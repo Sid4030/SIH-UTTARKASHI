@@ -1,0 +1,245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.784,
+          31.023
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Dharali Cloudburst",
+        "type": "cloudburst",
+        "year": 2025,
+        "severity": "extreme",
+        "casualties": 1,
+        "displaced": 4699
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48,
+          30.71
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Nirakot Cloudburst",
+        "type": "cloudburst",
+        "year": 2021,
+        "severity": "high",
+        "casualties": 30,
+        "displaced": 1189
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47,
+          30.69
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Mando Debris Flow",
+        "type": "cloudburst",
+        "year": 2021,
+        "severity": "high",
+        "casualties": 11,
+        "displaced": 4704
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46,
+          30.68
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Siror Flash Flood",
+        "type": "flood",
+        "year": 2021,
+        "severity": "extreme",
+        "casualties": 26,
+        "displaced": 4989
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.94,
+          30.995
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Gangotri Floods",
+        "type": "flood",
+        "year": 2013,
+        "severity": "extreme",
+        "casualties": 148,
+        "displaced": 3252
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.777
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Maneri Landslide",
+        "type": "landslide",
+        "year": 2013,
+        "severity": "very_high",
+        "casualties": 54,
+        "displaced": 3250
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.445,
+          30.727
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Uttarkashi Town Floods",
+        "type": "flood",
+        "year": 2013,
+        "severity": "high",
+        "casualties": 138,
+        "displaced": 3215
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.738,
+          31.036
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Harsil Slope Failure",
+        "type": "landslide",
+        "year": 2022,
+        "severity": "high",
+        "casualties": 16,
+        "displaced": 939
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.585,
+          30.8
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Bhatwari Landslide",
+        "type": "landslide",
+        "year": 2022,
+        "severity": "very_high",
+        "casualties": 19,
+        "displaced": 3748
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.185,
+          31.082
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Sankri Cloudburst",
+        "type": "cloudburst",
+        "year": 2023,
+        "severity": "extreme",
+        "casualties": 29,
+        "displaced": 2545
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Purola Flash Flood",
+        "type": "flood",
+        "year": 2023,
+        "severity": "high",
+        "casualties": 6,
+        "displaced": 904
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.686,
+          30.853
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Barsu Slope Collapse",
+        "type": "landslide",
+        "year": 2024,
+        "severity": "extreme",
+        "casualties": 18,
+        "displaced": 1505
+      }
+    }
+  ]
+}

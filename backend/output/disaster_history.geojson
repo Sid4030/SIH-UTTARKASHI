@@ -1,0 +1,269 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.784,
+          31.023
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Dharali Cloudburst",
+        "type": "cloudburst",
+        "year": 2025,
+        "severity": "extreme",
+        "casualties": 4,
+        "missing": 14,
+        "displaced": 450,
+        "source": "District Emergency Operations Centre (DEOC) Uttarkashi Flash Report 2025"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48,
+          30.71
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Nirakot Cloudburst",
+        "type": "cloudburst",
+        "year": 2021,
+        "severity": "high",
+        "casualties": 1,
+        "missing": 0,
+        "displaced": 85,
+        "source": "Uttarakhand State Disaster Management Authority (USDMA) Report Jul-2021"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47,
+          30.69
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Mando Debris Flow",
+        "type": "cloudburst",
+        "year": 2021,
+        "severity": "extreme",
+        "casualties": 3,
+        "missing": 0,
+        "displaced": 120,
+        "source": "Geological Survey of India (GSI) Post-Disaster Geotechnical Field Audit 2021"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46,
+          30.68
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Siror Flash Flood",
+        "type": "flood",
+        "year": 2021,
+        "severity": "high",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 320,
+        "source": "DDMA Uttarkashi Relief & Rehabilitation Record 2021"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.94,
+          30.995
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Gangotri Deluge",
+        "type": "flood",
+        "year": 2013,
+        "severity": "extreme",
+        "casualties": 28,
+        "missing": 42,
+        "displaced": 1100,
+        "source": "National Disaster Management Authority (NDMA) Uttarakhand Multi-Hazard Report 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.777
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Maneri Landslide Dam",
+        "type": "landslide",
+        "year": 2013,
+        "severity": "extreme",
+        "casualties": 14,
+        "missing": 8,
+        "displaced": 450,
+        "source": "GSI Landslide Hazard Zonation & Catastrophic Failure Assessment 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.445,
+          30.727
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Uttarkashi Town Bhagirathi Inundation",
+        "type": "flood",
+        "year": 2013,
+        "severity": "extreme",
+        "casualties": 72,
+        "missing": 110,
+        "displaced": 1850,
+        "source": "Uttarakhand Disaster Mitigation and Management Centre (DMMC) Final Registry 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.738,
+          31.036
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Harsil Slope Failure",
+        "type": "landslide",
+        "year": 2022,
+        "severity": "medium",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 240,
+        "source": "Border Roads Organisation (BRO) Project Shivalik Traffic Incident Log 2022"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.585,
+          30.8
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Bhatwari Landslide",
+        "type": "landslide",
+        "year": 2022,
+        "severity": "high",
+        "casualties": 2,
+        "missing": 0,
+        "displaced": 380,
+        "source": "USDMA Incident Assessment Bulletin Sep-2022"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.185,
+          31.082
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Sankri Cloudburst",
+        "type": "cloudburst",
+        "year": 2023,
+        "severity": "high",
+        "casualties": 1,
+        "missing": 2,
+        "displaced": 140,
+        "source": "Govt of Uttarakhand Revenue Dept Damage Audit 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Purola Flash Flood",
+        "type": "flood",
+        "year": 2023,
+        "severity": "medium",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 210,
+        "source": "State Disaster Response Force (SDRF) Deployment After-Action Review 2023"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.686,
+          30.853
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Barsu Slope Collapse",
+        "type": "landslide",
+        "year": 2024,
+        "severity": "medium",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 90,
+        "source": "DDMA Precautionary Evacuation Dossier Aug-2024"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6947 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.445,
+          30.727
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Uttarkashi Town",
+        "tehsil": "Bhatwari",
+        "population": 18000,
+        "households": 3461,
+        "is_town": true,
+        "elevation": 2309.4,
+        "slope": 18.86,
+        "aspect": 346.2,
+        "curvature": 677.8085,
+        "twi": 11.69,
+        "dist_river_km": 0.58,
+        "rainfall_mm": 176.9,
+        "ndvi": 0.631,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.998,
+        "zone": "red",
+        "vulnerability_index": 89.4,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 99.8,
+          "population_exposure": 100.0,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 50.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.94,
+          30.995
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Gangotri",
+        "tehsil": "Bhatwari",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 4464.4,
+        "slope": 3.76,
+        "aspect": 147.9,
+        "curvature": -399.2167,
+        "twi": 13.29,
+        "dist_river_km": 6.18,
+        "rainfall_mm": 169.5,
+        "ndvi": 0.192,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9507,
+        "zone": "red",
+        "vulnerability_index": 76.2,
+        "nearest_disaster": "Gangotri Floods",
+        "score_breakdown": {
+          "hazard_intensity": 95.1,
+          "population_exposure": 69.5,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.738,
+          31.036
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Harsil",
+        "tehsil": "Bhatwari",
+        "population": 1200,
+        "households": 230,
+        "is_town": false,
+        "elevation": 3765.1,
+        "slope": 16.73,
+        "aspect": 155.5,
+        "curvature": 377.8935,
+        "twi": 11.51,
+        "dist_river_km": 0.69,
+        "rainfall_mm": 176.6,
+        "ndvi": 0.2,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 1.0,
+        "zone": "red",
+        "vulnerability_index": 86.8,
+        "nearest_disaster": "Harsil Slope Failure",
+        "score_breakdown": {
+          "hazard_intensity": 100.0,
+          "population_exposure": 77.0,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.784,
+          31.023
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Dharali",
+        "tehsil": "Bhatwari",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 4047.5,
+        "slope": 1.36,
+        "aspect": 352.6,
+        "curvature": -323.5172,
+        "twi": 14.54,
+        "dist_river_km": 2.42,
+        "rainfall_mm": 163.0,
+        "ndvi": 0.235,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9817,
+        "zone": "red",
+        "vulnerability_index": 78.0,
+        "nearest_disaster": "Dharali Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 98.2,
+          "population_exposure": 72.6,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.585,
+          30.8
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Bhatwari",
+        "tehsil": "Bhatwari",
+        "population": 2500,
+        "households": 480,
+        "is_town": false,
+        "elevation": 2657.7,
+        "slope": 9.58,
+        "aspect": 104.7,
+        "curvature": 470.6067,
+        "twi": 11.99,
+        "dist_river_km": 0.47,
+        "rainfall_mm": 194.5,
+        "ndvi": 0.709,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9627,
+        "zone": "red",
+        "vulnerability_index": 84.4,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 96.3,
+          "population_exposure": 84.9,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.777
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Maneri",
+        "tehsil": "Bhatwari",
+        "population": 3000,
+        "households": 576,
+        "is_town": false,
+        "elevation": 2453.3,
+        "slope": 20.78,
+        "aspect": 350.9,
+        "curvature": 380.4161,
+        "twi": 9.6,
+        "dist_river_km": 0.83,
+        "rainfall_mm": 204.0,
+        "ndvi": 0.69,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9508,
+        "zone": "red",
+        "vulnerability_index": 83.5,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 95.1,
+          "population_exposure": 86.9,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.686,
+          30.853
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Barsu",
+        "tehsil": "Bhatwari",
+        "population": 450,
+        "households": 86,
+        "is_town": false,
+        "elevation": 3085.9,
+        "slope": 0.46,
+        "aspect": 300.7,
+        "curvature": 141.0019,
+        "twi": 13.41,
+        "dist_river_km": 3.44,
+        "rainfall_mm": 207.3,
+        "ndvi": 0.632,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.8468,
+        "zone": "red",
+        "vulnerability_index": 71.7,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 84.7,
+          "population_exposure": 66.3,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.63,
+          30.81
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Sukhi",
+        "tehsil": "Bhatwari",
+        "population": 380,
+        "households": 73,
+        "is_town": false,
+        "elevation": 2695.5,
+        "slope": 7.63,
+        "aspect": 132.6,
+        "curvature": 210.909,
+        "twi": 12.59,
+        "dist_river_km": 4.83,
+        "rainfall_mm": 204.9,
+        "ndvi": 0.692,
+        "dist_disaster_km": 4.42,
+        "hazard_probability": 0.5975,
+        "zone": "orange",
+        "vulnerability_index": 52.5,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 59.7,
+          "population_exposure": 64.5,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.51,
+          30.78
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Lanka",
+        "tehsil": "Bhatwari",
+        "population": 520,
+        "households": 100,
+        "is_town": false,
+        "elevation": 2731.8,
+        "slope": 12.78,
+        "aspect": 66.3,
+        "curvature": -7.1206,
+        "twi": 8.27,
+        "dist_river_km": 3.06,
+        "rainfall_mm": 199.8,
+        "ndvi": 0.648,
+        "dist_disaster_km": 3.15,
+        "hazard_probability": 0.7074,
+        "zone": "red",
+        "vulnerability_index": 57.2,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 70.7,
+          "population_exposure": 67.9,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.65,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Jhala",
+        "tehsil": "Bhatwari",
+        "population": 300,
+        "households": 57,
+        "is_town": false,
+        "elevation": 3226.2,
+        "slope": 13.16,
+        "aspect": 111.8,
+        "curvature": 207.2966,
+        "twi": 10.22,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 206.8,
+        "ndvi": 0.551,
+        "dist_disaster_km": 3.44,
+        "hazard_probability": 0.8281,
+        "zone": "red",
+        "vulnerability_index": 64.0,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 82.8,
+          "population_exposure": 61.9,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.24,
+          30.52
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Chinyalisaur",
+        "tehsil": "Chinyalisaur",
+        "population": 5500,
+        "households": 1057,
+        "is_town": true,
+        "elevation": 1420.3,
+        "slope": 18.67,
+        "aspect": 337.8,
+        "curvature": -215.911,
+        "twi": 9.75,
+        "dist_river_km": 2.41,
+        "rainfall_mm": 155.1,
+        "ndvi": 0.64,
+        "dist_disaster_km": 27.43,
+        "hazard_probability": 0.3759,
+        "zone": "yellow",
+        "vulnerability_index": 44.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.6,
+          "population_exposure": 93.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 10.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.27,
+          30.51
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Lakhwar",
+        "tehsil": "Chinyalisaur",
+        "population": 900,
+        "households": 173,
+        "is_town": false,
+        "elevation": 1910.4,
+        "slope": 15.09,
+        "aspect": 316.1,
+        "curvature": -143.2833,
+        "twi": 11.33,
+        "dist_river_km": 2.2,
+        "rainfall_mm": 187.6,
+        "ndvi": 0.653,
+        "dist_disaster_km": 26.11,
+        "hazard_probability": 0.5138,
+        "zone": "orange",
+        "vulnerability_index": 47.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 51.4,
+          "population_exposure": 73.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2,
+          30.49
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Jakhol",
+        "tehsil": "Chinyalisaur",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 1367.1,
+        "slope": 6.84,
+        "aspect": 22.9,
+        "curvature": -170.1747,
+        "twi": 12.42,
+        "dist_river_km": 4.88,
+        "rainfall_mm": 139.9,
+        "ndvi": 0.669,
+        "dist_disaster_km": 32.48,
+        "hazard_probability": 0.3282,
+        "zone": "yellow",
+        "vulnerability_index": 36.4,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 32.8,
+          "population_exposure": 69.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38,
+          30.6
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Dunda",
+        "tehsil": "Dunda",
+        "population": 2800,
+        "households": 538,
+        "is_town": false,
+        "elevation": 2146.6,
+        "slope": 13.69,
+        "aspect": 268.6,
+        "curvature": -416.1252,
+        "twi": 10.73,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 191.0,
+        "ndvi": 0.681,
+        "dist_disaster_km": 11.69,
+        "hazard_probability": 0.442,
+        "zone": "yellow",
+        "vulnerability_index": 48.5,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 44.2,
+          "population_exposure": 86.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.355,
+          30.614
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Barkot",
+        "tehsil": "Dunda",
+        "population": 4200,
+        "households": 807,
+        "is_town": true,
+        "elevation": 1898.0,
+        "slope": 11.64,
+        "aspect": 308.1,
+        "curvature": -44.0727,
+        "twi": 12.08,
+        "dist_river_km": 2.84,
+        "rainfall_mm": 172.7,
+        "ndvi": 0.715,
+        "dist_disaster_km": 12.38,
+        "hazard_probability": 0.4111,
+        "zone": "yellow",
+        "vulnerability_index": 41.5,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.1,
+          "population_exposure": 90.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 10.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.42,
+          30.58
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Tikochi",
+        "tehsil": "Dunda",
+        "population": 700,
+        "households": 134,
+        "is_town": false,
+        "elevation": 2247.9,
+        "slope": 6.82,
+        "aspect": 81.2,
+        "curvature": 60.162,
+        "twi": 12.53,
+        "dist_river_km": 4.4,
+        "rainfall_mm": 189.0,
+        "ndvi": 0.665,
+        "dist_disaster_km": 11.73,
+        "hazard_probability": 0.3933,
+        "zone": "yellow",
+        "vulnerability_index": 39.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.3,
+          "population_exposure": 71.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          31.1
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Mori",
+        "tehsil": "Mori",
+        "population": 1500,
+        "households": 288,
+        "is_town": false,
+        "elevation": 3184.9,
+        "slope": 16.98,
+        "aspect": 124.7,
+        "curvature": -194.8212,
+        "twi": 11.57,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 189.7,
+        "ndvi": 0.538,
+        "dist_disaster_km": 8.32,
+        "hazard_probability": 0.4953,
+        "zone": "yellow",
+        "vulnerability_index": 54.7,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 49.5,
+          "population_exposure": 79.4,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.15,
+          31.05
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Netwar",
+        "tehsil": "Mori",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 3012.0,
+        "slope": 6.21,
+        "aspect": 300.0,
+        "curvature": -473.5942,
+        "twi": 13.04,
+        "dist_river_km": 5.55,
+        "rainfall_mm": 211.3,
+        "ndvi": 0.727,
+        "dist_disaster_km": 4.87,
+        "hazard_probability": 0.6385,
+        "zone": "orange",
+        "vulnerability_index": 56.0,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 63.8,
+          "population_exposure": 72.6,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.185,
+          31.082
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Sankri",
+        "tehsil": "Mori",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 3276.9,
+        "slope": 20.5,
+        "aspect": 295.7,
+        "curvature": -289.0052,
+        "twi": 10.95,
+        "dist_river_km": 8.32,
+        "rainfall_mm": 197.9,
+        "ndvi": 0.488,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9127,
+        "zone": "red",
+        "vulnerability_index": 77.8,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 91.3,
+          "population_exposure": 69.5,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.06,
+          31.05
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Taluka",
+        "tehsil": "Mori",
+        "population": 400,
+        "households": 76,
+        "is_town": false,
+        "elevation": 3131.3,
+        "slope": 25.28,
+        "aspect": 326.4,
+        "curvature": -259.3248,
+        "twi": 11.23,
+        "dist_river_km": 6.73,
+        "rainfall_mm": 173.7,
+        "ndvi": 0.612,
+        "dist_disaster_km": 12.39,
+        "hazard_probability": 0.4175,
+        "zone": "yellow",
+        "vulnerability_index": 44.4,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 41.7,
+          "population_exposure": 65.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Purola",
+        "tehsil": "Purola",
+        "population": 5000,
+        "households": 961,
+        "is_town": true,
+        "elevation": 2482.1,
+        "slope": 18.02,
+        "aspect": 126.1,
+        "curvature": -165.9676,
+        "twi": 11.84,
+        "dist_river_km": 1.9,
+        "rainfall_mm": 199.1,
+        "ndvi": 0.642,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.922,
+        "zone": "red",
+        "vulnerability_index": 80.9,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 92.2,
+          "population_exposure": 92.5,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 10.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5,
+          30.7
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Naugaon",
+        "tehsil": "Naugaon",
+        "population": 3500,
+        "households": 673,
+        "is_town": false,
+        "elevation": 2665.3,
+        "slope": 20.18,
+        "aspect": 291.8,
+        "curvature": -189.066,
+        "twi": 9.92,
+        "dist_river_km": 5.8,
+        "rainfall_mm": 202.9,
+        "ndvi": 0.618,
+        "dist_disaster_km": 2.2,
+        "hazard_probability": 0.7084,
+        "zone": "red",
+        "vulnerability_index": 71.4,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 70.8,
+          "population_exposure": 88.6,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46,
+          30.68
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Siror",
+        "tehsil": "Naugaon",
+        "population": 1800,
+        "households": 346,
+        "is_town": false,
+        "elevation": 2270.7,
+        "slope": 8.26,
+        "aspect": 120.6,
+        "curvature": 93.0955,
+        "twi": 12.28,
+        "dist_river_km": 3.8,
+        "rainfall_mm": 189.7,
+        "ndvi": 0.69,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.8981,
+        "zone": "red",
+        "vulnerability_index": 77.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 89.8,
+          "population_exposure": 81.4,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48,
+          30.71
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Nirakot",
+        "tehsil": "Naugaon",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 2396.7,
+        "slope": 26.23,
+        "aspect": 310.0,
+        "curvature": -157.007,
+        "twi": 11.19,
+        "dist_river_km": 3.61,
+        "rainfall_mm": 196.1,
+        "ndvi": 0.63,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.9475,
+        "zone": "red",
+        "vulnerability_index": 82.0,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 94.7,
+          "population_exposure": 69.5,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47,
+          30.69
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Mando",
+        "tehsil": "Naugaon",
+        "population": 400,
+        "households": 76,
+        "is_town": false,
+        "elevation": 2104.4,
+        "slope": 9.35,
+        "aspect": 121.1,
+        "curvature": -125.4312,
+        "twi": 12.11,
+        "dist_river_km": 4.83,
+        "rainfall_mm": 180.3,
+        "ndvi": 0.659,
+        "dist_disaster_km": 0.0,
+        "hazard_probability": 0.8695,
+        "zone": "red",
+        "vulnerability_index": 72.2,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 86.9,
+          "population_exposure": 65.1,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.49,
+          30.7
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Kankrari",
+        "tehsil": "Naugaon",
+        "population": 350,
+        "households": 67,
+        "is_town": false,
+        "elevation": 2322.1,
+        "slope": 27.26,
+        "aspect": 323.0,
+        "curvature": 211.962,
+        "twi": 10.8,
+        "dist_river_km": 5.05,
+        "rainfall_mm": 194.6,
+        "ndvi": 0.632,
+        "dist_disaster_km": 1.46,
+        "hazard_probability": 0.891,
+        "zone": "red",
+        "vulnerability_index": 78.6,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 89.1,
+          "population_exposure": 63.6,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.55,
+          30.65
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Rajgarhi",
+        "tehsil": "Rajgarhi",
+        "population": 1200,
+        "households": 230,
+        "is_town": false,
+        "elevation": 2136.4,
+        "slope": 26.32,
+        "aspect": 338.8,
+        "curvature": 536.1515,
+        "twi": 11.29,
+        "dist_river_km": 12.79,
+        "rainfall_mm": 166.4,
+        "ndvi": 0.603,
+        "dist_disaster_km": 8.8,
+        "hazard_probability": 0.3931,
+        "zone": "yellow",
+        "vulnerability_index": 49.5,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 39.3,
+          "population_exposure": 77.0,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.52,
+          30.67
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Kharadi",
+        "tehsil": "Rajgarhi",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 2469.1,
+        "slope": 19.46,
+        "aspect": 331.6,
+        "curvature": 146.9851,
+        "twi": 11.44,
+        "dist_river_km": 9.41,
+        "rainfall_mm": 191.9,
+        "ndvi": 0.695,
+        "dist_disaster_km": 5.24,
+        "hazard_probability": 0.5619,
+        "zone": "orange",
+        "vulnerability_index": 56.3,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 56.2,
+          "population_exposure": 72.6,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1725,
+          30.7334
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Bandal Gaon",
+        "tehsil": "Purola",
+        "population": 827,
+        "households": 159,
+        "is_town": false,
+        "elevation": 2271.1,
+        "slope": 17.66,
+        "aspect": 143.1,
+        "curvature": -17.7591,
+        "twi": 11.37,
+        "dist_river_km": 13.12,
+        "rainfall_mm": 169.6,
+        "ndvi": 0.697,
+        "dist_disaster_km": 14.66,
+        "hazard_probability": 0.413,
+        "zone": "yellow",
+        "vulnerability_index": 43.2,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.3,
+          "population_exposure": 72.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3589,
+          30.6766
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Dodra Gaon",
+        "tehsil": "Naugaon",
+        "population": 403,
+        "households": 77,
+        "is_town": false,
+        "elevation": 2433.4,
+        "slope": 23.79,
+        "aspect": 317.1,
+        "curvature": -386.7318,
+        "twi": 10.8,
+        "dist_river_km": 5.82,
+        "rainfall_mm": 197.5,
+        "ndvi": 0.686,
+        "dist_disaster_km": 9.61,
+        "hazard_probability": 0.4083,
+        "zone": "yellow",
+        "vulnerability_index": 44.1,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 40.8,
+          "population_exposure": 65.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3104,
+          30.6148
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Nagrasu Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 363,
+        "households": 69,
+        "is_town": false,
+        "elevation": 2500.0,
+        "slope": 5.06,
+        "aspect": 319.6,
+        "curvature": -398.4427,
+        "twi": 12.37,
+        "dist_river_km": 6.81,
+        "rainfall_mm": 184.8,
+        "ndvi": 0.722,
+        "dist_disaster_km": 15.95,
+        "hazard_probability": 0.3994,
+        "zone": "yellow",
+        "vulnerability_index": 37.5,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 64.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6417,
+          30.5019
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Bhukki Patti",
+        "tehsil": "Rajgarhi",
+        "population": 271,
+        "households": 52,
+        "is_town": false,
+        "elevation": 2297.2,
+        "slope": 14.06,
+        "aspect": 68.1,
+        "curvature": 14.6041,
+        "twi": 11.29,
+        "dist_river_km": 27.14,
+        "rainfall_mm": 177.8,
+        "ndvi": 0.692,
+        "dist_disaster_km": 26.24,
+        "hazard_probability": 0.3685,
+        "zone": "yellow",
+        "vulnerability_index": 35.6,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.8,
+          "population_exposure": 60.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4278,
+          30.601
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Badal Patti",
+        "tehsil": "Rajgarhi",
+        "population": 1332,
+        "households": 256,
+        "is_town": false,
+        "elevation": 2144.3,
+        "slope": 12.26,
+        "aspect": 133.2,
+        "curvature": -259.3002,
+        "twi": 11.19,
+        "dist_river_km": 4.54,
+        "rainfall_mm": 194.8,
+        "ndvi": 0.654,
+        "dist_disaster_km": 9.29,
+        "hazard_probability": 0.3985,
+        "zone": "yellow",
+        "vulnerability_index": 44.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.8,
+          "population_exposure": 78.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5378,
+          30.513
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Deosar Khala",
+        "tehsil": "Rajgarhi",
+        "population": 176,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1615.9,
+        "slope": 7.91,
+        "aspect": 87.3,
+        "curvature": 274.8159,
+        "twi": 11.43,
+        "dist_river_km": 17.83,
+        "rainfall_mm": 176.1,
+        "ndvi": 0.728,
+        "dist_disaster_km": 19.96,
+        "hazard_probability": 0.3921,
+        "zone": "yellow",
+        "vulnerability_index": 35.2,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.2,
+          "population_exposure": 56.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2085,
+          30.8856
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Rautgaon Gaon",
+        "tehsil": "Purola",
+        "population": 536,
+        "households": 103,
+        "is_town": false,
+        "elevation": 2517.3,
+        "slope": 7.97,
+        "aspect": 147.8,
+        "curvature": -321.7563,
+        "twi": 12.41,
+        "dist_river_km": 1.79,
+        "rainfall_mm": 201.4,
+        "ndvi": 0.68,
+        "dist_disaster_km": 11.04,
+        "hazard_probability": 0.4203,
+        "zone": "yellow",
+        "vulnerability_index": 39.2,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 42.0,
+          "population_exposure": 68.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3956,
+          30.6319
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Kwari",
+        "tehsil": "Chinyalisaur",
+        "population": 296,
+        "households": 56,
+        "is_town": false,
+        "elevation": 1644.5,
+        "slope": 6.34,
+        "aspect": 101.3,
+        "curvature": 531.063,
+        "twi": 10.64,
+        "dist_river_km": 3.84,
+        "rainfall_mm": 176.8,
+        "ndvi": 0.644,
+        "dist_disaster_km": 8.12,
+        "hazard_probability": 0.3946,
+        "zone": "yellow",
+        "vulnerability_index": 39.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.5,
+          "population_exposure": 61.8,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5111,
+          30.6094
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Dodra Patti",
+        "tehsil": "Rajgarhi",
+        "population": 959,
+        "households": 184,
+        "is_town": false,
+        "elevation": 2007.5,
+        "slope": 7.59,
+        "aspect": 187.1,
+        "curvature": 498.2495,
+        "twi": 12.0,
+        "dist_river_km": 11.68,
+        "rainfall_mm": 164.2,
+        "ndvi": 0.708,
+        "dist_disaster_km": 9.22,
+        "hazard_probability": 0.2206,
+        "zone": "green",
+        "vulnerability_index": 36.9,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 22.1,
+          "population_exposure": 74.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5013,
+          30.8327
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Bandal-9 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 372,
+        "households": 71,
+        "is_town": false,
+        "elevation": 3073.0,
+        "slope": 2.6,
+        "aspect": 288.1,
+        "curvature": -41.322,
+        "twi": 12.93,
+        "dist_river_km": 7.87,
+        "rainfall_mm": 180.3,
+        "ndvi": 0.617,
+        "dist_disaster_km": 7.34,
+        "hazard_probability": 0.5227,
+        "zone": "orange",
+        "vulnerability_index": 44.9,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 52.3,
+          "population_exposure": 64.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0159,
+          30.9064
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Padri",
+        "tehsil": "Purola",
+        "population": 283,
+        "households": 54,
+        "is_town": false,
+        "elevation": 2647.3,
+        "slope": 2.17,
+        "aspect": 126.3,
+        "curvature": -288.8938,
+        "twi": 11.31,
+        "dist_river_km": 8.02,
+        "rainfall_mm": 204.9,
+        "ndvi": 0.741,
+        "dist_disaster_km": 10.15,
+        "hazard_probability": 0.3699,
+        "zone": "yellow",
+        "vulnerability_index": 35.8,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.0,
+          "population_exposure": 61.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2702,
+          30.6739
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Padri Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 569,
+        "households": 109,
+        "is_town": false,
+        "elevation": 1916.3,
+        "slope": 3.51,
+        "aspect": 327.1,
+        "curvature": 137.939,
+        "twi": 13.04,
+        "dist_river_km": 13.27,
+        "rainfall_mm": 167.2,
+        "ndvi": 0.709,
+        "dist_disaster_km": 17.62,
+        "hazard_probability": 0.318,
+        "zone": "yellow",
+        "vulnerability_index": 35.9,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 31.8,
+          "population_exposure": 68.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0295,
+          30.8377
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Bandal",
+        "tehsil": "Purola",
+        "population": 494,
+        "households": 95,
+        "is_town": false,
+        "elevation": 2483.8,
+        "slope": 7.06,
+        "aspect": 184.3,
+        "curvature": -636.3623,
+        "twi": 12.02,
+        "dist_river_km": 4.99,
+        "rainfall_mm": 179.6,
+        "ndvi": 0.722,
+        "dist_disaster_km": 6.84,
+        "hazard_probability": 0.4777,
+        "zone": "yellow",
+        "vulnerability_index": 44.1,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 47.8,
+          "population_exposure": 67.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0698,
+          31.2193
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Kwari Gaon",
+        "tehsil": "Mori",
+        "population": 405,
+        "households": 77,
+        "is_town": false,
+        "elevation": 3339.1,
+        "slope": 12.81,
+        "aspect": 213.1,
+        "curvature": 94.3647,
+        "twi": 12.24,
+        "dist_river_km": 6.97,
+        "rainfall_mm": 182.3,
+        "ndvi": 0.48,
+        "dist_disaster_km": 18.76,
+        "hazard_probability": 0.4201,
+        "zone": "yellow",
+        "vulnerability_index": 38.5,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 42.0,
+          "population_exposure": 65.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4959,
+          30.9083
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Naitwar Khala",
+        "tehsil": "Bhatwari",
+        "population": 495,
+        "households": 95,
+        "is_town": false,
+        "elevation": 3260.8,
+        "slope": 10.03,
+        "aspect": 165.3,
+        "curvature": -126.5862,
+        "twi": 12.46,
+        "dist_river_km": 11.07,
+        "rainfall_mm": 192.8,
+        "ndvi": 0.492,
+        "dist_disaster_km": 14.7,
+        "hazard_probability": 0.3553,
+        "zone": "yellow",
+        "vulnerability_index": 36.8,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 35.5,
+          "population_exposure": 67.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5087,
+          30.8488
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Purana",
+        "tehsil": "Naugaon",
+        "population": 528,
+        "households": 101,
+        "is_town": false,
+        "elevation": 2976.1,
+        "slope": 10.46,
+        "aspect": 141.2,
+        "curvature": -357.09,
+        "twi": 11.27,
+        "dist_river_km": 8.67,
+        "rainfall_mm": 179.1,
+        "ndvi": 0.658,
+        "dist_disaster_km": 8.61,
+        "hazard_probability": 0.4008,
+        "zone": "yellow",
+        "vulnerability_index": 41.6,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 40.1,
+          "population_exposure": 68.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5806,
+          30.7753
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Khaga",
+        "tehsil": "Naugaon",
+        "population": 285,
+        "households": 54,
+        "is_town": false,
+        "elevation": 3080.1,
+        "slope": 6.69,
+        "aspect": 139.6,
+        "curvature": -307.7411,
+        "twi": 10.71,
+        "dist_river_km": 2.74,
+        "rainfall_mm": 195.1,
+        "ndvi": 0.651,
+        "dist_disaster_km": 2.77,
+        "hazard_probability": 0.7475,
+        "zone": "red",
+        "vulnerability_index": 63.0,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 74.8,
+          "population_exposure": 61.4,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7128,
+          30.9361
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Tuneta",
+        "tehsil": "Bhatwari",
+        "population": 830,
+        "households": 159,
+        "is_town": false,
+        "elevation": 3708.2,
+        "slope": 14.03,
+        "aspect": 76.9,
+        "curvature": 63.3851,
+        "twi": 10.35,
+        "dist_river_km": 10.74,
+        "rainfall_mm": 174.6,
+        "ndvi": 0.256,
+        "dist_disaster_km": 9.57,
+        "hazard_probability": 0.4613,
+        "zone": "yellow",
+        "vulnerability_index": 44.9,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 46.1,
+          "population_exposure": 73.0,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5395,
+          30.9112
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Makudi",
+        "tehsil": "Bhatwari",
+        "population": 206,
+        "households": 39,
+        "is_town": false,
+        "elevation": 3087.7,
+        "slope": 26.34,
+        "aspect": 323.6,
+        "curvature": 97.0117,
+        "twi": 11.36,
+        "dist_river_km": 12.5,
+        "rainfall_mm": 201.9,
+        "ndvi": 0.63,
+        "dist_disaster_km": 13.08,
+        "hazard_probability": 0.3961,
+        "zone": "yellow",
+        "vulnerability_index": 41.8,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 39.6,
+          "population_exposure": 57.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3336,
+          30.5618
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Neghar",
+        "tehsil": "Chinyalisaur",
+        "population": 521,
+        "households": 100,
+        "is_town": false,
+        "elevation": 1601.5,
+        "slope": 15.38,
+        "aspect": 298.4,
+        "curvature": 220.3825,
+        "twi": 11.53,
+        "dist_river_km": 3.45,
+        "rainfall_mm": 160.9,
+        "ndvi": 0.627,
+        "dist_disaster_km": 17.79,
+        "hazard_probability": 0.3991,
+        "zone": "yellow",
+        "vulnerability_index": 41.4,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 67.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7136,
+          30.9287
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Dimri Gaon",
+        "tehsil": "Bhatwari",
+        "population": 391,
+        "households": 75,
+        "is_town": false,
+        "elevation": 3678.3,
+        "slope": 17.62,
+        "aspect": 101.8,
+        "curvature": 264.4613,
+        "twi": 10.69,
+        "dist_river_km": 10.62,
+        "rainfall_mm": 175.9,
+        "ndvi": 0.249,
+        "dist_disaster_km": 8.8,
+        "hazard_probability": 0.4958,
+        "zone": "yellow",
+        "vulnerability_index": 47.1,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 49.6,
+          "population_exposure": 64.8,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4377,
+          30.6598
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Kandara",
+        "tehsil": "Rajgarhi",
+        "population": 151,
+        "households": 29,
+        "is_town": false,
+        "elevation": 2165.9,
+        "slope": 15.31,
+        "aspect": 141.4,
+        "curvature": 396.3111,
+        "twi": 11.27,
+        "dist_river_km": 2.8,
+        "rainfall_mm": 194.6,
+        "ndvi": 0.672,
+        "dist_disaster_km": 3.08,
+        "hazard_probability": 0.6918,
+        "zone": "orange",
+        "vulnerability_index": 56.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 69.2,
+          "population_exposure": 54.5,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4135,
+          30.6769
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Osla Gaon",
+        "tehsil": "Naugaon",
+        "population": 650,
+        "households": 125,
+        "is_town": false,
+        "elevation": 2312.8,
+        "slope": 20.11,
+        "aspect": 99.6,
+        "curvature": 114.5138,
+        "twi": 11.56,
+        "dist_river_km": 0.71,
+        "rainfall_mm": 194.6,
+        "ndvi": 0.667,
+        "dist_disaster_km": 4.43,
+        "hazard_probability": 0.7225,
+        "zone": "red",
+        "vulnerability_index": 65.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 72.2,
+          "population_exposure": 70.3,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 80.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0814,
+          30.895
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Neghar Khala",
+        "tehsil": "Purola",
+        "population": 204,
+        "households": 39,
+        "is_town": false,
+        "elevation": 1998.9,
+        "slope": 12.74,
+        "aspect": 344.5,
+        "curvature": 435.1055,
+        "twi": 11.91,
+        "dist_river_km": 1.85,
+        "rainfall_mm": 176.7,
+        "ndvi": 0.677,
+        "dist_disaster_km": 5.3,
+        "hazard_probability": 0.5158,
+        "zone": "orange",
+        "vulnerability_index": 48.0,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 51.6,
+          "population_exposure": 57.7,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4162,
+          30.4563
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Sasta Gaon",
+        "tehsil": "Dunda",
+        "population": 153,
+        "households": 29,
+        "is_town": false,
+        "elevation": 1971.0,
+        "slope": 10.05,
+        "aspect": 57.6,
+        "curvature": -94.8087,
+        "twi": 12.06,
+        "dist_river_km": 15.17,
+        "rainfall_mm": 184.4,
+        "ndvi": 0.693,
+        "dist_disaster_km": 25.18,
+        "hazard_probability": 0.4037,
+        "zone": "yellow",
+        "vulnerability_index": 35.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 40.4,
+          "population_exposure": 54.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5507,
+          30.6214
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Dodra",
+        "tehsil": "Naugaon",
+        "population": 481,
+        "households": 92,
+        "is_town": false,
+        "elevation": 2071.5,
+        "slope": 5.82,
+        "aspect": 126.5,
+        "curvature": 224.4022,
+        "twi": 12.74,
+        "dist_river_km": 14.02,
+        "rainfall_mm": 160.9,
+        "ndvi": 0.64,
+        "dist_disaster_km": 10.8,
+        "hazard_probability": 0.3715,
+        "zone": "yellow",
+        "vulnerability_index": 37.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.2,
+          "population_exposure": 67.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5221,
+          30.6419
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Badal",
+        "tehsil": "Rajgarhi",
+        "population": 560,
+        "households": 107,
+        "is_town": false,
+        "elevation": 2255.8,
+        "slope": 8.45,
+        "aspect": 95.1,
+        "curvature": -140.7208,
+        "twi": 11.43,
+        "dist_river_km": 10.58,
+        "rainfall_mm": 171.2,
+        "ndvi": 0.707,
+        "dist_disaster_km": 7.26,
+        "hazard_probability": 0.4829,
+        "zone": "yellow",
+        "vulnerability_index": 44.6,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 48.3,
+          "population_exposure": 68.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1687,
+          31.0901
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Badal-27",
+        "tehsil": "Mori",
+        "population": 326,
+        "households": 62,
+        "is_town": false,
+        "elevation": 3016.0,
+        "slope": 22.14,
+        "aspect": 339.9,
+        "curvature": 175.9726,
+        "twi": 11.64,
+        "dist_river_km": 6.62,
+        "rainfall_mm": 199.0,
+        "ndvi": 0.675,
+        "dist_disaster_km": 1.79,
+        "hazard_probability": 0.9009,
+        "zone": "red",
+        "vulnerability_index": 71.7,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 90.1,
+          "population_exposure": 62.8,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4575,
+          30.5328
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Osla Khala",
+        "tehsil": "Rajgarhi",
+        "population": 218,
+        "households": 41,
+        "is_town": false,
+        "elevation": 1998.9,
+        "slope": 15.24,
+        "aspect": 274.2,
+        "curvature": 53.9532,
+        "twi": 10.42,
+        "dist_river_km": 10.48,
+        "rainfall_mm": 166.8,
+        "ndvi": 0.63,
+        "dist_disaster_km": 16.34,
+        "hazard_probability": 0.3715,
+        "zone": "yellow",
+        "vulnerability_index": 38.1,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.2,
+          "population_exposure": 58.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.227,
+          31.0249
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Dabrani",
+        "tehsil": "Mori",
+        "population": 81,
+        "households": 15,
+        "is_town": false,
+        "elevation": 2586.3,
+        "slope": 16.23,
+        "aspect": 317.5,
+        "curvature": 246.2399,
+        "twi": 11.64,
+        "dist_river_km": 7.82,
+        "rainfall_mm": 198.2,
+        "ndvi": 0.621,
+        "dist_disaster_km": 7.49,
+        "hazard_probability": 0.4388,
+        "zone": "yellow",
+        "vulnerability_index": 40.8,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 43.9,
+          "population_exposure": 47.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6407,
+          30.8008
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Bandal-30 Gaon",
+        "tehsil": "Naugaon",
+        "population": 312,
+        "households": 60,
+        "is_town": false,
+        "elevation": 2838.9,
+        "slope": 16.43,
+        "aspect": 187.3,
+        "curvature": 282.963,
+        "twi": 11.74,
+        "dist_river_km": 5.53,
+        "rainfall_mm": 201.2,
+        "ndvi": 0.711,
+        "dist_disaster_km": 5.29,
+        "hazard_probability": 0.5359,
+        "zone": "orange",
+        "vulnerability_index": 52.9,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 53.6,
+          "population_exposure": 62.4,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4176,
+          30.6203
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Durgapur",
+        "tehsil": "Rajgarhi",
+        "population": 817,
+        "households": 157,
+        "is_town": false,
+        "elevation": 1931.2,
+        "slope": 10.15,
+        "aspect": 317.6,
+        "curvature": 395.6479,
+        "twi": 10.17,
+        "dist_river_km": 4.22,
+        "rainfall_mm": 191.7,
+        "ndvi": 0.68,
+        "dist_disaster_km": 7.75,
+        "hazard_probability": 0.4891,
+        "zone": "yellow",
+        "vulnerability_index": 45.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 48.9,
+          "population_exposure": 72.8,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1692,
+          31.159
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Purana Khala",
+        "tehsil": "Mori",
+        "population": 203,
+        "households": 39,
+        "is_town": false,
+        "elevation": 3585.7,
+        "slope": 7.73,
+        "aspect": 328.4,
+        "curvature": -452.0432,
+        "twi": 11.84,
+        "dist_river_km": 9.28,
+        "rainfall_mm": 164.2,
+        "ndvi": 0.329,
+        "dist_disaster_km": 8.68,
+        "hazard_probability": 0.4128,
+        "zone": "yellow",
+        "vulnerability_index": 39.4,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 41.3,
+          "population_exposure": 57.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6127,
+          30.8238
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Padri-33",
+        "tehsil": "Bhatwari",
+        "population": 122,
+        "households": 23,
+        "is_town": false,
+        "elevation": 2611.9,
+        "slope": 11.17,
+        "aspect": 79.2,
+        "curvature": 424.2007,
+        "twi": 10.6,
+        "dist_river_km": 4.08,
+        "rainfall_mm": 202.7,
+        "ndvi": 0.656,
+        "dist_disaster_km": 3.73,
+        "hazard_probability": 0.6915,
+        "zone": "orange",
+        "vulnerability_index": 52.7,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 69.1,
+          "population_exposure": 52.2,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4171,
+          30.6593
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Makudi-34",
+        "tehsil": "Rajgarhi",
+        "population": 50,
+        "households": 9,
+        "is_town": false,
+        "elevation": 2464.6,
+        "slope": 2.99,
+        "aspect": 207.4,
+        "curvature": -345.8951,
+        "twi": 12.65,
+        "dist_river_km": 2.31,
+        "rainfall_mm": 211.3,
+        "ndvi": 0.737,
+        "dist_disaster_km": 4.68,
+        "hazard_probability": 0.6764,
+        "zone": "orange",
+        "vulnerability_index": 49.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 67.6,
+          "population_exposure": 42.5,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5284,
+          30.6239
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Udiyari",
+        "tehsil": "Naugaon",
+        "population": 306,
+        "households": 58,
+        "is_town": false,
+        "elevation": 2223.6,
+        "slope": 11.74,
+        "aspect": 165.8,
+        "curvature": -31.5468,
+        "twi": 11.88,
+        "dist_river_km": 12.03,
+        "rainfall_mm": 167.9,
+        "ndvi": 0.712,
+        "dist_disaster_km": 9.0,
+        "hazard_probability": 0.3643,
+        "zone": "yellow",
+        "vulnerability_index": 38.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.4,
+          "population_exposure": 62.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4282,
+          30.6449
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Padri-36 Gaon",
+        "tehsil": "Naugaon",
+        "population": 276,
+        "households": 53,
+        "is_town": false,
+        "elevation": 2471.5,
+        "slope": 10.81,
+        "aspect": 230.9,
+        "curvature": 146.0233,
+        "twi": 10.63,
+        "dist_river_km": 3.97,
+        "rainfall_mm": 215.7,
+        "ndvi": 0.701,
+        "dist_disaster_km": 4.93,
+        "hazard_probability": 0.6077,
+        "zone": "orange",
+        "vulnerability_index": 52.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 60.8,
+          "population_exposure": 61.0,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0449,
+          30.79
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Dhanari",
+        "tehsil": "Purola",
+        "population": 234,
+        "households": 45,
+        "is_town": false,
+        "elevation": 2020.3,
+        "slope": 4.74,
+        "aspect": 301.1,
+        "curvature": -156.0254,
+        "twi": 10.35,
+        "dist_river_km": 7.45,
+        "rainfall_mm": 175.6,
+        "ndvi": 0.648,
+        "dist_disaster_km": 8.47,
+        "hazard_probability": 0.3611,
+        "zone": "yellow",
+        "vulnerability_index": 37.9,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.1,
+          "population_exposure": 59.2,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5138,
+          30.7143
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Basari Patti",
+        "tehsil": "Dunda",
+        "population": 821,
+        "households": 157,
+        "is_town": false,
+        "elevation": 2673.4,
+        "slope": 7.38,
+        "aspect": 171.3,
+        "curvature": 144.3633,
+        "twi": 12.05,
+        "dist_river_km": 6.31,
+        "rainfall_mm": 210.3,
+        "ndvi": 0.676,
+        "dist_disaster_km": 3.25,
+        "hazard_probability": 0.641,
+        "zone": "orange",
+        "vulnerability_index": 56.2,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 64.1,
+          "population_exposure": 72.9,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4023,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Purana Patti",
+        "tehsil": "Rajgarhi",
+        "population": 809,
+        "households": 155,
+        "is_town": false,
+        "elevation": 2399.2,
+        "slope": 9.72,
+        "aspect": 25.3,
+        "curvature": 579.6806,
+        "twi": 12.09,
+        "dist_river_km": 2.46,
+        "rainfall_mm": 187.7,
+        "ndvi": 0.67,
+        "dist_disaster_km": 5.31,
+        "hazard_probability": 0.5746,
+        "zone": "orange",
+        "vulnerability_index": 53.8,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 57.5,
+          "population_exposure": 72.7,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4966,
+          30.8727
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Jaspur",
+        "tehsil": "Bhatwari",
+        "population": 218,
+        "households": 41,
+        "is_town": false,
+        "elevation": 2884.1,
+        "slope": 7.56,
+        "aspect": 58.0,
+        "curvature": 206.2938,
+        "twi": 11.31,
+        "dist_river_km": 11.31,
+        "rainfall_mm": 189.0,
+        "ndvi": 0.684,
+        "dist_disaster_km": 11.5,
+        "hazard_probability": 0.4375,
+        "zone": "yellow",
+        "vulnerability_index": 37.4,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 43.7,
+          "population_exposure": 58.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0292,
+          30.8903
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Lata Patti",
+        "tehsil": "Purola",
+        "population": 151,
+        "households": 29,
+        "is_town": false,
+        "elevation": 2518.5,
+        "slope": 17.3,
+        "aspect": 5.0,
+        "curvature": -253.2692,
+        "twi": 10.93,
+        "dist_river_km": 6.58,
+        "rainfall_mm": 198.5,
+        "ndvi": 0.623,
+        "dist_disaster_km": 8.08,
+        "hazard_probability": 0.4894,
+        "zone": "yellow",
+        "vulnerability_index": 44.2,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 48.9,
+          "population_exposure": 54.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3501,
+          30.4632
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Kirola Patti",
+        "tehsil": "Dunda",
+        "population": 174,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1823.7,
+        "slope": 8.39,
+        "aspect": 186.2,
+        "curvature": -100.8465,
+        "twi": 12.35,
+        "dist_river_km": 10.35,
+        "rainfall_mm": 167.4,
+        "ndvi": 0.691,
+        "dist_disaster_km": 26.23,
+        "hazard_probability": 0.3486,
+        "zone": "yellow",
+        "vulnerability_index": 33.7,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 34.9,
+          "population_exposure": 56.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9529,
+          30.8283
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Dhanari Gaon",
+        "tehsil": "Purola",
+        "population": 583,
+        "households": 112,
+        "is_town": false,
+        "elevation": 2225.4,
+        "slope": 9.18,
+        "aspect": 34.7,
+        "curvature": -237.0542,
+        "twi": 12.0,
+        "dist_river_km": 12.31,
+        "rainfall_mm": 196.4,
+        "ndvi": 0.66,
+        "dist_disaster_km": 14.18,
+        "hazard_probability": 0.3953,
+        "zone": "yellow",
+        "vulnerability_index": 38.6,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.5,
+          "population_exposure": 69.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4789,
+          30.7158
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Salan Patti",
+        "tehsil": "Naugaon",
+        "population": 216,
+        "households": 41,
+        "is_town": false,
+        "elevation": 2533.2,
+        "slope": 19.43,
+        "aspect": 320.8,
+        "curvature": -118.3138,
+        "twi": 10.36,
+        "dist_river_km": 3.17,
+        "rainfall_mm": 200.3,
+        "ndvi": 0.705,
+        "dist_disaster_km": 0.65,
+        "hazard_probability": 0.9333,
+        "zone": "red",
+        "vulnerability_index": 75.8,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 93.3,
+          "population_exposure": 58.4,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.184,
+          30.7308
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Nagrasu",
+        "tehsil": "Purola",
+        "population": 259,
+        "households": 49,
+        "is_town": false,
+        "elevation": 2089.3,
+        "slope": 15.19,
+        "aspect": 119.5,
+        "curvature": 108.8861,
+        "twi": 9.25,
+        "dist_river_km": 13.62,
+        "rainfall_mm": 163.2,
+        "ndvi": 0.637,
+        "dist_disaster_km": 15.45,
+        "hazard_probability": 0.3225,
+        "zone": "yellow",
+        "vulnerability_index": 36.8,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 32.2,
+          "population_exposure": 60.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6644,
+          30.7432
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Bangan Gaon",
+        "tehsil": "Rajgarhi",
+        "population": 650,
+        "households": 125,
+        "is_town": false,
+        "elevation": 2704.4,
+        "slope": 9.45,
+        "aspect": 43.7,
+        "curvature": 141.262,
+        "twi": 12.56,
+        "dist_river_km": 10.2,
+        "rainfall_mm": 177.5,
+        "ndvi": 0.706,
+        "dist_disaster_km": 9.83,
+        "hazard_probability": 0.4163,
+        "zone": "yellow",
+        "vulnerability_index": 42.6,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 41.6,
+          "population_exposure": 70.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2092,
+          31.1907
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Bandal Patti",
+        "tehsil": "Mori",
+        "population": 83,
+        "households": 15,
+        "is_town": false,
+        "elevation": 3966.7,
+        "slope": 16.9,
+        "aspect": 317.8,
+        "curvature": -510.762,
+        "twi": 11.74,
+        "dist_river_km": 14.46,
+        "rainfall_mm": 174.4,
+        "ndvi": 0.17,
+        "dist_disaster_km": 12.28,
+        "hazard_probability": 0.4796,
+        "zone": "yellow",
+        "vulnerability_index": 39.3,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 48.0,
+          "population_exposure": 48.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2076,
+          31.2117
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Kwari-48 Gaon",
+        "tehsil": "Mori",
+        "population": 894,
+        "households": 171,
+        "is_town": false,
+        "elevation": 3638.8,
+        "slope": 18.25,
+        "aspect": 143.6,
+        "curvature": 174.4577,
+        "twi": 9.82,
+        "dist_river_km": 16.07,
+        "rainfall_mm": 184.3,
+        "ndvi": 0.301,
+        "dist_disaster_km": 14.56,
+        "hazard_probability": 0.5015,
+        "zone": "orange",
+        "vulnerability_index": 46.5,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 50.2,
+          "population_exposure": 73.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5114,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Kwari-49",
+        "tehsil": "Dunda",
+        "population": 576,
+        "households": 110,
+        "is_town": false,
+        "elevation": 2982.0,
+        "slope": 10.08,
+        "aspect": 270.0,
+        "curvature": -682.4607,
+        "twi": 11.71,
+        "dist_river_km": 6.94,
+        "rainfall_mm": 198.7,
+        "ndvi": 0.641,
+        "dist_disaster_km": 3.35,
+        "hazard_probability": 0.6967,
+        "zone": "orange",
+        "vulnerability_index": 57.1,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 69.7,
+          "population_exposure": 69.0,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5401,
+          30.7093
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Bairagi Patti",
+        "tehsil": "Dunda",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 2710.7,
+        "slope": 9.39,
+        "aspect": 129.7,
+        "curvature": 194.2348,
+        "twi": 11.99,
+        "dist_river_km": 6.74,
+        "rainfall_mm": 211.1,
+        "ndvi": 0.652,
+        "dist_disaster_km": 5.71,
+        "hazard_probability": 0.4968,
+        "zone": "yellow",
+        "vulnerability_index": 50.0,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 49.7,
+          "population_exposure": 68.5,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6818,
+          30.6609
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Deosar Patti",
+        "tehsil": "Rajgarhi",
+        "population": 278,
+        "households": 53,
+        "is_town": false,
+        "elevation": 2569.1,
+        "slope": 14.07,
+        "aspect": 12.8,
+        "curvature": -53.4735,
+        "twi": 11.62,
+        "dist_river_km": 18.11,
+        "rainfall_mm": 210.2,
+        "ndvi": 0.686,
+        "dist_disaster_km": 17.97,
+        "hazard_probability": 0.4062,
+        "zone": "yellow",
+        "vulnerability_index": 37.0,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 40.6,
+          "population_exposure": 61.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1859,
+          31.0537
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Bhukki",
+        "tehsil": "Mori",
+        "population": 787,
+        "households": 151,
+        "is_town": false,
+        "elevation": 2861.2,
+        "slope": 14.23,
+        "aspect": 272.2,
+        "curvature": 109.2867,
+        "twi": 11.16,
+        "dist_river_km": 6.87,
+        "rainfall_mm": 211.2,
+        "ndvi": 0.658,
+        "dist_disaster_km": 3.14,
+        "hazard_probability": 0.6348,
+        "zone": "orange",
+        "vulnerability_index": 55.8,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 63.5,
+          "population_exposure": 72.4,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4505,
+          30.8626
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Osla-53 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 327,
+        "households": 62,
+        "is_town": false,
+        "elevation": 3247.7,
+        "slope": 23.48,
+        "aspect": 344.6,
+        "curvature": -444.7209,
+        "twi": 11.36,
+        "dist_river_km": 13.34,
+        "rainfall_mm": 198.4,
+        "ndvi": 0.539,
+        "dist_disaster_km": 12.94,
+        "hazard_probability": 0.426,
+        "zone": "yellow",
+        "vulnerability_index": 41.1,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 42.6,
+          "population_exposure": 62.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1369,
+          30.9762
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Deosar-54 Patti",
+        "tehsil": "Purola",
+        "population": 411,
+        "households": 79,
+        "is_town": false,
+        "elevation": 2676.3,
+        "slope": 17.33,
+        "aspect": 357.3,
+        "curvature": -152.0242,
+        "twi": 11.21,
+        "dist_river_km": 2.92,
+        "rainfall_mm": 188.0,
+        "ndvi": 0.619,
+        "dist_disaster_km": 12.6,
+        "hazard_probability": 0.4139,
+        "zone": "yellow",
+        "vulnerability_index": 41.3,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 41.4,
+          "population_exposure": 65.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3387,
+          30.5707
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Kirola Gaon",
+        "tehsil": "Dunda",
+        "population": 64,
+        "households": 12,
+        "is_town": false,
+        "elevation": 1946.1,
+        "slope": 22.0,
+        "aspect": 288.8,
+        "curvature": -349.3398,
+        "twi": 10.57,
+        "dist_river_km": 4.34,
+        "rainfall_mm": 174.8,
+        "ndvi": 0.644,
+        "dist_disaster_km": 16.73,
+        "hazard_probability": 0.4127,
+        "zone": "yellow",
+        "vulnerability_index": 36.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.3,
+          "population_exposure": 45.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0022,
+          30.9244
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Rautgaon Patti",
+        "tehsil": "Purola",
+        "population": 184,
+        "households": 35,
+        "is_town": false,
+        "elevation": 2344.0,
+        "slope": 18.28,
+        "aspect": 168.9,
+        "curvature": 96.1469,
+        "twi": 11.03,
+        "dist_river_km": 9.68,
+        "rainfall_mm": 203.0,
+        "ndvi": 0.673,
+        "dist_disaster_km": 12.43,
+        "hazard_probability": 0.3653,
+        "zone": "yellow",
+        "vulnerability_index": 37.4,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.5,
+          "population_exposure": 56.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.379,
+          30.5361
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Sasta",
+        "tehsil": "Dunda",
+        "population": 594,
+        "households": 114,
+        "is_town": false,
+        "elevation": 1944.7,
+        "slope": 24.65,
+        "aspect": 329.7,
+        "curvature": -344.0503,
+        "twi": 10.36,
+        "dist_river_km": 7.09,
+        "rainfall_mm": 161.2,
+        "ndvi": 0.636,
+        "dist_disaster_km": 17.73,
+        "hazard_probability": 0.3683,
+        "zone": "yellow",
+        "vulnerability_index": 40.7,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.8,
+          "population_exposure": 69.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1034,
+          31.1527
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Naitwar",
+        "tehsil": "Mori",
+        "population": 165,
+        "households": 31,
+        "is_town": false,
+        "elevation": 3373.0,
+        "slope": 11.54,
+        "aspect": 265.3,
+        "curvature": -431.7465,
+        "twi": 12.37,
+        "dist_river_km": 5.86,
+        "rainfall_mm": 185.2,
+        "ndvi": 0.434,
+        "dist_disaster_km": 11.03,
+        "hazard_probability": 0.4479,
+        "zone": "yellow",
+        "vulnerability_index": 37.0,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 44.8,
+          "population_exposure": 55.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5955,
+          30.6506
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Bandal-59 Patti",
+        "tehsil": "Naugaon",
+        "population": 249,
+        "households": 47,
+        "is_town": false,
+        "elevation": 2599.1,
+        "slope": 7.32,
+        "aspect": 168.5,
+        "curvature": 289.1774,
+        "twi": 12.82,
+        "dist_river_km": 14.26,
+        "rainfall_mm": 195.6,
+        "ndvi": 0.68,
+        "dist_disaster_km": 12.7,
+        "hazard_probability": 0.3605,
+        "zone": "yellow",
+        "vulnerability_index": 35.1,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 36.1,
+          "population_exposure": 59.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7452,
+          30.6639
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Udiyari-60",
+        "tehsil": "Bhatwari",
+        "population": 233,
+        "households": 44,
+        "is_town": false,
+        "elevation": 2594.8,
+        "slope": 6.32,
+        "aspect": 187.8,
+        "curvature": 483.2385,
+        "twi": 12.65,
+        "dist_river_km": 21.78,
+        "rainfall_mm": 194.2,
+        "ndvi": 0.672,
+        "dist_disaster_km": 21.44,
+        "hazard_probability": 0.3754,
+        "zone": "yellow",
+        "vulnerability_index": 35.4,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 37.5,
+          "population_exposure": 59.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5589,
+          30.6083
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Lata Khala",
+        "tehsil": "Naugaon",
+        "population": 144,
+        "households": 27,
+        "is_town": false,
+        "elevation": 2383.6,
+        "slope": 15.58,
+        "aspect": 176.2,
+        "curvature": -91.2341,
+        "twi": 11.27,
+        "dist_river_km": 15.41,
+        "rainfall_mm": 180.5,
+        "ndvi": 0.626,
+        "dist_disaster_km": 12.31,
+        "hazard_probability": 0.3726,
+        "zone": "yellow",
+        "vulnerability_index": 37.1,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.3,
+          "population_exposure": 54.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7081,
+          30.9178
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Badal Khala",
+        "tehsil": "Bhatwari",
+        "population": 55,
+        "households": 10,
+        "is_town": false,
+        "elevation": 3733.0,
+        "slope": 13.8,
+        "aspect": 331.2,
+        "curvature": -320.6505,
+        "twi": 11.4,
+        "dist_river_km": 9.33,
+        "rainfall_mm": 174.8,
+        "ndvi": 0.232,
+        "dist_disaster_km": 7.49,
+        "hazard_probability": 0.5395,
+        "zone": "orange",
+        "vulnerability_index": 40.3,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 54.0,
+          "population_exposure": 43.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9651,
+          30.8554
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Bandal-63",
+        "tehsil": "Purola",
+        "population": 296,
+        "households": 56,
+        "is_town": false,
+        "elevation": 2074.8,
+        "slope": 2.81,
+        "aspect": 249.0,
+        "curvature": -24.2844,
+        "twi": 11.31,
+        "dist_river_km": 10.93,
+        "rainfall_mm": 183.7,
+        "ndvi": 0.731,
+        "dist_disaster_km": 12.83,
+        "hazard_probability": 0.3835,
+        "zone": "yellow",
+        "vulnerability_index": 36.4,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 38.3,
+          "population_exposure": 61.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1177,
+          30.8593
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Padri Khala",
+        "tehsil": "Purola",
+        "population": 693,
+        "households": 133,
+        "is_town": false,
+        "elevation": 2282.9,
+        "slope": 11.34,
+        "aspect": 341.8,
+        "curvature": 195.505,
+        "twi": 12.13,
+        "dist_river_km": 3.24,
+        "rainfall_mm": 196.7,
+        "ndvi": 0.647,
+        "dist_disaster_km": 1.97,
+        "hazard_probability": 0.8864,
+        "zone": "red",
+        "vulnerability_index": 70.3,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 88.6,
+          "population_exposure": 71.0,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6221,
+          30.678
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Dabrani Gaon",
+        "tehsil": "Naugaon",
+        "population": 755,
+        "households": 145,
+        "is_town": false,
+        "elevation": 2600.3,
+        "slope": 13.36,
+        "aspect": 137.2,
+        "curvature": -268.6462,
+        "twi": 12.01,
+        "dist_river_km": 12.85,
+        "rainfall_mm": 199.9,
+        "ndvi": 0.628,
+        "dist_disaster_km": 13.31,
+        "hazard_probability": 0.383,
+        "zone": "yellow",
+        "vulnerability_index": 38.9,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 38.3,
+          "population_exposure": 71.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.502,
+          30.6755
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Bairagi",
+        "tehsil": "Dunda",
+        "population": 389,
+        "households": 74,
+        "is_town": false,
+        "elevation": 2250.3,
+        "slope": 1.76,
+        "aspect": 159.1,
+        "curvature": 523.4931,
+        "twi": 13.84,
+        "dist_river_km": 7.81,
+        "rainfall_mm": 185.4,
+        "ndvi": 0.699,
+        "dist_disaster_km": 3.44,
+        "hazard_probability": 0.6714,
+        "zone": "orange",
+        "vulnerability_index": 55.2,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 67.1,
+          "population_exposure": 64.7,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0357,
+          30.9732
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Bairagi-67 Patti",
+        "tehsil": "Mori",
+        "population": 233,
+        "households": 44,
+        "is_town": false,
+        "elevation": 2543.8,
+        "slope": 12.28,
+        "aspect": 180.8,
+        "curvature": 145.4291,
+        "twi": 10.71,
+        "dist_river_km": 10.17,
+        "rainfall_mm": 212.5,
+        "ndvi": 0.7,
+        "dist_disaster_km": 14.98,
+        "hazard_probability": 0.3542,
+        "zone": "yellow",
+        "vulnerability_index": 34.7,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 35.4,
+          "population_exposure": 59.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2149,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Semwal Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 145,
+        "households": 27,
+        "is_town": false,
+        "elevation": 1792.9,
+        "slope": 22.15,
+        "aspect": 169.3,
+        "curvature": -117.0127,
+        "twi": 10.68,
+        "dist_river_km": 6.47,
+        "rainfall_mm": 169.5,
+        "ndvi": 0.697,
+        "dist_disaster_km": 34.55,
+        "hazard_probability": 0.3826,
+        "zone": "yellow",
+        "vulnerability_index": 37.4,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 38.3,
+          "population_exposure": 54.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3687,
+          30.6898
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Nagrasu Khala",
+        "tehsil": "Naugaon",
+        "population": 1521,
+        "households": 292,
+        "is_town": false,
+        "elevation": 2819.3,
+        "slope": 10.9,
+        "aspect": 261.4,
+        "curvature": -180.6305,
+        "twi": 12.03,
+        "dist_river_km": 4.99,
+        "rainfall_mm": 193.5,
+        "ndvi": 0.641,
+        "dist_disaster_km": 8.34,
+        "hazard_probability": 0.4805,
+        "zone": "yellow",
+        "vulnerability_index": 47.2,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 48.0,
+          "population_exposure": 79.6,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2142,
+          30.7059
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Rautgaon Khala",
+        "tehsil": "Purola",
+        "population": 230,
+        "households": 44,
+        "is_town": false,
+        "elevation": 2281.8,
+        "slope": 19.78,
+        "aspect": 165.9,
+        "curvature": 394.6204,
+        "twi": 9.59,
+        "dist_river_km": 17.12,
+        "rainfall_mm": 185.9,
+        "ndvi": 0.632,
+        "dist_disaster_km": 19.33,
+        "hazard_probability": 0.4115,
+        "zone": "yellow",
+        "vulnerability_index": 39.7,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.2,
+          "population_exposure": 59.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.506,
+          30.676
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Nagrasu-71",
+        "tehsil": "Dunda",
+        "population": 845,
+        "households": 162,
+        "is_town": false,
+        "elevation": 2268.9,
+        "slope": 7.08,
+        "aspect": 296.0,
+        "curvature": 685.4838,
+        "twi": 11.16,
+        "dist_river_km": 8.01,
+        "rainfall_mm": 186.2,
+        "ndvi": 0.65,
+        "dist_disaster_km": 3.76,
+        "hazard_probability": 0.656,
+        "zone": "orange",
+        "vulnerability_index": 56.8,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 65.6,
+          "population_exposure": 73.2,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4965,
+          30.8193
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Bairagi Khala",
+        "tehsil": "Naugaon",
+        "population": 387,
+        "households": 74,
+        "is_town": false,
+        "elevation": 2722.8,
+        "slope": 28.13,
+        "aspect": 295.1,
+        "curvature": 206.4624,
+        "twi": 11.17,
+        "dist_river_km": 6.86,
+        "rainfall_mm": 189.0,
+        "ndvi": 0.595,
+        "dist_disaster_km": 6.45,
+        "hazard_probability": 0.4927,
+        "zone": "yellow",
+        "vulnerability_index": 49.9,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 49.3,
+          "population_exposure": 64.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0713,
+          30.9037
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Naitwar-73 Khala",
+        "tehsil": "Purola",
+        "population": 661,
+        "households": 127,
+        "is_town": false,
+        "elevation": 2170.0,
+        "slope": 11.63,
+        "aspect": 326.0,
+        "curvature": 83.8052,
+        "twi": 12.35,
+        "dist_river_km": 2.76,
+        "rainfall_mm": 188.6,
+        "ndvi": 0.687,
+        "dist_disaster_km": 6.55,
+        "hazard_probability": 0.5113,
+        "zone": "orange",
+        "vulnerability_index": 46.0,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 51.1,
+          "population_exposure": 70.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3581,
+          30.7193
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Bhukki Gaon",
+        "tehsil": "Naugaon",
+        "population": 740,
+        "households": 142,
+        "is_town": false,
+        "elevation": 2293.4,
+        "slope": 20.45,
+        "aspect": 163.7,
+        "curvature": 332.3099,
+        "twi": 11.04,
+        "dist_river_km": 7.32,
+        "rainfall_mm": 187.1,
+        "ndvi": 0.661,
+        "dist_disaster_km": 8.3,
+        "hazard_probability": 0.4335,
+        "zone": "yellow",
+        "vulnerability_index": 46.6,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 43.4,
+          "population_exposure": 71.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3135,
+          30.5637
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Padri Patti",
+        "tehsil": "Dunda",
+        "population": 712,
+        "households": 136,
+        "is_town": false,
+        "elevation": 1429.5,
+        "slope": 16.97,
+        "aspect": 149.6,
+        "curvature": 413.4294,
+        "twi": 11.46,
+        "dist_river_km": 1.99,
+        "rainfall_mm": 155.4,
+        "ndvi": 0.704,
+        "dist_disaster_km": 18.98,
+        "hazard_probability": 0.4003,
+        "zone": "yellow",
+        "vulnerability_index": 42.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 40.0,
+          "population_exposure": 71.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5265,
+          30.7854
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Gangar Khala",
+        "tehsil": "Rajgarhi",
+        "population": 1025,
+        "households": 197,
+        "is_town": false,
+        "elevation": 2508.1,
+        "slope": 9.06,
+        "aspect": 1.6,
+        "curvature": 684.2643,
+        "twi": 12.53,
+        "dist_river_km": 2.14,
+        "rainfall_mm": 201.1,
+        "ndvi": 0.694,
+        "dist_disaster_km": 1.82,
+        "hazard_probability": 0.9548,
+        "zone": "red",
+        "vulnerability_index": 73.8,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 95.5,
+          "population_exposure": 75.3,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9593,
+          30.7121
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Bandal-77 Gaon",
+        "tehsil": "Purola",
+        "population": 1367,
+        "households": 262,
+        "is_town": false,
+        "elevation": 1739.1,
+        "slope": 16.7,
+        "aspect": 89.6,
+        "curvature": 201.7265,
+        "twi": 12.01,
+        "dist_river_km": 19.13,
+        "rainfall_mm": 157.8,
+        "ndvi": 0.645,
+        "dist_disaster_km": 20.32,
+        "hazard_probability": 0.3494,
+        "zone": "yellow",
+        "vulnerability_index": 42.3,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 34.9,
+          "population_exposure": 78.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3008,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Rautgaon-78 Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 375,
+        "households": 72,
+        "is_town": false,
+        "elevation": 1108.5,
+        "slope": 15.54,
+        "aspect": 151.3,
+        "curvature": 265.8759,
+        "twi": 12.07,
+        "dist_river_km": 7.35,
+        "rainfall_mm": 120.9,
+        "ndvi": 0.603,
+        "dist_disaster_km": 29.67,
+        "hazard_probability": 0.2729,
+        "zone": "green",
+        "vulnerability_index": 36.2,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 27.3,
+          "population_exposure": 64.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4322,
+          30.5003
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Deosar Gaon",
+        "tehsil": "Dunda",
+        "population": 155,
+        "households": 29,
+        "is_town": false,
+        "elevation": 2159.6,
+        "slope": 19.69,
+        "aspect": 323.0,
+        "curvature": -275.0596,
+        "twi": 11.03,
+        "dist_river_km": 12.13,
+        "rainfall_mm": 170.7,
+        "ndvi": 0.653,
+        "dist_disaster_km": 20.12,
+        "hazard_probability": 0.3792,
+        "zone": "yellow",
+        "vulnerability_index": 37.5,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.9,
+          "population_exposure": 54.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0626,
+          30.9724
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Ghuttu",
+        "tehsil": "Purola",
+        "population": 843,
+        "households": 162,
+        "is_town": false,
+        "elevation": 2504.8,
+        "slope": 6.44,
+        "aspect": 199.7,
+        "curvature": 408.834,
+        "twi": 12.54,
+        "dist_river_km": 8.79,
+        "rainfall_mm": 210.8,
+        "ndvi": 0.715,
+        "dist_disaster_km": 14.04,
+        "hazard_probability": 0.3896,
+        "zone": "yellow",
+        "vulnerability_index": 39.4,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.0,
+          "population_exposure": 73.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3317,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Tiloth",
+        "tehsil": "Chinyalisaur",
+        "population": 1020,
+        "households": 196,
+        "is_town": false,
+        "elevation": 1426.1,
+        "slope": 20.52,
+        "aspect": 306.2,
+        "curvature": 96.2227,
+        "twi": 11.28,
+        "dist_river_km": 9.54,
+        "rainfall_mm": 142.4,
+        "ndvi": 0.67,
+        "dist_disaster_km": 28.29,
+        "hazard_probability": 0.3284,
+        "zone": "yellow",
+        "vulnerability_index": 40.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 32.8,
+          "population_exposure": 75.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5785,
+          30.7542
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Basari",
+        "tehsil": "Bhatwari",
+        "population": 404,
+        "households": 77,
+        "is_town": false,
+        "elevation": 2713.4,
+        "slope": 26.71,
+        "aspect": 292.2,
+        "curvature": 283.4708,
+        "twi": 8.93,
+        "dist_river_km": 4.06,
+        "rainfall_mm": 206.4,
+        "ndvi": 0.637,
+        "dist_disaster_km": 4.22,
+        "hazard_probability": 0.6612,
+        "zone": "orange",
+        "vulnerability_index": 60.9,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 66.1,
+          "population_exposure": 65.2,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5471,
+          30.626
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Bhukki-83 Patti",
+        "tehsil": "Rajgarhi",
+        "population": 1185,
+        "households": 227,
+        "is_town": false,
+        "elevation": 2076.4,
+        "slope": 5.14,
+        "aspect": 143.2,
+        "curvature": -118.4887,
+        "twi": 10.0,
+        "dist_river_km": 13.48,
+        "rainfall_mm": 160.2,
+        "ndvi": 0.675,
+        "dist_disaster_km": 10.2,
+        "hazard_probability": 0.3745,
+        "zone": "yellow",
+        "vulnerability_index": 39.8,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 37.4,
+          "population_exposure": 76.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0028,
+          30.7459
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Neghar Patti",
+        "tehsil": "Purola",
+        "population": 2894,
+        "households": 556,
+        "is_town": false,
+        "elevation": 2191.2,
+        "slope": 14.77,
+        "aspect": 73.5,
+        "curvature": 110.9766,
+        "twi": 10.91,
+        "dist_river_km": 13.69,
+        "rainfall_mm": 197.6,
+        "ndvi": 0.682,
+        "dist_disaster_km": 14.79,
+        "hazard_probability": 0.4026,
+        "zone": "yellow",
+        "vulnerability_index": 43.2,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 40.3,
+          "population_exposure": 86.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5307,
+          30.645
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Sasta Patti",
+        "tehsil": "Rajgarhi",
+        "population": 289,
+        "households": 55,
+        "is_town": false,
+        "elevation": 2130.9,
+        "slope": 10.85,
+        "aspect": 74.9,
+        "curvature": -212.1905,
+        "twi": 12.45,
+        "dist_river_km": 11.21,
+        "rainfall_mm": 164.6,
+        "ndvi": 0.635,
+        "dist_disaster_km": 7.63,
+        "hazard_probability": 0.5044,
+        "zone": "orange",
+        "vulnerability_index": 43.5,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 50.4,
+          "population_exposure": 61.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5852,
+          30.7337
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Jhajra",
+        "tehsil": "Bhatwari",
+        "population": 510,
+        "households": 98,
+        "is_town": false,
+        "elevation": 2603.5,
+        "slope": 3.62,
+        "aspect": 200.9,
+        "curvature": 301.1414,
+        "twi": 13.06,
+        "dist_river_km": 5.89,
+        "rainfall_mm": 206.9,
+        "ndvi": 0.68,
+        "dist_disaster_km": 6.26,
+        "hazard_probability": 0.4702,
+        "zone": "yellow",
+        "vulnerability_index": 43.9,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 47.0,
+          "population_exposure": 67.7,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5475,
+          30.7983
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Lata Gaon",
+        "tehsil": "Bhatwari",
+        "population": 305,
+        "households": 58,
+        "is_town": false,
+        "elevation": 3230.5,
+        "slope": 3.72,
+        "aspect": 75.7,
+        "curvature": -80.4445,
+        "twi": 13.01,
+        "dist_river_km": 3.09,
+        "rainfall_mm": 182.9,
+        "ndvi": 0.601,
+        "dist_disaster_km": 2.4,
+        "hazard_probability": 0.8004,
+        "zone": "red",
+        "vulnerability_index": 65.0,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 80.0,
+          "population_exposure": 62.1,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4604,
+          30.7141
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Bairagi-88",
+        "tehsil": "Dunda",
+        "population": 374,
+        "households": 71,
+        "is_town": false,
+        "elevation": 2111.2,
+        "slope": 19.14,
+        "aspect": 357.7,
+        "curvature": 473.7393,
+        "twi": 11.58,
+        "dist_river_km": 2.02,
+        "rainfall_mm": 174.8,
+        "ndvi": 0.612,
+        "dist_disaster_km": 1.92,
+        "hazard_probability": 0.9514,
+        "zone": "red",
+        "vulnerability_index": 73.9,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 95.1,
+          "population_exposure": 64.3,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1636,
+          30.8428
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Dabrani-89",
+        "tehsil": "Purola",
+        "population": 195,
+        "households": 37,
+        "is_town": false,
+        "elevation": 2418.9,
+        "slope": 21.21,
+        "aspect": 332.1,
+        "curvature": -103.3947,
+        "twi": 11.67,
+        "dist_river_km": 1.52,
+        "rainfall_mm": 216.0,
+        "ndvi": 0.66,
+        "dist_disaster_km": 6.09,
+        "hazard_probability": 0.5488,
+        "zone": "orange",
+        "vulnerability_index": 47.0,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 54.9,
+          "population_exposure": 57.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1492,
+          30.773
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Basari Khala",
+        "tehsil": "Purola",
+        "population": 447,
+        "households": 85,
+        "is_town": false,
+        "elevation": 2381.3,
+        "slope": 8.8,
+        "aspect": 227.8,
+        "curvature": -272.0244,
+        "twi": 11.02,
+        "dist_river_km": 8.55,
+        "rainfall_mm": 186.3,
+        "ndvi": 0.691,
+        "dist_disaster_km": 9.74,
+        "hazard_probability": 0.4244,
+        "zone": "yellow",
+        "vulnerability_index": 41.9,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 42.4,
+          "population_exposure": 66.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0555,
+          30.8651
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Jhajra Patti",
+        "tehsil": "Purola",
+        "population": 283,
+        "households": 54,
+        "is_town": false,
+        "elevation": 2141.4,
+        "slope": 14.68,
+        "aspect": 285.0,
+        "curvature": 157.1922,
+        "twi": 11.47,
+        "dist_river_km": 2.87,
+        "rainfall_mm": 169.7,
+        "ndvi": 0.713,
+        "dist_disaster_km": 4.55,
+        "hazard_probability": 0.6146,
+        "zone": "orange",
+        "vulnerability_index": 52.3,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 61.5,
+          "population_exposure": 61.3,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9859,
+          30.7578
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Osla-92 Gaon",
+        "tehsil": "Purola",
+        "population": 79,
+        "households": 15,
+        "is_town": false,
+        "elevation": 2268.5,
+        "slope": 8.44,
+        "aspect": 143.1,
+        "curvature": 297.508,
+        "twi": 11.93,
+        "dist_river_km": 13.59,
+        "rainfall_mm": 193.3,
+        "ndvi": 0.712,
+        "dist_disaster_km": 14.91,
+        "hazard_probability": 0.401,
+        "zone": "yellow",
+        "vulnerability_index": 33.4,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 40.1,
+          "population_exposure": 47.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.6674
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Neghar-93",
+        "tehsil": "Dunda",
+        "population": 287,
+        "households": 55,
+        "is_town": false,
+        "elevation": 2798.1,
+        "slope": 17.43,
+        "aspect": 326.6,
+        "curvature": -333.7314,
+        "twi": 11.8,
+        "dist_river_km": 11.24,
+        "rainfall_mm": 186.6,
+        "ndvi": 0.71,
+        "dist_disaster_km": 7.37,
+        "hazard_probability": 0.5209,
+        "zone": "orange",
+        "vulnerability_index": 47.1,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 52.1,
+          "population_exposure": 61.4,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2083,
+          30.4889
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Dimri",
+        "tehsil": "Chinyalisaur",
+        "population": 554,
+        "households": 106,
+        "is_town": false,
+        "elevation": 1307.9,
+        "slope": 5.83,
+        "aspect": 13.8,
+        "curvature": 288.7821,
+        "twi": 10.65,
+        "dist_river_km": 4.15,
+        "rainfall_mm": 139.0,
+        "ndvi": 0.676,
+        "dist_disaster_km": 31.96,
+        "hazard_probability": 0.25,
+        "zone": "green",
+        "vulnerability_index": 33.4,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 25.0,
+          "population_exposure": 68.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.616,
+          30.9423
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Kirola Khala",
+        "tehsil": "Bhatwari",
+        "population": 226,
+        "households": 43,
+        "is_town": false,
+        "elevation": 2985.0,
+        "slope": 14.24,
+        "aspect": 161.0,
+        "curvature": 429.3024,
+        "twi": 9.0,
+        "dist_river_km": 10.74,
+        "rainfall_mm": 186.2,
+        "ndvi": 0.689,
+        "dist_disaster_km": 11.94,
+        "hazard_probability": 0.3827,
+        "zone": "yellow",
+        "vulnerability_index": 35.6,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 38.3,
+          "population_exposure": 58.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2654,
+          30.5053
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Kandara-96",
+        "tehsil": "Dunda",
+        "population": 836,
+        "households": 160,
+        "is_town": false,
+        "elevation": 1727.7,
+        "slope": 15.86,
+        "aspect": 318.8,
+        "curvature": -183.494,
+        "twi": 12.07,
+        "dist_river_km": 1.58,
+        "rainfall_mm": 176.6,
+        "ndvi": 0.667,
+        "dist_disaster_km": 26.79,
+        "hazard_probability": 0.4635,
+        "zone": "yellow",
+        "vulnerability_index": 45.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 46.3,
+          "population_exposure": 73.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6559,
+          30.8231
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Semwal-97 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 187,
+        "households": 35,
+        "is_town": false,
+        "elevation": 3074.5,
+        "slope": 25.9,
+        "aspect": 317.2,
+        "curvature": 281.9194,
+        "twi": 11.05,
+        "dist_river_km": 3.04,
+        "rainfall_mm": 208.4,
+        "ndvi": 0.64,
+        "dist_disaster_km": 4.38,
+        "hazard_probability": 0.7168,
+        "zone": "red",
+        "vulnerability_index": 60.8,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 71.7,
+          "population_exposure": 56.8,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5319,
+          30.7793
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Udiyari Gaon",
+        "tehsil": "Naugaon",
+        "population": 736,
+        "households": 141,
+        "is_town": false,
+        "elevation": 2468.1,
+        "slope": 2.03,
+        "aspect": 349.9,
+        "curvature": 273.0046,
+        "twi": 14.07,
+        "dist_river_km": 1.29,
+        "rainfall_mm": 203.3,
+        "ndvi": 0.684,
+        "dist_disaster_km": 1.08,
+        "hazard_probability": 0.9493,
+        "zone": "red",
+        "vulnerability_index": 76.6,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 94.9,
+          "population_exposure": 71.7,
+          "disaster_history_proximity": 100.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1266,
+          31.0392
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Bhukki-99 Patti",
+        "tehsil": "Mori",
+        "population": 442,
+        "households": 85,
+        "is_town": false,
+        "elevation": 2777.3,
+        "slope": 9.0,
+        "aspect": 219.8,
+        "curvature": -112.3344,
+        "twi": 12.41,
+        "dist_river_km": 4.89,
+        "rainfall_mm": 207.6,
+        "ndvi": 0.698,
+        "dist_disaster_km": 7.3,
+        "hazard_probability": 0.4624,
+        "zone": "yellow",
+        "vulnerability_index": 43.2,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 46.2,
+          "population_exposure": 66.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1788,
+          30.7298
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Dodra-100 Patti",
+        "tehsil": "Purola",
+        "population": 519,
+        "households": 99,
+        "is_town": false,
+        "elevation": 2235.6,
+        "slope": 18.05,
+        "aspect": 133.4,
+        "curvature": -221.6486,
+        "twi": 9.03,
+        "dist_river_km": 13.62,
+        "rainfall_mm": 169.1,
+        "ndvi": 0.673,
+        "dist_disaster_km": 15.3,
+        "hazard_probability": 0.3786,
+        "zone": "yellow",
+        "vulnerability_index": 40.7,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.9,
+          "population_exposure": 67.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.147,
+          30.5656
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Nagrasu-101 Khala",
+        "tehsil": "Chinyalisaur",
+        "population": 653,
+        "households": 125,
+        "is_town": false,
+        "elevation": 1239.8,
+        "slope": 18.54,
+        "aspect": 135.6,
+        "curvature": 395.4497,
+        "twi": 10.82,
+        "dist_river_km": 12.2,
+        "rainfall_mm": 132.7,
+        "ndvi": 0.631,
+        "dist_disaster_km": 31.88,
+        "hazard_probability": 0.3127,
+        "zone": "yellow",
+        "vulnerability_index": 39.1,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 31.3,
+          "population_exposure": 70.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6621,
+          30.7194
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Jhajra-102",
+        "tehsil": "Bhatwari",
+        "population": 1147,
+        "households": 220,
+        "is_town": false,
+        "elevation": 2877.1,
+        "slope": 14.74,
+        "aspect": 172.4,
+        "curvature": 62.9598,
+        "twi": 11.57,
+        "dist_river_km": 11.87,
+        "rainfall_mm": 176.6,
+        "ndvi": 0.656,
+        "dist_disaster_km": 11.56,
+        "hazard_probability": 0.4052,
+        "zone": "yellow",
+        "vulnerability_index": 40.8,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 40.5,
+          "population_exposure": 76.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0093,
+          30.9412
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Deosar",
+        "tehsil": "Purola",
+        "population": 256,
+        "households": 49,
+        "is_town": false,
+        "elevation": 2062.7,
+        "slope": 2.02,
+        "aspect": 349.0,
+        "curvature": 7.3496,
+        "twi": 12.79,
+        "dist_river_km": 9.75,
+        "rainfall_mm": 194.3,
+        "ndvi": 0.731,
+        "dist_disaster_km": 13.29,
+        "hazard_probability": 0.3721,
+        "zone": "yellow",
+        "vulnerability_index": 35.6,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 37.2,
+          "population_exposure": 60.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2714,
+          30.698
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Naitwar Patti",
+        "tehsil": "Dunda",
+        "population": 840,
+        "households": 161,
+        "is_town": false,
+        "elevation": 2235.6,
+        "slope": 13.97,
+        "aspect": 27.2,
+        "curvature": -22.2998,
+        "twi": 12.18,
+        "dist_river_km": 14.26,
+        "rainfall_mm": 195.3,
+        "ndvi": 0.679,
+        "dist_disaster_km": 16.8,
+        "hazard_probability": 0.3849,
+        "zone": "yellow",
+        "vulnerability_index": 39.2,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 38.5,
+          "population_exposure": 73.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3906,
+          30.5817
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Dimri Khala",
+        "tehsil": "Dunda",
+        "population": 1349,
+        "households": 259,
+        "is_town": false,
+        "elevation": 2142.1,
+        "slope": 10.74,
+        "aspect": 259.7,
+        "curvature": 323.5757,
+        "twi": 10.6,
+        "dist_river_km": 2.27,
+        "rainfall_mm": 184.6,
+        "ndvi": 0.634,
+        "dist_disaster_km": 12.75,
+        "hazard_probability": 0.4326,
+        "zone": "yellow",
+        "vulnerability_index": 42.2,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 43.3,
+          "population_exposure": 78.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1294,
+          31.0813
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Bhukki-106 Patti",
+        "tehsil": "Mori",
+        "population": 462,
+        "households": 88,
+        "is_town": false,
+        "elevation": 2772.3,
+        "slope": 18.8,
+        "aspect": 133.4,
+        "curvature": 282.2005,
+        "twi": 11.49,
+        "dist_river_km": 3.48,
+        "rainfall_mm": 203.6,
+        "ndvi": 0.7,
+        "dist_disaster_km": 5.28,
+        "hazard_probability": 0.5425,
+        "zone": "orange",
+        "vulnerability_index": 54.1,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 54.2,
+          "population_exposure": 66.6,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3508,
+          30.6886
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Rautgaon",
+        "tehsil": "Chinyalisaur",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 2434.4,
+        "slope": 18.6,
+        "aspect": 316.8,
+        "curvature": -89.6615,
+        "twi": 10.74,
+        "dist_river_km": 6.64,
+        "rainfall_mm": 196.9,
+        "ndvi": 0.674,
+        "dist_disaster_km": 9.91,
+        "hazard_probability": 0.3994,
+        "zone": "yellow",
+        "vulnerability_index": 44.6,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 68.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5026,
+          30.8789
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Neghar-108 Khala",
+        "tehsil": "Bhatwari",
+        "population": 803,
+        "households": 154,
+        "is_town": false,
+        "elevation": 3031.8,
+        "slope": 16.13,
+        "aspect": 339.4,
+        "curvature": -225.1791,
+        "twi": 11.65,
+        "dist_river_km": 11.44,
+        "rainfall_mm": 187.3,
+        "ndvi": 0.643,
+        "dist_disaster_km": 11.75,
+        "hazard_probability": 0.3995,
+        "zone": "yellow",
+        "vulnerability_index": 42.6,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 72.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5943,
+          30.6808
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Gangar-109 Khala",
+        "tehsil": "Naugaon",
+        "population": 292,
+        "households": 56,
+        "is_town": false,
+        "elevation": 2370.0,
+        "slope": 15.01,
+        "aspect": 338.5,
+        "curvature": 460.2117,
+        "twi": 11.79,
+        "dist_river_km": 11.16,
+        "rainfall_mm": 193.5,
+        "ndvi": 0.625,
+        "dist_disaster_km": 11.33,
+        "hazard_probability": 0.4019,
+        "zone": "yellow",
+        "vulnerability_index": 40.0,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 40.2,
+          "population_exposure": 61.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9982,
+          30.7314
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Nagrasu-110 Khala",
+        "tehsil": "Purola",
+        "population": 1041,
+        "households": 200,
+        "is_town": false,
+        "elevation": 2209.1,
+        "slope": 9.9,
+        "aspect": 337.7,
+        "curvature": -350.7384,
+        "twi": 11.99,
+        "dist_river_km": 15.29,
+        "rainfall_mm": 197.2,
+        "ndvi": 0.692,
+        "dist_disaster_km": 16.34,
+        "hazard_probability": 0.3821,
+        "zone": "yellow",
+        "vulnerability_index": 39.7,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 38.2,
+          "population_exposure": 75.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0257,
+          30.9764
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Deosar-111 Khala",
+        "tehsil": "Mori",
+        "population": 378,
+        "households": 72,
+        "is_town": false,
+        "elevation": 2538.2,
+        "slope": 11.66,
+        "aspect": 127.5,
+        "curvature": 430.9951,
+        "twi": 11.29,
+        "dist_river_km": 11.03,
+        "rainfall_mm": 210.6,
+        "ndvi": 0.637,
+        "dist_disaster_km": 15.71,
+        "hazard_probability": 0.3682,
+        "zone": "yellow",
+        "vulnerability_index": 36.5,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 36.8,
+          "population_exposure": 64.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5769,
+          30.6585
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Dabrani-112",
+        "tehsil": "Naugaon",
+        "population": 162,
+        "households": 31,
+        "is_town": false,
+        "elevation": 2595.6,
+        "slope": 10.85,
+        "aspect": 177.4,
+        "curvature": 127.6388,
+        "twi": 12.12,
+        "dist_river_km": 12.86,
+        "rainfall_mm": 190.5,
+        "ndvi": 0.721,
+        "dist_disaster_km": 10.74,
+        "hazard_probability": 0.4069,
+        "zone": "yellow",
+        "vulnerability_index": 35.5,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 40.7,
+          "population_exposure": 55.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4595,
+          30.5814
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Deosar-113",
+        "tehsil": "Dunda",
+        "population": 261,
+        "households": 50,
+        "is_town": false,
+        "elevation": 1626.0,
+        "slope": 10.25,
+        "aspect": 74.1,
+        "curvature": 584.328,
+        "twi": 12.53,
+        "dist_river_km": 7.83,
+        "rainfall_mm": 158.9,
+        "ndvi": 0.718,
+        "dist_disaster_km": 10.94,
+        "hazard_probability": 0.3907,
+        "zone": "yellow",
+        "vulnerability_index": 36.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.1,
+          "population_exposure": 60.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4724,
+          30.5541
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Kwari-114",
+        "tehsil": "Naugaon",
+        "population": 376,
+        "households": 72,
+        "is_town": false,
+        "elevation": 1866.5,
+        "slope": 11.01,
+        "aspect": 188.4,
+        "curvature": 265.8675,
+        "twi": 10.11,
+        "dist_river_km": 10.15,
+        "rainfall_mm": 168.1,
+        "ndvi": 0.693,
+        "dist_disaster_km": 14.02,
+        "hazard_probability": 0.391,
+        "zone": "yellow",
+        "vulnerability_index": 37.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.1,
+          "population_exposure": 64.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6798,
+          30.5462
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Jaspur-115",
+        "tehsil": "Rajgarhi",
+        "population": 647,
+        "households": 124,
+        "is_town": false,
+        "elevation": 2445.0,
+        "slope": 17.35,
+        "aspect": 308.8,
+        "curvature": 218.693,
+        "twi": 11.31,
+        "dist_river_km": 28.17,
+        "rainfall_mm": 182.0,
+        "ndvi": 0.613,
+        "dist_disaster_km": 25.53,
+        "hazard_probability": 0.4092,
+        "zone": "yellow",
+        "vulnerability_index": 42.4,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 40.9,
+          "population_exposure": 70.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0231,
+          31.2441
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Purana Gaon",
+        "tehsil": "Mori",
+        "population": 51,
+        "households": 9,
+        "is_town": false,
+        "elevation": 3276.6,
+        "slope": 5.83,
+        "aspect": 120.1,
+        "curvature": -205.5146,
+        "twi": 11.93,
+        "dist_river_km": 5.36,
+        "rainfall_mm": 171.4,
+        "ndvi": 0.572,
+        "dist_disaster_km": 23.67,
+        "hazard_probability": 0.3547,
+        "zone": "yellow",
+        "vulnerability_index": 30.6,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 35.5,
+          "population_exposure": 42.7,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.391,
+          30.7739
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Dhanari Patti",
+        "tehsil": "Naugaon",
+        "population": 142,
+        "households": 27,
+        "is_town": false,
+        "elevation": 2186.3,
+        "slope": 24.02,
+        "aspect": 319.5,
+        "curvature": 404.5772,
+        "twi": 10.56,
+        "dist_river_km": 7.43,
+        "rainfall_mm": 178.2,
+        "ndvi": 0.673,
+        "dist_disaster_km": 7.31,
+        "hazard_probability": 0.4422,
+        "zone": "yellow",
+        "vulnerability_index": 42.4,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 44.2,
+          "population_exposure": 53.8,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3349,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Dimri-118",
+        "tehsil": "Dunda",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 2133.8,
+        "slope": 24.35,
+        "aspect": 290.5,
+        "curvature": -119.4329,
+        "twi": 9.97,
+        "dist_river_km": 8.28,
+        "rainfall_mm": 185.5,
+        "ndvi": 0.696,
+        "dist_disaster_km": 11.0,
+        "hazard_probability": 0.3734,
+        "zone": "yellow",
+        "vulnerability_index": 40.7,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 37.3,
+          "population_exposure": 68.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5616,
+          30.5446
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Rampur Patti",
+        "tehsil": "Rajgarhi",
+        "population": 467,
+        "households": 89,
+        "is_town": false,
+        "elevation": 2435.5,
+        "slope": 9.3,
+        "aspect": 89.6,
+        "curvature": -183.3992,
+        "twi": 10.78,
+        "dist_river_km": 18.32,
+        "rainfall_mm": 211.4,
+        "ndvi": 0.659,
+        "dist_disaster_km": 17.86,
+        "hazard_probability": 0.4112,
+        "zone": "yellow",
+        "vulnerability_index": 38.6,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.1,
+          "population_exposure": 66.7,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2109,
+          31.2299
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Bandal-120",
+        "tehsil": "Mori",
+        "population": 131,
+        "households": 25,
+        "is_town": false,
+        "elevation": 3415.9,
+        "slope": 11.63,
+        "aspect": 242.1,
+        "curvature": -129.0819,
+        "twi": 12.16,
+        "dist_river_km": 17.86,
+        "rainfall_mm": 190.9,
+        "ndvi": 0.441,
+        "dist_disaster_km": 16.6,
+        "hazard_probability": 0.5186,
+        "zone": "orange",
+        "vulnerability_index": 38.9,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 51.9,
+          "population_exposure": 52.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1734,
+          30.9631
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Durgapur Khala",
+        "tehsil": "Mori",
+        "population": 511,
+        "households": 98,
+        "is_town": false,
+        "elevation": 2708.3,
+        "slope": 21.02,
+        "aspect": 328.6,
+        "curvature": 282.3247,
+        "twi": 11.16,
+        "dist_river_km": 4.66,
+        "rainfall_mm": 180.4,
+        "ndvi": 0.677,
+        "dist_disaster_km": 13.24,
+        "hazard_probability": 0.477,
+        "zone": "yellow",
+        "vulnerability_index": 44.1,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 47.7,
+          "population_exposure": 67.7,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7396,
+          30.6879
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Khaga-122",
+        "tehsil": "Bhatwari",
+        "population": 1001,
+        "households": 192,
+        "is_town": false,
+        "elevation": 2724.7,
+        "slope": 2.42,
+        "aspect": 326.1,
+        "curvature": 320.1187,
+        "twi": 13.34,
+        "dist_river_km": 19.61,
+        "rainfall_mm": 197.5,
+        "ndvi": 0.711,
+        "dist_disaster_km": 19.02,
+        "hazard_probability": 0.3943,
+        "zone": "yellow",
+        "vulnerability_index": 40.0,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 39.4,
+          "population_exposure": 75.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3546,
+          30.8231
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Semwal Khala",
+        "tehsil": "Naugaon",
+        "population": 169,
+        "households": 32,
+        "is_town": false,
+        "elevation": 2993.2,
+        "slope": 9.37,
+        "aspect": 320.4,
+        "curvature": -148.5244,
+        "twi": 12.49,
+        "dist_river_km": 13.75,
+        "rainfall_mm": 194.0,
+        "ndvi": 0.691,
+        "dist_disaster_km": 13.69,
+        "hazard_probability": 0.406,
+        "zone": "yellow",
+        "vulnerability_index": 35.6,
+        "nearest_disaster": "Uttarkashi Town Floods",
+        "score_breakdown": {
+          "hazard_intensity": 40.6,
+          "population_exposure": 55.7,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2055,
+          31.145
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Osla-124 Khala",
+        "tehsil": "Mori",
+        "population": 1129,
+        "households": 217,
+        "is_town": false,
+        "elevation": 3155.0,
+        "slope": 19.76,
+        "aspect": 105.8,
+        "curvature": 7.8112,
+        "twi": 11.33,
+        "dist_river_km": 11.2,
+        "rainfall_mm": 180.9,
+        "ndvi": 0.569,
+        "dist_disaster_km": 7.26,
+        "hazard_probability": 0.4557,
+        "zone": "yellow",
+        "vulnerability_index": 48.5,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 45.6,
+          "population_exposure": 76.3,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3705,
+          30.5608
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Jaspur Gaon",
+        "tehsil": "Naugaon",
+        "population": 727,
+        "households": 139,
+        "is_town": false,
+        "elevation": 2506.2,
+        "slope": 8.22,
+        "aspect": 293.2,
+        "curvature": -350.1045,
+        "twi": 11.05,
+        "dist_river_km": 4.44,
+        "rainfall_mm": 195.3,
+        "ndvi": 0.701,
+        "dist_disaster_km": 15.73,
+        "hazard_probability": 0.4399,
+        "zone": "yellow",
+        "vulnerability_index": 40.8,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 44.0,
+          "population_exposure": 71.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6612,
+          30.8781
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Badal-126 Khala",
+        "tehsil": "Bhatwari",
+        "population": 208,
+        "households": 40,
+        "is_town": false,
+        "elevation": 3155.0,
+        "slope": 9.54,
+        "aspect": 322.7,
+        "curvature": 263.8368,
+        "twi": 12.13,
+        "dist_river_km": 3.3,
+        "rainfall_mm": 198.4,
+        "ndvi": 0.643,
+        "dist_disaster_km": 3.65,
+        "hazard_probability": 0.6839,
+        "zone": "orange",
+        "vulnerability_index": 53.9,
+        "nearest_disaster": "Barsu Slope Collapse",
+        "score_breakdown": {
+          "hazard_intensity": 68.4,
+          "population_exposure": 58.0,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6888,
+          30.6638
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Jaspur Patti",
+        "tehsil": "Bhatwari",
+        "population": 327,
+        "households": 62,
+        "is_town": false,
+        "elevation": 2648.9,
+        "slope": 20.78,
+        "aspect": 355.6,
+        "curvature": 271.3857,
+        "twi": 11.46,
+        "dist_river_km": 18.31,
+        "rainfall_mm": 206.8,
+        "ndvi": 0.608,
+        "dist_disaster_km": 18.05,
+        "hazard_probability": 0.4327,
+        "zone": "yellow",
+        "vulnerability_index": 41.4,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 43.3,
+          "population_exposure": 62.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5545,
+          30.6736
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Chopta Gaon",
+        "tehsil": "Naugaon",
+        "population": 127,
+        "households": 24,
+        "is_town": false,
+        "elevation": 2831.8,
+        "slope": 6.82,
+        "aspect": 136.6,
+        "curvature": 29.2806,
+        "twi": 11.94,
+        "dist_river_km": 10.79,
+        "rainfall_mm": 189.9,
+        "ndvi": 0.707,
+        "dist_disaster_km": 8.15,
+        "hazard_probability": 0.4594,
+        "zone": "yellow",
+        "vulnerability_index": 39.7,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 45.9,
+          "population_exposure": 52.6,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0222,
+          31.1359
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Sasta-129 Gaon",
+        "tehsil": "Mori",
+        "population": 144,
+        "households": 27,
+        "is_town": false,
+        "elevation": 2996.0,
+        "slope": 15.13,
+        "aspect": 12.4,
+        "curvature": 379.3091,
+        "twi": 12.1,
+        "dist_river_km": 7.42,
+        "rainfall_mm": 208.5,
+        "ndvi": 0.677,
+        "dist_disaster_km": 16.58,
+        "hazard_probability": 0.3723,
+        "zone": "yellow",
+        "vulnerability_index": 37.0,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 37.2,
+          "population_exposure": 54.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9528,
+          31.0266
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Jhajra-130 Patti",
+        "tehsil": "Mori",
+        "population": 534,
+        "households": 102,
+        "is_town": false,
+        "elevation": 2812.2,
+        "slope": 7.01,
+        "aspect": 137.3,
+        "curvature": -274.3919,
+        "twi": 12.63,
+        "dist_river_km": 16.18,
+        "rainfall_mm": 203.3,
+        "ndvi": 0.713,
+        "dist_disaster_km": 22.9,
+        "hazard_probability": 0.4132,
+        "zone": "yellow",
+        "vulnerability_index": 39.0,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 41.3,
+          "population_exposure": 68.2,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2463,
+          31.2336
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Dimri-131 Khala",
+        "tehsil": "Mori",
+        "population": 646,
+        "households": 124,
+        "is_town": false,
+        "elevation": 3679.6,
+        "slope": 11.31,
+        "aspect": 179.3,
+        "curvature": -168.9423,
+        "twi": 10.98,
+        "dist_river_km": 20.32,
+        "rainfall_mm": 175.1,
+        "ndvi": 0.249,
+        "dist_disaster_km": 17.81,
+        "hazard_probability": 0.5046,
+        "zone": "orange",
+        "vulnerability_index": 42.8,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 50.5,
+          "population_exposure": 70.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3654,
+          30.5098
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Kandara-132",
+        "tehsil": "Dunda",
+        "population": 172,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1644.9,
+        "slope": 9.45,
+        "aspect": 60.1,
+        "curvature": 130.922,
+        "twi": 12.58,
+        "dist_river_km": 7.65,
+        "rainfall_mm": 152.8,
+        "ndvi": 0.707,
+        "dist_disaster_km": 20.92,
+        "hazard_probability": 0.2562,
+        "zone": "green",
+        "vulnerability_index": 30.4,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 25.6,
+          "population_exposure": 55.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5598,
+          30.6388
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Bangan Khala",
+        "tehsil": "Naugaon",
+        "population": 196,
+        "households": 37,
+        "is_town": false,
+        "elevation": 2086.7,
+        "slope": 17.96,
+        "aspect": 309.1,
+        "curvature": 265.5735,
+        "twi": 11.85,
+        "dist_river_km": 14.05,
+        "rainfall_mm": 163.1,
+        "ndvi": 0.629,
+        "dist_disaster_km": 10.25,
+        "hazard_probability": 0.3987,
+        "zone": "yellow",
+        "vulnerability_index": 38.8,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 57.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2421,
+          30.9335
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Tiloth Khala",
+        "tehsil": "Purola",
+        "population": 653,
+        "households": 125,
+        "is_town": false,
+        "elevation": 3061.5,
+        "slope": 19.44,
+        "aspect": 121.6,
+        "curvature": -232.8051,
+        "twi": 11.47,
+        "dist_river_km": 5.46,
+        "rainfall_mm": 199.1,
+        "ndvi": 0.669,
+        "dist_disaster_km": 16.38,
+        "hazard_probability": 0.3988,
+        "zone": "yellow",
+        "vulnerability_index": 42.1,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.9,
+          "population_exposure": 70.4,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.591,
+          30.6057
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Udiyari Patti",
+        "tehsil": "Rajgarhi",
+        "population": 958,
+        "households": 184,
+        "is_town": false,
+        "elevation": 2316.1,
+        "slope": 5.64,
+        "aspect": 227.7,
+        "curvature": 121.2625,
+        "twi": 12.32,
+        "dist_river_km": 18.22,
+        "rainfall_mm": 187.0,
+        "ndvi": 0.714,
+        "dist_disaster_km": 14.82,
+        "hazard_probability": 0.3145,
+        "zone": "yellow",
+        "vulnerability_index": 37.1,
+        "nearest_disaster": "Mando Debris Flow",
+        "score_breakdown": {
+          "hazard_intensity": 31.4,
+          "population_exposure": 74.5,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.991,
+          30.9043
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Badal-136",
+        "tehsil": "Purola",
+        "population": 250,
+        "households": 48,
+        "is_town": false,
+        "elevation": 2378.5,
+        "slope": 8.85,
+        "aspect": 215.5,
+        "curvature": 69.7968,
+        "twi": 12.43,
+        "dist_river_km": 10.37,
+        "rainfall_mm": 197.0,
+        "ndvi": 0.681,
+        "dist_disaster_km": 11.98,
+        "hazard_probability": 0.3375,
+        "zone": "yellow",
+        "vulnerability_index": 34.3,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 33.8,
+          "population_exposure": 59.9,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 166,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3894,
+          30.6595
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Jaspur-137 Patti",
+        "tehsil": "Naugaon",
+        "population": 603,
+        "households": 115,
+        "is_town": false,
+        "elevation": 2332.4,
+        "slope": 22.77,
+        "aspect": 352.3,
+        "curvature": -301.5543,
+        "twi": 10.82,
+        "dist_river_km": 3.69,
+        "rainfall_mm": 202.5,
+        "ndvi": 0.616,
+        "dist_disaster_km": 7.08,
+        "hazard_probability": 0.5165,
+        "zone": "orange",
+        "vulnerability_index": 49.0,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 51.7,
+          "population_exposure": 69.5,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 167,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3629,
+          30.636
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Basari-138",
+        "tehsil": "Chinyalisaur",
+        "population": 401,
+        "households": 77,
+        "is_town": false,
+        "elevation": 2028.7,
+        "slope": 12.02,
+        "aspect": 50.0,
+        "curvature": 89.2913,
+        "twi": 10.76,
+        "dist_river_km": 4.31,
+        "rainfall_mm": 183.0,
+        "ndvi": 0.684,
+        "dist_disaster_km": 10.44,
+        "hazard_probability": 0.4164,
+        "zone": "yellow",
+        "vulnerability_index": 38.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.6,
+          "population_exposure": 65.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3474,
+          30.4771
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Kandara Patti",
+        "tehsil": "Chinyalisaur",
+        "population": 667,
+        "households": 128,
+        "is_town": false,
+        "elevation": 1623.5,
+        "slope": 17.78,
+        "aspect": 135.2,
+        "curvature": -38.0644,
+        "twi": 11.82,
+        "dist_river_km": 9.26,
+        "rainfall_mm": 158.1,
+        "ndvi": 0.616,
+        "dist_disaster_km": 24.93,
+        "hazard_probability": 0.3361,
+        "zone": "yellow",
+        "vulnerability_index": 39.9,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 33.6,
+          "population_exposure": 70.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4726,
+          30.7905
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Kwari Khala",
+        "tehsil": "Bhatwari",
+        "population": 165,
+        "households": 31,
+        "is_town": false,
+        "elevation": 2938.7,
+        "slope": 7.45,
+        "aspect": 173.9,
+        "curvature": -489.1347,
+        "twi": 12.12,
+        "dist_river_km": 6.8,
+        "rainfall_mm": 193.6,
+        "ndvi": 0.671,
+        "dist_disaster_km": 6.85,
+        "hazard_probability": 0.4608,
+        "zone": "yellow",
+        "vulnerability_index": 40.5,
+        "nearest_disaster": "Maneri Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 46.1,
+          "population_exposure": 55.4,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4871,
+          30.7293
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Basari-141 Patti",
+        "tehsil": "Bhatwari",
+        "population": 768,
+        "households": 147,
+        "is_town": false,
+        "elevation": 2710.8,
+        "slope": 10.88,
+        "aspect": 51.3,
+        "curvature": 141.5177,
+        "twi": 12.4,
+        "dist_river_km": 3.53,
+        "rainfall_mm": 201.8,
+        "ndvi": 0.697,
+        "dist_disaster_km": 2.25,
+        "hazard_probability": 0.5971,
+        "zone": "orange",
+        "vulnerability_index": 60.4,
+        "nearest_disaster": "Nirakot Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 59.7,
+          "population_exposure": 72.1,
+          "disaster_history_proximity": 80.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3201,
+          30.4825
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Bangan",
+        "tehsil": "Dunda",
+        "population": 1331,
+        "households": 255,
+        "is_town": false,
+        "elevation": 2021.6,
+        "slope": 14.47,
+        "aspect": 25.3,
+        "curvature": -385.2959,
+        "twi": 11.51,
+        "dist_river_km": 6.94,
+        "rainfall_mm": 180.8,
+        "ndvi": 0.63,
+        "dist_disaster_km": 25.64,
+        "hazard_probability": 0.3844,
+        "zone": "yellow",
+        "vulnerability_index": 40.5,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 38.4,
+          "population_exposure": 78.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.369,
+          30.6164
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Jhajra-143 Patti",
+        "tehsil": "Naugaon",
+        "population": 504,
+        "households": 96,
+        "is_town": false,
+        "elevation": 2030.8,
+        "slope": 3.68,
+        "aspect": 42.6,
+        "curvature": -296.5107,
+        "twi": 11.11,
+        "dist_river_km": 2.1,
+        "rainfall_mm": 185.3,
+        "ndvi": 0.658,
+        "dist_disaster_km": 11.16,
+        "hazard_probability": 0.4641,
+        "zone": "yellow",
+        "vulnerability_index": 40.6,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 46.4,
+          "population_exposure": 67.6,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 173,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5413,
+          30.9339
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Lata",
+        "tehsil": "Bhatwari",
+        "population": 160,
+        "households": 30,
+        "is_town": false,
+        "elevation": 3737.7,
+        "slope": 10.22,
+        "aspect": 72.7,
+        "curvature": -270.1077,
+        "twi": 11.74,
+        "dist_river_km": 11.36,
+        "rainfall_mm": 200.4,
+        "ndvi": 0.24,
+        "dist_disaster_km": 15.43,
+        "hazard_probability": 0.4474,
+        "zone": "yellow",
+        "vulnerability_index": 36.9,
+        "nearest_disaster": "Bhatwari Landslide",
+        "score_breakdown": {
+          "hazard_intensity": 44.7,
+          "population_exposure": 55.1,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 174,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1589,
+          30.9848
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Osla-145 Khala",
+        "tehsil": "Purola",
+        "population": 620,
+        "households": 119,
+        "is_town": false,
+        "elevation": 3160.9,
+        "slope": 13.4,
+        "aspect": 16.7,
+        "curvature": -355.3611,
+        "twi": 12.07,
+        "dist_river_km": 1.89,
+        "rainfall_mm": 182.9,
+        "ndvi": 0.559,
+        "dist_disaster_km": 11.07,
+        "hazard_probability": 0.4433,
+        "zone": "yellow",
+        "vulnerability_index": 40.5,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 44.3,
+          "population_exposure": 69.8,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 175,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2001,
+          31.1465
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Udiyari Khala",
+        "tehsil": "Mori",
+        "population": 923,
+        "households": 177,
+        "is_town": false,
+        "elevation": 3329.1,
+        "slope": 18.37,
+        "aspect": 90.2,
+        "curvature": -405.958,
+        "twi": 11.83,
+        "dist_river_km": 10.82,
+        "rainfall_mm": 175.9,
+        "ndvi": 0.526,
+        "dist_disaster_km": 7.3,
+        "hazard_probability": 0.48,
+        "zone": "yellow",
+        "vulnerability_index": 48.8,
+        "nearest_disaster": "Sankri Cloudburst",
+        "score_breakdown": {
+          "hazard_intensity": 48.0,
+          "population_exposure": 74.1,
+          "disaster_history_proximity": 25.0,
+          "slope_instability": 45.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 176,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.083,
+          30.8112
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Bandal-147 Patti",
+        "tehsil": "Purola",
+        "population": 3000,
+        "households": 576,
+        "is_town": false,
+        "elevation": 2462.4,
+        "slope": 12.71,
+        "aspect": 85.8,
+        "curvature": -8.2674,
+        "twi": 12.19,
+        "dist_river_km": 4.32,
+        "rainfall_mm": 192.8,
+        "ndvi": 0.715,
+        "dist_disaster_km": 4.6,
+        "hazard_probability": 0.59,
+        "zone": "orange",
+        "vulnerability_index": 57.9,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 59.0,
+          "population_exposure": 86.9,
+          "disaster_history_proximity": 50.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 177,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3328,
+          30.4682
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Deosar-148 Khala",
+        "tehsil": "Dunda",
+        "population": 196,
+        "households": 37,
+        "is_town": false,
+        "elevation": 1844.4,
+        "slope": 8.63,
+        "aspect": 324.8,
+        "curvature": -336.3375,
+        "twi": 11.83,
+        "dist_river_km": 8.62,
+        "rainfall_mm": 167.1,
+        "ndvi": 0.67,
+        "dist_disaster_km": 26.43,
+        "hazard_probability": 0.4148,
+        "zone": "yellow",
+        "vulnerability_index": 36.3,
+        "nearest_disaster": "Siror Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 41.5,
+          "population_exposure": 57.3,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 15.0,
+          "egress_isolation": 40.0
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 178,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9564,
+          30.8791
+        ]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Khaga Gaon",
+        "tehsil": "Purola",
+        "population": 478,
+        "households": 91,
+        "is_town": false,
+        "elevation": 2378.7,
+        "slope": 27.77,
+        "aspect": 301.9,
+        "curvature": -264.0386,
+        "twi": 10.48,
+        "dist_river_km": 12.18,
+        "rainfall_mm": 197.5,
+        "ndvi": 0.627,
+        "dist_disaster_km": 14.02,
+        "hazard_probability": 0.3962,
+        "zone": "yellow",
+        "vulnerability_index": 44.1,
+        "nearest_disaster": "Purola Flash Flood",
+        "score_breakdown": {
+          "hazard_intensity": 39.6,
+          "population_exposure": 67.0,
+          "disaster_history_proximity": 10.0,
+          "slope_instability": 75.0,
+          "egress_isolation": 40.0
+        }
+      }
+    }
+  ]
+}

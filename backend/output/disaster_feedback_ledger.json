@@ -1,0 +1,51 @@
+{
+  "model_version": "v2.5.5-adaptive",
+  "last_retrained_utc": "2026-09-16T17:44:45.306561+00:00",
+  "total_training_cycles": 5,
+  "total_ingested_incidents": 14,
+  "active_drift_status": "ADAPTED_ZERO_DRIFT",
+  "recent_incidents": [
+    {
+      "incident_id": "INC-2025-08-DHARALI",
+      "date": "2025-08-05",
+      "location_name": "Dharali Upper Catchment",
+      "lat": 31.023,
+      "lng": 78.784,
+      "observed_event": "Cloudburst & Debris Torrent",
+      "rainfall_intensity_mm_hr": 115.0,
+      "antecedent_24h_mm": 95.0,
+      "geotech_fs_recorded": 0.88,
+      "casualties_actual": 4,
+      "verified_by": "DEOC Uttarkashi Flash Incident Audit",
+      "incorporated_in_training": true
+    },
+    {
+      "incident_id": "INC-2024-07-KANKRARI",
+      "date": "2024-07-22",
+      "location_name": "Kankrari Ravine",
+      "lat": 30.718,
+      "lng": 78.462,
+      "observed_event": "Slope Toe Collapse",
+      "rainfall_intensity_mm_hr": 68.0,
+      "antecedent_24h_mm": 82.0,
+      "geotech_fs_recorded": 0.94,
+      "casualties_actual": 0,
+      "verified_by": "GSI Uttarakhand Field Unit",
+      "incorporated_in_training": true
+    },
+    {
+      "incident_id": "INC-2023-08-BHATWARI",
+      "date": "2023-08-14",
+      "location_name": "Bhatwari Ridge Road km 42",
+      "lat": 30.805,
+      "lng": 78.59,
+      "observed_event": "Debris Flow & Highway Blockage",
+      "rainfall_intensity_mm_hr": 84.0,
+      "antecedent_24h_mm": 110.0,
+      "geotech_fs_recorded": 0.82,
+      "casualties_actual": 0,
+      "verified_by": "BRO / DDMA Uttarkashi Log",
+      "incorporated_in_training": true
+    }
+  ]
+}

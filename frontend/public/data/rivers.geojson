@@ -1,0 +1,121 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.95,
+            31.05
+          ],
+          [
+            78.8,
+            31.04
+          ],
+          [
+            78.74,
+            31.03
+          ],
+          [
+            78.65,
+            30.85
+          ],
+          [
+            78.58,
+            30.8
+          ],
+          [
+            78.54,
+            30.77
+          ],
+          [
+            78.45,
+            30.73
+          ],
+          [
+            78.42,
+            30.68
+          ],
+          [
+            78.38,
+            30.6
+          ],
+          [
+            78.3,
+            30.55
+          ],
+          [
+            78.25,
+            30.5
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Bhagirathi",
+        "type": "river"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.0,
+            31.2
+          ],
+          [
+            78.1,
+            31.1
+          ],
+          [
+            78.15,
+            31.0
+          ],
+          [
+            78.1,
+            30.9
+          ],
+          [
+            78.08,
+            30.85
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Tons",
+        "type": "river"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.45,
+            31.0
+          ],
+          [
+            78.3,
+            30.95
+          ],
+          [
+            78.2,
+            30.9
+          ],
+          [
+            78.15,
+            30.85
+          ]
+        ]
+      },
+      "properties": {
+        "name": "Yamuna",
+        "type": "river"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4989 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.445,
+          30.727
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "name": "Uttarkashi Town",
+        "tehsil": "Bhatwari",
+        "population": 18000,
+        "households": 3461,
+        "is_town": true,
+        "elevation": 1126.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.22,
+        "dist_river_km": 0.58,
+        "rainfall_mm": 120.1,
+        "ndvi": 0.598,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.94,
+          30.995
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "name": "Gangotri",
+        "tehsil": "Bhatwari",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 3071.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.17,
+        "dist_river_km": 6.18,
+        "rainfall_mm": 190.4,
+        "ndvi": 0.684,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.738,
+          31.036
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "name": "Harsil",
+        "tehsil": "Bhatwari",
+        "population": 1200,
+        "households": 230,
+        "is_town": false,
+        "elevation": 2621.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.91,
+        "dist_river_km": 0.69,
+        "rainfall_mm": 193.8,
+        "ndvi": 0.678,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.784,
+          31.023
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Dharali",
+        "tehsil": "Bhatwari",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 3116.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.41,
+        "dist_river_km": 2.42,
+        "rainfall_mm": 176.9,
+        "ndvi": 0.676,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.585,
+          30.8
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Bhatwari",
+        "tehsil": "Bhatwari",
+        "population": 2500,
+        "households": 480,
+        "is_town": false,
+        "elevation": 2518.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.81,
+        "dist_river_km": 0.47,
+        "rainfall_mm": 196.6,
+        "ndvi": 0.73,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.777
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Maneri",
+        "tehsil": "Bhatwari",
+        "population": 3000,
+        "households": 576,
+        "is_town": false,
+        "elevation": 2193.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 13.23,
+        "dist_river_km": 0.83,
+        "rainfall_mm": 191.5,
+        "ndvi": 0.737,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.686,
+          30.853
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Barsu",
+        "tehsil": "Bhatwari",
+        "population": 450,
+        "households": 86,
+        "is_town": false,
+        "elevation": 2413.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 13.41,
+        "dist_river_km": 3.44,
+        "rainfall_mm": 211.9,
+        "ndvi": 0.686,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.63,
+          30.81
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Sukhi",
+        "tehsil": "Bhatwari",
+        "population": 380,
+        "households": 73,
+        "is_town": false,
+        "elevation": 1882.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.19,
+        "dist_river_km": 4.83,
+        "rainfall_mm": 178.2,
+        "ndvi": 0.709,
+        "dist_disaster_km": 4.42
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.51,
+          30.78
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Lanka",
+        "tehsil": "Bhatwari",
+        "population": 520,
+        "households": 100,
+        "is_town": false,
+        "elevation": 2088.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 11.39,
+        "dist_river_km": 3.06,
+        "rainfall_mm": 183.5,
+        "ndvi": 0.677,
+        "dist_disaster_km": 3.15
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.65,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Jhala",
+        "tehsil": "Bhatwari",
+        "population": 300,
+        "households": 57,
+        "is_town": false,
+        "elevation": 2324.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 13.37,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 209.2,
+        "ndvi": 0.692,
+        "dist_disaster_km": 3.44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.24,
+          30.52
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Chinyalisaur",
+        "tehsil": "Chinyalisaur",
+        "population": 5500,
+        "households": 1057,
+        "is_town": true,
+        "elevation": 840.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 13.27,
+        "dist_river_km": 2.41,
+        "rainfall_mm": 127.2,
+        "ndvi": 0.524,
+        "dist_disaster_km": 27.43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.27,
+          30.51
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Lakhwar",
+        "tehsil": "Chinyalisaur",
+        "population": 900,
+        "households": 173,
+        "is_town": false,
+        "elevation": 922.1,
+        "slope": 2.49,
+        "aspect": 193.3,
+        "curvature": 24.3487,
+        "twi": 13.16,
+        "dist_river_km": 2.2,
+        "rainfall_mm": 140.2,
+        "ndvi": 0.571,
+        "dist_disaster_km": 26.11
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2,
+          30.49
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Jakhol",
+        "tehsil": "Chinyalisaur",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 968.4,
+        "slope": 1.55,
+        "aspect": 350.4,
+        "curvature": -40.5811,
+        "twi": 13.91,
+        "dist_river_km": 4.88,
+        "rainfall_mm": 120.8,
+        "ndvi": 0.589,
+        "dist_disaster_km": 32.48
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.38,
+          30.6
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Dunda",
+        "tehsil": "Dunda",
+        "population": 2800,
+        "households": 538,
+        "is_town": false,
+        "elevation": 1020.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 13.92,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 137.0,
+        "ndvi": 0.616,
+        "dist_disaster_km": 11.69
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.355,
+          30.614
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Barkot",
+        "tehsil": "Dunda",
+        "population": 4200,
+        "households": 807,
+        "is_town": true,
+        "elevation": 1220.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.11,
+        "dist_river_km": 2.84,
+        "rainfall_mm": 140.2,
+        "ndvi": 0.685,
+        "dist_disaster_km": 12.38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.42,
+          30.58
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Tikochi",
+        "tehsil": "Dunda",
+        "population": 700,
+        "households": 134,
+        "is_town": false,
+        "elevation": 1217.5,
+        "slope": 2.58,
+        "aspect": 286.8,
+        "curvature": 16.2324,
+        "twi": 13.5,
+        "dist_river_km": 4.4,
+        "rainfall_mm": 139.5,
+        "ndvi": 0.624,
+        "dist_disaster_km": 11.73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          31.1
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Mori",
+        "tehsil": "Mori",
+        "population": 1500,
+        "households": 288,
+        "is_town": false,
+        "elevation": 1150.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.98,
+        "dist_river_km": 0.0,
+        "rainfall_mm": 135.2,
+        "ndvi": 0.583,
+        "dist_disaster_km": 8.32
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.15,
+          31.05
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Netwar",
+        "tehsil": "Mori",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 2210.8,
+        "slope": 4.22,
+        "aspect": 125.3,
+        "curvature": -24.3487,
+        "twi": 13.42,
+        "dist_river_km": 5.55,
+        "rainfall_mm": 205.1,
+        "ndvi": 0.725,
+        "dist_disaster_km": 4.87
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.185,
+          31.082
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Sankri",
+        "tehsil": "Mori",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 1950.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.57,
+        "dist_river_km": 8.32,
+        "rainfall_mm": 183.1,
+        "ndvi": 0.661,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.06,
+          31.05
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "Taluka",
+        "tehsil": "Mori",
+        "population": 400,
+        "households": 76,
+        "is_town": false,
+        "elevation": 1546.6,
+        "slope": 1.61,
+        "aspect": 297.0,
+        "curvature": 48.6973,
+        "twi": 14.05,
+        "dist_river_km": 6.73,
+        "rainfall_mm": 137.4,
+        "ndvi": 0.691,
+        "dist_disaster_km": 12.39
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1,
+          30.85
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "Purola",
+        "tehsil": "Purola",
+        "population": 5000,
+        "households": 961,
+        "is_town": true,
+        "elevation": 1524.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.32,
+        "dist_river_km": 1.9,
+        "rainfall_mm": 153.2,
+        "ndvi": 0.682,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5,
+          30.7
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Naugaon",
+        "tehsil": "Naugaon",
+        "population": 3500,
+        "households": 673,
+        "is_town": false,
+        "elevation": 1594.1,
+        "slope": 4.44,
+        "aspect": 296.2,
+        "curvature": 24.3487,
+        "twi": 11.48,
+        "dist_river_km": 5.8,
+        "rainfall_mm": 161.9,
+        "ndvi": 0.653,
+        "dist_disaster_km": 2.2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.46,
+          30.68
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "name": "Siror",
+        "tehsil": "Naugaon",
+        "population": 1800,
+        "households": 346,
+        "is_town": false,
+        "elevation": 1460.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.96,
+        "dist_river_km": 3.8,
+        "rainfall_mm": 150.8,
+        "ndvi": 0.701,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48,
+          30.71
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "name": "Nirakot",
+        "tehsil": "Naugaon",
+        "population": 600,
+        "households": 115,
+        "is_town": false,
+        "elevation": 1538.8,
+        "slope": 3.62,
+        "aspect": 331.2,
+        "curvature": 56.8136,
+        "twi": 13.24,
+        "dist_river_km": 3.61,
+        "rainfall_mm": 155.0,
+        "ndvi": 0.68,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.47,
+          30.69
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "name": "Mando",
+        "tehsil": "Naugaon",
+        "population": 400,
+        "households": 76,
+        "is_town": false,
+        "elevation": 1460.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 14.91,
+        "dist_river_km": 4.83,
+        "rainfall_mm": 149.3,
+        "ndvi": 0.671,
+        "dist_disaster_km": 0.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.49,
+          30.7
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "name": "Kankrari",
+        "tehsil": "Naugaon",
+        "population": 350,
+        "households": 67,
+        "is_town": false,
+        "elevation": 1533.2,
+        "slope": 3.59,
+        "aspect": 305.2,
+        "curvature": 32.4649,
+        "twi": 12.91,
+        "dist_river_km": 5.05,
+        "rainfall_mm": 156.7,
+        "ndvi": 0.685,
+        "dist_disaster_km": 1.46
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.55,
+          30.65
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "name": "Rajgarhi",
+        "tehsil": "Rajgarhi",
+        "population": 1200,
+        "households": 230,
+        "is_town": false,
+        "elevation": 1420.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.19,
+        "dist_river_km": 12.79,
+        "rainfall_mm": 132.0,
+        "ndvi": 0.645,
+        "dist_disaster_km": 8.8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.52,
+          30.67
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Kharadi",
+        "tehsil": "Rajgarhi",
+        "population": 800,
+        "households": 153,
+        "is_town": false,
+        "elevation": 1549.2,
+        "slope": 3.44,
+        "aspect": 9.1,
+        "curvature": 32.4649,
+        "twi": 13.21,
+        "dist_river_km": 9.41,
+        "rainfall_mm": 147.7,
+        "ndvi": 0.73,
+        "dist_disaster_km": 5.24
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1725,
+          30.7334
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "name": "Bandal Gaon",
+        "tehsil": "Purola",
+        "population": 827,
+        "households": 159,
+        "is_town": false,
+        "elevation": 1948.9,
+        "slope": 10.47,
+        "aspect": 324.7,
+        "curvature": -64.9298,
+        "twi": 11.91,
+        "dist_river_km": 13.12,
+        "rainfall_mm": 154.2,
+        "ndvi": 0.713,
+        "dist_disaster_km": 14.66
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3589,
+          30.6766
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "name": "Dodra Gaon",
+        "tehsil": "Naugaon",
+        "population": 403,
+        "households": 77,
+        "is_town": false,
+        "elevation": 1459.1,
+        "slope": 1.15,
+        "aspect": 351.0,
+        "curvature": 56.8136,
+        "twi": 13.88,
+        "dist_river_km": 5.82,
+        "rainfall_mm": 150.7,
+        "ndvi": 0.731,
+        "dist_disaster_km": 9.61
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3104,
+          30.6148
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "name": "Nagrasu Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 363,
+        "households": 69,
+        "is_town": false,
+        "elevation": 1341.4,
+        "slope": 2.67,
+        "aspect": 4.4,
+        "curvature": 8.1162,
+        "twi": 13.01,
+        "dist_river_km": 6.81,
+        "rainfall_mm": 129.2,
+        "ndvi": 0.701,
+        "dist_disaster_km": 15.95
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6417,
+          30.5019
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "name": "Bhukki Patti",
+        "tehsil": "Rajgarhi",
+        "population": 271,
+        "households": 52,
+        "is_town": false,
+        "elevation": 1821.8,
+        "slope": 1.04,
+        "aspect": 154.1,
+        "curvature": 178.5569,
+        "twi": 13.91,
+        "dist_river_km": 27.14,
+        "rainfall_mm": 155.0,
+        "ndvi": 0.721,
+        "dist_disaster_km": 26.24
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4278,
+          30.601
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "name": "Badal Patti",
+        "tehsil": "Rajgarhi",
+        "population": 1332,
+        "households": 256,
+        "is_town": false,
+        "elevation": 1254.5,
+        "slope": 1.5,
+        "aspect": 211.7,
+        "curvature": -32.4649,
+        "twi": 13.31,
+        "dist_river_km": 4.54,
+        "rainfall_mm": 152.1,
+        "ndvi": 0.632,
+        "dist_disaster_km": 9.29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5378,
+          30.513
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "name": "Deosar Khala",
+        "tehsil": "Rajgarhi",
+        "population": 176,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1721.6,
+        "slope": 10.37,
+        "aspect": 158.2,
+        "curvature": -8.1162,
+        "twi": 11.16,
+        "dist_river_km": 17.83,
+        "rainfall_mm": 181.2,
+        "ndvi": 0.722,
+        "dist_disaster_km": 19.96
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2085,
+          30.8856
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "name": "Rautgaon Gaon",
+        "tehsil": "Purola",
+        "population": 536,
+        "households": 103,
+        "is_town": false,
+        "elevation": 2170.0,
+        "slope": 2.22,
+        "aspect": 295.9,
+        "curvature": -154.2083,
+        "twi": 13.7,
+        "dist_river_km": 1.79,
+        "rainfall_mm": 185.8,
+        "ndvi": 0.692,
+        "dist_disaster_km": 11.04
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3956,
+          30.6319
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "name": "Kwari",
+        "tehsil": "Chinyalisaur",
+        "population": 296,
+        "households": 56,
+        "is_town": false,
+        "elevation": 1166.5,
+        "slope": 0.51,
+        "aspect": 86.6,
+        "curvature": 0.0,
+        "twi": 13.05,
+        "dist_river_km": 3.84,
+        "rainfall_mm": 153.9,
+        "ndvi": 0.592,
+        "dist_disaster_km": 8.12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5111,
+          30.6094
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Dodra Patti",
+        "tehsil": "Rajgarhi",
+        "population": 959,
+        "households": 184,
+        "is_town": false,
+        "elevation": 1585.5,
+        "slope": 1.94,
+        "aspect": 166.0,
+        "curvature": 48.6973,
+        "twi": 13.37,
+        "dist_river_km": 11.68,
+        "rainfall_mm": 144.0,
+        "ndvi": 0.72,
+        "dist_disaster_km": 9.22
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5013,
+          30.8327
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "name": "Bandal-9 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 372,
+        "households": 71,
+        "is_town": false,
+        "elevation": 2270.6,
+        "slope": 0.91,
+        "aspect": 71.0,
+        "curvature": 8.1162,
+        "twi": 13.98,
+        "dist_river_km": 7.87,
+        "rainfall_mm": 177.8,
+        "ndvi": 0.661,
+        "dist_disaster_km": 7.34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0159,
+          30.9064
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "name": "Padri",
+        "tehsil": "Purola",
+        "population": 283,
+        "households": 54,
+        "is_town": false,
+        "elevation": 1850.0,
+        "slope": 3.51,
+        "aspect": 5.9,
+        "curvature": 89.2785,
+        "twi": 10.83,
+        "dist_river_km": 8.02,
+        "rainfall_mm": 175.9,
+        "ndvi": 0.738,
+        "dist_disaster_km": 10.15
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2702,
+          30.6739
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "name": "Padri Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 569,
+        "households": 109,
+        "is_town": false,
+        "elevation": 1643.8,
+        "slope": 5.05,
+        "aspect": 56.4,
+        "curvature": -56.8136,
+        "twi": 12.67,
+        "dist_river_km": 13.27,
+        "rainfall_mm": 154.1,
+        "ndvi": 0.706,
+        "dist_disaster_km": 17.62
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0295,
+          30.8377
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "name": "Bandal",
+        "tehsil": "Purola",
+        "population": 494,
+        "households": 95,
+        "is_town": false,
+        "elevation": 1674.7,
+        "slope": 2.6,
+        "aspect": 15.2,
+        "curvature": 81.1622,
+        "twi": 13.03,
+        "dist_river_km": 4.99,
+        "rainfall_mm": 140.8,
+        "ndvi": 0.732,
+        "dist_disaster_km": 6.84
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0698,
+          31.2193
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "name": "Kwari Gaon",
+        "tehsil": "Mori",
+        "population": 405,
+        "households": 77,
+        "is_town": false,
+        "elevation": 2540.2,
+        "slope": 10.21,
+        "aspect": 0.4,
+        "curvature": -89.2785,
+        "twi": 12.47,
+        "dist_river_km": 6.97,
+        "rainfall_mm": 194.3,
+        "ndvi": 0.67,
+        "dist_disaster_km": 18.76
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4959,
+          30.9083
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "name": "Naitwar Khala",
+        "tehsil": "Bhatwari",
+        "population": 495,
+        "households": 95,
+        "is_town": false,
+        "elevation": 2544.9,
+        "slope": 1.37,
+        "aspect": 280.1,
+        "curvature": 170.4407,
+        "twi": 14.46,
+        "dist_river_km": 11.07,
+        "rainfall_mm": 203.5,
+        "ndvi": 0.652,
+        "dist_disaster_km": 14.7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5087,
+          30.8488
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "name": "Purana",
+        "tehsil": "Naugaon",
+        "population": 528,
+        "households": 101,
+        "is_town": false,
+        "elevation": 2308.9,
+        "slope": 3.91,
+        "aspect": 340.3,
+        "curvature": 81.1622,
+        "twi": 12.26,
+        "dist_river_km": 8.67,
+        "rainfall_mm": 177.1,
+        "ndvi": 0.673,
+        "dist_disaster_km": 8.61
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5806,
+          30.7753
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "name": "Khaga",
+        "tehsil": "Naugaon",
+        "population": 285,
+        "households": 54,
+        "is_town": false,
+        "elevation": 2545.0,
+        "slope": 1.35,
+        "aspect": 175.6,
+        "curvature": 48.6973,
+        "twi": 12.32,
+        "dist_river_km": 2.74,
+        "rainfall_mm": 203.1,
+        "ndvi": 0.698,
+        "dist_disaster_km": 2.77
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7128,
+          30.9361
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "name": "Tuneta",
+        "tehsil": "Bhatwari",
+        "population": 830,
+        "households": 159,
+        "is_town": false,
+        "elevation": 2871.2,
+        "slope": 3.98,
+        "aspect": 64.2,
+        "curvature": -89.2785,
+        "twi": 11.63,
+        "dist_river_km": 10.74,
+        "rainfall_mm": 187.1,
+        "ndvi": 0.689,
+        "dist_disaster_km": 9.57
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5395,
+          30.9112
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "name": "Makudi",
+        "tehsil": "Bhatwari",
+        "population": 206,
+        "households": 39,
+        "is_town": false,
+        "elevation": 2861.0,
+        "slope": 5.73,
+        "aspect": 64.0,
+        "curvature": -81.1622,
+        "twi": 12.95,
+        "dist_river_km": 12.5,
+        "rainfall_mm": 205.3,
+        "ndvi": 0.672,
+        "dist_disaster_km": 13.08
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3336,
+          30.5618
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "name": "Neghar",
+        "tehsil": "Chinyalisaur",
+        "population": 521,
+        "households": 100,
+        "is_town": false,
+        "elevation": 1254.3,
+        "slope": 45.83,
+        "aspect": 49.8,
+        "curvature": 24446.0677,
+        "twi": 10.21,
+        "dist_river_km": 3.45,
+        "rainfall_mm": 144.2,
+        "ndvi": 0.612,
+        "dist_disaster_km": 17.79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7136,
+          30.9287
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "name": "Dimri Gaon",
+        "tehsil": "Bhatwari",
+        "population": 391,
+        "households": 75,
+        "is_town": false,
+        "elevation": 2828.4,
+        "slope": 4.07,
+        "aspect": 14.8,
+        "curvature": -73.046,
+        "twi": 12.19,
+        "dist_river_km": 10.62,
+        "rainfall_mm": 188.7,
+        "ndvi": 0.664,
+        "dist_disaster_km": 8.8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4377,
+          30.6598
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "name": "Kandara",
+        "tehsil": "Rajgarhi",
+        "population": 151,
+        "households": 29,
+        "is_town": false,
+        "elevation": 1609.1,
+        "slope": 3.22,
+        "aspect": 154.5,
+        "curvature": 40.5811,
+        "twi": 12.86,
+        "dist_river_km": 2.8,
+        "rainfall_mm": 167.9,
+        "ndvi": 0.699,
+        "dist_disaster_km": 3.08
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4135,
+          30.6769
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "name": "Osla Gaon",
+        "tehsil": "Naugaon",
+        "population": 650,
+        "households": 125,
+        "is_town": false,
+        "elevation": 1662.6,
+        "slope": 4.02,
+        "aspect": 99.9,
+        "curvature": -8.1162,
+        "twi": 13.21,
+        "dist_river_km": 0.71,
+        "rainfall_mm": 163.4,
+        "ndvi": 0.703,
+        "dist_disaster_km": 4.43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0814,
+          30.895
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "name": "Neghar Khala",
+        "tehsil": "Purola",
+        "population": 204,
+        "households": 39,
+        "is_town": false,
+        "elevation": 1726.9,
+        "slope": 2.93,
+        "aspect": 84.7,
+        "curvature": 32.4649,
+        "twi": 13.4,
+        "dist_river_km": 1.85,
+        "rainfall_mm": 163.6,
+        "ndvi": 0.699,
+        "dist_disaster_km": 5.3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4162,
+          30.4563
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "name": "Sasta Gaon",
+        "tehsil": "Dunda",
+        "population": 153,
+        "households": 29,
+        "is_town": false,
+        "elevation": 1458.3,
+        "slope": 3.86,
+        "aspect": 81.1,
+        "curvature": 105.5109,
+        "twi": 13.02,
+        "dist_river_km": 15.17,
+        "rainfall_mm": 159.8,
+        "ndvi": 0.707,
+        "dist_disaster_km": 25.18
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5507,
+          30.6214
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Dodra",
+        "tehsil": "Naugaon",
+        "population": 481,
+        "households": 92,
+        "is_town": false,
+        "elevation": 1527.3,
+        "slope": 3.95,
+        "aspect": 169.8,
+        "curvature": 24.3487,
+        "twi": 13.13,
+        "dist_river_km": 14.02,
+        "rainfall_mm": 134.8,
+        "ndvi": 0.644,
+        "dist_disaster_km": 10.8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5221,
+          30.6419
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Badal",
+        "tehsil": "Rajgarhi",
+        "population": 560,
+        "households": 107,
+        "is_town": false,
+        "elevation": 1506.7,
+        "slope": 3.53,
+        "aspect": 118.7,
+        "curvature": 32.4649,
+        "twi": 12.31,
+        "dist_river_km": 10.58,
+        "rainfall_mm": 135.3,
+        "ndvi": 0.718,
+        "dist_disaster_km": 7.26
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1687,
+          31.0901
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "name": "Badal-27",
+        "tehsil": "Mori",
+        "population": 326,
+        "households": 62,
+        "is_town": false,
+        "elevation": 1950.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.34,
+        "dist_river_km": 6.62,
+        "rainfall_mm": 180.4,
+        "ndvi": 0.685,
+        "dist_disaster_km": 1.79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4575,
+          30.5328
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "name": "Osla Khala",
+        "tehsil": "Rajgarhi",
+        "population": 218,
+        "households": 41,
+        "is_town": false,
+        "elevation": 1486.6,
+        "slope": 4.67,
+        "aspect": 193.2,
+        "curvature": 48.6973,
+        "twi": 11.63,
+        "dist_river_km": 10.48,
+        "rainfall_mm": 142.2,
+        "ndvi": 0.662,
+        "dist_disaster_km": 16.34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.227,
+          31.0249
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "name": "Dabrani",
+        "tehsil": "Mori",
+        "population": 81,
+        "households": 15,
+        "is_town": false,
+        "elevation": 2268.5,
+        "slope": 5.11,
+        "aspect": 282.2,
+        "curvature": 24.3487,
+        "twi": 12.82,
+        "dist_river_km": 7.82,
+        "rainfall_mm": 188.4,
+        "ndvi": 0.646,
+        "dist_disaster_km": 7.49
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6407,
+          30.8008
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "name": "Bandal-30 Gaon",
+        "tehsil": "Naugaon",
+        "population": 312,
+        "households": 60,
+        "is_town": false,
+        "elevation": 1882.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.13,
+        "dist_river_km": 5.53,
+        "rainfall_mm": 176.6,
+        "ndvi": 0.747,
+        "dist_disaster_km": 5.29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4176,
+          30.6203
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "name": "Durgapur",
+        "tehsil": "Rajgarhi",
+        "population": 817,
+        "households": 157,
+        "is_town": false,
+        "elevation": 1193.5,
+        "slope": 1.4,
+        "aspect": 222.6,
+        "curvature": 8.1162,
+        "twi": 12.16,
+        "dist_river_km": 4.22,
+        "rainfall_mm": 156.3,
+        "ndvi": 0.642,
+        "dist_disaster_km": 7.75
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1692,
+          31.159
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "name": "Purana Khala",
+        "tehsil": "Mori",
+        "population": 203,
+        "households": 39,
+        "is_town": false,
+        "elevation": 2405.5,
+        "slope": 5.56,
+        "aspect": 83.5,
+        "curvature": -8.1162,
+        "twi": 12.18,
+        "dist_river_km": 9.28,
+        "rainfall_mm": 175.9,
+        "ndvi": 0.683,
+        "dist_disaster_km": 8.68
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6127,
+          30.8238
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "name": "Padri-33",
+        "tehsil": "Bhatwari",
+        "population": 122,
+        "households": 23,
+        "is_town": false,
+        "elevation": 1950.0,
+        "slope": 2.43,
+        "aspect": 8.0,
+        "curvature": 16.2324,
+        "twi": 12.14,
+        "dist_river_km": 4.08,
+        "rainfall_mm": 178.0,
+        "ndvi": 0.676,
+        "dist_disaster_km": 3.73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4171,
+          30.6593
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "name": "Makudi-34",
+        "tehsil": "Rajgarhi",
+        "population": 50,
+        "households": 9,
+        "is_town": false,
+        "elevation": 1657.8,
+        "slope": 0.58,
+        "aspect": 24.2,
+        "curvature": -56.8136,
+        "twi": 14.29,
+        "dist_river_km": 2.31,
+        "rainfall_mm": 172.5,
+        "ndvi": 0.743,
+        "dist_disaster_km": 4.68
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5284,
+          30.6239
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "name": "Udiyari",
+        "tehsil": "Naugaon",
+        "population": 306,
+        "households": 58,
+        "is_town": false,
+        "elevation": 1553.7,
+        "slope": 2.6,
+        "aspect": 156.6,
+        "curvature": -24.3487,
+        "twi": 13.4,
+        "dist_river_km": 12.03,
+        "rainfall_mm": 135.8,
+        "ndvi": 0.733,
+        "dist_disaster_km": 9.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4282,
+          30.6449
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Padri-36 Gaon",
+        "tehsil": "Naugaon",
+        "population": 276,
+        "households": 53,
+        "is_town": false,
+        "elevation": 1670.3,
+        "slope": 2.39,
+        "aspect": 276.5,
+        "curvature": -48.6973,
+        "twi": 12.15,
+        "dist_river_km": 3.97,
+        "rainfall_mm": 177.2,
+        "ndvi": 0.72,
+        "dist_disaster_km": 4.93
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0449,
+          30.79
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "name": "Dhanari",
+        "tehsil": "Purola",
+        "population": 234,
+        "households": 45,
+        "is_town": false,
+        "elevation": 1781.9,
+        "slope": 2.91,
+        "aspect": 179.0,
+        "curvature": -73.046,
+        "twi": 10.83,
+        "dist_river_km": 7.45,
+        "rainfall_mm": 164.1,
+        "ndvi": 0.652,
+        "dist_disaster_km": 8.47
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5138,
+          30.7143
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "Basari Patti",
+        "tehsil": "Dunda",
+        "population": 821,
+        "households": 157,
+        "is_town": false,
+        "elevation": 1679.3,
+        "slope": 2.1,
+        "aspect": 261.8,
+        "curvature": 24.3487,
+        "twi": 13.32,
+        "dist_river_km": 6.31,
+        "rainfall_mm": 173.5,
+        "ndvi": 0.688,
+        "dist_disaster_km": 3.25
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4023,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "name": "Purana Patti",
+        "tehsil": "Rajgarhi",
+        "population": 809,
+        "households": 155,
+        "is_town": false,
+        "elevation": 1422.0,
+        "slope": 3.78,
+        "aspect": 125.7,
+        "curvature": 48.6973,
+        "twi": 13.04,
+        "dist_river_km": 2.46,
+        "rainfall_mm": 140.8,
+        "ndvi": 0.676,
+        "dist_disaster_km": 5.31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4966,
+          30.8727
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "Jaspur",
+        "tehsil": "Bhatwari",
+        "population": 218,
+        "households": 41,
+        "is_town": false,
+        "elevation": 2555.6,
+        "slope": 5.98,
+        "aspect": 5.9,
+        "curvature": -73.046,
+        "twi": 11.55,
+        "dist_river_km": 11.31,
+        "rainfall_mm": 193.9,
+        "ndvi": 0.688,
+        "dist_disaster_km": 11.5
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0292,
+          30.8903
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "name": "Lata Patti",
+        "tehsil": "Purola",
+        "population": 151,
+        "households": 29,
+        "is_town": false,
+        "elevation": 1802.1,
+        "slope": 0.3,
+        "aspect": 95.7,
+        "curvature": 73.046,
+        "twi": 14.36,
+        "dist_river_km": 6.58,
+        "rainfall_mm": 165.3,
+        "ndvi": 0.66,
+        "dist_disaster_km": 8.08
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3501,
+          30.4632
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "name": "Kirola Patti",
+        "tehsil": "Dunda",
+        "population": 174,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1079.9,
+        "slope": 6.76,
+        "aspect": 283.0,
+        "curvature": 162.3245,
+        "twi": 12.56,
+        "dist_river_km": 10.35,
+        "rainfall_mm": 131.7,
+        "ndvi": 0.625,
+        "dist_disaster_km": 26.23
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9529,
+          30.8283
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "name": "Dhanari Gaon",
+        "tehsil": "Purola",
+        "population": 583,
+        "households": 112,
+        "is_town": false,
+        "elevation": 1897.1,
+        "slope": 5.5,
+        "aspect": 162.0,
+        "curvature": 56.8136,
+        "twi": 12.52,
+        "dist_river_km": 12.31,
+        "rainfall_mm": 180.7,
+        "ndvi": 0.669,
+        "dist_disaster_km": 14.18
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4789,
+          30.7158
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Salan Patti",
+        "tehsil": "Naugaon",
+        "population": 216,
+        "households": 41,
+        "is_town": false,
+        "elevation": 1573.9,
+        "slope": 4.12,
+        "aspect": 338.2,
+        "curvature": 40.5811,
+        "twi": 11.94,
+        "dist_river_km": 3.17,
+        "rainfall_mm": 156.3,
+        "ndvi": 0.739,
+        "dist_disaster_km": 0.65
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.184,
+          30.7308
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "name": "Nagrasu",
+        "tehsil": "Purola",
+        "population": 259,
+        "households": 49,
+        "is_town": false,
+        "elevation": 2016.8,
+        "slope": 8.81,
+        "aspect": 334.4,
+        "curvature": -146.092,
+        "twi": 9.81,
+        "dist_river_km": 13.62,
+        "rainfall_mm": 159.7,
+        "ndvi": 0.651,
+        "dist_disaster_km": 15.45
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6644,
+          30.7432
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "name": "Bangan Gaon",
+        "tehsil": "Rajgarhi",
+        "population": 650,
+        "households": 125,
+        "is_town": false,
+        "elevation": 2190.2,
+        "slope": 3.38,
+        "aspect": 178.3,
+        "curvature": -40.5811,
+        "twi": 13.59,
+        "dist_river_km": 10.2,
+        "rainfall_mm": 165.7,
+        "ndvi": 0.719,
+        "dist_disaster_km": 9.83
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2092,
+          31.1907
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "Bandal Patti",
+        "tehsil": "Mori",
+        "population": 83,
+        "households": 15,
+        "is_town": false,
+        "elevation": 2710.8,
+        "slope": 4.59,
+        "aspect": 42.3,
+        "curvature": 56.8136,
+        "twi": 13.07,
+        "dist_river_km": 14.46,
+        "rainfall_mm": 193.2,
+        "ndvi": 0.669,
+        "dist_disaster_km": 12.28
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2076,
+          31.2117
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "name": "Kwari-48 Gaon",
+        "tehsil": "Mori",
+        "population": 894,
+        "households": 171,
+        "is_town": false,
+        "elevation": 2987.9,
+        "slope": 10.43,
+        "aspect": 350.4,
+        "curvature": 40.5811,
+        "twi": 10.41,
+        "dist_river_km": 16.07,
+        "rainfall_mm": 194.0,
+        "ndvi": 0.677,
+        "dist_disaster_km": 14.56
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5114,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "name": "Kwari-49",
+        "tehsil": "Dunda",
+        "population": 576,
+        "households": 110,
+        "is_town": false,
+        "elevation": 1666.1,
+        "slope": 4.46,
+        "aspect": 283.9,
+        "curvature": -24.3487,
+        "twi": 12.53,
+        "dist_river_km": 6.94,
+        "rainfall_mm": 165.9,
+        "ndvi": 0.653,
+        "dist_disaster_km": 3.35
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5401,
+          30.7093
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "name": "Bairagi Patti",
+        "tehsil": "Dunda",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 1777.5,
+        "slope": 4.51,
+        "aspect": 343.9,
+        "curvature": 16.2324,
+        "twi": 12.73,
+        "dist_river_km": 6.74,
+        "rainfall_mm": 179.6,
+        "ndvi": 0.663,
+        "dist_disaster_km": 5.71
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6818,
+          30.6609
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "name": "Deosar Patti",
+        "tehsil": "Rajgarhi",
+        "population": 278,
+        "households": 53,
+        "is_town": false,
+        "elevation": 1954.9,
+        "slope": 11.08,
+        "aspect": 324.9,
+        "curvature": 16.2324,
+        "twi": 11.87,
+        "dist_river_km": 18.11,
+        "rainfall_mm": 185.1,
+        "ndvi": 0.692,
+        "dist_disaster_km": 17.97
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1859,
+          31.0537
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Bhukki",
+        "tehsil": "Mori",
+        "population": 787,
+        "households": 151,
+        "is_town": false,
+        "elevation": 2044.0,
+        "slope": 0.64,
+        "aspect": 228.6,
+        "curvature": 32.4649,
+        "twi": 14.28,
+        "dist_river_km": 6.87,
+        "rainfall_mm": 194.7,
+        "ndvi": 0.688,
+        "dist_disaster_km": 3.14
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4505,
+          30.8626
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "name": "Osla-53 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 327,
+        "households": 62,
+        "is_town": false,
+        "elevation": 2578.9,
+        "slope": 3.48,
+        "aspect": 351.4,
+        "curvature": -154.2083,
+        "twi": 13.32,
+        "dist_river_km": 13.34,
+        "rainfall_mm": 208.4,
+        "ndvi": 0.686,
+        "dist_disaster_km": 12.94
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1369,
+          30.9762
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "name": "Deosar-54 Patti",
+        "tehsil": "Purola",
+        "population": 411,
+        "households": 79,
+        "is_town": false,
+        "elevation": 2212.3,
+        "slope": 3.48,
+        "aspect": 240.4,
+        "curvature": 170.4407,
+        "twi": 12.84,
+        "dist_river_km": 2.92,
+        "rainfall_mm": 176.9,
+        "ndvi": 0.65,
+        "dist_disaster_km": 12.6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3387,
+          30.5707
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Kirola Gaon",
+        "tehsil": "Dunda",
+        "population": 64,
+        "households": 12,
+        "is_town": false,
+        "elevation": 1312.0,
+        "slope": 3.95,
+        "aspect": 162.6,
+        "curvature": 73.046,
+        "twi": 12.34,
+        "dist_river_km": 4.34,
+        "rainfall_mm": 144.4,
+        "ndvi": 0.655,
+        "dist_disaster_km": 16.73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0022,
+          30.9244
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "name": "Rautgaon Patti",
+        "tehsil": "Purola",
+        "population": 184,
+        "households": 35,
+        "is_town": false,
+        "elevation": 2071.7,
+        "slope": 7.5,
+        "aspect": 4.9,
+        "curvature": 32.4649,
+        "twi": 11.94,
+        "dist_river_km": 9.68,
+        "rainfall_mm": 190.0,
+        "ndvi": 0.697,
+        "dist_disaster_km": 12.43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.379,
+          30.5361
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "name": "Sasta",
+        "tehsil": "Dunda",
+        "population": 594,
+        "households": 114,
+        "is_town": false,
+        "elevation": 1200.3,
+        "slope": 5.11,
+        "aspect": 131.2,
+        "curvature": 40.5811,
+        "twi": 12.0,
+        "dist_river_km": 7.09,
+        "rainfall_mm": 125.5,
+        "ndvi": 0.631,
+        "dist_disaster_km": 17.73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1034,
+          31.1527
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "name": "Naitwar",
+        "tehsil": "Mori",
+        "population": 165,
+        "households": 31,
+        "is_town": false,
+        "elevation": 1723.9,
+        "slope": 4.8,
+        "aspect": 357.2,
+        "curvature": -40.5811,
+        "twi": 13.26,
+        "dist_river_km": 5.86,
+        "rainfall_mm": 161.0,
+        "ndvi": 0.657,
+        "dist_disaster_km": 11.03
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5955,
+          30.6506
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "name": "Bandal-59 Patti",
+        "tehsil": "Naugaon",
+        "population": 249,
+        "households": 47,
+        "is_town": false,
+        "elevation": 1623.4,
+        "slope": 2.96,
+        "aspect": 246.5,
+        "curvature": 16.2324,
+        "twi": 13.73,
+        "dist_river_km": 14.26,
+        "rainfall_mm": 155.0,
+        "ndvi": 0.689,
+        "dist_disaster_km": 12.7
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7452,
+          30.6639
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "name": "Udiyari-60",
+        "tehsil": "Bhatwari",
+        "population": 233,
+        "households": 44,
+        "is_town": false,
+        "elevation": 2516.6,
+        "slope": 11.01,
+        "aspect": 283.7,
+        "curvature": -48.6973,
+        "twi": 12.09,
+        "dist_river_km": 21.78,
+        "rainfall_mm": 195.3,
+        "ndvi": 0.662,
+        "dist_disaster_km": 21.44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5589,
+          30.6083
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "name": "Lata Khala",
+        "tehsil": "Naugaon",
+        "population": 144,
+        "households": 27,
+        "is_town": false,
+        "elevation": 1624.7,
+        "slope": 4.57,
+        "aspect": 167.5,
+        "curvature": -32.4649,
+        "twi": 12.52,
+        "dist_river_km": 15.41,
+        "rainfall_mm": 144.0,
+        "ndvi": 0.65,
+        "dist_disaster_km": 12.31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7081,
+          30.9178
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "name": "Badal Khala",
+        "tehsil": "Bhatwari",
+        "population": 55,
+        "households": 10,
+        "is_town": false,
+        "elevation": 2708.3,
+        "slope": 5.77,
+        "aspect": 348.3,
+        "curvature": 40.5811,
+        "twi": 12.28,
+        "dist_river_km": 9.33,
+        "rainfall_mm": 190.2,
+        "ndvi": 0.677,
+        "dist_disaster_km": 7.49
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9651,
+          30.8554
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "name": "Bandal-63",
+        "tehsil": "Purola",
+        "population": 296,
+        "households": 56,
+        "is_town": false,
+        "elevation": 1911.2,
+        "slope": 1.87,
+        "aspect": 117.0,
+        "curvature": -97.3947,
+        "twi": 11.72,
+        "dist_river_km": 10.93,
+        "rainfall_mm": 175.8,
+        "ndvi": 0.733,
+        "dist_disaster_km": 12.83
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1177,
+          30.8593
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "name": "Padri Khala",
+        "tehsil": "Purola",
+        "population": 693,
+        "households": 133,
+        "is_town": false,
+        "elevation": 1524.0,
+        "slope": 22.61,
+        "aspect": 314.2,
+        "curvature": 9739.4692,
+        "twi": 11.4,
+        "dist_river_km": 3.24,
+        "rainfall_mm": 160.3,
+        "ndvi": 0.622,
+        "dist_disaster_km": 1.97
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6221,
+          30.678
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Dabrani Gaon",
+        "tehsil": "Naugaon",
+        "population": 755,
+        "households": 145,
+        "is_town": false,
+        "elevation": 1749.4,
+        "slope": 3.49,
+        "aspect": 183.8,
+        "curvature": 16.2324,
+        "twi": 13.37,
+        "dist_river_km": 12.85,
+        "rainfall_mm": 165.3,
+        "ndvi": 0.65,
+        "dist_disaster_km": 13.31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.502,
+          30.6755
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "name": "Bairagi",
+        "tehsil": "Dunda",
+        "population": 389,
+        "households": 74,
+        "is_town": false,
+        "elevation": 1571.0,
+        "slope": 2.04,
+        "aspect": 240.9,
+        "curvature": 56.8136,
+        "twi": 13.7,
+        "dist_river_km": 7.81,
+        "rainfall_mm": 152.8,
+        "ndvi": 0.699,
+        "dist_disaster_km": 3.44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0357,
+          30.9732
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "name": "Bairagi-67 Patti",
+        "tehsil": "Mori",
+        "population": 233,
+        "households": 44,
+        "is_town": false,
+        "elevation": 2417.6,
+        "slope": 6.01,
+        "aspect": 355.8,
+        "curvature": -178.5569,
+        "twi": 11.44,
+        "dist_river_km": 10.17,
+        "rainfall_mm": 209.2,
+        "ndvi": 0.714,
+        "dist_disaster_km": 14.98
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2149,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "name": "Semwal Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 145,
+        "households": 27,
+        "is_town": false,
+        "elevation": 966.8,
+        "slope": 2.89,
+        "aspect": 172.8,
+        "curvature": 89.2785,
+        "twi": 12.76,
+        "dist_river_km": 6.47,
+        "rainfall_mm": 129.8,
+        "ndvi": 0.639,
+        "dist_disaster_km": 34.55
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3687,
+          30.6898
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "name": "Nagrasu Khala",
+        "tehsil": "Naugaon",
+        "population": 1521,
+        "households": 292,
+        "is_town": false,
+        "elevation": 1558.7,
+        "slope": 3.03,
+        "aspect": 312.7,
+        "curvature": -48.6973,
+        "twi": 13.32,
+        "dist_river_km": 4.99,
+        "rainfall_mm": 153.1,
+        "ndvi": 0.658,
+        "dist_disaster_km": 8.34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2142,
+          30.7059
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "name": "Rautgaon Khala",
+        "tehsil": "Purola",
+        "population": 230,
+        "households": 44,
+        "is_town": false,
+        "elevation": 1830.8,
+        "slope": 9.41,
+        "aspect": 316.2,
+        "curvature": -81.1622,
+        "twi": 10.36,
+        "dist_river_km": 17.12,
+        "rainfall_mm": 164.3,
+        "ndvi": 0.655,
+        "dist_disaster_km": 19.33
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.506,
+          30.676
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "name": "Nagrasu-71",
+        "tehsil": "Dunda",
+        "population": 845,
+        "households": 162,
+        "is_town": false,
+        "elevation": 1585.1,
+        "slope": 2.53,
+        "aspect": 270.7,
+        "curvature": 40.5811,
+        "twi": 12.2,
+        "dist_river_km": 8.01,
+        "rainfall_mm": 153.4,
+        "ndvi": 0.66,
+        "dist_disaster_km": 3.76
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4965,
+          30.8193
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "name": "Bairagi Khala",
+        "tehsil": "Naugaon",
+        "population": 387,
+        "households": 74,
+        "is_town": false,
+        "elevation": 2229.5,
+        "slope": 3.23,
+        "aspect": 331.7,
+        "curvature": -24.3487,
+        "twi": 13.42,
+        "dist_river_km": 6.86,
+        "rainfall_mm": 179.4,
+        "ndvi": 0.65,
+        "dist_disaster_km": 6.45
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0713,
+          30.9037
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "name": "Naitwar-73 Khala",
+        "tehsil": "Purola",
+        "population": 661,
+        "households": 127,
+        "is_town": false,
+        "elevation": 1764.7,
+        "slope": 2.88,
+        "aspect": 121.0,
+        "curvature": 32.4649,
+        "twi": 13.76,
+        "dist_river_km": 2.76,
+        "rainfall_mm": 169.1,
+        "ndvi": 0.706,
+        "dist_disaster_km": 6.55
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3581,
+          30.7193
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "name": "Bhukki Gaon",
+        "tehsil": "Naugaon",
+        "population": 740,
+        "households": 142,
+        "is_town": false,
+        "elevation": 1536.3,
+        "slope": 4.15,
+        "aspect": 120.7,
+        "curvature": -16.2324,
+        "twi": 12.68,
+        "dist_river_km": 7.32,
+        "rainfall_mm": 150.7,
+        "ndvi": 0.697,
+        "dist_disaster_km": 8.3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3135,
+          30.5637
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "name": "Padri Patti",
+        "tehsil": "Dunda",
+        "population": 712,
+        "households": 136,
+        "is_town": false,
+        "elevation": 1405.0,
+        "slope": 1.06,
+        "aspect": 238.5,
+        "curvature": -48.6973,
+        "twi": 14.27,
+        "dist_river_km": 1.99,
+        "rainfall_mm": 154.3,
+        "ndvi": 0.699,
+        "dist_disaster_km": 18.98
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5265,
+          30.7854
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Gangar Khala",
+        "tehsil": "Rajgarhi",
+        "population": 1025,
+        "households": 197,
+        "is_town": false,
+        "elevation": 2088.0,
+        "slope": 28.93,
+        "aspect": 270.0,
+        "curvature": 8522.0355,
+        "twi": 11.29,
+        "dist_river_km": 2.14,
+        "rainfall_mm": 181.5,
+        "ndvi": 0.65,
+        "dist_disaster_km": 1.82
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9593,
+          30.7121
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "name": "Bandal-77 Gaon",
+        "tehsil": "Purola",
+        "population": 1367,
+        "households": 262,
+        "is_town": false,
+        "elevation": 1817.0,
+        "slope": 7.14,
+        "aspect": 178.4,
+        "curvature": 97.3947,
+        "twi": 12.88,
+        "dist_river_km": 19.13,
+        "rainfall_mm": 161.6,
+        "ndvi": 0.666,
+        "dist_disaster_km": 20.32
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3008,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "name": "Rautgaon-78 Gaon",
+        "tehsil": "Chinyalisaur",
+        "population": 375,
+        "households": 72,
+        "is_town": false,
+        "elevation": 1067.2,
+        "slope": 3.55,
+        "aspect": 303.0,
+        "curvature": 48.6973,
+        "twi": 13.57,
+        "dist_river_km": 7.35,
+        "rainfall_mm": 118.9,
+        "ndvi": 0.595,
+        "dist_disaster_km": 29.67
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4322,
+          30.5003
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "name": "Deosar Gaon",
+        "tehsil": "Dunda",
+        "population": 155,
+        "households": 29,
+        "is_town": false,
+        "elevation": 1350.2,
+        "slope": 3.39,
+        "aspect": 162.0,
+        "curvature": 121.7434,
+        "twi": 12.83,
+        "dist_river_km": 12.13,
+        "rainfall_mm": 131.8,
+        "ndvi": 0.667,
+        "dist_disaster_km": 20.12
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0626,
+          30.9724
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "name": "Ghuttu",
+        "tehsil": "Purola",
+        "population": 843,
+        "households": 162,
+        "is_town": false,
+        "elevation": 2226.8,
+        "slope": 6.12,
+        "aspect": 46.5,
+        "curvature": 81.1622,
+        "twi": 12.59,
+        "dist_river_km": 8.79,
+        "rainfall_mm": 197.7,
+        "ndvi": 0.716,
+        "dist_disaster_km": 14.04
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3317,
+          30.45
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "name": "Tiloth",
+        "tehsil": "Chinyalisaur",
+        "population": 1020,
+        "households": 196,
+        "is_town": false,
+        "elevation": 1196.7,
+        "slope": 7.21,
+        "aspect": 174.5,
+        "curvature": -81.1622,
+        "twi": 12.36,
+        "dist_river_km": 9.54,
+        "rainfall_mm": 131.3,
+        "ndvi": 0.625,
+        "dist_disaster_km": 28.29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5785,
+          30.7542
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "name": "Basari",
+        "tehsil": "Bhatwari",
+        "population": 404,
+        "households": 77,
+        "is_town": false,
+        "elevation": 2323.1,
+        "slope": 3.23,
+        "aspect": 260.4,
+        "curvature": -48.6973,
+        "twi": 11.12,
+        "dist_river_km": 4.06,
+        "rainfall_mm": 201.1,
+        "ndvi": 0.689,
+        "dist_disaster_km": 4.22
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5471,
+          30.626
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "name": "Bhukki-83 Patti",
+        "tehsil": "Rajgarhi",
+        "population": 1185,
+        "households": 227,
+        "is_town": false,
+        "elevation": 1500.1,
+        "slope": 3.41,
+        "aspect": 167.7,
+        "curvature": 48.6973,
+        "twi": 10.41,
+        "dist_river_km": 13.48,
+        "rainfall_mm": 132.5,
+        "ndvi": 0.679,
+        "dist_disaster_km": 10.2
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0028,
+          30.7459
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "name": "Neghar Patti",
+        "tehsil": "Purola",
+        "population": 2894,
+        "households": 556,
+        "is_town": false,
+        "elevation": 1636.9,
+        "slope": 5.83,
+        "aspect": 281.8,
+        "curvature": 154.2083,
+        "twi": 11.86,
+        "dist_river_km": 13.69,
+        "rainfall_mm": 171.0,
+        "ndvi": 0.702,
+        "dist_disaster_km": 14.79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5307,
+          30.645
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "name": "Sasta Patti",
+        "tehsil": "Rajgarhi",
+        "population": 289,
+        "households": 55,
+        "is_town": false,
+        "elevation": 1420.0,
+        "slope": 13.58,
+        "aspect": 90.0,
+        "curvature": 3725.347,
+        "twi": 12.22,
+        "dist_river_km": 11.21,
+        "rainfall_mm": 130.5,
+        "ndvi": 0.643,
+        "dist_disaster_km": 7.63
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5852,
+          30.7337
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "name": "Jhajra",
+        "tehsil": "Bhatwari",
+        "population": 510,
+        "households": 98,
+        "is_town": false,
+        "elevation": 2316.7,
+        "slope": 4.3,
+        "aspect": 313.4,
+        "curvature": 0.0,
+        "twi": 12.89,
+        "dist_river_km": 5.89,
+        "rainfall_mm": 199.6,
+        "ndvi": 0.679,
+        "dist_disaster_km": 6.26
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5475,
+          30.7983
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "name": "Lata Gaon",
+        "tehsil": "Bhatwari",
+        "population": 305,
+        "households": 58,
+        "is_town": false,
+        "elevation": 2266.9,
+        "slope": 1.81,
+        "aspect": 15.0,
+        "curvature": -8.1162,
+        "twi": 13.73,
+        "dist_river_km": 3.09,
+        "rainfall_mm": 182.6,
+        "ndvi": 0.741,
+        "dist_disaster_km": 2.4
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4604,
+          30.7141
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "name": "Bairagi-88",
+        "tehsil": "Dunda",
+        "population": 374,
+        "households": 71,
+        "is_town": false,
+        "elevation": 1207.3,
+        "slope": 30.09,
+        "aspect": 225.5,
+        "curvature": -12839.8669,
+        "twi": 11.06,
+        "dist_river_km": 2.02,
+        "rainfall_mm": 131.5,
+        "ndvi": 0.596,
+        "dist_disaster_km": 1.92
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1636,
+          30.8428
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "Dabrani-89",
+        "tehsil": "Purola",
+        "population": 195,
+        "households": 37,
+        "is_town": false,
+        "elevation": 1718.7,
+        "slope": 3.36,
+        "aspect": 308.8,
+        "curvature": 81.1622,
+        "twi": 13.56,
+        "dist_river_km": 1.52,
+        "rainfall_mm": 182.4,
+        "ndvi": 0.7,
+        "dist_disaster_km": 6.09
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1492,
+          30.773
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "name": "Basari Khala",
+        "tehsil": "Purola",
+        "population": 447,
+        "households": 85,
+        "is_town": false,
+        "elevation": 1820.4,
+        "slope": 3.15,
+        "aspect": 191.4,
+        "curvature": -40.5811,
+        "twi": 12.06,
+        "dist_river_km": 8.55,
+        "rainfall_mm": 159.4,
+        "ndvi": 0.703,
+        "dist_disaster_km": 9.74
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0555,
+          30.8651
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "name": "Jhajra Patti",
+        "tehsil": "Purola",
+        "population": 283,
+        "households": 54,
+        "is_town": false,
+        "elevation": 1709.5,
+        "slope": 3.24,
+        "aspect": 68.6,
+        "curvature": 16.2324,
+        "twi": 13.0,
+        "dist_river_km": 2.87,
+        "rainfall_mm": 149.0,
+        "ndvi": 0.739,
+        "dist_disaster_km": 4.55
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9859,
+          30.7578
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "name": "Osla-92 Gaon",
+        "tehsil": "Purola",
+        "population": 79,
+        "households": 15,
+        "is_town": false,
+        "elevation": 1532.5,
+        "slope": 3.52,
+        "aspect": 308.1,
+        "curvature": 219.1381,
+        "twi": 12.81,
+        "dist_river_km": 13.59,
+        "rainfall_mm": 158.0,
+        "ndvi": 0.723,
+        "dist_disaster_km": 14.91
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.543,
+          30.6674
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "name": "Neghar-93",
+        "tehsil": "Dunda",
+        "population": 287,
+        "households": 55,
+        "is_town": false,
+        "elevation": 1508.9,
+        "slope": 23.3,
+        "aspect": 0.9,
+        "curvature": -6663.4202,
+        "twi": 11.49,
+        "dist_river_km": 11.24,
+        "rainfall_mm": 143.5,
+        "ndvi": 0.696,
+        "dist_disaster_km": 7.37
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2083,
+          30.4889
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "name": "Dimri",
+        "tehsil": "Chinyalisaur",
+        "population": 554,
+        "households": 106,
+        "is_town": false,
+        "elevation": 966.6,
+        "slope": 0.46,
+        "aspect": 132.5,
+        "curvature": -40.5811,
+        "twi": 12.97,
+        "dist_river_km": 4.15,
+        "rainfall_mm": 122.6,
+        "ndvi": 0.608,
+        "dist_disaster_km": 31.96
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.616,
+          30.9423
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "name": "Kirola Khala",
+        "tehsil": "Bhatwari",
+        "population": 226,
+        "households": 43,
+        "is_town": false,
+        "elevation": 2677.4,
+        "slope": 9.3,
+        "aspect": 337.1,
+        "curvature": 16.2324,
+        "twi": 9.44,
+        "dist_river_km": 10.74,
+        "rainfall_mm": 190.8,
+        "ndvi": 0.7,
+        "dist_disaster_km": 11.94
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2654,
+          30.5053
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Kandara-96",
+        "tehsil": "Dunda",
+        "population": 836,
+        "households": 160,
+        "is_town": false,
+        "elevation": 939.8,
+        "slope": 2.89,
+        "aspect": 197.9,
+        "curvature": 8.1162,
+        "twi": 13.8,
+        "dist_river_km": 1.58,
+        "rainfall_mm": 138.8,
+        "ndvi": 0.59,
+        "dist_disaster_km": 26.79
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6559,
+          30.8231
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "name": "Semwal-97 Gaon",
+        "tehsil": "Bhatwari",
+        "population": 187,
+        "households": 35,
+        "is_town": false,
+        "elevation": 2028.4,
+        "slope": 2.48,
+        "aspect": 281.9,
+        "curvature": 16.2324,
+        "twi": 13.47,
+        "dist_river_km": 3.04,
+        "rainfall_mm": 194.4,
+        "ndvi": 0.681,
+        "dist_disaster_km": 4.38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5319,
+          30.7793
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Udiyari Gaon",
+        "tehsil": "Naugaon",
+        "population": 736,
+        "households": 141,
+        "is_town": false,
+        "elevation": 2193.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.34,
+        "dist_river_km": 1.29,
+        "rainfall_mm": 190.1,
+        "ndvi": 0.689,
+        "dist_disaster_km": 1.08
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1266,
+          31.0392
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "name": "Bhukki-99 Patti",
+        "tehsil": "Mori",
+        "population": 442,
+        "households": 85,
+        "is_town": false,
+        "elevation": 1719.8,
+        "slope": 71.6,
+        "aspect": 268.7,
+        "curvature": 46132.6191,
+        "twi": 9.46,
+        "dist_river_km": 4.89,
+        "rainfall_mm": 174.3,
+        "ndvi": 0.559,
+        "dist_disaster_km": 7.3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1788,
+          30.7298
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "name": "Dodra-100 Patti",
+        "tehsil": "Purola",
+        "population": 519,
+        "households": 99,
+        "is_town": false,
+        "elevation": 1954.2,
+        "slope": 10.97,
+        "aspect": 331.2,
+        "curvature": -89.2785,
+        "twi": 9.55,
+        "dist_river_km": 13.62,
+        "rainfall_mm": 155.6,
+        "ndvi": 0.689,
+        "dist_disaster_km": 15.3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.147,
+          30.5656
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Nagrasu-101 Khala",
+        "tehsil": "Chinyalisaur",
+        "population": 653,
+        "households": 125,
+        "is_town": false,
+        "elevation": 1127.4,
+        "slope": 3.52,
+        "aspect": 41.5,
+        "curvature": 89.2785,
+        "twi": 12.52,
+        "dist_river_km": 12.2,
+        "rainfall_mm": 127.3,
+        "ndvi": 0.608,
+        "dist_disaster_km": 31.88
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6621,
+          30.7194
+        ]
+      },
+      "properties": {
+        "id": 131,
+        "name": "Jhajra-102",
+        "tehsil": "Bhatwari",
+        "population": 1147,
+        "households": 220,
+        "is_town": false,
+        "elevation": 2244.0,
+        "slope": 4.22,
+        "aspect": 235.6,
+        "curvature": 97.3947,
+        "twi": 12.84,
+        "dist_river_km": 11.87,
+        "rainfall_mm": 170.0,
+        "ndvi": 0.679,
+        "dist_disaster_km": 11.56
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0093,
+          30.9412
+        ]
+      },
+      "properties": {
+        "id": 132,
+        "name": "Deosar",
+        "tehsil": "Purola",
+        "population": 256,
+        "households": 49,
+        "is_town": false,
+        "elevation": 2189.6,
+        "slope": 7.51,
+        "aspect": 93.9,
+        "curvature": -137.9758,
+        "twi": 11.47,
+        "dist_river_km": 9.75,
+        "rainfall_mm": 200.4,
+        "ndvi": 0.718,
+        "dist_disaster_km": 13.29
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2714,
+          30.698
+        ]
+      },
+      "properties": {
+        "id": 133,
+        "name": "Naitwar Patti",
+        "tehsil": "Dunda",
+        "population": 840,
+        "households": 161,
+        "is_town": false,
+        "elevation": 1768.3,
+        "slope": 5.9,
+        "aspect": 8.6,
+        "curvature": 81.1622,
+        "twi": 13.05,
+        "dist_river_km": 14.26,
+        "rainfall_mm": 172.9,
+        "ndvi": 0.697,
+        "dist_disaster_km": 16.8
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3906,
+          30.5817
+        ]
+      },
+      "properties": {
+        "id": 134,
+        "name": "Dimri Khala",
+        "tehsil": "Dunda",
+        "population": 1349,
+        "households": 259,
+        "is_town": false,
+        "elevation": 1135.0,
+        "slope": 3.17,
+        "aspect": 194.3,
+        "curvature": 0.0,
+        "twi": 11.83,
+        "dist_river_km": 2.27,
+        "rainfall_mm": 136.2,
+        "ndvi": 0.585,
+        "dist_disaster_km": 12.75
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1294,
+          31.0813
+        ]
+      },
+      "properties": {
+        "id": 135,
+        "name": "Bhukki-106 Patti",
+        "tehsil": "Mori",
+        "population": 462,
+        "households": 88,
+        "is_town": false,
+        "elevation": 1403.8,
+        "slope": 5.2,
+        "aspect": 204.7,
+        "curvature": 32.4649,
+        "twi": 12.81,
+        "dist_river_km": 3.48,
+        "rainfall_mm": 155.1,
+        "ndvi": 0.722,
+        "dist_disaster_km": 5.28
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3508,
+          30.6886
+        ]
+      },
+      "properties": {
+        "id": 136,
+        "name": "Rautgaon",
+        "tehsil": "Chinyalisaur",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 1472.6,
+        "slope": 3.61,
+        "aspect": 310.2,
+        "curvature": 105.5109,
+        "twi": 12.42,
+        "dist_river_km": 6.64,
+        "rainfall_mm": 150.7,
+        "ndvi": 0.71,
+        "dist_disaster_km": 9.91
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5026,
+          30.8789
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "Neghar-108 Khala",
+        "tehsil": "Bhatwari",
+        "population": 803,
+        "households": 154,
+        "is_town": false,
+        "elevation": 2574.0,
+        "slope": 5.17,
+        "aspect": 71.3,
+        "curvature": -105.5109,
+        "twi": 12.81,
+        "dist_river_km": 11.44,
+        "rainfall_mm": 194.2,
+        "ndvi": 0.651,
+        "dist_disaster_km": 11.75
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5943,
+          30.6808
+        ]
+      },
+      "properties": {
+        "id": 138,
+        "name": "Gangar-109 Khala",
+        "tehsil": "Naugaon",
+        "population": 292,
+        "households": 56,
+        "is_town": false,
+        "elevation": 1676.5,
+        "slope": 3.24,
+        "aspect": 305.2,
+        "curvature": -40.5811,
+        "twi": 13.35,
+        "dist_river_km": 11.16,
+        "rainfall_mm": 160.2,
+        "ndvi": 0.651,
+        "dist_disaster_km": 11.33
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9982,
+          30.7314
+        ]
+      },
+      "properties": {
+        "id": 139,
+        "name": "Nagrasu-110 Khala",
+        "tehsil": "Purola",
+        "population": 1041,
+        "households": 200,
+        "is_town": false,
+        "elevation": 1786.3,
+        "slope": 11.26,
+        "aspect": 154.7,
+        "curvature": 32.4649,
+        "twi": 11.85,
+        "dist_river_km": 15.29,
+        "rainfall_mm": 176.9,
+        "ndvi": 0.689,
+        "dist_disaster_km": 16.34
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0257,
+          30.9764
+        ]
+      },
+      "properties": {
+        "id": 140,
+        "name": "Deosar-111 Khala",
+        "tehsil": "Mori",
+        "population": 378,
+        "households": 72,
+        "is_town": false,
+        "elevation": 2253.8,
+        "slope": 4.59,
+        "aspect": 279.0,
+        "curvature": -186.6732,
+        "twi": 12.23,
+        "dist_river_km": 11.03,
+        "rainfall_mm": 199.3,
+        "ndvi": 0.653,
+        "dist_disaster_km": 15.71
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5769,
+          30.6585
+        ]
+      },
+      "properties": {
+        "id": 141,
+        "name": "Dabrani-112",
+        "tehsil": "Naugaon",
+        "population": 162,
+        "households": 31,
+        "is_town": false,
+        "elevation": 1535.6,
+        "slope": 2.11,
+        "aspect": 268.4,
+        "curvature": 16.2324,
+        "twi": 13.77,
+        "dist_river_km": 12.86,
+        "rainfall_mm": 145.7,
+        "ndvi": 0.74,
+        "dist_disaster_km": 10.74
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4595,
+          30.5814
+        ]
+      },
+      "properties": {
+        "id": 142,
+        "name": "Deosar-113",
+        "tehsil": "Dunda",
+        "population": 261,
+        "households": 50,
+        "is_town": false,
+        "elevation": 1280.1,
+        "slope": 4.15,
+        "aspect": 157.5,
+        "curvature": 24.3487,
+        "twi": 13.44,
+        "dist_river_km": 7.83,
+        "rainfall_mm": 142.3,
+        "ndvi": 0.697,
+        "dist_disaster_km": 10.94
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4724,
+          30.5541
+        ]
+      },
+      "properties": {
+        "id": 143,
+        "name": "Kwari-114",
+        "tehsil": "Naugaon",
+        "population": 376,
+        "households": 72,
+        "is_town": false,
+        "elevation": 1533.3,
+        "slope": 4.99,
+        "aspect": 226.6,
+        "curvature": -105.5109,
+        "twi": 10.91,
+        "dist_river_km": 10.15,
+        "rainfall_mm": 152.1,
+        "ndvi": 0.706,
+        "dist_disaster_km": 14.02
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6798,
+          30.5462
+        ]
+      },
+      "properties": {
+        "id": 144,
+        "name": "Jaspur-115",
+        "tehsil": "Rajgarhi",
+        "population": 647,
+        "households": 124,
+        "is_town": false,
+        "elevation": 1885.8,
+        "slope": 12.74,
+        "aspect": 328.8,
+        "curvature": 16.2324,
+        "twi": 11.63,
+        "dist_river_km": 28.17,
+        "rainfall_mm": 155.2,
+        "ndvi": 0.624,
+        "dist_disaster_km": 25.53
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0231,
+          31.2441
+        ]
+      },
+      "properties": {
+        "id": 145,
+        "name": "Purana Gaon",
+        "tehsil": "Mori",
+        "population": 51,
+        "households": 9,
+        "is_town": false,
+        "elevation": 2669.9,
+        "slope": 7.27,
+        "aspect": 346.8,
+        "curvature": 170.4407,
+        "twi": 11.71,
+        "dist_river_km": 5.36,
+        "rainfall_mm": 180.5,
+        "ndvi": 0.729,
+        "dist_disaster_km": 23.67
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.391,
+          30.7739
+        ]
+      },
+      "properties": {
+        "id": 146,
+        "name": "Dhanari Patti",
+        "tehsil": "Naugaon",
+        "population": 142,
+        "households": 27,
+        "is_town": false,
+        "elevation": 1457.3,
+        "slope": 5.96,
+        "aspect": 4.0,
+        "curvature": 105.5109,
+        "twi": 12.01,
+        "dist_river_km": 7.43,
+        "rainfall_mm": 143.3,
+        "ndvi": 0.718,
+        "dist_disaster_km": 7.31
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3349,
+          30.6962
+        ]
+      },
+      "properties": {
+        "id": 147,
+        "name": "Dimri-118",
+        "tehsil": "Dunda",
+        "population": 552,
+        "households": 106,
+        "is_town": false,
+        "elevation": 1444.6,
+        "slope": 0.16,
+        "aspect": 31.0,
+        "curvature": 146.092,
+        "twi": 13.78,
+        "dist_river_km": 8.28,
+        "rainfall_mm": 152.4,
+        "ndvi": 0.739,
+        "dist_disaster_km": 11.0
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5616,
+          30.5446
+        ]
+      },
+      "properties": {
+        "id": 148,
+        "name": "Rampur Patti",
+        "tehsil": "Rajgarhi",
+        "population": 467,
+        "households": 89,
+        "is_town": false,
+        "elevation": 1765.8,
+        "slope": 1.73,
+        "aspect": 236.6,
+        "curvature": -89.2785,
+        "twi": 12.47,
+        "dist_river_km": 18.32,
+        "rainfall_mm": 179.2,
+        "ndvi": 0.676,
+        "dist_disaster_km": 17.86
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2109,
+          31.2299
+        ]
+      },
+      "properties": {
+        "id": 149,
+        "name": "Bandal-120",
+        "tehsil": "Mori",
+        "population": 131,
+        "households": 25,
+        "is_town": false,
+        "elevation": 3273.3,
+        "slope": 3.66,
+        "aspect": 57.9,
+        "curvature": -227.2543,
+        "twi": 13.33,
+        "dist_river_km": 17.86,
+        "rainfall_mm": 193.1,
+        "ndvi": 0.53,
+        "dist_disaster_km": 16.6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1734,
+          30.9631
+        ]
+      },
+      "properties": {
+        "id": 150,
+        "name": "Durgapur Khala",
+        "tehsil": "Mori",
+        "population": 511,
+        "households": 98,
+        "is_town": false,
+        "elevation": 2482.6,
+        "slope": 7.89,
+        "aspect": 324.7,
+        "curvature": -105.5109,
+        "twi": 12.18,
+        "dist_river_km": 4.66,
+        "rainfall_mm": 182.7,
+        "ndvi": 0.706,
+        "dist_disaster_km": 13.24
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.7396,
+          30.6879
+        ]
+      },
+      "properties": {
+        "id": 151,
+        "name": "Khaga-122",
+        "tehsil": "Bhatwari",
+        "population": 1001,
+        "households": 192,
+        "is_town": false,
+        "elevation": 2429.8,
+        "slope": 9.33,
+        "aspect": 157.7,
+        "curvature": -81.1622,
+        "twi": 11.99,
+        "dist_river_km": 19.61,
+        "rainfall_mm": 197.5,
+        "ndvi": 0.695,
+        "dist_disaster_km": 19.02
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3546,
+          30.8231
+        ]
+      },
+      "properties": {
+        "id": 152,
+        "name": "Semwal Khala",
+        "tehsil": "Naugaon",
+        "population": 169,
+        "households": 32,
+        "is_town": false,
+        "elevation": 1979.5,
+        "slope": 6.22,
+        "aspect": 334.4,
+        "curvature": -97.3947,
+        "twi": 12.91,
+        "dist_river_km": 13.75,
+        "rainfall_mm": 176.4,
+        "ndvi": 0.698,
+        "dist_disaster_km": 13.69
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2055,
+          31.145
+        ]
+      },
+      "properties": {
+        "id": 153,
+        "name": "Osla-124 Khala",
+        "tehsil": "Mori",
+        "population": 1129,
+        "households": 217,
+        "is_town": false,
+        "elevation": 2270.9,
+        "slope": 1.8,
+        "aspect": 305.2,
+        "curvature": 89.2785,
+        "twi": 13.77,
+        "dist_river_km": 11.2,
+        "rainfall_mm": 179.7,
+        "ndvi": 0.661,
+        "dist_disaster_km": 7.26
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3705,
+          30.5608
+        ]
+      },
+      "properties": {
+        "id": 154,
+        "name": "Jaspur Gaon",
+        "tehsil": "Naugaon",
+        "population": 727,
+        "households": 139,
+        "is_town": false,
+        "elevation": 1161.3,
+        "slope": 0.86,
+        "aspect": 257.9,
+        "curvature": 16.2324,
+        "twi": 13.32,
+        "dist_river_km": 4.44,
+        "rainfall_mm": 131.1,
+        "ndvi": 0.652,
+        "dist_disaster_km": 15.73
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6612,
+          30.8781
+        ]
+      },
+      "properties": {
+        "id": 155,
+        "name": "Badal-126 Khala",
+        "tehsil": "Bhatwari",
+        "population": 208,
+        "households": 40,
+        "is_town": false,
+        "elevation": 2404.4,
+        "slope": 1.43,
+        "aspect": 58.2,
+        "curvature": 32.4649,
+        "twi": 14.04,
+        "dist_river_km": 3.3,
+        "rainfall_mm": 203.6,
+        "ndvi": 0.737,
+        "dist_disaster_km": 3.65
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.6888,
+          30.6638
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Jaspur Patti",
+        "tehsil": "Bhatwari",
+        "population": 327,
+        "households": 62,
+        "is_town": false,
+        "elevation": 2071.9,
+        "slope": 7.76,
+        "aspect": 323.6,
+        "curvature": -97.3947,
+        "twi": 12.49,
+        "dist_river_km": 18.31,
+        "rainfall_mm": 188.5,
+        "ndvi": 0.637,
+        "dist_disaster_km": 18.05
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5545,
+          30.6736
+        ]
+      },
+      "properties": {
+        "id": 157,
+        "name": "Chopta Gaon",
+        "tehsil": "Naugaon",
+        "population": 127,
+        "households": 24,
+        "is_town": false,
+        "elevation": 1538.1,
+        "slope": 2.53,
+        "aspect": 7.6,
+        "curvature": 0.0,
+        "twi": 12.93,
+        "dist_river_km": 10.79,
+        "rainfall_mm": 148.7,
+        "ndvi": 0.716,
+        "dist_disaster_km": 8.15
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.0222,
+          31.1359
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Sasta-129 Gaon",
+        "tehsil": "Mori",
+        "population": 144,
+        "households": 27,
+        "is_town": false,
+        "elevation": 1785.4,
+        "slope": 4.88,
+        "aspect": 18.1,
+        "curvature": 56.8136,
+        "twi": 13.25,
+        "dist_river_km": 7.42,
+        "rainfall_mm": 181.6,
+        "ndvi": 0.7,
+        "dist_disaster_km": 16.58
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9528,
+          31.0266
+        ]
+      },
+      "properties": {
+        "id": 159,
+        "name": "Jhajra-130 Patti",
+        "tehsil": "Mori",
+        "population": 534,
+        "households": 102,
+        "is_town": false,
+        "elevation": 2222.3,
+        "slope": 8.41,
+        "aspect": 321.9,
+        "curvature": -64.9298,
+        "twi": 12.45,
+        "dist_river_km": 16.18,
+        "rainfall_mm": 194.6,
+        "ndvi": 0.71,
+        "dist_disaster_km": 22.9
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2463,
+          31.2336
+        ]
+      },
+      "properties": {
+        "id": 160,
+        "name": "Dimri-131 Khala",
+        "tehsil": "Mori",
+        "population": 646,
+        "households": 124,
+        "is_town": false,
+        "elevation": 3002.1,
+        "slope": 12.66,
+        "aspect": 347.3,
+        "curvature": 202.9056,
+        "twi": 10.87,
+        "dist_river_km": 20.32,
+        "rainfall_mm": 185.3,
+        "ndvi": 0.673,
+        "dist_disaster_km": 17.81
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3654,
+          30.5098
+        ]
+      },
+      "properties": {
+        "id": 161,
+        "name": "Kandara-132",
+        "tehsil": "Dunda",
+        "population": 172,
+        "households": 33,
+        "is_town": false,
+        "elevation": 1286.2,
+        "slope": 2.3,
+        "aspect": 328.9,
+        "curvature": 40.5811,
+        "twi": 14.0,
+        "dist_river_km": 7.65,
+        "rainfall_mm": 135.6,
+        "ndvi": 0.686,
+        "dist_disaster_km": 20.92
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5598,
+          30.6388
+        ]
+      },
+      "properties": {
+        "id": 162,
+        "name": "Bangan Khala",
+        "tehsil": "Naugaon",
+        "population": 196,
+        "households": 37,
+        "is_town": false,
+        "elevation": 1420.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 15.32,
+        "dist_river_km": 14.05,
+        "rainfall_mm": 131.1,
+        "ndvi": 0.653,
+        "dist_disaster_km": 10.25
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2421,
+          30.9335
+        ]
+      },
+      "properties": {
+        "id": 163,
+        "name": "Tiloth Khala",
+        "tehsil": "Purola",
+        "population": 653,
+        "households": 125,
+        "is_town": false,
+        "elevation": 2496.8,
+        "slope": 4.04,
+        "aspect": 205.4,
+        "curvature": -16.2324,
+        "twi": 13.08,
+        "dist_river_km": 5.46,
+        "rainfall_mm": 207.4,
+        "ndvi": 0.698,
+        "dist_disaster_km": 16.38
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.591,
+          30.6057
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Udiyari Patti",
+        "tehsil": "Rajgarhi",
+        "population": 958,
+        "households": 184,
+        "is_town": false,
+        "elevation": 1584.7,
+        "slope": 1.45,
+        "aspect": 325.7,
+        "curvature": 64.9298,
+        "twi": 13.68,
+        "dist_river_km": 18.22,
+        "rainfall_mm": 151.8,
+        "ndvi": 0.724,
+        "dist_disaster_km": 14.82
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.991,
+          30.9043
+        ]
+      },
+      "properties": {
+        "id": 165,
+        "name": "Badal-136",
+        "tehsil": "Purola",
+        "population": 250,
+        "households": 48,
+        "is_town": false,
+        "elevation": 2008.9,
+        "slope": 5.94,
+        "aspect": 69.3,
+        "curvature": -40.5811,
+        "twi": 12.83,
+        "dist_river_km": 10.37,
+        "rainfall_mm": 179.3,
+        "ndvi": 0.687,
+        "dist_disaster_km": 11.98
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 166,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3894,
+          30.6595
+        ]
+      },
+      "properties": {
+        "id": 166,
+        "name": "Jaspur-137 Patti",
+        "tehsil": "Naugaon",
+        "population": 603,
+        "households": 115,
+        "is_town": false,
+        "elevation": 1388.0,
+        "slope": 4.7,
+        "aspect": 342.2,
+        "curvature": 81.1622,
+        "twi": 12.45,
+        "dist_river_km": 3.69,
+        "rainfall_mm": 157.1,
+        "ndvi": 0.644,
+        "dist_disaster_km": 7.08
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 167,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3629,
+          30.636
+        ]
+      },
+      "properties": {
+        "id": 167,
+        "name": "Basari-138",
+        "tehsil": "Chinyalisaur",
+        "population": 401,
+        "households": 77,
+        "is_town": false,
+        "elevation": 1323.3,
+        "slope": 3.37,
+        "aspect": 348.0,
+        "curvature": 16.2324,
+        "twi": 12.05,
+        "dist_river_km": 4.31,
+        "rainfall_mm": 149.2,
+        "ndvi": 0.675,
+        "dist_disaster_km": 10.44
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 168,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3474,
+          30.4771
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Kandara Patti",
+        "tehsil": "Chinyalisaur",
+        "population": 667,
+        "households": 128,
+        "is_town": false,
+        "elevation": 1135.7,
+        "slope": 9.09,
+        "aspect": 302.9,
+        "curvature": 16.2324,
+        "twi": 12.52,
+        "dist_river_km": 9.26,
+        "rainfall_mm": 134.7,
+        "ndvi": 0.582,
+        "dist_disaster_km": 24.93
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4726,
+          30.7905
+        ]
+      },
+      "properties": {
+        "id": 169,
+        "name": "Kwari Khala",
+        "tehsil": "Bhatwari",
+        "population": 165,
+        "households": 31,
+        "is_town": false,
+        "elevation": 2195.8,
+        "slope": 2.45,
+        "aspect": 125.9,
+        "curvature": -24.3487,
+        "twi": 13.24,
+        "dist_river_km": 6.8,
+        "rainfall_mm": 185.6,
+        "ndvi": 0.682,
+        "dist_disaster_km": 6.85
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 170,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.4871,
+          30.7293
+        ]
+      },
+      "properties": {
+        "id": 170,
+        "name": "Basari-141 Patti",
+        "tehsil": "Bhatwari",
+        "population": 768,
+        "households": 147,
+        "is_town": false,
+        "elevation": 1358.7,
+        "slope": 2.11,
+        "aspect": 271.6,
+        "curvature": -16.2324,
+        "twi": 14.05,
+        "dist_river_km": 3.53,
+        "rainfall_mm": 150.1,
+        "ndvi": 0.693,
+        "dist_disaster_km": 2.25
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 171,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3201,
+          30.4825
+        ]
+      },
+      "properties": {
+        "id": 171,
+        "name": "Bangan",
+        "tehsil": "Dunda",
+        "population": 1331,
+        "households": 255,
+        "is_town": false,
+        "elevation": 977.0,
+        "slope": 1.65,
+        "aspect": 357.3,
+        "curvature": 137.9758,
+        "twi": 13.7,
+        "dist_river_km": 6.94,
+        "rainfall_mm": 130.7,
+        "ndvi": 0.558,
+        "dist_disaster_km": 25.64
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 172,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.369,
+          30.6164
+        ]
+      },
+      "properties": {
+        "id": 172,
+        "name": "Jhajra-143 Patti",
+        "tehsil": "Naugaon",
+        "population": 504,
+        "households": 96,
+        "is_town": false,
+        "elevation": 1220.0,
+        "slope": 0.0,
+        "aspect": -0.0,
+        "curvature": 0.0,
+        "twi": 12.97,
+        "dist_river_km": 2.1,
+        "rainfall_mm": 146.4,
+        "ndvi": 0.61,
+        "dist_disaster_km": 11.16
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 173,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.5413,
+          30.9339
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "Lata",
+        "tehsil": "Bhatwari",
+        "population": 160,
+        "households": 30,
+        "is_town": false,
+        "elevation": 2920.0,
+        "slope": 4.05,
+        "aspect": 351.9,
+        "curvature": 56.8136,
+        "twi": 12.67,
+        "dist_river_km": 11.36,
+        "rainfall_mm": 212.6,
+        "ndvi": 0.692,
+        "dist_disaster_km": 15.43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 174,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.1589,
+          30.9848
+        ]
+      },
+      "properties": {
+        "id": 174,
+        "name": "Osla-145 Khala",
+        "tehsil": "Purola",
+        "population": 620,
+        "households": 119,
+        "is_town": false,
+        "elevation": 2450.1,
+        "slope": 3.99,
+        "aspect": 241.2,
+        "curvature": -129.8596,
+        "twi": 13.3,
+        "dist_river_km": 1.89,
+        "rainfall_mm": 190.5,
+        "ndvi": 0.65,
+        "dist_disaster_km": 11.07
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 175,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.2001,
+          31.1465
+        ]
+      },
+      "properties": {
+        "id": 175,
+        "name": "Udiyari Khala",
+        "tehsil": "Mori",
+        "population": 923,
+        "households": 177,
+        "is_town": false,
+        "elevation": 2264.2,
+        "slope": 0.24,
+        "aspect": 277.1,
+        "curvature": 73.046,
+        "twi": 15.33,
+        "dist_river_km": 10.82,
+        "rainfall_mm": 177.1,
+        "ndvi": 0.731,
+        "dist_disaster_km": 7.3
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 176,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.083,
+          30.8112
+        ]
+      },
+      "properties": {
+        "id": 176,
+        "name": "Bandal-147 Patti",
+        "tehsil": "Purola",
+        "population": 3000,
+        "households": 576,
+        "is_town": false,
+        "elevation": 1675.9,
+        "slope": 2.2,
+        "aspect": 259.0,
+        "curvature": -48.6973,
+        "twi": 13.96,
+        "dist_river_km": 4.32,
+        "rainfall_mm": 155.1,
+        "ndvi": 0.738,
+        "dist_disaster_km": 4.6
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 177,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.3328,
+          30.4682
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "Deosar-148 Khala",
+        "tehsil": "Dunda",
+        "population": 196,
+        "households": 37,
+        "is_town": false,
+        "elevation": 977.6,
+        "slope": 2.19,
+        "aspect": 181.3,
+        "curvature": 170.4407,
+        "twi": 13.21,
+        "dist_river_km": 8.62,
+        "rainfall_mm": 125.5,
+        "ndvi": 0.585,
+        "dist_disaster_km": 26.43
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 178,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.9564,
+          30.8791
+        ]
+      },
+      "properties": {
+        "id": 178,
+        "name": "Khaga Gaon",
+        "tehsil": "Purola",
+        "population": 478,
+        "households": 91,
+        "is_town": false,
+        "elevation": 1895.7,
+        "slope": 10.46,
+        "aspect": 110.5,
+        "curvature": 24.3487,
+        "twi": 11.53,
+        "dist_river_km": 12.18,
+        "rainfall_mm": 174.3,
+        "ndvi": 0.665,
+        "dist_disaster_km": 14.02
+      }
+    }
+  ]
+}

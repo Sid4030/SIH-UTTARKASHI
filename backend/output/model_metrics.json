@@ -1,0 +1,34 @@
+{
+  "model_type": "Physics-Informed Adaptive XGBoost (Continuous GBDT)",
+  "model_version": "v2.5.5-adaptive",
+  "last_trained_utc": "2026-09-16T17:44:45.306561+00:00",
+  "training_samples": 3114,
+  "total_cycles_completed": 5,
+  "metrics": {
+    "roc_auc": 0.9982,
+    "precision": 0.978,
+    "recall": 0.924,
+    "f1_score": 0.95,
+    "log_loss": 0.084
+  },
+  "physics_grounding": {
+    "model_type": "Mohr-Coulomb Infinite Slope Stability (FS)",
+    "monsoon_failure_calibrated_cells": 4,
+    "high_stability_cells": 3097,
+    "seismic_shaking_factor_integrated": true
+  },
+  "feature_importances": {
+    "slope": 0.324,
+    "twi": 0.188,
+    "dist_river_km": 0.165,
+    "physics_fs": 0.142,
+    "rainfall_mean_mm": 0.085,
+    "dist_disaster_km": 0.056,
+    "ndvi": 0.04
+  },
+  "validation_benchmark": {
+    "historical_disaster_hit_rate_pct": 100.0,
+    "total_historical_events_tested": 12,
+    "total_hits": 12
+  }
+}

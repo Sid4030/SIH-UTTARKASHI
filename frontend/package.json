@@ -1,0 +1,20 @@
+{
+  "name": "frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "vite": "^8.3.0"
+  },
+  "dependencies": {
+    "html2pdf.js": "^0.14.0",
+    "mapbox-gl": "^3.30.0",
+    "maplibre-gl": "^6.10.0"
+  }
+}

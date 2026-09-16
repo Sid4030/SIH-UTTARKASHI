@@ -1,0 +1,6245 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.619999999999997
+            ],
+            [
+              78.38000000000001,
+              30.619999999999997
+            ],
+            [
+              78.38000000000001,
+              30.64
+            ],
+            [
+              78.36,
+              30.64
+            ],
+            [
+              78.36,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "suitability_score": 4.05,
+        "rating": "Very Good",
+        "carrying_capacity": 4070,
+        "elevation": 1959.4,
+        "slope": 4.13,
+        "dist_river_km": 3.46,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.5
+            ],
+            [
+              78.24000000000001,
+              30.5
+            ],
+            [
+              78.24000000000001,
+              30.520000000000003
+            ],
+            [
+              78.22,
+              30.520000000000003
+            ],
+            [
+              78.22,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 2,
+        "suitability_score": 3.95,
+        "rating": "Good",
+        "carrying_capacity": 4030,
+        "elevation": 1067.9,
+        "slope": 7.86,
+        "dist_river_km": 2.2,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.599999999999998
+            ],
+            [
+              78.36,
+              30.599999999999998
+            ],
+            [
+              78.36,
+              30.62
+            ],
+            [
+              78.33999999999999,
+              30.62
+            ],
+            [
+              78.33999999999999,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 3,
+        "suitability_score": 3.95,
+        "rating": "Good",
+        "carrying_capacity": 4030,
+        "elevation": 1817.4,
+        "slope": 2.61,
+        "dist_river_km": 3.06,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.52
+            ],
+            [
+              78.30000000000001,
+              30.52
+            ],
+            [
+              78.30000000000001,
+              30.540000000000003
+            ],
+            [
+              78.28,
+              30.540000000000003
+            ],
+            [
+              78.28,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "suitability_score": 3.9,
+        "rating": "Good",
+        "carrying_capacity": 4010,
+        "elevation": 1690.8,
+        "slope": 7.43,
+        "dist_river_km": 2.41,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.52
+            ],
+            [
+              78.32000000000001,
+              30.52
+            ],
+            [
+              78.32000000000001,
+              30.540000000000003
+            ],
+            [
+              78.3,
+              30.540000000000003
+            ],
+            [
+              78.3,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "suitability_score": 3.9,
+        "rating": "Good",
+        "carrying_capacity": 4010,
+        "elevation": 1891.0,
+        "slope": 7.01,
+        "dist_river_km": 2.41,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.54
+            ],
+            [
+              78.28,
+              30.54
+            ],
+            [
+              78.28,
+              30.560000000000002
+            ],
+            [
+              78.25999999999999,
+              30.560000000000002
+            ],
+            [
+              78.25999999999999,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "suitability_score": 3.9,
+        "rating": "Good",
+        "carrying_capacity": 4010,
+        "elevation": 1586.4,
+        "slope": 5.7,
+        "dist_river_km": 2.85,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.479999999999997
+            ],
+            [
+              78.22,
+              30.479999999999997
+            ],
+            [
+              78.22,
+              30.5
+            ],
+            [
+              78.19999999999999,
+              30.5
+            ],
+            [
+              78.19999999999999,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "suitability_score": 3.783,
+        "rating": "Good",
+        "carrying_capacity": 3963,
+        "elevation": 1317.5,
+        "slope": 6.45,
+        "dist_river_km": 3.96,
+        "scores": {
+          "hazard_safety": 2.61,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.439999999999998
+            ],
+            [
+              78.26,
+              30.439999999999998
+            ],
+            [
+              78.26,
+              30.46
+            ],
+            [
+              78.24,
+              30.46
+            ],
+            [
+              78.24,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "suitability_score": 3.75,
+        "rating": "Good",
+        "carrying_capacity": 3950,
+        "elevation": 1628.8,
+        "slope": 4.28,
+        "dist_river_km": 5.55,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.479999999999997
+            ],
+            [
+              78.2,
+              30.479999999999997
+            ],
+            [
+              78.2,
+              30.5
+            ],
+            [
+              78.17999999999999,
+              30.5
+            ],
+            [
+              78.17999999999999,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "suitability_score": 3.75,
+        "rating": "Good",
+        "carrying_capacity": 3950,
+        "elevation": 1368.7,
+        "slope": 3.84,
+        "dist_river_km": 5.81,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.58
+            ],
+            [
+              78.36,
+              30.58
+            ],
+            [
+              78.36,
+              30.6
+            ],
+            [
+              78.33999999999999,
+              30.6
+            ],
+            [
+              78.33999999999999,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "suitability_score": 3.75,
+        "rating": "Good",
+        "carrying_capacity": 3700,
+        "elevation": 2144.3,
+        "slope": 8.69,
+        "dist_river_km": 3.06,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.88
+            ],
+            [
+              78.24000000000001,
+              30.88
+            ],
+            [
+              78.24000000000001,
+              30.900000000000002
+            ],
+            [
+              78.22,
+              30.900000000000002
+            ],
+            [
+              78.22,
+              30.88
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "suitability_score": 3.75,
+        "rating": "Good",
+        "carrying_capacity": 3950,
+        "elevation": 2116.2,
+        "slope": 7.55,
+        "dist_river_km": 3.06,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.54
+            ],
+            [
+              78.24000000000001,
+              30.54
+            ],
+            [
+              78.24000000000001,
+              30.560000000000002
+            ],
+            [
+              78.22,
+              30.560000000000002
+            ],
+            [
+              78.22,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3680,
+        "elevation": 2243.3,
+        "slope": 11.18,
+        "dist_river_km": 5.87,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.56
+            ],
+            [
+              78.32000000000001,
+              30.56
+            ],
+            [
+              78.32000000000001,
+              30.580000000000002
+            ],
+            [
+              78.3,
+              30.580000000000002
+            ],
+            [
+              78.3,
+              30.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3680,
+        "elevation": 1391.7,
+        "slope": 13.08,
+        "dist_river_km": 2.41,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.39999999999999,
+              30.58
+            ],
+            [
+              78.42,
+              30.58
+            ],
+            [
+              78.42,
+              30.6
+            ],
+            [
+              78.39999999999999,
+              30.6
+            ],
+            [
+              78.39999999999999,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3930,
+        "elevation": 2404.9,
+        "slope": 5.89,
+        "dist_river_km": 3.06,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.619999999999997
+            ],
+            [
+              78.34,
+              30.619999999999997
+            ],
+            [
+              78.34,
+              30.64
+            ],
+            [
+              78.32,
+              30.64
+            ],
+            [
+              78.32,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3680,
+        "elevation": 2124.6,
+        "slope": 8.12,
+        "dist_river_km": 5.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.819999999999997
+            ],
+            [
+              78.16000000000001,
+              30.819999999999997
+            ],
+            [
+              78.16000000000001,
+              30.84
+            ],
+            [
+              78.14,
+              30.84
+            ],
+            [
+              78.14,
+              30.819999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3680,
+        "elevation": 1897.7,
+        "slope": 11.97,
+        "dist_river_km": 2.22,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.88
+            ],
+            [
+              78.18,
+              30.88
+            ],
+            [
+              78.18,
+              30.900000000000002
+            ],
+            [
+              78.16,
+              30.900000000000002
+            ],
+            [
+              78.16,
+              30.88
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "suitability_score": 3.7,
+        "rating": "Good",
+        "carrying_capacity": 3930,
+        "elevation": 2691.5,
+        "slope": 2.35,
+        "dist_river_km": 3.06,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.439999999999998
+            ],
+            [
+              78.24000000000001,
+              30.439999999999998
+            ],
+            [
+              78.24000000000001,
+              30.46
+            ],
+            [
+              78.22,
+              30.46
+            ],
+            [
+              78.22,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 1652.4,
+        "slope": 4.49,
+        "dist_river_km": 5.87,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.459999999999997
+            ],
+            [
+              78.22,
+              30.459999999999997
+            ],
+            [
+              78.22,
+              30.48
+            ],
+            [
+              78.19999999999999,
+              30.48
+            ],
+            [
+              78.19999999999999,
+              30.459999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 1404.6,
+        "slope": 6.92,
+        "dist_river_km": 5.05,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.459999999999997
+            ],
+            [
+              78.24000000000001,
+              30.459999999999997
+            ],
+            [
+              78.24000000000001,
+              30.48
+            ],
+            [
+              78.22,
+              30.48
+            ],
+            [
+              78.22,
+              30.459999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 1545.3,
+        "slope": 5.23,
+        "dist_river_km": 3.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.5
+            ],
+            [
+              78.26,
+              30.5
+            ],
+            [
+              78.26,
+              30.520000000000003
+            ],
+            [
+              78.24,
+              30.520000000000003
+            ],
+            [
+              78.24,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3410,
+        "elevation": 1343.9,
+        "slope": 20.33,
+        "dist_river_km": 1.11,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.38,
+              30.54
+            ],
+            [
+              78.4,
+              30.54
+            ],
+            [
+              78.4,
+              30.560000000000002
+            ],
+            [
+              78.38,
+              30.560000000000002
+            ],
+            [
+              78.38,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 2365.6,
+        "slope": 4.45,
+        "dist_river_km": 5.63,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.38,
+              30.619999999999997
+            ],
+            [
+              78.4,
+              30.619999999999997
+            ],
+            [
+              78.4,
+              30.64
+            ],
+            [
+              78.38,
+              30.64
+            ],
+            [
+              78.38,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 23,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3410,
+        "elevation": 1758.1,
+        "slope": 14.25,
+        "dist_river_km": 3.46,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.47999999999999,
+              30.779999999999998
+            ],
+            [
+              78.5,
+              30.779999999999998
+            ],
+            [
+              78.5,
+              30.8
+            ],
+            [
+              78.47999999999999,
+              30.8
+            ],
+            [
+              78.47999999999999,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 24,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 2789.7,
+        "slope": 7.48,
+        "dist_river_km": 5.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.799999999999997
+            ],
+            [
+              78.18,
+              30.799999999999997
+            ],
+            [
+              78.18,
+              30.82
+            ],
+            [
+              78.16,
+              30.82
+            ],
+            [
+              78.16,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 25,
+        "suitability_score": 3.65,
+        "rating": "Good",
+        "carrying_capacity": 3910,
+        "elevation": 1952.1,
+        "slope": 1.62,
+        "dist_river_km": 4.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.46
+            ],
+            [
+              78.3,
+              30.46
+            ],
+            [
+              78.3,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 26,
+        "suitability_score": 3.644,
+        "rating": "Good",
+        "carrying_capacity": 3907,
+        "elevation": 1040.9,
+        "slope": 3.02,
+        "dist_river_km": 7.96,
+        "scores": {
+          "hazard_safety": 3.48,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.5
+            ],
+            [
+              78.18,
+              30.5
+            ],
+            [
+              78.18,
+              30.520000000000003
+            ],
+            [
+              78.16,
+              30.520000000000003
+            ],
+            [
+              78.16,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 27,
+        "suitability_score": 3.6,
+        "rating": "Good",
+        "carrying_capacity": 3890,
+        "elevation": 1680.2,
+        "slope": 2.56,
+        "dist_river_km": 7.68,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.52
+            ],
+            [
+              78.22,
+              30.52
+            ],
+            [
+              78.22,
+              30.540000000000003
+            ],
+            [
+              78.19999999999999,
+              30.540000000000003
+            ],
+            [
+              78.19999999999999,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "suitability_score": 3.6,
+        "rating": "Good",
+        "carrying_capacity": 3640,
+        "elevation": 1387.5,
+        "slope": 13.05,
+        "dist_river_km": 5.05,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 5,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.44,
+              30.58
+            ],
+            [
+              78.46000000000001,
+              30.58
+            ],
+            [
+              78.46000000000001,
+              30.6
+            ],
+            [
+              78.44,
+              30.6
+            ],
+            [
+              78.44,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 29,
+        "suitability_score": 3.6,
+        "rating": "Good",
+        "carrying_capacity": 3890,
+        "elevation": 1845.1,
+        "slope": 4.67,
+        "dist_river_km": 6.74,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.86
+            ],
+            [
+              78.26,
+              30.86
+            ],
+            [
+              78.26,
+              30.880000000000003
+            ],
+            [
+              78.24,
+              30.880000000000003
+            ],
+            [
+              78.24,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 30,
+        "suitability_score": 3.6,
+        "rating": "Good",
+        "carrying_capacity": 3890,
+        "elevation": 2274.4,
+        "slope": 7.69,
+        "dist_river_km": 5.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.5
+            ],
+            [
+              78.34,
+              30.5
+            ],
+            [
+              78.34,
+              30.520000000000003
+            ],
+            [
+              78.32,
+              30.520000000000003
+            ],
+            [
+              78.32,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 31,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 1870.7,
+        "slope": 10.74,
+        "dist_river_km": 5.28,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.56
+            ],
+            [
+              78.28,
+              30.56
+            ],
+            [
+              78.28,
+              30.580000000000002
+            ],
+            [
+              78.25999999999999,
+              30.580000000000002
+            ],
+            [
+              78.25999999999999,
+              30.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 32,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 1860.5,
+        "slope": 13.93,
+        "dist_river_km": 3.61,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.58
+            ],
+            [
+              78.28,
+              30.58
+            ],
+            [
+              78.28,
+              30.6
+            ],
+            [
+              78.25999999999999,
+              30.6
+            ],
+            [
+              78.25999999999999,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 33,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 1978.3,
+        "slope": 13.15,
+        "dist_river_km": 5.28,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.42,
+              30.58
+            ],
+            [
+              78.44000000000001,
+              30.58
+            ],
+            [
+              78.44000000000001,
+              30.6
+            ],
+            [
+              78.42,
+              30.6
+            ],
+            [
+              78.42,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 34,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2129.1,
+        "slope": 10.74,
+        "dist_river_km": 4.88,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.42,
+              30.599999999999998
+            ],
+            [
+              78.44000000000001,
+              30.599999999999998
+            ],
+            [
+              78.44000000000001,
+              30.62
+            ],
+            [
+              78.42,
+              30.62
+            ],
+            [
+              78.42,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 35,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2030.1,
+        "slope": 10.74,
+        "dist_river_km": 4.88,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.639999999999997
+            ],
+            [
+              78.38000000000001,
+              30.639999999999997
+            ],
+            [
+              78.38000000000001,
+              30.66
+            ],
+            [
+              78.36,
+              30.66
+            ],
+            [
+              78.36,
+              30.639999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 36,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 1887.8,
+        "slope": 13.47,
+        "dist_river_km": 5.63,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.46,
+              30.759999999999998
+            ],
+            [
+              78.48,
+              30.759999999999998
+            ],
+            [
+              78.48,
+              30.78
+            ],
+            [
+              78.46,
+              30.78
+            ],
+            [
+              78.46,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3870,
+        "elevation": 2728.6,
+        "slope": 7.81,
+        "dist_river_km": 4.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.08,
+              30.799999999999997
+            ],
+            [
+              78.10000000000001,
+              30.799999999999997
+            ],
+            [
+              78.10000000000001,
+              30.82
+            ],
+            [
+              78.08,
+              30.82
+            ],
+            [
+              78.08,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 38,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2299.5,
+        "slope": 13.84,
+        "dist_river_km": 4.54,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              30.84
+            ],
+            [
+              78.04,
+              30.84
+            ],
+            [
+              78.04,
+              30.860000000000003
+            ],
+            [
+              78.02,
+              30.860000000000003
+            ],
+            [
+              78.02,
+              30.84
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 39,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2160.4,
+        "slope": 10.73,
+        "dist_river_km": 4.75,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.86
+            ],
+            [
+              78.22,
+              30.86
+            ],
+            [
+              78.22,
+              30.880000000000003
+            ],
+            [
+              78.19999999999999,
+              30.880000000000003
+            ],
+            [
+              78.19999999999999,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 40,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2383.5,
+        "slope": 9.63,
+        "dist_river_km": 3.46,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 5,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.11999999999999,
+              30.919999999999998
+            ],
+            [
+              78.14,
+              30.919999999999998
+            ],
+            [
+              78.14,
+              30.94
+            ],
+            [
+              78.11999999999999,
+              30.94
+            ],
+            [
+              78.11999999999999,
+              30.919999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 41,
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 3620,
+        "elevation": 2350.0,
+        "slope": 8.67,
+        "dist_river_km": 4.38,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.939999999999998
+            ],
+            [
+              78.16000000000001,
+              30.939999999999998
+            ],
+            [
+              78.16000000000001,
+              30.96
+            ],
+            [
+              78.14,
+              30.96
+            ],
+            [
+              78.14,
+              30.939999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 42,
+        "suitability_score": 3.51,
+        "rating": "Good",
+        "carrying_capacity": 3603,
+        "elevation": 2132.9,
+        "slope": 8.18,
+        "dist_river_km": 5.55,
+        "scores": {
+          "hazard_safety": 2.87,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.479999999999997
+            ],
+            [
+              78.28,
+              30.479999999999997
+            ],
+            [
+              78.28,
+              30.5
+            ],
+            [
+              78.25999999999999,
+              30.5
+            ],
+            [
+              78.25999999999999,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 43,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3350,
+        "elevation": 1556.4,
+        "slope": 20.88,
+        "dist_river_km": 2.2,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.52
+            ],
+            [
+              78.38000000000001,
+              30.52
+            ],
+            [
+              78.38000000000001,
+              30.540000000000003
+            ],
+            [
+              78.36,
+              30.540000000000003
+            ],
+            [
+              78.36,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 44,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 1578.4,
+        "slope": 6.06,
+        "dist_river_km": 7.01,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.54
+            ],
+            [
+              78.26,
+              30.54
+            ],
+            [
+              78.26,
+              30.560000000000002
+            ],
+            [
+              78.24,
+              30.560000000000002
+            ],
+            [
+              78.24,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 45,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3350,
+        "elevation": 1832.1,
+        "slope": 20.82,
+        "dist_river_km": 4.75,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 5,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.54
+            ],
+            [
+              78.34,
+              30.54
+            ],
+            [
+              78.34,
+              30.560000000000002
+            ],
+            [
+              78.32,
+              30.560000000000002
+            ],
+            [
+              78.32,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 46,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3350,
+        "elevation": 1707.2,
+        "slope": 16.32,
+        "dist_river_km": 2.85,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.44,
+              30.619999999999997
+            ],
+            [
+              78.46000000000001,
+              30.619999999999997
+            ],
+            [
+              78.46000000000001,
+              30.64
+            ],
+            [
+              78.44,
+              30.64
+            ],
+            [
+              78.44,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 47,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2730.9,
+        "slope": 7.2,
+        "dist_river_km": 6.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.66
+            ],
+            [
+              78.36,
+              30.66
+            ],
+            [
+              78.36,
+              30.680000000000003
+            ],
+            [
+              78.33999999999999,
+              30.680000000000003
+            ],
+            [
+              78.33999999999999,
+              30.66
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 48,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2089.6,
+        "slope": 2.68,
+        "dist_river_km": 6.74,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              30.779999999999998
+            ],
+            [
+              78.04,
+              30.779999999999998
+            ],
+            [
+              78.04,
+              30.8
+            ],
+            [
+              78.02,
+              30.8
+            ],
+            [
+              78.02,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 49,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 1953.2,
+        "slope": 5.23,
+        "dist_river_km": 8.18,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              30.779999999999998
+            ],
+            [
+              78.06,
+              30.779999999999998
+            ],
+            [
+              78.06,
+              30.8
+            ],
+            [
+              78.03999999999999,
+              30.8
+            ],
+            [
+              78.03999999999999,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 50,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2046.8,
+        "slope": 7.98,
+        "dist_river_km": 7.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.39999999999999,
+              30.779999999999998
+            ],
+            [
+              78.42,
+              30.779999999999998
+            ],
+            [
+              78.42,
+              30.8
+            ],
+            [
+              78.39999999999999,
+              30.8
+            ],
+            [
+              78.39999999999999,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 51,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2760.3,
+        "slope": 1.43,
+        "dist_river_km": 7.67,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.799999999999997
+            ],
+            [
+              78.02000000000001,
+              30.799999999999997
+            ],
+            [
+              78.02000000000001,
+              30.82
+            ],
+            [
+              78.0,
+              30.82
+            ],
+            [
+              78.0,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 52,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 1714.2,
+        "slope": 1.91,
+        "dist_river_km": 8.0,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.46,
+              30.799999999999997
+            ],
+            [
+              78.48,
+              30.799999999999997
+            ],
+            [
+              78.48,
+              30.82
+            ],
+            [
+              78.46,
+              30.82
+            ],
+            [
+              78.46,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 53,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2484.3,
+        "slope": 6.21,
+        "dist_river_km": 8.0,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.919999999999998
+            ],
+            [
+              78.30000000000001,
+              30.919999999999998
+            ],
+            [
+              78.30000000000001,
+              30.94
+            ],
+            [
+              78.28,
+              30.94
+            ],
+            [
+              78.28,
+              30.919999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2686.0,
+        "slope": 5.86,
+        "dist_river_km": 2.41,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.44,
+              30.959999999999997
+            ],
+            [
+              78.46000000000001,
+              30.959999999999997
+            ],
+            [
+              78.46000000000001,
+              30.98
+            ],
+            [
+              78.44,
+              30.98
+            ],
+            [
+              78.44,
+              30.959999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "suitability_score": 3.5,
+        "rating": "Good",
+        "carrying_capacity": 3850,
+        "elevation": 2869.2,
+        "slope": 3.89,
+        "dist_river_km": 3.33,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 5,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.39999999999999,
+              30.52
+            ],
+            [
+              78.42,
+              30.52
+            ],
+            [
+              78.42,
+              30.540000000000003
+            ],
+            [
+              78.39999999999999,
+              30.540000000000003
+            ],
+            [
+              78.39999999999999,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 56,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3830,
+        "elevation": 2080.8,
+        "slope": 5.98,
+        "dist_river_km": 8.28,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.42,
+              30.54
+            ],
+            [
+              78.44000000000001,
+              30.54
+            ],
+            [
+              78.44000000000001,
+              30.560000000000002
+            ],
+            [
+              78.42,
+              30.560000000000002
+            ],
+            [
+              78.42,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 57,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3830,
+        "elevation": 1715.6,
+        "slope": 5.22,
+        "dist_river_km": 7.31,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.44,
+              30.56
+            ],
+            [
+              78.46000000000001,
+              30.56
+            ],
+            [
+              78.46000000000001,
+              30.580000000000002
+            ],
+            [
+              78.44,
+              30.580000000000002
+            ],
+            [
+              78.44,
+              30.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 58,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3830,
+        "elevation": 1820.4,
+        "slope": 6.15,
+        "dist_river_km": 7.44,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.58
+            ],
+            [
+              78.30000000000001,
+              30.58
+            ],
+            [
+              78.30000000000001,
+              30.6
+            ],
+            [
+              78.28,
+              30.6
+            ],
+            [
+              78.28,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 59,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3580,
+        "elevation": 1606.3,
+        "slope": 10.32,
+        "dist_river_km": 4.54,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.9
+            ],
+            [
+              78.16000000000001,
+              30.9
+            ],
+            [
+              78.16000000000001,
+              30.92
+            ],
+            [
+              78.14,
+              30.92
+            ],
+            [
+              78.14,
+              30.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 60,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3580,
+        "elevation": 2563.0,
+        "slope": 8.88,
+        "dist_river_km": 4.88,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              30.919999999999998
+            ],
+            [
+              78.04,
+              30.919999999999998
+            ],
+            [
+              78.04,
+              30.94
+            ],
+            [
+              78.02,
+              30.94
+            ],
+            [
+              78.02,
+              30.919999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 61,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3830,
+        "elevation": 2362.8,
+        "slope": 5.52,
+        "dist_river_km": 7.44,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.05999999999999,
+              31.0
+            ],
+            [
+              78.08,
+              31.0
+            ],
+            [
+              78.08,
+              31.020000000000003
+            ],
+            [
+              78.05999999999999,
+              31.020000000000003
+            ],
+            [
+              78.05999999999999,
+              31.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 62,
+        "suitability_score": 3.45,
+        "rating": "Moderate",
+        "carrying_capacity": 3830,
+        "elevation": 2189.0,
+        "slope": 6.26,
+        "dist_river_km": 7.68,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.52
+            ],
+            [
+              78.24000000000001,
+              30.52
+            ],
+            [
+              78.24000000000001,
+              30.540000000000003
+            ],
+            [
+              78.22,
+              30.540000000000003
+            ],
+            [
+              78.22,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 63,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3310,
+        "elevation": 1490.1,
+        "slope": 16.77,
+        "dist_river_km": 3.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 5,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.58
+            ],
+            [
+              78.24000000000001,
+              30.58
+            ],
+            [
+              78.24000000000001,
+              30.6
+            ],
+            [
+              78.22,
+              30.6
+            ],
+            [
+              78.22,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 64,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 1929.6,
+        "slope": 11.15,
+        "dist_river_km": 8.0,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.599999999999998
+            ],
+            [
+              78.28,
+              30.599999999999998
+            ],
+            [
+              78.28,
+              30.62
+            ],
+            [
+              78.25999999999999,
+              30.62
+            ],
+            [
+              78.25999999999999,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 1824.9,
+        "slope": 11.11,
+        "dist_river_km": 7.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.639999999999997
+            ],
+            [
+              78.32000000000001,
+              30.639999999999997
+            ],
+            [
+              78.32000000000001,
+              30.66
+            ],
+            [
+              78.3,
+              30.66
+            ],
+            [
+              78.3,
+              30.639999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 66,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 2221.7,
+        "slope": 13.16,
+        "dist_river_km": 8.66,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.52,
+              30.68
+            ],
+            [
+              78.54,
+              30.68
+            ],
+            [
+              78.54,
+              30.700000000000003
+            ],
+            [
+              78.52,
+              30.700000000000003
+            ],
+            [
+              78.52,
+              30.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3810,
+        "elevation": 3034.6,
+        "slope": 7.86,
+        "dist_river_km": 8.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.72
+            ],
+            [
+              78.36,
+              30.72
+            ],
+            [
+              78.36,
+              30.740000000000002
+            ],
+            [
+              78.33999999999999,
+              30.740000000000002
+            ],
+            [
+              78.33999999999999,
+              30.72
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 68,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 2216.2,
+        "slope": 13.24,
+        "dist_river_km": 8.66,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.72
+            ],
+            [
+              78.38000000000001,
+              30.72
+            ],
+            [
+              78.38000000000001,
+              30.740000000000002
+            ],
+            [
+              78.36,
+              30.740000000000002
+            ],
+            [
+              78.36,
+              30.72
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 2233.8,
+        "slope": 13.06,
+        "dist_river_km": 7.31,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.779999999999998
+            ],
+            [
+              78.16000000000001,
+              30.779999999999998
+            ],
+            [
+              78.16000000000001,
+              30.8
+            ],
+            [
+              78.14,
+              30.8
+            ],
+            [
+              78.14,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 70,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 2227.8,
+        "slope": 8.34,
+        "dist_river_km": 6.66,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.86
+            ],
+            [
+              78.02000000000001,
+              30.86
+            ],
+            [
+              78.02000000000001,
+              30.880000000000003
+            ],
+            [
+              78.0,
+              30.880000000000003
+            ],
+            [
+              78.0,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 71,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3560,
+        "elevation": 2367.9,
+        "slope": 9.86,
+        "dist_river_km": 7.01,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.88
+            ],
+            [
+              78.02000000000001,
+              30.88
+            ],
+            [
+              78.02000000000001,
+              30.900000000000002
+            ],
+            [
+              78.0,
+              30.900000000000002
+            ],
+            [
+              78.0,
+              30.88
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 72,
+        "suitability_score": 3.4,
+        "rating": "Moderate",
+        "carrying_capacity": 3810,
+        "elevation": 2446.2,
+        "slope": 2.87,
+        "dist_river_km": 8.0,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.479999999999997
+            ],
+            [
+              78.36,
+              30.479999999999997
+            ],
+            [
+              78.36,
+              30.5
+            ],
+            [
+              78.33999999999999,
+              30.5
+            ],
+            [
+              78.33999999999999,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "suitability_score": 3.351,
+        "rating": "Moderate",
+        "carrying_capacity": 3540,
+        "elevation": 1498.2,
+        "slope": 9.99,
+        "dist_river_km": 8.18,
+        "scores": {
+          "hazard_safety": 2.84,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.459999999999997
+            ],
+            [
+              78.30000000000001,
+              30.459999999999997
+            ],
+            [
+              78.30000000000001,
+              30.48
+            ],
+            [
+              78.28,
+              30.48
+            ],
+            [
+              78.28,
+              30.459999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 74,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 1374.3,
+        "slope": 14.24,
+        "dist_river_km": 5.05,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.5
+            ],
+            [
+              78.2,
+              30.5
+            ],
+            [
+              78.2,
+              30.520000000000003
+            ],
+            [
+              78.17999999999999,
+              30.520000000000003
+            ],
+            [
+              78.17999999999999,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 75,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 1618.5,
+        "slope": 16.15,
+        "dist_river_km": 5.81,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.33999999999999,
+              30.54
+            ],
+            [
+              78.36,
+              30.54
+            ],
+            [
+              78.36,
+              30.560000000000002
+            ],
+            [
+              78.33999999999999,
+              30.560000000000002
+            ],
+            [
+              78.33999999999999,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 1777.7,
+        "slope": 18.33,
+        "dist_river_km": 4.75,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.58
+            ],
+            [
+              78.32000000000001,
+              30.58
+            ],
+            [
+              78.32000000000001,
+              30.6
+            ],
+            [
+              78.3,
+              30.6
+            ],
+            [
+              78.3,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 77,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 1712.4,
+        "slope": 21.7,
+        "dist_river_km": 4.54,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.47999999999999,
+              30.619999999999997
+            ],
+            [
+              78.5,
+              30.619999999999997
+            ],
+            [
+              78.5,
+              30.64
+            ],
+            [
+              78.47999999999999,
+              30.64
+            ],
+            [
+              78.47999999999999,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 78,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2261.2,
+        "slope": 7.05,
+        "dist_river_km": 8.66,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.53999999999999,
+              30.7
+            ],
+            [
+              78.56,
+              30.7
+            ],
+            [
+              78.56,
+              30.720000000000002
+            ],
+            [
+              78.53999999999999,
+              30.720000000000002
+            ],
+            [
+              78.53999999999999,
+              30.7
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 79,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2678.1,
+        "slope": 7.05,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.58,
+              30.72
+            ],
+            [
+              78.60000000000001,
+              30.72
+            ],
+            [
+              78.60000000000001,
+              30.740000000000002
+            ],
+            [
+              78.58,
+              30.740000000000002
+            ],
+            [
+              78.58,
+              30.72
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 80,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2660.3,
+        "slope": 5.43,
+        "dist_river_km": 6.5,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.42,
+              30.759999999999998
+            ],
+            [
+              78.44000000000001,
+              30.759999999999998
+            ],
+            [
+              78.44000000000001,
+              30.78
+            ],
+            [
+              78.42,
+              30.78
+            ],
+            [
+              78.42,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3540,
+        "elevation": 2846.8,
+        "slope": 12.33,
+        "dist_river_km": 4.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.11999999999999,
+              30.799999999999997
+            ],
+            [
+              78.14,
+              30.799999999999997
+            ],
+            [
+              78.14,
+              30.82
+            ],
+            [
+              78.11999999999999,
+              30.82
+            ],
+            [
+              78.11999999999999,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 82,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 2143.3,
+        "slope": 14.07,
+        "dist_river_km": 4.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.84
+            ],
+            [
+              78.2,
+              30.84
+            ],
+            [
+              78.2,
+              30.860000000000003
+            ],
+            [
+              78.17999999999999,
+              30.860000000000003
+            ],
+            [
+              78.17999999999999,
+              30.84
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 83,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 2362.6,
+        "slope": 16.85,
+        "dist_river_km": 3.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.84
+            ],
+            [
+              78.24000000000001,
+              30.84
+            ],
+            [
+              78.24000000000001,
+              30.860000000000003
+            ],
+            [
+              78.22,
+              30.860000000000003
+            ],
+            [
+              78.22,
+              30.84
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2558.0,
+        "slope": 2.97,
+        "dist_river_km": 6.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.97999999999999,
+              30.86
+            ],
+            [
+              78.0,
+              30.86
+            ],
+            [
+              78.0,
+              30.880000000000003
+            ],
+            [
+              77.97999999999999,
+              30.880000000000003
+            ],
+            [
+              77.97999999999999,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 85,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2812.4,
+        "slope": 7.4,
+        "dist_river_km": 8.83,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              30.86
+            ],
+            [
+              78.06,
+              30.86
+            ],
+            [
+              78.06,
+              30.880000000000003
+            ],
+            [
+              78.03999999999999,
+              30.880000000000003
+            ],
+            [
+              78.03999999999999,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 86,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3290,
+        "elevation": 2113.0,
+        "slope": 14.19,
+        "dist_river_km": 3.61,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.9
+            ],
+            [
+              78.02000000000001,
+              30.9
+            ],
+            [
+              78.02000000000001,
+              30.92
+            ],
+            [
+              78.0,
+              30.92
+            ],
+            [
+              78.0,
+              30.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 87,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2682.2,
+        "slope": 2.86,
+        "dist_river_km": 8.62,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.25999999999999,
+              30.919999999999998
+            ],
+            [
+              78.28,
+              30.919999999999998
+            ],
+            [
+              78.28,
+              30.94
+            ],
+            [
+              78.25999999999999,
+              30.94
+            ],
+            [
+              78.25999999999999,
+              30.919999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 88,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2626.7,
+        "slope": 7.99,
+        "dist_river_km": 3.61,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.05999999999999,
+              30.939999999999998
+            ],
+            [
+              78.08,
+              30.939999999999998
+            ],
+            [
+              78.08,
+              30.96
+            ],
+            [
+              78.05999999999999,
+              30.96
+            ],
+            [
+              78.05999999999999,
+              30.939999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 89,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2797.5,
+        "slope": 6.42,
+        "dist_river_km": 6.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.959999999999997
+            ],
+            [
+              78.22,
+              30.959999999999997
+            ],
+            [
+              78.22,
+              30.98
+            ],
+            [
+              78.19999999999999,
+              30.98
+            ],
+            [
+              78.19999999999999,
+              30.959999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 90,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2774.3,
+        "slope": 3.34,
+        "dist_river_km": 6.6,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.979999999999997
+            ],
+            [
+              78.22,
+              30.979999999999997
+            ],
+            [
+              78.22,
+              31.0
+            ],
+            [
+              78.19999999999999,
+              31.0
+            ],
+            [
+              78.19999999999999,
+              30.979999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 91,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2651.2,
+        "slope": 2.75,
+        "dist_river_km": 5.81,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.11999999999999,
+              31.04
+            ],
+            [
+              78.14,
+              31.04
+            ],
+            [
+              78.14,
+              31.060000000000002
+            ],
+            [
+              78.11999999999999,
+              31.060000000000002
+            ],
+            [
+              78.11999999999999,
+              31.04
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 92,
+        "suitability_score": 3.35,
+        "rating": "Moderate",
+        "carrying_capacity": 3790,
+        "elevation": 2666.7,
+        "slope": 6.8,
+        "dist_river_km": 5.87,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.52
+            ],
+            [
+              78.18,
+              30.52
+            ],
+            [
+              78.18,
+              30.540000000000003
+            ],
+            [
+              78.16,
+              30.540000000000003
+            ],
+            [
+              78.16,
+              30.52
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 93,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3520,
+        "elevation": 1885.1,
+        "slope": 8.34,
+        "dist_river_km": 8.3,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.54
+            ],
+            [
+              78.16000000000001,
+              30.54
+            ],
+            [
+              78.16000000000001,
+              30.560000000000002
+            ],
+            [
+              78.14,
+              30.560000000000002
+            ],
+            [
+              78.14,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3770,
+        "elevation": 1654.7,
+        "slope": 5.21,
+        "dist_river_km": 11.0,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 1,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.56
+            ],
+            [
+              78.22,
+              30.56
+            ],
+            [
+              78.22,
+              30.580000000000002
+            ],
+            [
+              78.19999999999999,
+              30.580000000000002
+            ],
+            [
+              78.19999999999999,
+              30.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 95,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3520,
+        "elevation": 2320.4,
+        "slope": 10.75,
+        "dist_river_km": 8.65,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.58
+            ],
+            [
+              78.22,
+              30.58
+            ],
+            [
+              78.22,
+              30.6
+            ],
+            [
+              78.19999999999999,
+              30.6
+            ],
+            [
+              78.19999999999999,
+              30.58
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 96,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3770,
+        "elevation": 1777.0,
+        "slope": 5.96,
+        "dist_river_km": 9.63,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 1,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.599999999999998
+            ],
+            [
+              78.32000000000001,
+              30.599999999999998
+            ],
+            [
+              78.32000000000001,
+              30.62
+            ],
+            [
+              78.3,
+              30.62
+            ],
+            [
+              78.3,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 97,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3520,
+        "elevation": 2428.4,
+        "slope": 11.83,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.66
+            ],
+            [
+              78.30000000000001,
+              30.66
+            ],
+            [
+              78.30000000000001,
+              30.680000000000003
+            ],
+            [
+              78.28,
+              30.680000000000003
+            ],
+            [
+              78.28,
+              30.66
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 98,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3770,
+        "elevation": 1956.1,
+        "slope": 7.64,
+        "dist_river_km": 11.55,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 1,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.66
+            ],
+            [
+              78.34,
+              30.66
+            ],
+            [
+              78.34,
+              30.680000000000003
+            ],
+            [
+              78.32,
+              30.680000000000003
+            ],
+            [
+              78.32,
+              30.66
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 99,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3520,
+        "elevation": 2187.5,
+        "slope": 13.69,
+        "dist_river_km": 8.62,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.959999999999997
+            ],
+            [
+              78.30000000000001,
+              30.959999999999997
+            ],
+            [
+              78.30000000000001,
+              30.98
+            ],
+            [
+              78.28,
+              30.98
+            ],
+            [
+              78.28,
+              30.959999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 100,
+        "suitability_score": 3.3,
+        "rating": "Moderate",
+        "carrying_capacity": 3520,
+        "elevation": 2673.5,
+        "slope": 9.98,
+        "dist_river_km": 2.41,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 5,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.38,
+              30.5
+            ],
+            [
+              78.4,
+              30.5
+            ],
+            [
+              78.4,
+              30.520000000000003
+            ],
+            [
+              78.38,
+              30.520000000000003
+            ],
+            [
+              78.38,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 101,
+        "suitability_score": 3.268,
+        "rating": "Moderate",
+        "carrying_capacity": 3757,
+        "elevation": 1347.5,
+        "slope": 6.94,
+        "dist_river_km": 9.63,
+        "scores": {
+          "hazard_safety": 2.89,
+          "slope_suitability": 5,
+          "water_access": 1,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.5
+            ],
+            [
+              78.38000000000001,
+              30.5
+            ],
+            [
+              78.38000000000001,
+              30.520000000000003
+            ],
+            [
+              78.36,
+              30.520000000000003
+            ],
+            [
+              78.36,
+              30.5
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 102,
+        "suitability_score": 3.258,
+        "rating": "Moderate",
+        "carrying_capacity": 3503,
+        "elevation": 1583.8,
+        "slope": 8.0,
+        "dist_river_km": 8.0,
+        "scores": {
+          "hazard_safety": 2.86,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 2,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.5,
+              30.599999999999998
+            ],
+            [
+              78.52000000000001,
+              30.599999999999998
+            ],
+            [
+              78.52000000000001,
+              30.62
+            ],
+            [
+              78.5,
+              30.62
+            ],
+            [
+              78.5,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 103,
+        "suitability_score": 3.258,
+        "rating": "Moderate",
+        "carrying_capacity": 3753,
+        "elevation": 1997.6,
+        "slope": 7.22,
+        "dist_river_km": 11.55,
+        "scores": {
+          "hazard_safety": 2.86,
+          "slope_suitability": 5,
+          "water_access": 1,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.61999999999999,
+              30.759999999999998
+            ],
+            [
+              78.64,
+              30.759999999999998
+            ],
+            [
+              78.64,
+              30.78
+            ],
+            [
+              78.61999999999999,
+              30.78
+            ],
+            [
+              78.61999999999999,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 104,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3750,
+        "elevation": 2985.9,
+        "slope": 0.96,
+        "dist_river_km": 5.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.779999999999998
+            ],
+            [
+              78.2,
+              30.779999999999998
+            ],
+            [
+              78.2,
+              30.8
+            ],
+            [
+              78.17999999999999,
+              30.8
+            ],
+            [
+              78.17999999999999,
+              30.779999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3500,
+        "elevation": 2162.7,
+        "slope": 11.12,
+        "dist_river_km": 7.67,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 4,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.819999999999997
+            ],
+            [
+              78.2,
+              30.819999999999997
+            ],
+            [
+              78.2,
+              30.84
+            ],
+            [
+              78.17999999999999,
+              30.84
+            ],
+            [
+              78.17999999999999,
+              30.819999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 106,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3250,
+        "elevation": 2728.8,
+        "slope": 16.25,
+        "dist_river_km": 4.4,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.939999999999998
+            ],
+            [
+              78.26,
+              30.939999999999998
+            ],
+            [
+              78.26,
+              30.96
+            ],
+            [
+              78.24,
+              30.96
+            ],
+            [
+              78.24,
+              30.939999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 107,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3750,
+        "elevation": 2967.7,
+        "slope": 5.86,
+        "dist_river_km": 4.75,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.46,
+              30.939999999999998
+            ],
+            [
+              78.48,
+              30.939999999999998
+            ],
+            [
+              78.48,
+              30.96
+            ],
+            [
+              78.46,
+              30.96
+            ],
+            [
+              78.46,
+              30.939999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 108,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3750,
+        "elevation": 2671.0,
+        "slope": 7.35,
+        "dist_river_km": 5.87,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.14,
+              30.959999999999997
+            ],
+            [
+              78.16000000000001,
+              30.959999999999997
+            ],
+            [
+              78.16000000000001,
+              30.98
+            ],
+            [
+              78.14,
+              30.98
+            ],
+            [
+              78.14,
+              30.959999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 109,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3250,
+        "elevation": 2528.3,
+        "slope": 14.52,
+        "dist_river_km": 3.33,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 4
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              31.08
+            ],
+            [
+              78.06,
+              31.08
+            ],
+            [
+              78.06,
+              31.1
+            ],
+            [
+              78.03999999999999,
+              31.1
+            ],
+            [
+              78.03999999999999,
+              31.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 110,
+        "suitability_score": 3.25,
+        "rating": "Moderate",
+        "carrying_capacity": 3750,
+        "elevation": 2933.2,
+        "slope": 7.44,
+        "dist_river_km": 4.88,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 3
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.439999999999998
+            ],
+            [
+              78.22,
+              30.439999999999998
+            ],
+            [
+              78.22,
+              30.46
+            ],
+            [
+              78.19999999999999,
+              30.46
+            ],
+            [
+              78.19999999999999,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 111,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1825.1,
+        "slope": 17.99,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.439999999999998
+            ],
+            [
+              78.30000000000001,
+              30.439999999999998
+            ],
+            [
+              78.30000000000001,
+              30.46
+            ],
+            [
+              78.28,
+              30.46
+            ],
+            [
+              78.28,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 112,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1315.2,
+        "slope": 14.7,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.459999999999997
+            ],
+            [
+              78.2,
+              30.459999999999997
+            ],
+            [
+              78.2,
+              30.48
+            ],
+            [
+              78.17999999999999,
+              30.48
+            ],
+            [
+              78.17999999999999,
+              30.459999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 113,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1423.0,
+        "slope": 18.54,
+        "dist_river_km": 6.6,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.459999999999997
+            ],
+            [
+              78.32000000000001,
+              30.459999999999997
+            ],
+            [
+              78.32000000000001,
+              30.48
+            ],
+            [
+              78.3,
+              30.48
+            ],
+            [
+              78.3,
+              30.459999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 114,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1594.5,
+        "slope": 20.42,
+        "dist_river_km": 6.6,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.479999999999997
+            ],
+            [
+              78.18,
+              30.479999999999997
+            ],
+            [
+              78.18,
+              30.5
+            ],
+            [
+              78.16,
+              30.5
+            ],
+            [
+              78.16,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 115,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1513.3,
+        "slope": 17.62,
+        "dist_river_km": 7.68,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.479999999999997
+            ],
+            [
+              78.34,
+              30.479999999999997
+            ],
+            [
+              78.34,
+              30.5
+            ],
+            [
+              78.32,
+              30.5
+            ],
+            [
+              78.32,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 116,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1775.4,
+        "slope": 21.4,
+        "dist_river_km": 7.24,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.19999999999999,
+              30.54
+            ],
+            [
+              78.22,
+              30.54
+            ],
+            [
+              78.22,
+              30.560000000000002
+            ],
+            [
+              78.19999999999999,
+              30.560000000000002
+            ],
+            [
+              78.19999999999999,
+              30.54
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 117,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1873.4,
+        "slope": 16.84,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.22,
+              30.56
+            ],
+            [
+              78.24000000000001,
+              30.56
+            ],
+            [
+              78.24000000000001,
+              30.580000000000002
+            ],
+            [
+              78.22,
+              30.580000000000002
+            ],
+            [
+              78.22,
+              30.56
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2021.8,
+        "slope": 15.84,
+        "dist_river_km": 7.01,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.599999999999998
+            ],
+            [
+              78.26,
+              30.599999999999998
+            ],
+            [
+              78.26,
+              30.62
+            ],
+            [
+              78.24,
+              30.62
+            ],
+            [
+              78.24,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 119,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1808.7,
+        "slope": 19.31,
+        "dist_river_km": 8.18,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.28,
+              30.599999999999998
+            ],
+            [
+              78.30000000000001,
+              30.599999999999998
+            ],
+            [
+              78.30000000000001,
+              30.62
+            ],
+            [
+              78.28,
+              30.62
+            ],
+            [
+              78.28,
+              30.599999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 120,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2144.4,
+        "slope": 18.43,
+        "dist_river_km": 6.73,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.619999999999997
+            ],
+            [
+              78.32000000000001,
+              30.619999999999997
+            ],
+            [
+              78.32000000000001,
+              30.64
+            ],
+            [
+              78.3,
+              30.64
+            ],
+            [
+              78.3,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 121,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2376.7,
+        "slope": 19.81,
+        "dist_river_km": 7.44,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.68
+            ],
+            [
+              78.34,
+              30.68
+            ],
+            [
+              78.34,
+              30.700000000000003
+            ],
+            [
+              78.32,
+              30.700000000000003
+            ],
+            [
+              78.32,
+              30.68
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 122,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1863.7,
+        "slope": 17.18,
+        "dist_river_km": 8.62,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.08,
+              30.759999999999998
+            ],
+            [
+              78.10000000000001,
+              30.759999999999998
+            ],
+            [
+              78.10000000000001,
+              30.78
+            ],
+            [
+              78.08,
+              30.78
+            ],
+            [
+              78.08,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 123,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1820.0,
+        "slope": 19.89,
+        "dist_river_km": 8.93,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.36,
+              30.759999999999998
+            ],
+            [
+              78.38000000000001,
+              30.759999999999998
+            ],
+            [
+              78.38000000000001,
+              30.78
+            ],
+            [
+              78.36,
+              30.78
+            ],
+            [
+              78.36,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 124,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2234.9,
+        "slope": 18.95,
+        "dist_river_km": 8.8,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.38,
+              30.759999999999998
+            ],
+            [
+              78.4,
+              30.759999999999998
+            ],
+            [
+              78.4,
+              30.78
+            ],
+            [
+              78.38,
+              30.78
+            ],
+            [
+              78.38,
+              30.759999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2050.6,
+        "slope": 16.73,
+        "dist_river_km": 7.23,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              30.799999999999997
+            ],
+            [
+              78.04,
+              30.799999999999997
+            ],
+            [
+              78.04,
+              30.82
+            ],
+            [
+              78.02,
+              30.82
+            ],
+            [
+              78.02,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 126,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2022.5,
+        "slope": 14.65,
+        "dist_river_km": 6.5,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.819999999999997
+            ],
+            [
+              78.02000000000001,
+              30.819999999999997
+            ],
+            [
+              78.02000000000001,
+              30.84
+            ],
+            [
+              78.0,
+              30.84
+            ],
+            [
+              78.0,
+              30.819999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 1794.5,
+        "slope": 19.41,
+        "dist_river_km": 7.01,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              30.9
+            ],
+            [
+              78.04,
+              30.9
+            ],
+            [
+              78.04,
+              30.92
+            ],
+            [
+              78.02,
+              30.92
+            ],
+            [
+              78.02,
+              30.9
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 128,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2394.1,
+        "slope": 14.88,
+        "dist_river_km": 6.74,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.16,
+              30.939999999999998
+            ],
+            [
+              78.18,
+              30.939999999999998
+            ],
+            [
+              78.18,
+              30.96
+            ],
+            [
+              78.16,
+              30.96
+            ],
+            [
+              78.16,
+              30.939999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 129,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3230,
+        "elevation": 2397.0,
+        "slope": 16.89,
+        "dist_river_km": 5.87,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.67999999999999,
+              31.02
+            ],
+            [
+              78.7,
+              31.02
+            ],
+            [
+              78.7,
+              31.040000000000003
+            ],
+            [
+              78.67999999999999,
+              31.040000000000003
+            ],
+            [
+              78.67999999999999,
+              31.02
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "suitability_score": 3.2,
+        "rating": "Moderate",
+        "carrying_capacity": 3730,
+        "elevation": 3372.3,
+        "slope": 7.0,
+        "dist_river_km": 4.75,
+        "scores": {
+          "hazard_safety": 2.5,
+          "slope_suitability": 5,
+          "water_access": 4,
+          "road_connectivity": 1,
+          "land_availability": 4,
+          "elevation_suitability": 3
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.46
+            ],
+            [
+              78.3,
+              30.46
+            ],
+            [
+              78.3,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 1,
+        "suitability_score": 3.613,
+        "rating": "Good",
+        "carrying_capacity": 76,
+        "elevation": 1040.9,
+        "slope": 3.02,
+        "dist_river_km": 7.96,
+        "scores": {
+          "hazard_safety": 3.71,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 2,
+          "elevation_suitability": 4
+        }
+      }
+    }
+  ]
+}
