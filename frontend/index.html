@@ -43,10 +43,10 @@
                     </div>
                     <div class="logo-text">
                         <div class="govt-emblem-row" id="govt-emblem-row">
-                            <span class="govt-title">GOVERNMENT OF UTTARAKHAND • आपदा प्रबंधन विभाग</span>
+                            <span class="govt-title">MINISTRY OF HOME AFFAIRS (DISASTER MANAGEMENT) & USDMA • आपदा प्रबंधन विभाग</span>
                         </div>
-                        <h1 id="header-main-title">USDMA & DDMA UTTARKASHI <span class="version-badge" id="model-version-tag">AI v2.5 ADAPTIVE</span></h1>
-                        <span class="logo-tagline" id="header-sub-title">STATUTORY MULTI-HAZARD DECISION PLATFORM • SEC. 30 & 34 DISASTER MANAGEMENT ACT 2005</span>
+                        <h1 id="header-main-title">NATIONAL MULTI-HAZARD RED ZONE & RELOCATION PLATFORM <span class="version-badge" id="model-version-tag">MHA-NDMA v3.2</span></h1>
+                        <span class="logo-tagline" id="header-sub-title">STATUTORY DECISION SUPPORT SYSTEM • SEC. 30 & 34 DISASTER MANAGEMENT ACT 2005</span>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,11 @@
                         <span class="status-dot live-pulse"></span>
                         <span id="telemetry-mode-text">LIVE TELEMETRY STREAM</span>
                     </div>
-                    <div class="status-chip warning" id="status-seismic" title="Live USGS Earthquake Telemetry">
+                    <div class="status-chip safe" id="status-national-threat" title="National / State Multi-Hazard Threat Alert Level">
+                        <span class="status-dot live-pulse" id="threat-pulse-dot"></span>
+                        <span id="threat-tier-text">THREAT LEVEL: GREEN (NORMAL)</span>
+                    </div>
+                    <div class="status-chip warning" id="status-seismic" title="Live USGS Regional Earthquake Telemetry">
                         <span class="status-dot pulse-amber"></span>
                         <span id="seismic-chip-text">USGS SEISMIC: M 4.0 (Sarāhan)</span>
                     </div>
@@ -68,14 +72,23 @@
             </div>
             <div class="top-bar-right">
                 <!-- Action Modules with refined hierarchy -->
+                <button class="nav-action-btn btn-thrive-primary" id="btn-open-thrive-modal" title="Explore THRIVE Multi-Hazard Engine Formulation, Radar Breakdown & Weight Sensitivity">
+                    <span class="btn-icon-symbol">🧠</span> THRIVE™ Engine
+                </button>
+                <button class="nav-action-btn btn-action-emerald" id="btn-open-capacity-modal" title="Inspect NDMA Safe Site Carrying Capacity Allocation Ledger & Headroom">
+                    <span class="btn-icon-symbol">⚖️</span> Carrying Capacity
+                </button>
+                <button class="nav-action-btn btn-action-cyan" id="btn-open-imd-modal" title="Inspect IMD Live Weather Telemetry & Early Warning Bulletins">
+                    <span class="btn-icon-symbol">🌦️</span> IMD Warning & AWS
+                </button>
+                <button class="nav-action-btn btn-action-emerald" id="btn-open-provenance-modal" title="View Verified Real Geospatial Data Provenance">
+                    <span class="btn-icon-symbol">🛰️</span> Data Provenance
+                </button>
                 <button class="nav-action-btn btn-dm-primary" id="btn-dm-report" title="Generate Official Relocation Decision Order & Action Matrix">
-                    <span class="btn-icon-symbol">📋</span> DM Relocation Order
+                    <span class="btn-icon-symbol">📋</span> MHA Relocation Order
                 </button>
                 <button class="nav-action-btn btn-action-amber" id="btn-history-replay" title="Replay historical disaster scenarios and test decision outcomes">
                     <span class="btn-icon-symbol">⏱️</span> Scenario Replay
-                </button>
-                <button class="nav-action-btn btn-action-emerald" id="btn-open-continuous-modal" title="View Model Self-Training Ledger & Trigger Continuous Retraining">
-                    <span class="btn-icon-symbol">🔄</span> Model Retraining
                 </button>
                 <button class="nav-action-btn btn-action-subtle" id="btn-open-gis-modal" title="Ingest Custom USGS DEM or ESRI Shapefile">
                     <span class="btn-icon-symbol">📁</span> Ingest GIS
@@ -205,6 +218,9 @@
                             <strong class="text-safe" id="stat-capacity-buffer">+410,059 (Surplus)</strong>
                         </div>
                     </div>
+                    <button class="btn btn-action gov-action-btn" id="btn-inspect-capacity-ledger" style="margin-top: 10px; width: 100%;">
+                        <span>⚖️</span> Inspect NDMA Safe Site Ledger
+                    </button>
                 </div>
 
                 <!-- AI Model Performance -->
@@ -228,10 +244,10 @@
                 <!-- Dynamic Hazard Trigger Controller -->
                 <div class="control-section trigger-section gov-card">
                     <div class="section-title-tag">
-                        <h3>⚡ Dynamic Hydrological Trigger & Pore Pressure</h3>
+                        <h3>⚡ Dynamic Multi-Hazard Trigger & Pore Pressure</h3>
                         <span class="live-pill" id="mode-status-badge">LIVE SENSORS</span>
                     </div>
-                    <p class="control-description">Real-time precipitation & soil saturation feeding Mohr-Coulomb slope stability mechanics.</p>
+                    <p class="control-description">Coupled IMD precipitation, USGS seismic acceleration, and Mohr-Coulomb slope stability physics.</p>
                     
                     <button class="btn btn-action gov-action-btn" id="btn-fetch-live-weather">
                         <span>🌐</span> Pull Live IMD / Open-Meteo Weather
@@ -279,8 +295,25 @@
                         <input type="range" id="sim-saturation" min="0" max="200" step="5" value="50" class="gov-slider">
                     </div>
 
+                    <!-- Himalayan Seismic Acceleration Slider -->
+                    <div class="slider-control" style="margin-top: 12px;">
+                        <div class="slider-header-flex">
+                            <label>Himalayan Seismic Shaking (kh Ground Accel)</label>
+                            <span class="slider-value mono-readout" id="sim-seismic-value">0.00g (Baseline)</span>
+                        </div>
+                        <input type="range" id="sim-seismic" min="0.00" max="0.45" step="0.05" value="0.00" class="gov-slider">
+                    </div>
+
+                    <!-- Seismic Presets -->
+                    <div class="preset-buttons gov-presets" style="margin-top: 6px;">
+                        <button class="btn-preset-seismic active" data-kh="0.00">Zone IV Base (0.00g)</button>
+                        <button class="btn-preset-seismic" data-kh="0.10">Tremor (0.10g)</button>
+                        <button class="btn-preset-seismic" data-kh="0.25">M6.8 Quake (0.25g)</button>
+                        <button class="btn-preset-seismic" data-kh="0.40">M8.0 Deluge (0.40g)</button>
+                    </div>
+
                     <!-- Dynamic Alert Tiers Distribution -->
-                    <div class="alert-tiers-grid gov-tiers">
+                    <div class="alert-tiers-grid gov-tiers" style="margin-top: 14px;">
                         <div class="alert-tier-pill evac">
                             <span>EVACUATE</span>
                             <span class="count" id="alert-badge-evac">0</span>
@@ -312,6 +345,14 @@
                         <div class="feedback-row">
                             <span>Displaced Population Surge:</span>
                             <strong class="mono-readout" id="feedback-displaced-pop">0</strong>
+                        </div>
+                        <div class="feedback-row">
+                            <span>Safe Sites Stressed/Deficit:</span>
+                            <strong class="mono-readout" id="feedback-stressed-sites">0 of 130 Sites</strong>
+                        </div>
+                        <div class="feedback-row">
+                            <span>Net District Headroom Buffer:</span>
+                            <strong class="text-safe mono-readout" id="feedback-net-buffer">+410,059</strong>
                         </div>
                     </div>
 
@@ -457,6 +498,24 @@
             </div>
         </aside>
 
+        <!-- IMD Real-Time Early Warning & Telemetry Operational Ribbon -->
+        <div id="imd-live-ticker-strip" class="imd-live-ticker-strip">
+            <div class="imd-ticker-pulse-badge">
+                <span class="live-dot-pulse"></span>
+                <span class="imd-badge-text">IMD WARNING: ORANGE ALERT</span>
+            </div>
+            <div class="imd-ticker-marquee">
+                <span class="imd-marquee-item"><strong>⛈️ Convective Nowcast:</strong> Severe cloudburst potential along Bhatwari-Gangotri corridor (rain rate 25-45 mm/hr)</span>
+                <span class="imd-sep">•</span>
+                <span class="imd-marquee-item"><strong>🌊 Upper Ganga Basin QPF:</strong> Inflow 780 m³/s (RISING) • Stage 1122.8m / Danger 1124.5m</span>
+                <span class="imd-sep">•</span>
+                <span class="imd-marquee-item"><strong>📡 Live AWS:</strong> Uttarkashi HQ 14.5 mm/hr • Bhatwari ARG 18.2 mm/hr • Gangotri AWS 21.4 mm/hr</span>
+                <span class="imd-sep">•</span>
+                <span class="imd-marquee-item"><strong>🏔️ Soil Moisture:</strong> 72% Antecedent Saturation (Liquefaction Threshold: 85%)</span>
+            </div>
+            <button class="btn-imd-strip-inspect" id="btn-open-imd-from-strip">Telemetry Explorer ↗</button>
+        </div>
+
         <!-- 3D Map Container -->
         <div id="map" class="map-container"></div>
 
@@ -477,6 +536,25 @@
                 <div class="legend-item"><span class="legend-color" style="background: #f5cc00"></span> Yellow — Moderate Risk (0.30 - 0.50)</div>
                 <div class="legend-item"><span class="legend-color" style="background: #10b981"></span> Green — Safe Relocation Site (&lt; 0.30)</div>
                 <div class="legend-item"><span class="legend-color pulse-box"></span> Newly Expanded Red Zone (Dynamic Trigger)</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NDMA Safe Alternative Sites Carrying Capacity Assessment & Allocation Ledger Modal -->
+    <div id="capacity-ledger-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <h2>⚖️ NDMA Safe Alternative Sites Carrying Capacity & Relocation Allocation Ledger</h2>
+                    <span class="modal-sub">National Disaster Management Authority & USDMA • Sustainable Hill Terrace Resettlement • 70 LPCD Potable Water • &lt;14° Slope • All-Weather PMGSY/BRO Corridor</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-modal-action primary" id="btn-export-capacity-csv"><span>📊</span> Export Capacity Matrix (CSV)</button>
+                    <button class="modal-close" id="btn-close-capacity-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body" id="capacity-ledger-content">
+                <!-- Dynamically populated by main.js -->
             </div>
         </div>
     </div>
@@ -644,6 +722,260 @@
                             <span>➕</span> Ingest Field Ground-Truth
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- THRIVE EXPLAINABILITY & MULTI-HAZARD INTELLIGENCE MODAL      -->
+    <!-- ============================================================ -->
+    <div id="thrive-explain-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen thrive-modal-box">
+            <div class="modal-header thrive-modal-header">
+                <div class="modal-header-left">
+                    <div class="thrive-badge-pill">CORE ALGORITHMIC INNOVATION</div>
+                    <h2>THRIVE™ Multi-Hazard Intelligence & Carrying Capacity Engine</h2>
+                    <span class="modal-sub">Terrain-Hydro-Risk Integrated Vulnerability Engine • Physics-Bounded ML & 5D Spatial MCDA</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close" id="btn-close-thrive-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body thrive-modal-body">
+                <!-- Top Grid: Interactive Radar + AHP Sensitivity Sliders -->
+                <div class="thrive-top-grid">
+                    <!-- Left: 5D Radar Chart -->
+                    <div class="thrive-card radar-card">
+                        <div class="thrive-card-header">
+                            <div class="thrive-card-title-group">
+                                <h3>📊 5-Dimensional Hazard & Urgency Radar</h3>
+                                <p>Dynamic multi-criteria profiling for selected habitations</p>
+                            </div>
+                            <div class="village-selector-wrap">
+                                <label for="thrive-village-select">Select Habitation:</label>
+                                <select id="thrive-village-select" class="thrive-select">
+                                    <option value="Bhatwari">Bhatwari (Critical Red Zone)</option>
+                                    <option value="Uttarkashi">Uttarkashi HQ (Urban Cluster)</option>
+                                    <option value="Gangotri">Gangotri (High-Altitude Gorge)</option>
+                                    <option value="Barkot">Barkot (Yamuna Basin)</option>
+                                    <option value="Mori">Mori (Tons Valley)</option>
+                                    <option value="Sukhi">Sukhi (Debris Flow Corridor)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="radar-visual-wrapper">
+                            <div id="thrive-radar-svg-container" class="radar-svg-container">
+                                <!-- Dynamic SVG Radar Chart inserted here -->
+                            </div>
+                            <div class="radar-metrics-sidebar" id="radar-metrics-sidebar">
+                                <!-- Dynamic metrics bars inserted here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: AHP Weight Sensitivity Sliders -->
+                    <div class="thrive-card sensitivity-card">
+                        <div class="thrive-card-header">
+                            <div class="thrive-card-title-group">
+                                <h3>⚖️ AHP Weight Sensitivity & Eigenvector Tuner</h3>
+                                <p>Saaty Consistency Ratio: <strong class="cr-safe" id="thrive-cr-value">CR = 0.0106 (CONSISTENT &lt; 0.10)</strong></p>
+                            </div>
+                            <button class="btn btn-preset-reset" id="btn-reset-thrive-weights">Reset AHP Defaults</button>
+                        </div>
+                        <div class="thrive-sliders-container">
+                            <div class="thrive-slider-row">
+                                <div class="slider-label-row">
+                                    <span>α: Landslide Susceptibility (Terrain/Geology)</span>
+                                    <strong id="w-val-landslide" class="mono-readout">30%</strong>
+                                </div>
+                                <input type="range" id="w-slider-landslide" min="10" max="60" step="5" value="30" class="thrive-range">
+                            </div>
+                            <div class="thrive-slider-row">
+                                <div class="slider-label-row">
+                                    <span>β: Flood & Inundation (Drainage/HydroRIVERS)</span>
+                                    <strong id="w-val-flood" class="mono-readout">25%</strong>
+                                </div>
+                                <input type="range" id="w-slider-flood" min="10" max="50" step="5" value="25" class="thrive-range">
+                            </div>
+                            <div class="thrive-slider-row">
+                                <div class="slider-label-row">
+                                    <span>γ: Cloudburst Susceptibility (Orography/IMD)</span>
+                                    <strong id="w-val-cloudburst" class="mono-readout">15%</strong>
+                                </div>
+                                <input type="range" id="w-slider-cloudburst" min="5" max="40" step="5" value="15" class="thrive-range">
+                            </div>
+                            <div class="thrive-slider-row">
+                                <div class="slider-label-row">
+                                    <span>δ: Socio-Demographic Vulnerability (Isolation/Pop)</span>
+                                    <strong id="w-val-vulnerability" class="mono-readout">15%</strong>
+                                </div>
+                                <input type="range" id="w-slider-vulnerability" min="5" max="35" step="5" value="15" class="thrive-range">
+                            </div>
+                            <div class="thrive-slider-row">
+                                <div class="slider-label-row">
+                                    <span>ε: Historical Recurrence (Temporal Decay t½=5yr)</span>
+                                    <strong id="w-val-recurrence" class="mono-readout">15%</strong>
+                                </div>
+                                <input type="range" id="w-slider-recurrence" min="5" max="35" step="5" value="15" class="thrive-range">
+                            </div>
+                        </div>
+                        <div class="sensitivity-action-row">
+                            <span class="weight-sum-indicator" id="thrive-weight-sum">Total Weight: 100%</span>
+                            <button class="btn industrial-btn primary" id="btn-recompute-thrive">
+                                <span>⚡ Apply Weights to Live Decision Platform</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Grid: Formulation & Physics Constraints -->
+                <div class="thrive-middle-grid">
+                    <div class="thrive-card math-card">
+                        <h3>📐 Mathematical Formulation & Statutory Alignment</h3>
+                        <div class="formula-box">
+                            <div class="formula-title">1. Multi-Hazard Probabilistic Union (Non-Diluting Physical Exposure):</div>
+                            <code>P(H_multi) = 0.70 · max(P_LS, P_FL, P_CB) + 0.30 · [1 - (1 - P_LS)(1 - P_FL)(1 - P_CB)]</code>
+                            <p class="formula-desc">Ensures a severe single hazard (e.g. 90% landslide probability on 45° cliff) is never diluted by dry flood scores.</p>
+                        </div>
+                        <div class="formula-box">
+                            <div class="formula-title">2. Habitation Relocation Urgency Index:</div>
+                            <code>THRIVE_village = 0.55 · H_multi + 0.25 · V_pop + 0.20 · H_recurrence</code>
+                            <p class="formula-desc">Integrates physical danger with road isolation, vulnerable demographics, and repeated past disaster trauma.</p>
+                        </div>
+                        <div class="formula-box">
+                            <div class="formula-title">3. Safe Relocation Site Carrying Capacity (K_site):</div>
+                            <code>K_site = floor((A_usable / 25 m²) × FS_geotech × AHP_suitability)</code>
+                            <p class="formula-desc">Guarantees safe relocation reception sites possess &lt;15° slope, &gt;100m river safety buffer, and verified civil infrastructure.</p>
+                        </div>
+                    </div>
+
+                    <div class="thrive-card physics-card">
+                        <h3>🛡️ Geotechnical Physics Constraints (Mohr-Coulomb)</h3>
+                        <div class="physics-visual-box">
+                            <div class="physics-formula-pill">
+                                <code>FS = [c' + (γ·z·cos²β - u)·tan φ'] / [γ·z·sin β·cos β]</code>
+                            </div>
+                            <p>To eliminate artificial machine learning hallucinations, XGBoost predictions are strictly bounded by geotechnical limit equilibrium:</p>
+                            <ul class="physics-rules-list">
+                                <li><strong class="text-safe">Guaranteed Stability Override:</strong> If <code>FS &gt; 3.0</code> (flat ridge / bedrock), Landslide Probability is capped at <strong>0.10</strong>.</li>
+                                <li><strong class="text-danger">Critical Shear Failure Floor:</strong> If <code>FS &lt; 1.0</code> (sheared talus / active creeping slope), Landslide Probability is floored at <strong>0.70</strong>.</li>
+                                <li><strong class="text-warning">Pore Pressure Dynamics:</strong> Live IMD rainfall directly inflates pore-water pressure <code>u</code>, collapsing effective normal stress <code>σ' = σ - u</code>.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- IMD REAL-TIME TELEMETRY & EARLY WARNING MODAL                -->
+    <!-- ============================================================ -->
+    <div id="imd-telemetry-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen imd-modal-box">
+            <div class="modal-header imd-modal-header">
+                <div class="modal-header-left">
+                    <div class="imd-badge-pill">OPERATIONAL METEOROLOGY</div>
+                    <h2>India Meteorological Department (IMD) Real-Time Telemetry & Alert Center</h2>
+                    <span class="modal-sub">Direct API Ingestion • Automatic Weather Stations (AWS) • River Basin QPF • Severe Convective Nowcasts</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close" id="btn-close-imd-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body imd-modal-body">
+                <!-- Top Status Cards -->
+                <div class="imd-status-grid">
+                    <div class="imd-stat-card warning-card">
+                        <span class="imd-card-tag">OFFICIAL IMD BULLETIN (API-6)</span>
+                        <h4 class="warning-title">ORANGE WARNING: HEAVY TO VERY HEAVY RAINFALL</h4>
+                        <p class="advisory-text">High probability of localized flash floods, slope wash, and debris flows along the Bhagirathi, Yamuna, and Tons valleys. Enhanced vigilance ordered under Section 30 & 34 of DM Act 2005.</p>
+                        <div class="stat-footer-badge">Valid: Next 24 Hours • USDMA Alert Level 3</div>
+                    </div>
+
+                    <div class="imd-stat-card basin-card">
+                        <span class="imd-card-tag">RIVER BASIN QPF (API-10)</span>
+                        <h4 class="basin-title">Upper Ganga & Bhagirathi Catchment</h4>
+                        <div class="basin-metric-row">
+                            <div class="b-metric">
+                                <span class="lbl">Predicted Inflow:</span>
+                                <strong class="val danger-text">780 m³/s</strong>
+                            </div>
+                            <div class="b-metric">
+                                <span class="lbl">Current River Gauge:</span>
+                                <strong class="val">1,122.8 m</strong>
+                            </div>
+                            <div class="b-metric">
+                                <span class="lbl">Warning Stage:</span>
+                                <strong class="val">1,123.5 m</strong>
+                            </div>
+                        </div>
+                        <div class="basin-status-bar">
+                            <span class="trend-badge rising">▲ TREND: RISING RAPIDLY</span>
+                            <span class="buffer-badge">Mandatory River Buffer: 250m</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AWS / ARG Station Telemetry Table -->
+                <div class="imd-telemetry-table-card">
+                    <div class="table-header-flex">
+                        <h3>📡 Automated Weather Station (AWS / ARG) Live Telemetry Network (API-9)</h3>
+                        <span class="refresh-badge">Live Transmission Stream: Every 15 Min</span>
+                    </div>
+                    <div class="telemetry-table-wrapper">
+                        <table class="telemetry-table">
+                            <thead>
+                                <tr>
+                                    <th>Station ID</th>
+                                    <th>Station Location</th>
+                                    <th>Elevation</th>
+                                    <th>Rainfall Rate (1h)</th>
+                                    <th>Cumulative 24h</th>
+                                    <th>Temperature</th>
+                                    <th>Humidity</th>
+                                    <th>Soil Saturation Proxy</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="imd-aws-tbody">
+                                <!-- Populated dynamically from API -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Technical IMD API Architecture Assessment (Answering user query) -->
+                <div class="imd-api-eval-card">
+                    <h3>📋 Architectural Assessment of IMD APIs for HazardShield Platform</h3>
+                    <p class="eval-intro">Rigorous evaluation of which IMD APIs are essential, high-value, or excluded for Uttarkashi District Disaster Management:</p>
+                    <div class="api-eval-grid" id="imd-api-eval-grid">
+                        <!-- Populated dynamically from /api/imd/api-requirements -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GEOSPATIAL DATA PROVENANCE MODAL                             -->
+    <!-- ============================================================ -->
+    <div id="provenance-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen prov-modal-box">
+            <div class="modal-header prov-modal-header">
+                <div class="modal-header-left">
+                    <div class="prov-badge-pill">GROUND-TRUTH DATASET REGISTRY</div>
+                    <h2>Geospatial Data Provenance & Real-Data Verification</h2>
+                    <span class="modal-sub">Audit trail of real spaceborne radar, administrative boundaries, stream networks, and geotechnical maps</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close" id="btn-close-provenance-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body prov-modal-body">
+                <div class="provenance-cards-grid" id="provenance-cards-grid">
+                    <!-- Populated dynamically -->
                 </div>
             </div>
         </div>

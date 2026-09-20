@@ -111,13 +111,14 @@ export class DMReportManager {
                 <div class="gov-header">
                     <div class="gov-emblem">🏛️</div>
                     <div class="gov-titles">
-                        <h2>GOVERNMENT OF UTTARAKHAND</h2>
-                        <h3>OFFICE OF THE DISTRICT MAGISTRATE & DDMA, UTTARKASHI</h3>
-                        <p class="gov-sub">In Coordination with Uttarakhand State Disaster Management Authority (USDMA)</p>
+                        <h2>GOVERNMENT OF INDIA • MINISTRY OF HOME AFFAIRS</h2>
+                        <h3>DISASTER MANAGEMENT DIVISION & USDMA UTTARKASHI</h3>
+                        <p class="gov-sub">National Relocation Priority Matrix & Carrying Capacity Allocation Order</p>
                         <div class="doc-meta">
-                            <span><strong>ORDER NO:</strong> USDMA/UTK/HZ-2026/09</span>
+                            <span><strong>ORDER NO:</strong> MHA-USDMA/UTK/RELOC-2026/09</span>
                             <span><strong>DATE:</strong> ${data.date_generated || 'September 2026'}</span>
-                            <span><strong>STATUS:</strong> EXECUTIVE RELOCATION DIRECTIVE</span>
+                            <span><strong>STATUTE:</strong> SECTIONS 30 & 34, DM ACT 2005</span>
+                            <span><strong>STATUS:</strong> EXECUTIVE STATUTORY DIRECTIVE</span>
                         </div>
                     </div>
                 </div>
@@ -126,7 +127,7 @@ export class DMReportManager {
 
                 <!-- Executive Briefing Stats -->
                 <div class="report-section">
-                    <h3 class="section-title">1. Executive Overview & Carrying Capacity Balance</h3>
+                    <h3 class="section-title">1. Executive Overview, Carrying Capacity Balance & SDRF Rehabilitation Budget</h3>
                     <div class="report-stats-grid">
                         <div class="r-stat-box danger">
                             <span class="r-label">Habitations for Relocation</span>
@@ -136,17 +137,17 @@ export class DMReportManager {
                         <div class="r-stat-box warning">
                             <span class="r-label">Citizens at Critical Risk</span>
                             <span class="r-value">${(exec.population_at_critical_risk || 0).toLocaleString()}</span>
-                            <span class="r-sub">Requiring Safe Resettlement</span>
+                            <span class="r-sub">${(exec.total_affected_households || 0).toLocaleString()} Affected Families</span>
                         </div>
                         <div class="r-stat-box safe">
-                            <span class="r-label">Ecological Safe Sites</span>
-                            <span class="r-value">${exec.safe_sites_available || 0}</span>
-                            <span class="r-sub">Total Capacity: ${(exec.total_safe_carrying_capacity || 0).toLocaleString()}</span>
+                            <span class="r-label">Total Safe Sites Carrying Capacity</span>
+                            <span class="r-value">${(exec.total_safe_carrying_capacity || 0).toLocaleString()}</span>
+                            <span class="r-sub">Across ${exec.safe_sites_available || 0} Verified Terraces</span>
                         </div>
                         <div class="r-stat-box primary">
-                            <span class="r-label">District Capacity Headroom</span>
-                            <span class="r-value">+${(exec.net_capacity_buffer || 0).toLocaleString()}</span>
-                            <span class="r-sub">${exec.capacity_status || 'Capacity Buffer Verified'}</span>
+                            <span class="r-label">SDRF Financial Package</span>
+                            <span class="r-value">₹${exec.estimated_sdrf_rehab_package_cr || '43.3'} Cr</span>
+                            <span class="r-sub">₹7.0L / Household Norm</span>
                         </div>
                     </div>
                 </div>
@@ -163,7 +164,7 @@ export class DMReportManager {
                 <div class="report-section">
                     <div class="section-header-flex">
                         <h3 class="section-title">3. Prioritized Relocation Action Matrix & Defensible Rationales</h3>
-                        <span class="doc-badge">Sorted by Vulnerability Index (VI)</span>
+                        <span class="doc-badge">Sorted by Multi-Hazard Vulnerability Index (VI)</span>
                     </div>
                     <div class="report-table-wrapper">
                         <table class="report-table">
@@ -187,7 +188,7 @@ export class DMReportManager {
                 </div>
 
                 <!-- Official Signoff Footer -->
-                <div class="doc-footer">
+                <div class="doc-footer" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px;">
                     <div class="signoff-box">
                         <p class="signature-line">___________________________</p>
                         <p><strong>District Magistrate & Chairman, DDMA</strong></p>
@@ -197,6 +198,11 @@ export class DMReportManager {
                         <p class="signature-line">___________________________</p>
                         <p><strong>Chief Executive Officer</strong></p>
                         <p>Uttarakhand State Disaster Management Authority (USDMA)</p>
+                    </div>
+                    <div class="signoff-box">
+                        <p class="signature-line">___________________________</p>
+                        <p><strong>Joint Secretary (Disaster Management)</strong></p>
+                        <p>Ministry of Home Affairs, Government of India</p>
                     </div>
                 </div>
             </div>

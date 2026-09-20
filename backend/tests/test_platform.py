@@ -171,6 +171,33 @@ class TestApiEndpointsWithTestClient(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         plan = res.json()
         self.assertIn("priorities_matrix", plan)
+        self.assertIn("executive_summary", plan)
+        self.assertIn("estimated_sdrf_rehab_package_cr", plan["executive_summary"])
+        self.assertIn("tier_population_breakdown", plan["executive_summary"])
+        self.assertGreater(plan["executive_summary"]["estimated_sdrf_rehab_package_cr"], 0)
+
+    def test_carrying_capacity_ledger_api(self):
+        res = client.get("/api/carrying-capacity/ledger?intensity_mm_hr=45&antecedent_24h_mm=30")
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertIn("summary", data)
+        self.assertIn("sites", data)
+        self.assertGreater(len(data["sites"]), 0)
+        first_site = data["sites"][0]
+        self.assertIn("total_capacity", first_site)
+        self.assertIn("remaining_headroom", first_site)
+        self.assertIn("stress_tier", first_site)
+
+    def test_dynamic_hazard_zones_api(self):
+        res = client.get("/api/hazard-zones/dynamic?intensity_mm_hr=75&antecedent_24h_mm=60")
+        self.assertEqual(res.status_code, 200)
+        zones = res.json()
+        self.assertEqual(zones["type"], "FeatureCollection")
+        self.assertGreater(len(zones["features"]), 0)
+        first_feat = zones["features"][0]
+        self.assertEqual(first_feat["geometry"]["type"], "Polygon")
+        self.assertIn("zone", first_feat["properties"])
+        self.assertIn("hazard_probability", first_feat["properties"])
 
     def test_disaster_simulations_api(self):
         res = client.get("/api/disaster-simulations")
@@ -186,3 +213,4 @@ class TestApiEndpointsWithTestClient(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

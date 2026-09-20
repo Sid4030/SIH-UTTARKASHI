@@ -1,0 +1,13 @@
+{
+  "source": "Geological Survey of India (GSI) Bhukosh Portal",
+  "document_id": "DCPORT1GSIGOVI1176749",
+  "region": "Uttarkashi, Garhwal Himalaya, Uttarakhand",
+  "resolution": "15099 x 9212 px (325 DPI)",
+  "geological_features": [
+    "Main Central Thrust (MCT) active fault zone",
+    "Central Crystallines (Gneiss, Schist, Quartzite)",
+    "Garhwal Group (Limestone, Dolomite, Slate)",
+    "Debris Flow & Scree slope classifications"
+  ],
+  "statutory_role": "Authoritative geotechnical ground-truth for USDMA/DDMA slope stability"
+}

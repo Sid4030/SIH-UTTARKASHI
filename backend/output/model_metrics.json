@@ -1,34 +1,31 @@
 {
-  "model_type": "Physics-Informed Adaptive XGBoost (Continuous GBDT)",
-  "model_version": "v2.5.5-adaptive",
-  "last_trained_utc": "2026-09-16T17:44:45.306561+00:00",
-  "training_samples": 3114,
-  "total_cycles_completed": 5,
-  "metrics": {
-    "roc_auc": 0.9982,
-    "precision": 0.978,
-    "recall": 0.924,
-    "f1_score": 0.95,
-    "log_loss": 0.084
+  "model_type": "THRIVE XGBoost (Ground-Truth Trained, Spatial CV)",
+  "training_mode": "spatial_cross_validation",
+  "ground_truth_source": "12 verified disaster events",
+  "auc_roc": 0.9995,
+  "precision": 1.0,
+  "recall": 0.449,
+  "f1_score": 0.6197,
+  "mae": 0.0092,
+  "feature_importance": {
+    "dist_disaster_km": 0.826,
+    "dist_river_km": 0.0372,
+    "elevation": 0.0325,
+    "slope": 0.0255,
+    "ndvi": 0.022,
+    "aspect": 0.0206,
+    "twi": 0.013,
+    "rainfall_mm": 0.0123,
+    "curvature": 0.0109
   },
-  "physics_grounding": {
-    "model_type": "Mohr-Coulomb Infinite Slope Stability (FS)",
-    "monsoon_failure_calibrated_cells": 4,
-    "high_stability_cells": 3097,
-    "seismic_shaking_factor_integrated": true
-  },
-  "feature_importances": {
-    "slope": 0.324,
-    "twi": 0.188,
-    "dist_river_km": 0.165,
-    "physics_fs": 0.142,
-    "rainfall_mean_mm": 0.085,
-    "dist_disaster_km": 0.056,
-    "ndvi": 0.04
-  },
-  "validation_benchmark": {
-    "historical_disaster_hit_rate_pct": 100.0,
-    "total_historical_events_tested": 12,
-    "total_hits": 12
+  "training_samples": 1586,
+  "test_samples": 1525,
+  "positive_rate": 0.0254,
+  "thrive_weights": {
+    "landslide": 0.3,
+    "flood": 0.25,
+    "cloudburst": 0.15,
+    "vulnerability": 0.15,
+    "recurrence": 0.15
   }
 }

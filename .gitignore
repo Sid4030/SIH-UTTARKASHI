@@ -45,3 +45,18 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Heavy Raw Geospatial Datasets & External Archives (>50MB/100MB limit)
+data1
+data1/
+backend/data/datasets/rasters/*.tif
+backend/data/datasets/rasters/*.tiff
+backend/data/datasets/vectors/HydroRIVERS/
+backend/data/datasets/vectors/gadm41_IND_3.json
+backend/data/datasets/inventory/*.jpg
+backend/data/datasets/inventory/*.png
+*.zip
+*.tar.gz
+*.tif
+*.tiff
+

@@ -17,7 +17,9 @@ from backend.model.trigger_engine import (
     intensity_factor,
     antecedent_factor,
     rainfall_multiplier,
-    classify_zone
+    classify_zone,
+    compute_dynamic_hazard_zones,
+    generate_carrying_capacity_ledger
 )
 from backend.model.flow_simulation import (
     build_simulation_payload,
@@ -85,6 +87,12 @@ def root():
     }
 
 
+@app.get("/api/health")
+def get_health():
+    """Health check endpoint for API and models."""
+    return {"status": "ok", "platform": "HazardShield v3.0", "district": "Uttarkashi"}
+
+
 @app.get("/api/hazard-grid")
 def get_hazard_grid():
     """Returns hazard probability grid as GeoJSON points."""
@@ -147,6 +155,97 @@ def get_district_boundary():
 def get_model_stats():
     """Returns ML model performance metrics."""
     return load_json("model_metrics.json")
+
+
+@app.get("/api/data-provenance")
+def get_data_provenance():
+    """Returns data source provenance — shows which layers use real vs synthetic data."""
+    try:
+        return load_json("data_provenance.json")
+    except HTTPException:
+        # Generate on-the-fly if not yet saved
+        try:
+            from backend.data.raster_pipeline import get_raster_status
+            from backend.data.vector_pipeline import get_vector_status
+            return {
+                "raster_sources": get_raster_status(),
+                "vector_sources": get_vector_status(),
+                "note": "Run generate_data_v3.py to create full provenance report"
+            }
+        except Exception:
+            return {"error": "Data provenance not yet generated. Run the data pipeline first."}
+
+
+@app.get("/api/thrive-config")
+def get_thrive_config():
+    """Returns THRIVE algorithm configuration — weights, AHP matrix, dimensions."""
+    try:
+        from backend.model.thrive_engine import THRIVE_WEIGHTS, AHP_COMPARISON_MATRIX, compute_ahp_weights
+        ahp = compute_ahp_weights()
+        return {
+            "algorithm": "THRIVE — Terrain-Hydro-Risk Integrated Vulnerability Engine",
+            "version": "3.0",
+            "dimensions": {
+                "landslide_susceptibility": {"weight": THRIVE_WEIGHTS["landslide"], "features": ["slope", "curvature", "twi", "ndvi", "lulc", "aspect"]},
+                "flood_susceptibility": {"weight": THRIVE_WEIGHTS["flood"], "features": ["dist_river_km", "twi", "slope", "elevation", "lulc"]},
+                "cloudburst_susceptibility": {"weight": THRIVE_WEIGHTS["cloudburst"], "features": ["elevation", "aspect", "slope", "rainfall_mm"]},
+                "population_vulnerability": {"weight": THRIVE_WEIGHTS["vulnerability"], "features": ["population", "dist_road_km", "dist_river_km", "is_town"]},
+                "historical_recurrence": {"weight": THRIVE_WEIGHTS["recurrence"], "features": ["disaster_inventory", "temporal_decay"]},
+            },
+            "ahp_weights": ahp,
+            "physics_constraints": {
+                "factor_of_safety_bounds": "FS > 3.0 caps landslide P at 0.10; FS < 1.0 floors at 0.70",
+                "model": "Mohr-Coulomb Infinite Slope Stability"
+            },
+            "novel_features": [
+                "Multi-hazard fusion (5 orthogonal dimensions)",
+                "Physics-constrained ML (Factor of Safety bounds XGBoost)",
+                "Temporal decay weighting (halflife = 5 years)",
+                "Ground-truth training (real disaster inventory, not self-generated labels)",
+                "Spatial cross-validation (prevents autocorrelation leakage)",
+                "Proper AHP eigenvector method with consistency check",
+            ]
+        }
+    except Exception as e:
+        return {"error": str(e)}
+
+
+# ---------------------------------------------------------------------------
+# IMD (India Meteorological Department) Operational Telemetry Endpoints
+# ---------------------------------------------------------------------------
+@app.get("/api/imd/live-telemetry")
+def get_imd_live_telemetry():
+    """Returns real-time AWS/ARG automated weather station readings (API 9)."""
+    from backend.data.imd_client import get_imd_client
+    return {"stations": get_imd_client().get_aws_arg_telemetry()}
+
+
+@app.get("/api/imd/warnings")
+def get_imd_district_warning():
+    """Returns official IMD color-coded district hazard warning bulletin (API 6)."""
+    from backend.data.imd_client import get_imd_client
+    return get_imd_client().get_district_warning()
+
+
+@app.get("/api/imd/basin-qpf")
+def get_imd_basin_qpf():
+    """Returns Quantitative Precipitation Forecast for Bhagirathi/Yamuna basin (API 10)."""
+    from backend.data.imd_client import get_imd_client
+    return get_imd_client().get_river_basin_qpf()
+
+
+@app.get("/api/imd/nowcast")
+def get_imd_nowcast():
+    """Returns 3-hour Doppler radar convective thunderstorm/cloudburst nowcast (API 4/7)."""
+    from backend.data.imd_client import get_imd_client
+    return get_imd_client().get_nowcast()
+
+
+@app.get("/api/imd/api-requirements")
+def get_imd_api_requirements():
+    """Returns technical evaluation report of required vs optional IMD APIs for SDMA."""
+    from backend.data.imd_client import get_imd_client
+    return get_imd_client().get_api_evaluation_report()
 
 
 @app.get("/api/summary")
@@ -337,36 +436,60 @@ def get_dm_action_plan():
     total_needed = summary["relocation_summary"]["total_population_to_relocate"]
     buffer = total_safe_capacity - total_needed
     
+    # Financial estimation under SDRF / PMAY-G hill norms (₹7.0 Lakhs per household)
+    total_households = sum(p.get("households", max(1, int(p.get("population", 100) / 5.2))) for p in priorities)
+    estimated_sdrf_cr = round(total_households * 0.07, 2)
+    
+    # Immediate, short term, medium term breakdowns
+    imm_count = sum(1 for p in priorities if p["timeline"] == "immediate")
+    imm_pop = sum(p["population"] for p in priorities if p["timeline"] == "immediate")
+    st_count = sum(1 for p in priorities if p["timeline"] == "short_term")
+    st_pop = sum(p["population"] for p in priorities if p["timeline"] == "short_term")
+    mt_count = sum(1 for p in priorities if p["timeline"] == "medium_term")
+    mt_pop = sum(p["population"] for p in priorities if p["timeline"] == "medium_term")
+    
     return {
-        "authority": "Uttarakhand State Disaster Management Authority (USDMA)",
+        "authority": "Ministry of Home Affairs & Uttarakhand State Disaster Management Authority (USDMA)",
         "district": "Uttarkashi",
-        "date_generated": "2026-09-16",
+        "state": "Uttarakhand",
+        "date_generated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "statutory_mandate": "Disaster Management Act 2005 (Sections 30 & 34) & NDMA Hilly Terrain Resettlement Guidelines",
         "executive_summary": {
             "total_villages_assessed": summary["total_villages"],
             "villages_requiring_relocation": summary["relocation_summary"]["total_villages_to_relocate"],
             "population_at_critical_risk": total_needed,
+            "total_affected_households": total_households,
+            "estimated_sdrf_rehab_package_cr": estimated_sdrf_cr,
             "timeline_breakdown": summary["relocation_summary"]["timeline"],
+            "tier_population_breakdown": {
+                "immediate": {"villages": imm_count, "population": imm_pop},
+                "short_term": {"villages": st_count, "population": st_pop},
+                "medium_term": {"villages": mt_count, "population": mt_pop}
+            },
             "safe_sites_available": len(safe_zones["features"]),
             "total_safe_carrying_capacity": total_safe_capacity,
             "net_capacity_buffer": buffer,
-            "capacity_status": "SURPLUS (+{:,} capacity buffer available across district)".format(buffer) if buffer >= 0 else "DEFICIT"
+            "capacity_status": "SURPLUS (+{:,} capacity headroom available across district)".format(buffer) if buffer >= 0 else "DEFICIT"
         },
         "priorities_matrix": priorities,
         "action_framework": [
             {
-                "phase": "Immediate (0 - 30 Days)",
-                "statutory_mandate": "Disaster Management Act 2005, Section 30 & 34",
-                "directive": "Issue mandatory pre-monsoon evacuation orders for Tier-1 immediate habitations. Setup transit camps at pre-designated Safe Sites Alpha-1 to Alpha-10."
+                "phase": "Immediate (0 - 30 Days) — Critical Pre-Monsoon Staging",
+                "statutory_mandate": "Disaster Management Act 2005, Sections 30 & 34",
+                "directive": "Issue mandatory pre-monsoon evacuation orders for Tier-1 immediate habitations. Setup climate-resilient transit camps at pre-designated Safe Sites Alpha-1 to Alpha-10. Direct SDRF/QRT deployment along riverine corridors.",
+                "budget_allocation_cr": round(estimated_sdrf_cr * 0.40, 2)
             },
             {
-                "phase": "Short-Term (1 - 6 Months)",
+                "phase": "Short-Term (1 - 6 Months) — Resettlement Land Demarcation",
                 "statutory_mandate": "State Disaster Response Fund (SDRF) Rehabilitation Policy",
-                "directive": "Complete topographical survey and demarcation of permanent resettlement plots. Sanction financial assistance of ₹7.0 Lakhs per household."
+                "directive": "Complete cadastral demarcation of permanent terrace plots (<14° slope, >300m flood buffer). Disburse financial assistance of ₹7.0 Lakhs per displaced household for climate-resilient construction.",
+                "budget_allocation_cr": round(estimated_sdrf_cr * 0.45, 2)
             },
             {
-                "phase": "Medium-Term (6 - 18 Months)",
-                "statutory_mandate": "National Disaster Management Authority (NDMA) Resettlement Guidelines",
-                "directive": "Construct permanent climate-resilient community infrastructure (water treatment, primary health centre, road connectivity) and execute bio-engineering slope stabilization in abandoned red zones."
+                "phase": "Medium-Term (6 - 24 Months) — Infrastructure & Ecological Recovery",
+                "statutory_mandate": "National Disaster Management Authority (NDMA) Resettlement Norms",
+                "directive": "Construct permanent community infrastructure (gravity-fed potable water 70 LPCD, all-weather PMGSY road links, Primary Health Centre). Execute bio-engineering slope stabilization in abandoned red zones.",
+                "budget_allocation_cr": round(estimated_sdrf_cr * 0.15, 2)
             }
         ]
     }
@@ -374,13 +497,15 @@ def get_dm_action_plan():
 
 @app.post("/api/simulate")
 def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.0,
-                   rainfall_mm: float = None, rainfall_factor: float = None, saturation: float = None):
+                   seismic_kh: float = 0.0, rainfall_mm: float = None,
+                   rainfall_factor: float = None, saturation: float = None):
     """
-    Operational Layer 2 Hydrological Trigger & Nowcast Endpoint (NASA LHASA & IMD style).
-    Accepts instantaneous intensity (mm/hr) and 24h antecedent rainfall (soil saturation proxy).
-    Computes alert states (NORMAL -> WATCH -> WARNING -> EVACUATE_NOW) and auto-dispatches to safe zones.
+    Operational Layer 2 Hydrological & Seismic Trigger Endpoint (NASA LHASA, IMD, USGS).
+    Accepts instantaneous intensity (mm/hr), 24h antecedent rainfall (soil saturation proxy),
+    and pseudo-static seismic coefficient (kh).
+    Computes dynamic Red Zone contours, alert states, and safe zone carrying capacity headroom.
     """
-    # Backward compatibility with slider inputs
+    # Backward compatibility with legacy inputs
     if rainfall_mm is not None:
         intensity_mm_hr = max(1.0, rainfall_mm * 0.4)
         antecedent_24h_mm = max(5.0, rainfall_mm * 0.7)
@@ -391,9 +516,10 @@ def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.
     if saturation is not None:
         antecedent_24h_mm = saturation * 120.0
 
-    # 1. Run Hydrological Trigger Pipeline
-    trigger_results = run_trigger_pipeline(DATA_DIR, intensity_mm_hr, antecedent_24h_mm)
+    # 1. Run Hydrological & Seismic Trigger Pipeline
+    trigger_results = run_trigger_pipeline(DATA_DIR, intensity_mm_hr, antecedent_24h_mm, seismic_kh=seismic_kh)
     mult = trigger_results["rainfall_input"]["multiplier"]
+    seismic_amp = 1.0 + max(0.0, float(seismic_kh) * 1.8)
 
     # 2. Update Spatial Hazard Grid for MapLibre visualization
     hazard_grid = load_json("hazard_grid.geojson")
@@ -405,9 +531,12 @@ def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.
         orig_prob = props.get("hazard_probability", 0.3)
         orig_zone = props.get("zone", "green")
         slope = props.get("slope", 15.0)
+        elev = props.get("elevation", 1800.0)
 
         slope_amp = 1.0 + max(0.0, (slope - 20.0) / 50.0) * 0.15
-        amplified = min(0.99, orig_prob * mult * slope_amp)
+        orog_amp = 1.12 if (1500.0 <= elev <= 2800.0 and intensity_mm_hr >= 50.0) else 1.0
+
+        amplified = min(0.99, orig_prob * mult * slope_amp * seismic_amp * orog_amp)
         new_zone = classify_zone(amplified)
 
         props["hazard_probability"] = round(float(amplified), 4)
@@ -416,37 +545,66 @@ def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.
         props["simulated"] = True
         props["intensity_mm_hr"] = intensity_mm_hr
         props["antecedent_24h_mm"] = antecedent_24h_mm
+        props["seismic_kh"] = seismic_kh
 
         if new_zone == "red":
             total_red_cells += 1
             if orig_zone != "red":
                 newly_red_cells += 1
 
-    # 3. Geotechnical Mohr-Coulomb Factor of Safety Calculation (using cached telemetry)
-    telemetry = get_cached_telemetry()
-    kh = telemetry.get("seismic_acceleration_kh", 0.0)
-    seismic_meta = {
-        "seismic_status": telemetry.get("seismic_status", "LOW_SEISMICITY"),
-        "recent_title": telemetry.get("recent_earthquake_title", "Regional Baseline"),
-        "acceleration_kh": kh
-    }
-    fs_diag = compute_factor_of_safety(34.0, intensity_mm_hr, antecedent_24h_mm, seismic_kh=kh)
+    # 3. Generate Real-Time Dynamic Hazard Zone Polygons
+    dynamic_hazard_zones = compute_dynamic_hazard_zones(hazard_grid)
 
+    # 4. Geotechnical Mohr-Coulomb Factor of Safety Calculation
+    telemetry = get_cached_telemetry()
+    kh_active = max(float(seismic_kh), float(telemetry.get("seismic_acceleration_kh", 0.0)))
+    seismic_meta = {
+        "seismic_status": "CRITICAL_SHAKING" if kh_active >= 0.20 else ("MODERATE_SHAKING" if kh_active >= 0.10 else telemetry.get("seismic_status", "LOW_SEISMICITY")),
+        "recent_title": telemetry.get("recent_earthquake_title", "Regional Baseline"),
+        "acceleration_kh": kh_active
+    }
+    fs_diag = compute_factor_of_safety(34.0, intensity_mm_hr, antecedent_24h_mm, seismic_kh=kh_active)
+
+    # 5. Extract newly endangered villages
+    dispatched = trigger_results.get("dispatched_evacuations", [])
+    newly_endangered = [v for v in dispatched if v.get("alert_level") in ["EVACUATE_NOW", "WARNING"]]
 
     return {
         "hazard_grid": hazard_grid,
+        "dynamic_hazard_zones": dynamic_hazard_zones,
         "rainfall_input": trigger_results["rainfall_input"],
         "alert_counts": trigger_results["alert_counts"],
         "evacuate_now_count": trigger_results["evacuate_now_count"],
-        "dispatched_evacuations": trigger_results["dispatched_evacuations"],
+        "dispatched_evacuations": dispatched,
+        "newly_endangered_villages": newly_endangered,
+        "carrying_capacity_summary": trigger_results.get("carrying_capacity_summary", {}),
+        "carrying_capacity_ledger": trigger_results.get("carrying_capacity_ledger", []),
         "all_alerts": trigger_results["all_alerts"],
         "geotech_stability": fs_diag,
         "seismic_telemetry": seismic_meta,
         "spatial_grid_meta": {
             "total_red_cells": total_red_cells,
-            "newly_expanded_red_cells": newly_red_cells
+            "newly_expanded_red_cells": newly_red_cells,
+            "total_grid_cells": len(hazard_grid["features"])
         }
     }
+
+
+@app.get("/api/carrying-capacity/ledger")
+def get_carrying_capacity_ledger(intensity_mm_hr: float = 35.0, antecedent_24h_mm: float = 50.0, seismic_kh: float = 0.0):
+    """Returns site-by-site carrying capacity allocation ledger with remaining headroom and stress tiers."""
+    trigger_results = run_trigger_pipeline(DATA_DIR, intensity_mm_hr, antecedent_24h_mm, seismic_kh=seismic_kh)
+    return {
+        "summary": trigger_results.get("carrying_capacity_summary", {}),
+        "sites": trigger_results.get("carrying_capacity_ledger", [])
+    }
+
+
+@app.get("/api/hazard-zones/dynamic")
+def get_dynamic_hazard_zones(intensity_mm_hr: float = 35.0, antecedent_24h_mm: float = 50.0, seismic_kh: float = 0.0):
+    """Returns dynamic polygon hazard zone contours generated in real-time under current environmental triggers."""
+    sim_res = simulate_event(intensity_mm_hr=intensity_mm_hr, antecedent_24h_mm=antecedent_24h_mm, seismic_kh=seismic_kh)
+    return sim_res["dynamic_hazard_zones"]
 
 
 @app.get("/api/simulate/flow")

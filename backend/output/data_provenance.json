@@ -1,0 +1,45 @@
+{
+  "raster_sources": {
+    "dem": {
+      "loaded": true,
+      "source": "GeoTIFF",
+      "path": "/Users/meow/.gemini/antigravity-ide/scratch/uttarkashi-hazard-platform/backend/data/datasets/rasters/uttarkashi_srtm_30m_mosaic.tif",
+      "resolution_m": 30.8
+    },
+    "ndvi": {
+      "loaded": false,
+      "source": "Elevation-Based Proxy",
+      "path": null
+    },
+    "lulc": {
+      "loaded": false,
+      "source": "NDVI-Based Estimation"
+    }
+  },
+  "vector_sources": {
+    "boundary": {
+      "available": true,
+      "source": "GADM"
+    },
+    "roads": {
+      "available": false,
+      "source": "Town-Distance Estimation"
+    },
+    "rivers": {
+      "available": true,
+      "source": "Hand-plotted"
+    },
+    "inventory": {
+      "available": false,
+      "source": "Hardcoded"
+    },
+    "villages": {
+      "available": false,
+      "source": "Known Villages List"
+    }
+  },
+  "disaster_inventory_events": 12,
+  "total_villages": 178,
+  "total_grid_points": 3111,
+  "generation_timestamp": "2026-09-17T15:21:54"
+}
