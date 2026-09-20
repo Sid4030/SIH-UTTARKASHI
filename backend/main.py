@@ -644,14 +644,31 @@ def get_model_validation():
     return evaluate_historical_disaster_hit_rate(DATA_DIR)
 
 
+@app.get("/api/tectonic-faults")
+def get_tectonic_faults():
+    """Returns GSI Bhukosh Main Central Thrust (MCT) and tectonic shear buffer."""
+    return load_json("tectonic_faults.geojson")
+
+
 @app.post("/api/simulate/evacuation-routes")
-def get_evacuation_routes(intensity_mm_hr: float = 85.0, antecedent_24h_mm: float = 65.0):
+async def get_evacuation_routes(request: Request = None, intensity_mm_hr: float = 85.0, antecedent_24h_mm: float = 65.0):
     """
     Computes terrain-following, least-cost evacuation trails using Dijkstra's algorithm
     connecting vulnerable habitations crossing EVACUATE_NOW to assigned safe sites.
     """
-    trigger_results = run_trigger_pipeline(DATA_DIR, intensity_mm_hr, antecedent_24h_mm)
-    dispatched = trigger_results.get("dispatched_evacuations", [])
+    custom_villages = None
+    if request:
+        try:
+            body = await request.json()
+            custom_villages = body.get("villages")
+        except Exception:
+            pass
+
+    if custom_villages and len(custom_villages) > 0:
+        dispatched = custom_villages
+    else:
+        trigger_results = run_trigger_pipeline(DATA_DIR, intensity_mm_hr, antecedent_24h_mm)
+        dispatched = trigger_results.get("dispatched_evacuations", [])
 
     with open(DATA_DIR / "safe_zones.geojson") as f:
         sz_geojson = json.load(f)
@@ -671,7 +688,9 @@ def get_evacuation_routes(intensity_mm_hr: float = 85.0, antecedent_24h_mm: floa
     routes = compute_dijkstra_evacuation_routes(dispatched, safe_zones, terrain_features)
     return {
         "status": "success",
+        "type": "FeatureCollection",
         "total_routes": len(routes),
+        "features": routes,
         "evacuation_routes_geojson": {
             "type": "FeatureCollection",
             "features": routes

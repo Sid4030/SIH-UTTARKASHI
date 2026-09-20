@@ -1,18 +1,96 @@
 [
   {
+    "village_id": 1,
+    "village_name": "Uttarkashi Town",
+    "tehsil": "Bhatwari",
+    "population": 18000,
+    "households": 3461,
+    "current_zone": "orange",
+    "hazard_probability": 0.6249,
+    "vulnerability_index": 62.5,
+    "priority_score": 67.5,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 62.5/100. Multi-hazard exposure (Recurrence: 44%). 18,000 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-30. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 33.0,
+      "flood_exposure": 67.0,
+      "cloudburst_risk": 19.0,
+      "population_exposure": 38.0,
+      "disaster_history_proximity": 44.0
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.33,
+      "flood_susceptibility": 0.67,
+      "cloudburst_susceptibility": 0.19,
+      "population_vulnerability": 0.38,
+      "historical_recurrence": 0.4401
+    },
+    "relocation_distance_km": 15.81,
+    "suggested_safe_zone": {
+      "site_id": 30,
+      "lat": 30.61,
+      "lng": 78.35,
+      "suitability_score": 3.957,
+      "total_carrying_capacity": 3532,
+      "remaining_capacity_headroom": 0
+    },
+    "rank": 1
+  },
+  {
+    "village_id": 5,
+    "village_name": "Bhatwari",
+    "tehsil": "Bhatwari",
+    "population": 2500,
+    "households": 480,
+    "current_zone": "orange",
+    "hazard_probability": 0.6558,
+    "vulnerability_index": 65.6,
+    "priority_score": 66.3,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 65.6/100. Multi-hazard exposure (Recurrence: 39%). 2,500 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-53. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 56.0,
+      "flood_exposure": 52.0,
+      "cloudburst_risk": 59.0,
+      "population_exposure": 66.0,
+      "disaster_history_proximity": 39.1
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.56,
+      "flood_susceptibility": 0.52,
+      "cloudburst_susceptibility": 0.59,
+      "population_vulnerability": 0.66,
+      "historical_recurrence": 0.3915
+    },
+    "relocation_distance_km": 19.58,
+    "suggested_safe_zone": {
+      "site_id": 53,
+      "lat": 30.63,
+      "lng": 78.53,
+      "suitability_score": 3.891,
+      "total_carrying_capacity": 3756,
+      "remaining_capacity_headroom": 456
+    },
+    "rank": 2
+  },
+  {
     "village_id": 4,
     "village_name": "Dharali",
     "tehsil": "Bhatwari",
     "population": 800,
     "households": 153,
-    "current_zone": "red",
-    "hazard_probability": 0.6805,
-    "vulnerability_index": 68.1,
-    "priority_score": 75.4,
-    "timeline": "immediate",
-    "urgency_level": "CRITICAL / IMMEDIATE",
-    "defensible_rationale": "IMMEDIATE EVACUATION: THRIVE score 68% (Landslide: 33%, Flood: 21%, Cloudburst: 63%). 800 residents on 34.7\u00b0 slope, 0.0km from Dharali Cloudburst.",
-    "recommended_action": "Invoke DM Act Sec 30: Mandatory pre-monsoon evacuation to Safe Site Alpha-41 (49.9km, Road: 46.0km). SDRF permanent rehabilitation package.",
+    "current_zone": "orange",
+    "hazard_probability": 0.6801,
+    "vulnerability_index": 68.0,
+    "priority_score": 65.3,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 68.0/100. Multi-hazard exposure (Recurrence: 52%). 800 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-53. Deploy slope sensors and early warning siren.",
     "score_breakdown": {
       "hazard_intensity": 33.0,
       "flood_exposure": 21.0,
@@ -29,92 +107,131 @@
     },
     "relocation_distance_km": 49.85,
     "suggested_safe_zone": {
-      "site_id": 41,
+      "site_id": 53,
       "lat": 30.63,
       "lng": 78.53,
-      "suitability_score": 3.905,
-      "total_carrying_capacity": 3762,
-      "remaining_capacity_headroom": 2962
-    },
-    "rank": 1
-  },
-  {
-    "village_id": 5,
-    "village_name": "Bhatwari",
-    "tehsil": "Bhatwari",
-    "population": 2500,
-    "households": 480,
-    "current_zone": "orange",
-    "hazard_probability": 0.6422,
-    "vulnerability_index": 64.2,
-    "priority_score": 65.5,
-    "timeline": "short_term",
-    "urgency_level": "HIGH RISK / SHORT-TERM",
-    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 64.2/100. Multi-hazard exposure (Recurrence: 30%). 2,500 residents, 0.0km from disaster corridor.",
-    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-41. Deploy slope sensors and early warning siren.",
-    "score_breakdown": {
-      "hazard_intensity": 56.0,
-      "flood_exposure": 52.0,
-      "cloudburst_risk": 59.0,
-      "population_exposure": 66.0,
-      "disaster_history_proximity": 30.1
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.56,
-      "flood_susceptibility": 0.52,
-      "cloudburst_susceptibility": 0.59,
-      "population_vulnerability": 0.66,
-      "historical_recurrence": 0.3009
-    },
-    "relocation_distance_km": 19.58,
-    "suggested_safe_zone": {
-      "site_id": 41,
-      "lat": 30.63,
-      "lng": 78.53,
-      "suitability_score": 3.905,
-      "total_carrying_capacity": 3762,
-      "remaining_capacity_headroom": 62
-    },
-    "rank": 2
-  },
-  {
-    "village_id": 1,
-    "village_name": "Uttarkashi Town",
-    "tehsil": "Bhatwari",
-    "population": 18000,
-    "households": 3461,
-    "current_zone": "orange",
-    "hazard_probability": 0.5693,
-    "vulnerability_index": 56.9,
-    "priority_score": 64.1,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 56.9/100. 18,000 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-9.",
-    "score_breakdown": {
-      "hazard_intensity": 33.0,
-      "flood_exposure": 67.0,
-      "cloudburst_risk": 19.0,
-      "population_exposure": 38.0,
-      "disaster_history_proximity": 26.4
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.33,
-      "flood_susceptibility": 0.67,
-      "cloudburst_susceptibility": 0.19,
-      "population_vulnerability": 0.38,
-      "historical_recurrence": 0.2644
-    },
-    "relocation_distance_km": 15.81,
-    "suggested_safe_zone": {
-      "site_id": 9,
-      "lat": 30.61,
-      "lng": 78.35,
-      "suitability_score": 4.029,
-      "total_carrying_capacity": 3561,
-      "remaining_capacity_headroom": 0
+      "suitability_score": 3.891,
+      "total_carrying_capacity": 3756,
+      "remaining_capacity_headroom": 2956
     },
     "rank": 3
+  },
+  {
+    "village_id": 22,
+    "village_name": "Naugaon",
+    "tehsil": "Naugaon",
+    "population": 3500,
+    "households": 673,
+    "current_zone": "orange",
+    "hazard_probability": 0.5816,
+    "vulnerability_index": 58.2,
+    "priority_score": 62.6,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 58.2/100. Multi-hazard exposure (Recurrence: 31%). 3,500 residents, 2.2km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-25. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 60.0,
+      "flood_exposure": 47.0,
+      "cloudburst_risk": 46.0,
+      "population_exposure": 40.0,
+      "disaster_history_proximity": 31.3
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.6,
+      "flood_susceptibility": 0.47,
+      "cloudburst_susceptibility": 0.46,
+      "population_vulnerability": 0.4,
+      "historical_recurrence": 0.313
+    },
+    "relocation_distance_km": 18.77,
+    "suggested_safe_zone": {
+      "site_id": 25,
+      "lat": 30.59,
+      "lng": 78.35,
+      "suitability_score": 3.987,
+      "total_carrying_capacity": 3544,
+      "remaining_capacity_headroom": 44
+    },
+    "rank": 4
+  },
+  {
+    "village_id": 19,
+    "village_name": "Sankri",
+    "tehsil": "Mori",
+    "population": 600,
+    "households": 115,
+    "current_zone": "orange",
+    "hazard_probability": 0.6435,
+    "vulnerability_index": 64.4,
+    "priority_score": 62.5,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 64.4/100. Multi-hazard exposure (Recurrence: 49%). 600 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-24. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 62.0,
+      "flood_exposure": 33.0,
+      "cloudburst_risk": 49.0,
+      "population_exposure": 41.0,
+      "disaster_history_proximity": 48.7
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.62,
+      "flood_susceptibility": 0.33,
+      "cloudburst_susceptibility": 0.49,
+      "population_vulnerability": 0.41,
+      "historical_recurrence": 0.4867
+    },
+    "relocation_distance_km": 9.17,
+    "suggested_safe_zone": {
+      "site_id": 24,
+      "lat": 31.03,
+      "lng": 78.11,
+      "suitability_score": 3.997,
+      "total_carrying_capacity": 4048,
+      "remaining_capacity_headroom": 3448
+    },
+    "rank": 5
+  },
+  {
+    "village_id": 24,
+    "village_name": "Nirakot",
+    "tehsil": "Naugaon",
+    "population": 600,
+    "households": 115,
+    "current_zone": "orange",
+    "hazard_probability": 0.6348,
+    "vulnerability_index": 63.5,
+    "priority_score": 62.0,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 63.5/100. Multi-hazard exposure (Recurrence: 61%). 600 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-53. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 23.0,
+      "flood_exposure": 20.0,
+      "cloudburst_risk": 30.0,
+      "population_exposure": 28.0,
+      "disaster_history_proximity": 60.9
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.23,
+      "flood_susceptibility": 0.2,
+      "cloudburst_susceptibility": 0.3,
+      "population_vulnerability": 0.28,
+      "historical_recurrence": 0.6087
+    },
+    "relocation_distance_km": 10.07,
+    "suggested_safe_zone": {
+      "site_id": 53,
+      "lat": 30.63,
+      "lng": 78.53,
+      "suitability_score": 3.891,
+      "total_carrying_capacity": 3756,
+      "remaining_capacity_headroom": 0
+    },
+    "rank": 6
   },
   {
     "village_id": 25,
@@ -123,37 +240,76 @@
     "population": 400,
     "households": 76,
     "current_zone": "orange",
-    "hazard_probability": 0.6449,
-    "vulnerability_index": 64.5,
-    "priority_score": 61.7,
+    "hazard_probability": 0.6332,
+    "vulnerability_index": 63.3,
+    "priority_score": 61.0,
     "timeline": "short_term",
     "urgency_level": "HIGH RISK / SHORT-TERM",
-    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 64.5/100. Multi-hazard exposure (Recurrence: 49%). 400 residents, 0.0km from disaster corridor.",
-    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-41. Deploy slope sensors and early warning siren.",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 63.3/100. Multi-hazard exposure (Recurrence: 57%). 400 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-39. Deploy slope sensors and early warning siren.",
     "score_breakdown": {
       "hazard_intensity": 54.0,
       "flood_exposure": 32.0,
       "cloudburst_risk": 53.0,
       "population_exposure": 26.0,
-      "disaster_history_proximity": 48.8
+      "disaster_history_proximity": 56.6
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.54,
       "flood_susceptibility": 0.32,
       "cloudburst_susceptibility": 0.53,
       "population_vulnerability": 0.26,
-      "historical_recurrence": 0.4877
+      "historical_recurrence": 0.566
     },
-    "relocation_distance_km": 8.77,
+    "relocation_distance_km": 13.3,
     "suggested_safe_zone": {
-      "site_id": 41,
-      "lat": 30.63,
-      "lng": 78.53,
-      "suitability_score": 3.905,
-      "total_carrying_capacity": 3762,
-      "remaining_capacity_headroom": 2562
+      "site_id": 39,
+      "lat": 30.69,
+      "lng": 78.33,
+      "suitability_score": 3.917,
+      "total_carrying_capacity": 4016,
+      "remaining_capacity_headroom": 3400
     },
-    "rank": 4
+    "rank": 7
+  },
+  {
+    "village_id": 2,
+    "village_name": "Gangotri",
+    "tehsil": "Bhatwari",
+    "population": 600,
+    "households": 115,
+    "current_zone": "orange",
+    "hazard_probability": 0.6183,
+    "vulnerability_index": 61.8,
+    "priority_score": 61.0,
+    "timeline": "short_term",
+    "urgency_level": "HIGH RISK / SHORT-TERM",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 61.8/100. Multi-hazard exposure (Recurrence: 22%). 600 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-39. Deploy slope sensors and early warning siren.",
+    "score_breakdown": {
+      "hazard_intensity": 27.0,
+      "flood_exposure": 35.0,
+      "cloudburst_risk": 52.0,
+      "population_exposure": 63.0,
+      "disaster_history_proximity": 21.9
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.27,
+      "flood_susceptibility": 0.35,
+      "cloudburst_susceptibility": 0.52,
+      "population_vulnerability": 0.63,
+      "historical_recurrence": 0.2187
+    },
+    "relocation_distance_km": 67.11,
+    "suggested_safe_zone": {
+      "site_id": 39,
+      "lat": 30.69,
+      "lng": 78.33,
+      "suitability_score": 3.917,
+      "total_carrying_capacity": 4016,
+      "remaining_capacity_headroom": 2800
+    },
+    "rank": 8
   },
   {
     "village_id": 3,
@@ -162,13 +318,13 @@
     "population": 1200,
     "households": 230,
     "current_zone": "orange",
-    "hazard_probability": 0.5846,
-    "vulnerability_index": 58.5,
-    "priority_score": 60.5,
+    "hazard_probability": 0.5862,
+    "vulnerability_index": 58.6,
+    "priority_score": 60.6,
     "timeline": "short_term",
     "urgency_level": "HIGH RISK / SHORT-TERM",
-    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 58.5/100. Multi-hazard exposure (Recurrence: 27%). 1,200 residents, 0.0km from disaster corridor.",
-    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-38. Deploy slope sensors and early warning siren.",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 58.6/100. Multi-hazard exposure (Recurrence: 27%). 1,200 residents, 0.0km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-39. Deploy slope sensors and early warning siren.",
     "score_breakdown": {
       "hazard_intensity": 50.0,
       "flood_exposure": 42.0,
@@ -185,53 +341,53 @@
     },
     "relocation_distance_km": 54.57,
     "suggested_safe_zone": {
-      "site_id": 38,
+      "site_id": 39,
       "lat": 30.69,
       "lng": 78.33,
-      "suitability_score": 3.915,
+      "suitability_score": 3.917,
       "total_carrying_capacity": 4016,
-      "remaining_capacity_headroom": 2216
+      "remaining_capacity_headroom": 1600
     },
-    "rank": 5
+    "rank": 9
   },
   {
-    "village_id": 2,
-    "village_name": "Gangotri",
-    "tehsil": "Bhatwari",
-    "population": 600,
-    "households": 115,
+    "village_id": 73,
+    "village_name": "Salan Patti",
+    "tehsil": "Naugaon",
+    "population": 216,
+    "households": 41,
     "current_zone": "orange",
-    "hazard_probability": 0.5948,
-    "vulnerability_index": 59.5,
-    "priority_score": 59.6,
+    "hazard_probability": 0.6343,
+    "vulnerability_index": 63.4,
+    "priority_score": 59.7,
     "timeline": "short_term",
     "urgency_level": "HIGH RISK / SHORT-TERM",
-    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 59.5/100. Multi-hazard exposure (Recurrence: 14%). 600 residents, 0.0km from disaster corridor.",
-    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-38. Deploy slope sensors and early warning siren.",
+    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 63.4/100. Multi-hazard exposure (Recurrence: 61%). 216 residents, 0.5km from disaster corridor.",
+    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-39. Deploy slope sensors and early warning siren.",
     "score_breakdown": {
-      "hazard_intensity": 27.0,
-      "flood_exposure": 35.0,
-      "cloudburst_risk": 52.0,
-      "population_exposure": 63.0,
-      "disaster_history_proximity": 13.5
+      "hazard_intensity": 31.0,
+      "flood_exposure": 7.0,
+      "cloudburst_risk": 42.0,
+      "population_exposure": 13.0,
+      "disaster_history_proximity": 61.0
     },
     "thrive_dimensions": {
-      "landslide_susceptibility": 0.27,
-      "flood_susceptibility": 0.35,
-      "cloudburst_susceptibility": 0.52,
-      "population_vulnerability": 0.63,
-      "historical_recurrence": 0.1354
+      "landslide_susceptibility": 0.31,
+      "flood_susceptibility": 0.07,
+      "cloudburst_susceptibility": 0.42,
+      "population_vulnerability": 0.13,
+      "historical_recurrence": 0.6101
     },
-    "relocation_distance_km": 67.11,
+    "relocation_distance_km": 14.43,
     "suggested_safe_zone": {
-      "site_id": 38,
+      "site_id": 39,
       "lat": 30.69,
       "lng": 78.33,
-      "suitability_score": 3.915,
+      "suitability_score": 3.917,
       "total_carrying_capacity": 4016,
-      "remaining_capacity_headroom": 3416
+      "remaining_capacity_headroom": 3800
     },
-    "rank": 6
+    "rank": 10
   },
   {
     "village_id": 23,
@@ -240,76 +396,76 @@
     "population": 1800,
     "households": 346,
     "current_zone": "orange",
-    "hazard_probability": 0.5556,
-    "vulnerability_index": 55.6,
-    "priority_score": 59.6,
+    "hazard_probability": 0.552,
+    "vulnerability_index": 55.2,
+    "priority_score": 59.4,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 55.6/100. 1,800 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-38.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 55.2/100. 1,800 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-31.",
     "score_breakdown": {
       "hazard_intensity": 34.0,
       "flood_exposure": 16.0,
       "cloudburst_risk": 46.0,
       "population_exposure": 33.0,
-      "disaster_history_proximity": 40.6
+      "disaster_history_proximity": 45.6
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.34,
       "flood_susceptibility": 0.16,
       "cloudburst_susceptibility": 0.46,
       "population_vulnerability": 0.33,
-      "historical_recurrence": 0.4061
+      "historical_recurrence": 0.4556
     },
-    "relocation_distance_km": 12.4,
+    "relocation_distance_km": 14.91,
     "suggested_safe_zone": {
-      "site_id": 38,
-      "lat": 30.69,
-      "lng": 78.33,
-      "suitability_score": 3.915,
-      "total_carrying_capacity": 4016,
-      "remaining_capacity_headroom": 0
-    },
-    "rank": 7
-  },
-  {
-    "village_id": 22,
-    "village_name": "Naugaon",
-    "tehsil": "Naugaon",
-    "population": 3500,
-    "households": 673,
-    "current_zone": "orange",
-    "hazard_probability": 0.5235,
-    "vulnerability_index": 52.4,
-    "priority_score": 59.2,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.4/100. 3,500 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-27.",
-    "score_breakdown": {
-      "hazard_intensity": 60.0,
-      "flood_exposure": 47.0,
-      "cloudburst_risk": 46.0,
-      "population_exposure": 40.0,
-      "disaster_history_proximity": 22.2
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.6,
-      "flood_susceptibility": 0.47,
-      "cloudburst_susceptibility": 0.46,
-      "population_vulnerability": 0.4,
-      "historical_recurrence": 0.2222
-    },
-    "relocation_distance_km": 18.99,
-    "suggested_safe_zone": {
-      "site_id": 27,
+      "site_id": 31,
       "lat": 30.57,
       "lng": 78.37,
-      "suitability_score": 3.977,
-      "total_carrying_capacity": 3790,
-      "remaining_capacity_headroom": 290
+      "suitability_score": 3.956,
+      "total_carrying_capacity": 3782,
+      "remaining_capacity_headroom": 1982
     },
-    "rank": 8
+    "rank": 11
+  },
+  {
+    "village_id": 170,
+    "village_name": "Basari-141 Patti",
+    "tehsil": "Bhatwari",
+    "population": 768,
+    "households": 147,
+    "current_zone": "orange",
+    "hazard_probability": 0.5711,
+    "vulnerability_index": 57.1,
+    "priority_score": 58.7,
+    "timeline": "medium_term",
+    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 57.1/100. 768 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-39.",
+    "score_breakdown": {
+      "hazard_intensity": 48.0,
+      "flood_exposure": 16.0,
+      "cloudburst_risk": 53.0,
+      "population_exposure": 33.0,
+      "disaster_history_proximity": 39.6
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.48,
+      "flood_susceptibility": 0.16,
+      "cloudburst_susceptibility": 0.53,
+      "population_vulnerability": 0.33,
+      "historical_recurrence": 0.3964
+    },
+    "relocation_distance_km": 15.55,
+    "suggested_safe_zone": {
+      "site_id": 39,
+      "lat": 30.69,
+      "lng": 78.33,
+      "suitability_score": 3.917,
+      "total_carrying_capacity": 4016,
+      "remaining_capacity_headroom": 382
+    },
+    "rank": 12
   },
   {
     "village_id": 6,
@@ -318,37 +474,37 @@
     "population": 3000,
     "households": 576,
     "current_zone": "orange",
-    "hazard_probability": 0.5262,
-    "vulnerability_index": 52.6,
-    "priority_score": 58.9,
+    "hazard_probability": 0.5215,
+    "vulnerability_index": 52.2,
+    "priority_score": 58.7,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.6/100. 3,000 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-3.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.2/100. 3,000 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-31.",
     "score_breakdown": {
       "hazard_intensity": 34.0,
       "flood_exposure": 30.0,
       "cloudburst_risk": 46.0,
       "population_exposure": 48.0,
-      "disaster_history_proximity": 16.2
+      "disaster_history_proximity": 17.9
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.34,
       "flood_susceptibility": 0.3,
       "cloudburst_susceptibility": 0.46,
       "population_vulnerability": 0.48,
-      "historical_recurrence": 0.1624
+      "historical_recurrence": 0.1792
     },
-    "relocation_distance_km": 27.7,
+    "relocation_distance_km": 28.25,
     "suggested_safe_zone": {
-      "site_id": 3,
-      "lat": 30.59,
-      "lng": 78.35,
-      "suitability_score": 4.071,
-      "total_carrying_capacity": 3578,
+      "site_id": 31,
+      "lat": 30.57,
+      "lng": 78.37,
+      "suitability_score": 3.956,
+      "total_carrying_capacity": 3782,
       "remaining_capacity_headroom": 0
     },
-    "rank": 9
+    "rank": 13
   },
   {
     "village_id": 7,
@@ -357,13 +513,13 @@
     "population": 450,
     "households": 86,
     "current_zone": "orange",
-    "hazard_probability": 0.5823,
-    "vulnerability_index": 58.2,
-    "priority_score": 58.2,
-    "timeline": "short_term",
-    "urgency_level": "HIGH RISK / SHORT-TERM",
-    "defensible_rationale": "SHORT-TERM RELOCATION: THRIVE VI 58.2/100. Multi-hazard exposure (Recurrence: 25%). 450 residents, 0.0km from disaster corridor.",
-    "recommended_action": "Phase-1 pre-monsoon staging at Safe Site Alpha-38. Deploy slope sensors and early warning siren.",
+    "hazard_probability": 0.5773,
+    "vulnerability_index": 57.7,
+    "priority_score": 57.9,
+    "timeline": "medium_term",
+    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 57.7/100. 450 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-39.",
     "score_breakdown": {
       "hazard_intensity": 34.0,
       "flood_exposure": 40.0,
@@ -380,53 +536,14 @@
     },
     "relocation_distance_km": 38.36,
     "suggested_safe_zone": {
-      "site_id": 38,
+      "site_id": 39,
       "lat": 30.69,
       "lng": 78.33,
-      "suitability_score": 3.915,
+      "suitability_score": 3.917,
       "total_carrying_capacity": 4016,
-      "remaining_capacity_headroom": 1766
+      "remaining_capacity_headroom": 1150
     },
-    "rank": 10
-  },
-  {
-    "village_id": 19,
-    "village_name": "Sankri",
-    "tehsil": "Mori",
-    "population": 600,
-    "households": 115,
-    "current_zone": "orange",
-    "hazard_probability": 0.5686,
-    "vulnerability_index": 56.9,
-    "priority_score": 58.0,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 56.9/100. 600 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-26.",
-    "score_breakdown": {
-      "hazard_intensity": 62.0,
-      "flood_exposure": 33.0,
-      "cloudburst_risk": 49.0,
-      "population_exposure": 41.0,
-      "disaster_history_proximity": 28.6
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.62,
-      "flood_susceptibility": 0.33,
-      "cloudburst_susceptibility": 0.49,
-      "population_vulnerability": 0.41,
-      "historical_recurrence": 0.2861
-    },
-    "relocation_distance_km": 9.17,
-    "suggested_safe_zone": {
-      "site_id": 26,
-      "lat": 31.03,
-      "lng": 78.11,
-      "suitability_score": 3.996,
-      "total_carrying_capacity": 4048,
-      "remaining_capacity_headroom": 3448
-    },
-    "rank": 11
+    "rank": 14
   },
   {
     "village_id": 105,
@@ -435,37 +552,37 @@
     "population": 1025,
     "households": 197,
     "current_zone": "orange",
-    "hazard_probability": 0.5399,
-    "vulnerability_index": 54.0,
-    "priority_score": 57.5,
+    "hazard_probability": 0.5367,
+    "vulnerability_index": 53.7,
+    "priority_score": 57.3,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 54.0/100. 1,025 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-3.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 53.7/100. 1,025 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-15.",
     "score_breakdown": {
       "hazard_intensity": 54.0,
       "flood_exposure": 42.0,
       "cloudburst_risk": 52.0,
       "population_exposure": 48.0,
-      "disaster_history_proximity": 9.6
+      "disaster_history_proximity": 10.7
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.54,
       "flood_susceptibility": 0.42,
       "cloudburst_susceptibility": 0.52,
       "population_vulnerability": 0.48,
-      "historical_recurrence": 0.0955
+      "historical_recurrence": 0.1073
     },
-    "relocation_distance_km": 27.41,
+    "relocation_distance_km": 27.53,
     "suggested_safe_zone": {
-      "site_id": 3,
-      "lat": 30.59,
-      "lng": 78.35,
-      "suitability_score": 4.071,
-      "total_carrying_capacity": 3578,
-      "remaining_capacity_headroom": 2203
+      "site_id": 15,
+      "lat": 30.67,
+      "lng": 78.27,
+      "suitability_score": 4.012,
+      "total_carrying_capacity": 4054,
+      "remaining_capacity_headroom": 3029
     },
-    "rank": 12
+    "rank": 15
   },
   {
     "village_id": 26,
@@ -474,76 +591,37 @@
     "population": 350,
     "households": 67,
     "current_zone": "orange",
-    "hazard_probability": 0.552,
-    "vulnerability_index": 55.2,
-    "priority_score": 55.8,
+    "hazard_probability": 0.558,
+    "vulnerability_index": 55.8,
+    "priority_score": 56.2,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 55.2/100. 350 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-3.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 55.8/100. 350 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-39.",
     "score_breakdown": {
       "hazard_intensity": 34.0,
       "flood_exposure": 16.0,
       "cloudburst_risk": 46.0,
       "population_exposure": 26.0,
-      "disaster_history_proximity": 32.1
+      "disaster_history_proximity": 43.7
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.34,
       "flood_susceptibility": 0.16,
       "cloudburst_susceptibility": 0.46,
       "population_vulnerability": 0.26,
-      "historical_recurrence": 0.3214
+      "historical_recurrence": 0.437
     },
-    "relocation_distance_km": 18.05,
+    "relocation_distance_km": 15.24,
     "suggested_safe_zone": {
-      "site_id": 3,
-      "lat": 30.59,
-      "lng": 78.35,
-      "suitability_score": 4.071,
-      "total_carrying_capacity": 3578,
-      "remaining_capacity_headroom": 3228
+      "site_id": 39,
+      "lat": 30.69,
+      "lng": 78.33,
+      "suitability_score": 3.917,
+      "total_carrying_capacity": 4016,
+      "remaining_capacity_headroom": 32
     },
-    "rank": 13
-  },
-  {
-    "village_id": 127,
-    "village_name": "Udiyari Gaon",
-    "tehsil": "Naugaon",
-    "population": 736,
-    "households": 141,
-    "current_zone": "orange",
-    "hazard_probability": 0.5219,
-    "vulnerability_index": 52.2,
-    "priority_score": 55.7,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.2/100. 736 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 36.0,
-      "flood_exposure": 20.0,
-      "cloudburst_risk": 55.0,
-      "population_exposure": 41.0,
-      "disaster_history_proximity": 12.5
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.36,
-      "flood_susceptibility": 0.2,
-      "cloudburst_susceptibility": 0.55,
-      "population_vulnerability": 0.41,
-      "historical_recurrence": 0.125
-    },
-    "relocation_distance_km": 27.68,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 2719
-    },
-    "rank": 14
+    "rank": 16
   },
   {
     "village_id": 56,
@@ -552,115 +630,76 @@
     "population": 326,
     "households": 62,
     "current_zone": "orange",
-    "hazard_probability": 0.5451,
-    "vulnerability_index": 54.5,
-    "priority_score": 55.3,
+    "hazard_probability": 0.5529,
+    "vulnerability_index": 55.3,
+    "priority_score": 55.7,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 54.5/100. 326 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-26.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 55.3/100. 326 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-24.",
     "score_breakdown": {
       "hazard_intensity": 67.0,
       "flood_exposure": 24.0,
       "cloudburst_risk": 46.0,
       "population_exposure": 26.0,
-      "disaster_history_proximity": 15.9
+      "disaster_history_proximity": 25.1
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.67,
       "flood_susceptibility": 0.24,
       "cloudburst_susceptibility": 0.46,
       "population_vulnerability": 0.26,
-      "historical_recurrence": 0.1588
+      "historical_recurrence": 0.2505
     },
     "relocation_distance_km": 8.69,
     "suggested_safe_zone": {
-      "site_id": 26,
+      "site_id": 24,
       "lat": 31.03,
       "lng": 78.11,
-      "suitability_score": 3.996,
+      "suitability_score": 3.997,
       "total_carrying_capacity": 4048,
       "remaining_capacity_headroom": 3122
     },
-    "rank": 15
-  },
-  {
-    "village_id": 24,
-    "village_name": "Nirakot",
-    "tehsil": "Naugaon",
-    "population": 600,
-    "households": 115,
-    "current_zone": "orange",
-    "hazard_probability": 0.5226,
-    "vulnerability_index": 52.3,
-    "priority_score": 55.3,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.3/100. 600 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 23.0,
-      "flood_exposure": 20.0,
-      "cloudburst_risk": 30.0,
-      "population_exposure": 28.0,
-      "disaster_history_proximity": 39.5
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.23,
-      "flood_susceptibility": 0.2,
-      "cloudburst_susceptibility": 0.3,
-      "population_vulnerability": 0.28,
-      "historical_recurrence": 0.395
-    },
-    "relocation_distance_km": 20.44,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 3455
-    },
-    "rank": 16
-  },
-  {
-    "village_id": 170,
-    "village_name": "Basari-141 Patti",
-    "tehsil": "Bhatwari",
-    "population": 768,
-    "households": 147,
-    "current_zone": "orange",
-    "hazard_probability": 0.4858,
-    "vulnerability_index": 48.6,
-    "priority_score": 53.6,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 48.6/100. 768 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 48.0,
-      "flood_exposure": 16.0,
-      "cloudburst_risk": 53.0,
-      "population_exposure": 33.0,
-      "disaster_history_proximity": 19.3
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.48,
-      "flood_susceptibility": 0.16,
-      "cloudburst_susceptibility": 0.53,
-      "population_vulnerability": 0.33,
-      "historical_recurrence": 0.1933
-    },
-    "relocation_distance_km": 21.65,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 1272
-    },
     "rank": 17
+  },
+  {
+    "village_id": 127,
+    "village_name": "Udiyari Gaon",
+    "tehsil": "Naugaon",
+    "population": 736,
+    "households": 141,
+    "current_zone": "orange",
+    "hazard_probability": 0.5205,
+    "vulnerability_index": 52.1,
+    "priority_score": 55.6,
+    "timeline": "medium_term",
+    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.1/100. 736 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-15.",
+    "score_breakdown": {
+      "hazard_intensity": 36.0,
+      "flood_exposure": 20.0,
+      "cloudburst_risk": 55.0,
+      "population_exposure": 41.0,
+      "disaster_history_proximity": 13.8
+    },
+    "thrive_dimensions": {
+      "landslide_susceptibility": 0.36,
+      "flood_susceptibility": 0.2,
+      "cloudburst_susceptibility": 0.55,
+      "population_vulnerability": 0.41,
+      "historical_recurrence": 0.1377
+    },
+    "relocation_distance_km": 27.68,
+    "suggested_safe_zone": {
+      "site_id": 15,
+      "lat": 30.67,
+      "lng": 78.27,
+      "suitability_score": 4.012,
+      "total_carrying_capacity": 4054,
+      "remaining_capacity_headroom": 1919
+    },
+    "rank": 18
   },
   {
     "village_id": 117,
@@ -669,37 +708,37 @@
     "population": 374,
     "households": 71,
     "current_zone": "orange",
-    "hazard_probability": 0.5079,
-    "vulnerability_index": 50.8,
-    "priority_score": 53.3,
+    "hazard_probability": 0.5214,
+    "vulnerability_index": 52.1,
+    "priority_score": 54.1,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 50.8/100. 374 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 52.1/100. 374 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-15.",
     "score_breakdown": {
       "hazard_intensity": 41.0,
       "flood_exposure": 20.0,
       "cloudburst_risk": 34.0,
       "population_exposure": 21.0,
-      "disaster_history_proximity": 31.5
+      "disaster_history_proximity": 48.8
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.41,
       "flood_susceptibility": 0.2,
       "cloudburst_susceptibility": 0.34,
       "population_vulnerability": 0.21,
-      "historical_recurrence": 0.3154
+      "historical_recurrence": 0.4877
     },
     "relocation_distance_km": 18.74,
     "suggested_safe_zone": {
-      "site_id": 18,
+      "site_id": 15,
       "lat": 30.67,
       "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 2345
+      "suitability_score": 4.012,
+      "total_carrying_capacity": 4054,
+      "remaining_capacity_headroom": 2655
     },
-    "rank": 18
+    "rank": 19
   },
   {
     "village_id": 116,
@@ -708,231 +747,36 @@
     "population": 305,
     "households": 58,
     "current_zone": "orange",
-    "hazard_probability": 0.5046,
-    "vulnerability_index": 50.5,
-    "priority_score": 52.7,
+    "hazard_probability": 0.5133,
+    "vulnerability_index": 51.3,
+    "priority_score": 53.2,
     "timeline": "medium_term",
     "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 50.5/100. 305 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
+    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 51.3/100. 305 residents vulnerable during extreme events.",
+    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-15.",
     "score_breakdown": {
       "hazard_intensity": 41.0,
       "flood_exposure": 20.0,
       "cloudburst_risk": 56.0,
       "population_exposure": 42.0,
-      "disaster_history_proximity": 11.7
+      "disaster_history_proximity": 14.5
     },
     "thrive_dimensions": {
       "landslide_susceptibility": 0.41,
       "flood_susceptibility": 0.2,
       "cloudburst_susceptibility": 0.56,
       "population_vulnerability": 0.42,
-      "historical_recurrence": 0.1166
+      "historical_recurrence": 0.1448
     },
     "relocation_distance_km": 29.96,
     "suggested_safe_zone": {
-      "site_id": 18,
+      "site_id": 15,
       "lat": 30.67,
       "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 2040
-    },
-    "rank": 19
-  },
-  {
-    "village_id": 73,
-    "village_name": "Salan Patti",
-    "tehsil": "Naugaon",
-    "population": 216,
-    "households": 41,
-    "current_zone": "orange",
-    "hazard_probability": 0.5136,
-    "vulnerability_index": 51.4,
-    "priority_score": 52.5,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 51.4/100. 216 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-27.",
-    "score_breakdown": {
-      "hazard_intensity": 31.0,
-      "flood_exposure": 7.0,
-      "cloudburst_risk": 42.0,
-      "population_exposure": 13.0,
-      "disaster_history_proximity": 34.7
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.31,
-      "flood_susceptibility": 0.07,
-      "cloudburst_susceptibility": 0.42,
-      "population_vulnerability": 0.13,
-      "historical_recurrence": 0.3472
-    },
-    "relocation_distance_km": 19.21,
-    "suggested_safe_zone": {
-      "site_id": 27,
-      "lat": 30.57,
-      "lng": 78.37,
-      "suitability_score": 3.977,
-      "total_carrying_capacity": 3790,
-      "remaining_capacity_headroom": 74
+      "suitability_score": 4.012,
+      "total_carrying_capacity": 4054,
+      "remaining_capacity_headroom": 1614
     },
     "rank": 20
-  },
-  {
-    "village_id": 9,
-    "village_name": "Lanka",
-    "tehsil": "Bhatwari",
-    "population": 520,
-    "households": 100,
-    "current_zone": "orange",
-    "hazard_probability": 0.4704,
-    "vulnerability_index": 47.0,
-    "priority_score": 51.8,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 47.0/100. 520 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 64.0,
-      "flood_exposure": 42.0,
-      "cloudburst_risk": 51.0,
-      "population_exposure": 41.0,
-      "disaster_history_proximity": 5.3
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.64,
-      "flood_susceptibility": 0.42,
-      "cloudburst_susceptibility": 0.51,
-      "population_vulnerability": 0.41,
-      "historical_recurrence": 0.0533
-    },
-    "relocation_distance_km": 25.86,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 244
-    },
-    "rank": 21
-  },
-  {
-    "village_id": 10,
-    "village_name": "Jhala",
-    "tehsil": "Bhatwari",
-    "population": 300,
-    "households": 57,
-    "current_zone": "orange",
-    "hazard_probability": 0.4751,
-    "vulnerability_index": 47.5,
-    "priority_score": 50.9,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 47.5/100. 300 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 53.0,
-      "flood_exposure": 30.0,
-      "cloudburst_risk": 57.0,
-      "population_exposure": 41.0,
-      "disaster_history_proximity": 6.4
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.53,
-      "flood_susceptibility": 0.3,
-      "cloudburst_susceptibility": 0.57,
-      "population_vulnerability": 0.41,
-      "historical_recurrence": 0.0639
-    },
-    "relocation_distance_km": 41.26,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 764
-    },
-    "rank": 22
-  },
-  {
-    "village_id": 155,
-    "village_name": "Badal-126 Khala",
-    "tehsil": "Bhatwari",
-    "population": 208,
-    "households": 40,
-    "current_zone": "orange",
-    "hazard_probability": 0.4778,
-    "vulnerability_index": 47.8,
-    "priority_score": 50.3,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 47.8/100. 208 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 64.0,
-      "flood_exposure": 39.0,
-      "cloudburst_risk": 40.0,
-      "population_exposure": 48.0,
-      "disaster_history_proximity": 5.8
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.64,
-      "flood_susceptibility": 0.39,
-      "cloudburst_susceptibility": 0.4,
-      "population_vulnerability": 0.48,
-      "historical_recurrence": 0.0584
-    },
-    "relocation_distance_km": 43.76,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 1064
-    },
-    "rank": 23
-  },
-  {
-    "village_id": 45,
-    "village_name": "Khaga",
-    "tehsil": "Naugaon",
-    "population": 285,
-    "households": 54,
-    "current_zone": "orange",
-    "hazard_probability": 0.4568,
-    "vulnerability_index": 45.7,
-    "priority_score": 49.7,
-    "timeline": "medium_term",
-    "urgency_level": "MODERATE RISK / MEDIUM-TERM",
-    "defensible_rationale": "MEDIUM-TERM MITIGATION: THRIVE VI 45.7/100. 285 residents vulnerable during extreme events.",
-    "recommended_action": "Bio-engineering slope stabilization + planned voluntary relocation to Safe Site Alpha-18.",
-    "score_breakdown": {
-      "hazard_intensity": 37.0,
-      "flood_exposure": 40.0,
-      "cloudburst_risk": 33.0,
-      "population_exposure": 41.0,
-      "disaster_history_proximity": 12.5
-    },
-    "thrive_dimensions": {
-      "landslide_susceptibility": 0.37,
-      "flood_susceptibility": 0.4,
-      "cloudburst_susceptibility": 0.33,
-      "population_vulnerability": 0.41,
-      "historical_recurrence": 0.1252
-    },
-    "relocation_distance_km": 31.74,
-    "suggested_safe_zone": {
-      "site_id": 18,
-      "lat": 30.67,
-      "lng": 78.27,
-      "suitability_score": 4.013,
-      "total_carrying_capacity": 4055,
-      "remaining_capacity_headroom": 0
-    },
-    "rank": 24
   }
 ]

@@ -4493,3 +4493,268 @@ body.theme-govt-portal .action-order-box {
 }
 .prov-detail-list li strong { color: #cbd5e1; }
 
+/* ============================================================ */
+/* MHA / NDMA INCIDENT COMMAND OPERATIONAL PROFILES              */
+/* ============================================================ */
+.mha-profiles-box {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 10px 0 14px 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.mha-profiles-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #e2e8f0;
+}
+
+.mha-profiles-sub {
+    font-size: 9.5px;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.mha-scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.btn-mha-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6px 9px;
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.btn-mha-profile:hover {
+    background: rgba(51, 65, 85, 0.9);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-mha-profile.active {
+    background: rgba(30, 58, 138, 0.5);
+    border-color: #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.profile-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.profile-dot.green { background: #10b981; box-shadow: 0 0 6px #10b981; }
+.profile-dot.yellow { background: #f59e0b; box-shadow: 0 0 6px #f59e0b; }
+.profile-dot.orange { background: #f97316; box-shadow: 0 0 6px #f97316; }
+.profile-dot.red { background: #ef4444; box-shadow: 0 0 6px #ef4444; }
+
+.profile-name {
+    font-size: 10px;
+    font-weight: 800;
+    color: #f8fafc;
+    letter-spacing: 0.3px;
+}
+
+.profile-desc {
+    font-size: 9px;
+    color: #94a3b8;
+    margin-top: 1px;
+}
+
+/* ============================================================ */
+/* VILLAGE STATUTORY EVIDENTIARY DOSSIER MODAL (DM ACT 2005)   */
+/* ============================================================ */
+.dossier-modal-box {
+    max-width: 960px !important;
+    max-height: 90vh;
+    background: #0b1120 !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.dossier-modal-header {
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+    border-bottom: 2px solid #3b82f6;
+    padding: 16px 24px;
+}
+
+.dossier-emblem-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.dossier-badge-pill {
+    font-size: 10px;
+    font-weight: 800;
+    background: rgba(59, 130, 246, 0.2);
+    color: #60a5fa;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    padding: 2px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+
+.dossier-modal-body {
+    padding: 24px;
+    overflow-y: auto;
+    background: #0f172a;
+}
+
+.official-dossier-paper {
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 6px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.5;
+}
+
+.dossier-letterhead {
+    text-align: center;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.dossier-seal-symbol {
+    font-size: 32px;
+    margin-bottom: 4px;
+}
+
+.dossier-letterhead h3 {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+    margin: 0;
+    color: #0f172a;
+    text-transform: uppercase;
+}
+
+.dossier-letterhead h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #334155;
+    margin: 2px 0;
+}
+
+.dossier-letterhead p {
+    font-size: 11px;
+    color: #64748b;
+    margin: 0;
+}
+
+.dossier-ref-strip {
+    display: flex;
+    justify-content: space-between;
+    background: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+}
+
+.dossier-section {
+    margin-bottom: 20px;
+}
+
+.dossier-section-title {
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+}
+
+.dossier-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.dossier-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+}
+
+.dossier-table td {
+    padding: 6px 8px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dossier-table td.lbl {
+    font-weight: 700;
+    color: #475569;
+    width: 45%;
+}
+
+.dossier-table td.val {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.dossier-callout-danger {
+    background: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    font-size: 12px;
+    color: #991b1b;
+    margin-bottom: 14px;
+}
+
+.dossier-callout-safe {
+    background: #ecfdf5;
+    border-left: 4px solid #10b981;
+    padding: 10px 14px;
+    border-radius: 0 4px 4px 0;
+    font-size: 12px;
+    color: #065f46;
+    margin-bottom: 14px;
+}
+
+.dossier-sign-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #cbd5e1;
+    text-align: center;
+    font-size: 11px;
+}
+
+.dossier-signature-line {
+    border-bottom: 1px dashed #64748b;
+    width: 80%;
+    margin: 30px auto 8px auto;
+}
+
+

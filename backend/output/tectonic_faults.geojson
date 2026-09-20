@@ -1,0 +1,89 @@
+{
+  "type": "FeatureCollection",
+  "name": "Uttarkashi_Main_Central_Thrust_Faults",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "fault_name": "Main Central Thrust (MCT-II / Vaikrita Thrust)",
+        "type": "Active Continental Tectonic Thrust Fault",
+        "slip_rate_mm_yr": 14.5,
+        "crustal_depth_km": 12.0,
+        "geological_hanging_wall": "Central Crystallines (High-grade Kyanite/Sillimanite Gneiss & Quartzite)",
+        "geological_footwall": "Garhwal Group (Cherty Limestone, Sericitic Slate & Phyllite)",
+        "shear_zone_width_m": 2500,
+        "gsi_record_id": "GSI-BHUKOSH-MCT-UTK-01",
+        "hazard_implication": "Zone of intense cataclasis, pulverized gouge rock, and severe earthquake ground motion amplification (Zone V)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [77.920, 31.280],
+          [78.080, 31.140],
+          [78.250, 31.020],
+          [78.440, 30.860],
+          [78.580, 30.770],
+          [78.760, 30.690],
+          [78.980, 30.610]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "fault_name": "North Almora Thrust (NAT) Secondary Lineament",
+        "type": "Regional Intra-Plate Fault",
+        "slip_rate_mm_yr": 4.2,
+        "crustal_depth_km": 18.0,
+        "geological_hanging_wall": "Lesser Himalayan Metamorphics",
+        "geological_footwall": "Sub-Himalayan Sediments",
+        "shear_zone_width_m": 1200,
+        "gsi_record_id": "GSI-BHUKOSH-NAT-UTK-02",
+        "hazard_implication": "Secondary seismogenic source generating shallow crustal micro-tremors"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [78.150, 30.580],
+          [78.320, 30.540],
+          [78.520, 30.500],
+          [78.750, 30.470]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "zone_name": "Main Central Thrust (MCT) High-Shear Tectonic Buffer (2.5 km)",
+        "type": "Tectonic Shear Hazard Corridor",
+        "shear_strain_factor": 1.35,
+        "liquefaction_susceptibility": "CRITICAL",
+        "statutory_classification": "MHA Seismic Zone V Geotechnical Hazard Corridor",
+        "gsi_source": "Geological Survey of India (GSI) Bhukosh Portal (Doc: DCPORT1GSIGOVI1176749)"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [77.900, 31.295],
+            [78.065, 31.155],
+            [78.235, 31.035],
+            [78.425, 30.875],
+            [78.565, 30.785],
+            [78.745, 30.705],
+            [78.965, 30.625],
+            [78.995, 30.595],
+            [78.775, 30.675],
+            [78.595, 30.755],
+            [78.455, 30.845],
+            [78.265, 31.005],
+            [78.095, 31.125],
+            [77.935, 31.265],
+            [77.900, 31.295]
+          ]
+        ]
+      }
+    }
+  ]
+}

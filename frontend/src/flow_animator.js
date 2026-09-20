@@ -200,6 +200,10 @@ export class FlowAnimator {
 
         if (evacData.type === 'FeatureCollection') {
             evacGeoJSON = evacData;
+        } else if (evacData.evacuation_routes_geojson && evacData.evacuation_routes_geojson.type === 'FeatureCollection') {
+            evacGeoJSON = evacData.evacuation_routes_geojson;
+        } else if (evacData.features && Array.isArray(evacData.features)) {
+            evacGeoJSON = { type: 'FeatureCollection', features: evacData.features };
         } else if (Array.isArray(evacData) && evacData.length > 0) {
             const vectorFeatures = evacData.map(item => {
                 const coords = item.geometry?.coordinates || [

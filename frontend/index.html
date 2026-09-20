@@ -253,6 +253,36 @@
                         <span>🌐</span> Pull Live IMD / Open-Meteo Weather
                     </button>
 
+                    <!-- MHA / NDMA Incident Command Operating Profiles -->
+                    <div class="mha-profiles-box">
+                        <div class="mha-profiles-title">
+                            <span>🏛️ MHA INCIDENT COMMAND PROFILES</span>
+                            <span class="mha-profiles-sub">One-Touch Standardized Emergency Directives</span>
+                        </div>
+                        <div class="mha-scenario-grid">
+                            <button class="btn-mha-profile active" data-scenario="green" title="Standard Peacetime Monitoring (Rain 35mm/hr, 0.0g kh)">
+                                <span class="profile-dot green"></span>
+                                <span class="profile-name">CODE GREEN</span>
+                                <span class="profile-desc">Seasonal Normal</span>
+                            </button>
+                            <button class="btn-mha-profile" data-scenario="yellow" title="USDMA Watch: Active Monsoon Trough (Rain 55mm/hr, 0.05g kh)">
+                                <span class="profile-dot yellow"></span>
+                                <span class="profile-name">CODE YELLOW</span>
+                                <span class="profile-desc">Monsoon Watch</span>
+                            </button>
+                            <button class="btn-mha-profile" data-scenario="orange" title="USDMA Warning: Severe Cloudburst (Rain 110mm/hr, 0.12g kh)">
+                                <span class="profile-dot orange"></span>
+                                <span class="profile-name">CODE ORANGE</span>
+                                <span class="profile-desc">Cloudburst Surge</span>
+                            </button>
+                            <button class="btn-mha-profile" data-scenario="red" title="MHA Code Red: Compound Megahazard (Rain 160mm/hr, 0.30g kh)">
+                                <span class="profile-dot red"></span>
+                                <span class="profile-name">CODE RED</span>
+                                <span class="profile-desc">Compound Catastrophe</span>
+                            </button>
+                        </div>
+                    </div>
+
                     <!-- Real Geotechnical Factor of Safety Gauge -->
                     <div class="geotech-gauge-box">
                         <div class="gauge-header">
@@ -354,6 +384,15 @@
                             <span>Net District Headroom Buffer:</span>
                             <strong class="text-safe mono-readout" id="feedback-net-buffer">+410,059</strong>
                         </div>
+                    </div>
+
+                    <div class="sim-quick-actions-flex" style="margin-top: 10px; display: flex; gap: 8px;">
+                        <button class="btn btn-action gov-action-btn" id="btn-quick-evac-corridors" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Compute and render terrain-following Dijkstra evacuation corridors from Red Zone habitations to Green Zone safe sites">
+                            <span>⚡</span> Route Evacuation Corridors
+                        </button>
+                        <button class="btn btn-action gov-action-btn" id="btn-toggle-mct-fault" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Toggle GSI Main Central Thrust (MCT) active fault trace and 2.5km shear corridor on 3D map">
+                            <span>🌋</span> MCT Fault Overlay
+                        </button>
                     </div>
 
                     <div class="sim-buttons">
@@ -977,6 +1016,30 @@
                 <div class="provenance-cards-grid" id="provenance-cards-grid">
                     <!-- Populated dynamically -->
                 </div>
+            </div>
+    <!-- ============================================================ -->
+    <!-- VILLAGE STATUTORY EVIDENTIARY DOSSIER MODAL (DM ACT SEC 30/34) -->
+    <!-- ============================================================ -->
+    <div id="village-dossier-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen dossier-modal-box">
+            <div class="modal-header dossier-modal-header">
+                <div class="modal-header-left">
+                    <div class="dossier-emblem-row">
+                        <span class="emblem-flag">🇮🇳</span>
+                        <span class="dossier-badge-pill">STATUTORY EVIDENTIARY DOSSIER</span>
+                    </div>
+                    <h2 id="dossier-modal-title">Official Habitation Relocation Evidentiary Case File</h2>
+                    <span class="modal-sub">District Disaster Management Authority (DDMA), Uttarkashi • Invocations under Sections 30 & 34, Disaster Management Act 2005</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-primary btn-sm" id="btn-print-village-dossier" style="margin-right: 8px;">
+                        <span>🖨️</span> Print Official Order
+                    </button>
+                    <button class="modal-close" id="btn-close-village-dossier">✕</button>
+                </div>
+            </div>
+            <div class="modal-body dossier-modal-body" id="village-dossier-content">
+                <!-- Dynamically populated from JS -->
             </div>
         </div>
     </div>

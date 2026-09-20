@@ -210,7 +210,38 @@ class TestApiEndpointsWithTestClient(unittest.TestCase):
         self.assertIn("red_zone_expansion_cells", s0)
         self.assertIn("pre_disaster_evacuated_pop", s0)
 
+    def test_tectonic_faults_api(self):
+        res = client.get("/api/tectonic-faults")
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertEqual(data.get("type"), "FeatureCollection")
+        self.assertGreater(len(data.get("features", [])), 0)
+        # Verify Main Central Thrust exists
+        fault_names = [f["properties"].get("fault_name", "") for f in data["features"]]
+        self.assertTrue(any("Main Central Thrust" in name for name in fault_names))
+
+    def test_evacuation_routes_api(self):
+        payload = {
+            "villages": [
+                {
+                    "village_id": 101,
+                    "village_name": "Bhatwari Test",
+                    "lat": 30.82,
+                    "lng": 78.60,
+                    "population": 350
+                }
+            ]
+        }
+        res = client.post("/api/simulate/evacuation-routes", json=payload)
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertEqual(data.get("status"), "success")
+        self.assertIn("features", data)
+        self.assertGreaterEqual(len(data["features"]), 1)
+        self.assertEqual(data["features"][0]["geometry"]["type"], "LineString")
+
 
 if __name__ == "__main__":
     unittest.main()
+
 
