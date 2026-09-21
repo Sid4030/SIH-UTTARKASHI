@@ -264,6 +264,42 @@
         "displaced": 90,
         "source": "DDMA Precautionary Evacuation Dossier Aug-2024"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.92,
+          31.0
+        ]
+      },
+      "properties": {
+        "name": "Kedarnath Region Mass Movement",
+        "type": "landslide",
+        "year": 2013,
+        "severity": "high",
+        "casualties": 169,
+        "source": "GSI Report 2013"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.37,
+          30.61
+        ]
+      },
+      "properties": {
+        "name": "Dunda Nala Surge",
+        "type": "flood",
+        "year": 2019,
+        "severity": "high",
+        "casualties": 0,
+        "source": "DDMA Uttarkashi 2019"
+      }
     }
   ]
 }

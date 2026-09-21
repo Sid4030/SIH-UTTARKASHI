@@ -4757,4 +4757,1057 @@ body.theme-govt-portal .action-order-box {
     margin: 30px auto 8px auto;
 }
 
+/* ============================================================
+   REAL-TIME GPS EVACUATION NAVIGATOR HUD (FLOATING GLASS PANEL)
+   ============================================================ */
+.btn-gps-pulse {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(5, 150, 105, 0.4)) !important;
+    border: 1px solid #10b981 !important;
+    color: #6ee7b7 !important;
+    box-shadow: 0 0 14px rgba(16, 185, 129, 0.35);
+    animation: gpsHeaderPulse 2.2s infinite ease-in-out;
+}
 
+@keyframes gpsHeaderPulse {
+    0%, 100% { box-shadow: 0 0 10px rgba(16, 185, 129, 0.3); }
+    50% { box-shadow: 0 0 22px rgba(16, 185, 129, 0.7); }
+}
+
+.gps-navigator-hud {
+    position: absolute;
+    top: 76px;
+    right: 340px;
+    width: 380px;
+    max-height: calc(100vh - 120px);
+    background: rgba(10, 15, 26, 0.90);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65), 0 0 25px rgba(56, 189, 248, 0.15);
+    border-radius: 12px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gps-navigator-hud.minimized {
+    max-height: 48px;
+    width: 320px;
+}
+
+.gps-hud-header {
+    background: linear-gradient(90deg, rgba(14, 165, 233, 0.25), rgba(16, 185, 129, 0.15));
+    border-bottom: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.gps-header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gps-icon-pulse {
+    font-size: 18px;
+    animation: gpsIconSpin 4s infinite linear;
+}
+
+@keyframes gpsIconSpin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.gps-header-title h4 {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: #e0f2fe;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.gps-header-title .gps-sub {
+    font-size: 10px;
+    color: #38bdf8;
+    font-family: var(--font-mono);
+    display: block;
+}
+
+.gps-header-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.btn-gps-minimize, .btn-gps-close {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #cbd5e1;
+    border-radius: 4px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.btn-gps-minimize:hover, .btn-gps-close:hover {
+    background: rgba(239, 68, 68, 0.3);
+    color: #fff;
+}
+
+.gps-hud-body {
+    padding: 14px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 540px;
+}
+
+.gps-selector-row label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #f87171;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.gps-destination-box {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.dest-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #6ee7b7;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+}
+
+.dest-val {
+    font-size: 13px;
+    font-weight: 800;
+    color: #ecfdf5;
+}
+
+.dest-meta {
+    font-size: 10px;
+    color: #a7f3d0;
+    margin-top: 4px;
+    font-family: var(--font-mono);
+}
+
+.gps-metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.gps-metric-item {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #94a3b8;
+    letter-spacing: 0.4px;
+}
+
+.metric-val {
+    font-size: 14px;
+    font-weight: 800;
+    color: #f8fafc;
+    font-family: var(--font-mono);
+    margin-top: 2px;
+}
+
+.text-cyan { color: #38bdf8 !important; }
+.text-amber { color: #fbbf24 !important; }
+.text-green { color: #34d399 !important; }
+
+.gps-convoy-sim-box {
+    background: rgba(2, 6, 23, 0.9);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.convoy-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 800;
+    color: #7dd3fc;
+    letter-spacing: 0.3px;
+    margin-bottom: 8px;
+}
+
+.convoy-status-pill {
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 800;
+    background: rgba(100, 116, 139, 0.3);
+    color: #cbd5e1;
+}
+
+.convoy-status-pill.active {
+    background: rgba(16, 185, 129, 0.3);
+    color: #6ee7b7;
+    border: 1px solid #10b981;
+    animation: livePillPulse 1.5s infinite;
+}
+
+.convoy-telemetry-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #94a3b8;
+    font-family: var(--font-mono);
+    margin-bottom: 6px;
+}
+
+.convoy-telemetry-row strong {
+    color: #38bdf8;
+}
+
+.convoy-progress-bar-bg {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.convoy-progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #10b981);
+    border-radius: 3px;
+    transition: width 0.2s linear;
+}
+
+.convoy-btn-group {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 6px;
+}
+
+.btn-gps-action {
+    padding: 7px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+}
+
+.btn-gps-action.primary {
+    background: linear-gradient(135deg, #0284c7, #0369a1);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(2, 132, 199, 0.4);
+}
+.btn-gps-action.primary:hover {
+    background: #0284c7;
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.7);
+}
+
+.btn-gps-action.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.btn-gps-action.secondary:not(:disabled):hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-gps-action.ghost {
+    background: transparent;
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-gps-action.ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.gps-turn-by-turn-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
+
+.turn-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.turn-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.turn-step-item {
+    background: rgba(15, 23, 42, 0.7);
+    border-left: 3px solid #0284c7;
+    padding: 6px 10px;
+    border-radius: 0 6px 6px 0;
+    font-size: 10.5px;
+}
+
+.turn-step-item.active {
+    border-left-color: #10b981;
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.turn-step-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    font-weight: 800;
+    color: #38bdf8;
+    margin-bottom: 2px;
+}
+
+.turn-step-inst {
+    color: #e2e8f0;
+    line-height: 1.3;
+}
+
+/* ============================================================
+   MAP TOP-LEFT HUD TELEMETRY PILLS (BOUNDARY & CORRIDOR)
+   ============================================================ */
+.map-hud-overlay-topleft {
+    position: absolute;
+    top: 76px;
+    left: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 900;
+    pointer-events: none;
+}
+
+.hud-pill {
+    pointer-events: auto;
+    background: rgba(6, 10, 20, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e2e8f0;
+}
+
+.border-glow-cyan {
+    border: 1px solid rgba(56, 189, 248, 0.6);
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.25);
+}
+
+.border-glow-amber {
+    border: 1px solid rgba(245, 158, 11, 0.6);
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.live-cyan {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 8px #38bdf8;
+    animation: livePulseCyan 2s infinite;
+}
+
+@keyframes livePulseCyan {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+}
+
+.live-amber {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f59e0b;
+    box-shadow: 0 0 8px #f59e0b;
+    animation: livePulseCyan 2s infinite;
+}
+
+/* ============================================================
+   MODAL STYLES: MODEL INSPECTOR, CORRIDOR, WIHG GLOF
+   ============================================================ */
+.inspector-modal-box, .corridor-modal-box, .wihg-modal-box {
+    background: #090d16;
+    color: #e2e8f0;
+}
+
+.math-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+}
+
+.math-formula-box {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-left: 4px solid #38bdf8;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: #7dd3fc;
+    margin: 10px 0;
+    overflow-x: auto;
+}
+
+.math-param-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.math-param-item {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.math-param-item .p-lbl {
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.math-param-item .p-val {
+    font-size: 13px;
+    font-weight: 700;
+    color: #f8fafc;
+    font-family: var(--font-mono);
+}
+
+.corridor-table-wrapper {
+    overflow-x: auto;
+    margin-top: 14px;
+}
+
+.corridor-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+}
+
+.corridor-table th {
+    background: rgba(30, 41, 59, 0.8);
+    padding: 8px 10px;
+    text-align: left;
+    color: #94a3b8;
+    border-bottom: 2px solid #334155;
+    font-family: var(--font-mono);
+}
+
+.corridor-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tier-badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 10px;
+}
+
+.tier-badge.red { background: rgba(239, 68, 68, 0.25); color: #f87171; border: 1px solid #ef4444; }
+.tier-badge.orange { background: rgba(249, 115, 22, 0.25); color: #fb923c; border: 1px solid #f97316; }
+.tier-badge.yellow { background: rgba(234, 179, 8, 0.25); color: #facc15; border: 1px solid #eab308; }
+.tier-badge.green { background: rgba(16, 185, 129, 0.25); color: #34d399; border: 1px solid #10b981; }
+
+.wihg-callout {
+    background: rgba(168, 85, 247, 0.1);
+    border-left: 4px solid #a855f7;
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+}
+
+.wihg-callout h4 {
+    color: #d8b4fe;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.wihg-callout p {
+    font-size: 12px;
+    color: #e9d5ff;
+    line-height: 1.5;
+}
+
+/* ============================================================
+   DEOC EMERGENCY OPERATIONS COMMAND CENTER ENHANCEMENTS
+   ============================================================ */
+
+/* Command Ops Dropdown in Top Bar */
+.command-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.command-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 280px;
+    background: rgba(10, 15, 28, 0.94);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 12px;
+    padding: 8px 6px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 240, 255, 0.1);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dropdown-header {
+    font-size: 10px;
+    font-weight: 800;
+    color: #64748b;
+    padding: 6px 10px 4px 10px;
+    letter-spacing: 0.5px;
+    font-family: var(--font-mono);
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.15s ease;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 240, 255, 0.12);
+    color: #38bdf8;
+    transform: translateX(3px);
+}
+
+.dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+    margin: 4px 6px;
+}
+
+/* Landslide Factor of Safety (FoS) Monitor Console */
+.fos-monitor-console {
+    border: 1px solid rgba(0, 240, 255, 0.2) !important;
+    background: rgba(8, 14, 26, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+.panel-sub-label {
+    display: block;
+    font-size: 9.5px;
+    color: #0ea5e9;
+    font-family: var(--font-mono);
+    letter-spacing: 0.4px;
+    margin-top: 2px;
+}
+
+.fos-slopes-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.fos-slope-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 10px 12px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.fos-slope-card:hover {
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 4px 16px rgba(0, 240, 255, 0.08);
+}
+
+.fos-slope-card.red-alert {
+    border-left: 4px solid #ef4444;
+}
+
+.fos-slope-card.yellow-alert {
+    border-left: 4px solid #eab308;
+}
+
+.fos-slope-card.green-alert {
+    border-left: 4px solid #10b981;
+}
+
+.fos-slope-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.fos-slope-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #f1f5f9;
+}
+
+.fos-id {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    padding: 1px 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #94a3b8;
+}
+
+.fos-status-pill {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.4px;
+}
+
+.fos-status-pill.red { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid #ef4444; }
+.fos-status-pill.yellow { background: rgba(234, 179, 8, 0.2); color: #facc15; border: 1px solid #eab308; }
+.fos-status-pill.green { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981; }
+
+.fos-slope-val-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.fos-number {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f8fafc;
+}
+
+.fos-label {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.fos-sparkline-box {
+    width: 100%;
+    height: 36px;
+    margin-bottom: 6px;
+}
+
+.fos-sparkline {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.spark-line {
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.spark-line.red { stroke: #ef4444; }
+.spark-line.yellow { stroke: #eab308; }
+.spark-line.green { stroke: #10b981; }
+
+.fos-slope-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 5px;
+}
+
+.btn-inspect-slope {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: #38bdf8;
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-inspect-slope:hover {
+    background: rgba(0, 240, 255, 0.25);
+    color: #fff;
+}
+
+/* GLOF EWS Lake Telemetry Stream */
+.glof-ews-console {
+    border: 1px solid rgba(168, 85, 247, 0.25) !important;
+    background: rgba(8, 14, 26, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+}
+
+.glof-lakes-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.glof-lake-card {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9px;
+    padding: 8px 11px;
+}
+
+.glof-lake-card.warning-alert {
+    border-left: 3px solid #eab308;
+}
+
+.glof-lake-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    font-size: 11.5px;
+}
+
+.glof-id {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    padding: 1px 4px;
+    background: rgba(168, 85, 247, 0.15);
+    border-radius: 3px;
+    color: #c084fc;
+    margin-right: 4px;
+}
+
+.glof-status-pill {
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 4px;
+}
+
+.glof-status-pill.green { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+.glof-status-pill.yellow { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+
+.glof-level-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10.5px;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.glof-gauge-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.glof-gauge-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.glof-gauge-fill.green { background: linear-gradient(90deg, #10b981, #34d399); }
+.glof-gauge-fill.yellow { background: linear-gradient(90deg, #eab308, #f59e0b); }
+
+/* Floating Area Intelligence Dossier (Optimized Inspector Card) */
+.area-dossier-card {
+    position: fixed;
+    top: calc(var(--top-bar-height) + 14px);
+    right: 360px;
+    width: 440px;
+    max-height: calc(100vh - 120px);
+    z-index: 960;
+    background: rgba(10, 15, 28, 0.92);
+    backdrop-filter: blur(28px) saturate(190%);
+    -webkit-backdrop-filter: blur(28px) saturate(190%);
+    border: 1px solid rgba(0, 240, 255, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 240, 255, 0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.area-dossier-card.hidden {
+    display: none !important;
+    transform: translateY(20px) scale(0.96);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dossier-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: rgba(0, 240, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 240, 255, 0.18);
+}
+
+.dossier-header-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dossier-icon {
+    font-size: 20px;
+}
+
+.dossier-header-title h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin: 0;
+}
+
+.dossier-sub {
+    font-size: 10.5px;
+    color: #94a3b8;
+    display: block;
+    font-family: var(--font-mono);
+}
+
+.dossier-content-body {
+    padding: 14px 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dossier-vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.vital-chip {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.vital-label {
+    font-size: 9.5px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
+}
+
+.vital-value {
+    font-size: 14px;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+.dossier-safe-haven-card {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    border-radius: 10px;
+    padding: 10px 12px;
+}
+
+.safe-haven-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.safe-haven-name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #34d399;
+}
+
+.safe-haven-headroom {
+    font-size: 10px;
+    color: #6ee7b7;
+    font-family: var(--font-mono);
+}
+
+.safe-haven-stats-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.dossier-actions-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.btn-dossier-primary {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 9px 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(14, 165, 233, 0.35);
+    transition: all 0.15s ease;
+}
+
+.btn-dossier-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn-dossier-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #cbd5e1;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 7px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.15s ease;
+}
+
+.btn-dossier-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
+
+/* DEOC Executive Bottom Command Center Status Ribbon */
+.deoc-bottom-ribbon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: rgba(6, 10, 18, 0.95);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+    z-index: 920;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    color: #94a3b8;
+    letter-spacing: 0.3px;
+}
+
+.deoc-ribbon-left, .deoc-ribbon-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.deoc-badge-live {
+    color: #38bdf8;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.deoc-dot-pulse {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 8px #10b981;
+    animation: live-pulse-anim 1.5s infinite;
+}
+
+@keyframes live-pulse-anim {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.deoc-sep {
+    color: #334155;
+}
+
+.deoc-time {
+    color: #f8fafc;
+    font-weight: 700;
+}

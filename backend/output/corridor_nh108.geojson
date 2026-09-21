@@ -1,0 +1,806 @@
+{
+  "type": "FeatureCollection",
+  "name": "NH-108_Uttarkashi_Gangotri_100km_Corridor",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 1,
+        "chainage": "Km 0-5: Uttarkashi Town - Gangori",
+        "start_km": 0.0,
+        "end_km": 5.0,
+        "slope_deg": 22.0,
+        "mct_dist_km": 6.2,
+        "drainage_count": 3,
+        "landslide_scars": 3,
+        "ahp_hazard_score": 43.6,
+        "hazard_tier": "yellow",
+        "hazard_tier_label": "YELLOW (Moderate Caution)",
+        "road_status": "ACTIVE ROCKFALL WATCH",
+        "speed_limit_kmh": 35,
+        "habitations": "Uttarkashi Town, Gangori"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.445,
+            30.729
+          ],
+          [
+            78.45375,
+            30.7325
+          ],
+          [
+            78.46925,
+            30.7335
+          ],
+          [
+            78.48,
+            30.735
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 2,
+        "chainage": "Km 5-10: Uttarkashi Town - Gangori",
+        "start_km": 5.0,
+        "end_km": 10.0,
+        "slope_deg": 22.0,
+        "mct_dist_km": 6.2,
+        "drainage_count": 3,
+        "landslide_scars": 3,
+        "ahp_hazard_score": 43.6,
+        "hazard_tier": "yellow",
+        "hazard_tier_label": "YELLOW (Moderate Caution)",
+        "road_status": "ACTIVE ROCKFALL WATCH",
+        "speed_limit_kmh": 35,
+        "habitations": "Uttarkashi Town, Gangori"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.48,
+            30.735
+          ],
+          [
+            78.49323,
+            30.74014
+          ],
+          [
+            78.51322,
+            30.75189
+          ],
+          [
+            78.525,
+            30.755
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 3,
+        "chainage": "Km 10-15: Uttarkashi Town - Gangori",
+        "start_km": 10.0,
+        "end_km": 15.0,
+        "slope_deg": 22.0,
+        "mct_dist_km": 6.2,
+        "drainage_count": 3,
+        "landslide_scars": 3,
+        "ahp_hazard_score": 43.6,
+        "hazard_tier": "yellow",
+        "hazard_tier_label": "YELLOW (Moderate Caution)",
+        "road_status": "ACTIVE ROCKFALL WATCH",
+        "speed_limit_kmh": 35,
+        "habitations": "Uttarkashi Town, Gangori"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.525,
+            30.755
+          ],
+          [
+            78.52899,
+            30.75852
+          ],
+          [
+            78.54021,
+            30.77028
+          ],
+          [
+            78.543,
+            30.777
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 4,
+        "chainage": "Km 15-20: NH-108 Highway Sector 4",
+        "start_km": 15.0,
+        "end_km": 20.0,
+        "slope_deg": 28.7,
+        "mct_dist_km": 5.97,
+        "drainage_count": 3,
+        "landslide_scars": 2,
+        "ahp_hazard_score": 48.3,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.543,
+            30.777
+          ],
+          [
+            78.54686,
+            30.77979
+          ],
+          [
+            78.5616,
+            30.78554
+          ],
+          [
+            78.56586,
+            30.78986
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 5,
+        "chainage": "Km 20-25: NH-108 Highway Sector 5",
+        "start_km": 20.0,
+        "end_km": 25.0,
+        "slope_deg": 24.2,
+        "mct_dist_km": 4.96,
+        "drainage_count": 5,
+        "landslide_scars": 2,
+        "ahp_hazard_score": 52.1,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.56586,
+            30.78986
+          ],
+          [
+            78.56988,
+            30.79344
+          ],
+          [
+            78.57403,
+            30.79678
+          ],
+          [
+            78.578,
+            30.7965
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 6,
+        "chainage": "Km 25-30: NH-108 Highway Sector 6",
+        "start_km": 25.0,
+        "end_km": 30.0,
+        "slope_deg": 23.2,
+        "mct_dist_km": 3.85,
+        "drainage_count": 2,
+        "landslide_scars": 6,
+        "ahp_hazard_score": 49.5,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.578,
+            30.7965
+          ],
+          [
+            78.58085,
+            30.79782
+          ],
+          [
+            78.5798,
+            30.79822
+          ],
+          [
+            78.583,
+            30.799
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 7,
+        "chainage": "Km 30-35: Bhatwari - Dabrani Gorge",
+        "start_km": 30.0,
+        "end_km": 35.0,
+        "slope_deg": 42.5,
+        "mct_dist_km": 0.8,
+        "drainage_count": 6,
+        "landslide_scars": 14,
+        "ahp_hazard_score": 84.0,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Bhatwari, Dabrani"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.583,
+            30.799
+          ],
+          [
+            78.58398,
+            30.79893
+          ],
+          [
+            78.59002,
+            30.80241
+          ],
+          [
+            78.5925,
+            30.806
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 8,
+        "chainage": "Km 35-40: Bhatwari - Dabrani Gorge",
+        "start_km": 35.0,
+        "end_km": 40.0,
+        "slope_deg": 42.5,
+        "mct_dist_km": 0.8,
+        "drainage_count": 6,
+        "landslide_scars": 14,
+        "ahp_hazard_score": 84.0,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Bhatwari, Dabrani"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.5925,
+            30.806
+          ],
+          [
+            78.59439,
+            30.80755
+          ],
+          [
+            78.60377,
+            30.81484
+          ],
+          [
+            78.605,
+            30.816
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 9,
+        "chainage": "Km 40-45: Bhatwari - Dabrani Gorge",
+        "start_km": 40.0,
+        "end_km": 45.0,
+        "slope_deg": 42.5,
+        "mct_dist_km": 0.8,
+        "drainage_count": 6,
+        "landslide_scars": 14,
+        "ahp_hazard_score": 84.0,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Bhatwari, Dabrani"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.605,
+            30.816
+          ],
+          [
+            78.60912,
+            30.81811
+          ],
+          [
+            78.61334,
+            30.81824
+          ],
+          [
+            78.61462,
+            30.81769
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 10,
+        "chainage": "Km 45-50: NH-108 Highway Sector 10",
+        "start_km": 45.0,
+        "end_km": 50.0,
+        "slope_deg": 30.1,
+        "mct_dist_km": 5.73,
+        "drainage_count": 2,
+        "landslide_scars": 2,
+        "ahp_hazard_score": 47.6,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.61462,
+            30.81769
+          ],
+          [
+            78.61734,
+            30.81792
+          ],
+          [
+            78.61909,
+            30.81284
+          ],
+          [
+            78.62231,
+            30.81385
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 11,
+        "chainage": "Km 50-55: Sukhi Top - Jhala",
+        "start_km": 50.0,
+        "end_km": 55.0,
+        "slope_deg": 34.0,
+        "mct_dist_km": 1.2,
+        "drainage_count": 5,
+        "landslide_scars": 11,
+        "ahp_hazard_score": 73.1,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Sukhi, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.62231,
+            30.81385
+          ],
+          [
+            78.62231,
+            30.81137
+          ],
+          [
+            78.62626,
+            30.81126
+          ],
+          [
+            78.63,
+            30.81
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 12,
+        "chainage": "Km 55-60: Sukhi Top - Jhala",
+        "start_km": 55.0,
+        "end_km": 60.0,
+        "slope_deg": 34.0,
+        "mct_dist_km": 1.2,
+        "drainage_count": 5,
+        "landslide_scars": 11,
+        "ahp_hazard_score": 73.1,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Sukhi, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.63,
+            30.81
+          ],
+          [
+            78.63248,
+            30.81415
+          ],
+          [
+            78.63866,
+            30.82844
+          ],
+          [
+            78.64111,
+            30.83222
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 13,
+        "chainage": "Km 60-65: Sukhi Top - Jhala",
+        "start_km": 60.0,
+        "end_km": 65.0,
+        "slope_deg": 34.0,
+        "mct_dist_km": 1.2,
+        "drainage_count": 5,
+        "landslide_scars": 11,
+        "ahp_hazard_score": 73.1,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Sukhi, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.64111,
+            30.83222
+          ],
+          [
+            78.64753,
+            30.84264
+          ],
+          [
+            78.65637,
+            30.85806
+          ],
+          [
+            78.6588,
+            30.8686
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 14,
+        "chainage": "Km 65-70: NH-108 Highway Sector 14",
+        "start_km": 65.0,
+        "end_km": 70.0,
+        "slope_deg": 30.1,
+        "mct_dist_km": 5.72,
+        "drainage_count": 5,
+        "landslide_scars": 8,
+        "ahp_hazard_score": 57.8,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.6588,
+            30.8686
+          ],
+          [
+            78.66958,
+            30.89344
+          ],
+          [
+            78.69254,
+            30.93751
+          ],
+          [
+            78.7028,
+            30.9616
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 15,
+        "chainage": "Km 70-75: Harsil - Dharali Fan",
+        "start_km": 70.0,
+        "end_km": 75.0,
+        "slope_deg": 38.0,
+        "mct_dist_km": 2.4,
+        "drainage_count": 7,
+        "landslide_scars": 18,
+        "ahp_hazard_score": 81.4,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Harsil, Dharali, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.7028,
+            30.9616
+          ],
+          [
+            78.71253,
+            30.97829
+          ],
+          [
+            78.73623,
+            31.01695
+          ],
+          [
+            78.7495,
+            31.03275
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 16,
+        "chainage": "Km 75-80: Harsil - Dharali Fan",
+        "start_km": 75.0,
+        "end_km": 80.0,
+        "slope_deg": 38.0,
+        "mct_dist_km": 2.4,
+        "drainage_count": 7,
+        "landslide_scars": 18,
+        "ahp_hazard_score": 81.4,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Harsil, Dharali, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.7495,
+            31.03275
+          ],
+          [
+            78.74514,
+            31.01642
+          ],
+          [
+            78.73268,
+            30.98854
+          ],
+          [
+            78.7292,
+            30.9744
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 17,
+        "chainage": "Km 80-85: Harsil - Dharali Fan",
+        "start_km": 80.0,
+        "end_km": 85.0,
+        "slope_deg": 38.0,
+        "mct_dist_km": 2.4,
+        "drainage_count": 7,
+        "landslide_scars": 18,
+        "ahp_hazard_score": 81.4,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Harsil, Dharali, Jhala"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.7292,
+            30.9744
+          ],
+          [
+            78.69671,
+            30.94487
+          ],
+          [
+            78.62719,
+            30.88158
+          ],
+          [
+            78.5922,
+            30.8529
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 18,
+        "chainage": "Km 85-90: Lanka - Bhaironghati Gorge",
+        "start_km": 85.0,
+        "end_km": 90.0,
+        "slope_deg": 46.0,
+        "mct_dist_km": 3.5,
+        "drainage_count": 4,
+        "landslide_scars": 9,
+        "ahp_hazard_score": 72.0,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Lanka, Bhaironghati"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.5922,
+            30.8529
+          ],
+          [
+            78.61423,
+            30.86654
+          ],
+          [
+            78.66379,
+            30.88977
+          ],
+          [
+            78.685,
+            30.9
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 19,
+        "chainage": "Km 90-95: Lanka - Bhaironghati Gorge",
+        "start_km": 90.0,
+        "end_km": 95.0,
+        "slope_deg": 46.0,
+        "mct_dist_km": 3.5,
+        "drainage_count": 4,
+        "landslide_scars": 9,
+        "ahp_hazard_score": 72.0,
+        "hazard_tier": "red",
+        "hazard_tier_label": "RED (Critical Landslide Danger)",
+        "road_status": "CRITICAL DEBRIS BLOCKAGE / DIVERSION MANDATORY",
+        "speed_limit_kmh": 0,
+        "habitations": "Lanka, Bhaironghati"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.685,
+            30.9
+          ],
+          [
+            78.73479,
+            30.92707
+          ],
+          [
+            78.83907,
+            30.98367
+          ],
+          [
+            78.89,
+            31.01063
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "segment_id": 20,
+        "chainage": "Km 95-100: NH-108 Highway Sector 20",
+        "start_km": 95.0,
+        "end_km": 100.0,
+        "slope_deg": 28.7,
+        "mct_dist_km": 5.97,
+        "drainage_count": 4,
+        "landslide_scars": 8,
+        "ahp_hazard_score": 54.0,
+        "hazard_tier": "orange",
+        "hazard_tier_label": "ORANGE (High Susceptibility)",
+        "road_status": "RESTRICTED CONVOY ONLY (SDRF Escort Required)",
+        "speed_limit_kmh": 20,
+        "habitations": "Highway Pass"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            78.89,
+            31.01063
+          ],
+          [
+            78.90405,
+            31.00477
+          ],
+          [
+            78.92568,
+            30.99691
+          ],
+          [
+            78.94,
+            30.995
+          ]
+        ]
+      }
+    }
+  ]
+}

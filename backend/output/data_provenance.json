@@ -30,16 +30,16 @@
       "source": "Hand-plotted"
     },
     "inventory": {
-      "available": false,
-      "source": "Hardcoded"
+      "available": true,
+      "source": "Local"
     },
     "villages": {
       "available": false,
       "source": "Known Villages List"
     }
   },
-  "disaster_inventory_events": 12,
-  "total_villages": 178,
+  "disaster_inventory_events": 18,
+  "total_villages": 51,
   "total_grid_points": 3111,
-  "generation_timestamp": "2026-09-17T15:21:54"
+  "generation_timestamp": "2026-09-20T12:45:13"
 }

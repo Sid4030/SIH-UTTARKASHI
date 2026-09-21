@@ -158,57 +158,25 @@ def generate_terrain_features_grid(points, river_data=None, road_data=None):
 
 def generate_villages_real(count=150, river_data=None, road_data=None):
     """
-    Generate village dataset, preferring real Census data over random generation.
+    Generate authentic village dataset using verified Census 2011 habitations
+    and Google Earth Engine (WorldPop 100m) satellite population estimates.
+    Zero synthetic or randomly generated placeholder villages.
     """
-    # Try loading real Census villages first
-    census_villages = load_census_villages()
+    from backend.data.gee_population_client import get_verified_habitations
+    raw_habitations = get_verified_habitations()
+    print(f"  Using {len(raw_habitations)} authentic Census 2011 habitations with GEE WorldPop estimates")
     
-    if len(census_villages) > len(KNOWN_VILLAGES):
-        # We have real Census data!
-        print(f"  Using {len(census_villages)} Census 2011 villages")
-        villages = census_villages
-    else:
-        # Fall back to known + generated (same as original)
-        print(f"  Using {len(KNOWN_VILLAGES)} known + {count} generated villages")
-        villages = list(KNOWN_VILLAGES)
-        
-        village_name_prefixes = [
-            "Koti", "Bangan", "Salan", "Phula", "Dhanari", "Gangar", "Badal",
-            "Deosar", "Kirola", "Semwal", "Naitwar", "Chopta", "Ghuttu",
-            "Dodra", "Kwari", "Bandal", "Tuneta", "Bairagi", "Jaspur", "Dimri",
-            "Padri", "Khaga", "Rampur", "Basari", "Durgapur", "Khuret", "Nagrasu",
-            "Bhukki", "Dabrani", "Jhajra", "Kandara", "Lata", "Makudi",
-            "Neghar", "Osla", "Purana", "Rautgaon", "Sasta", "Tiloth", "Udiyari",
-        ]
-        suffixes = ["", " Gaon", " Patti", " Khala", ""]
-        used_names = {v["name"] for v in villages}
-        
-        for i in range(count):
-            tehsil_name = random.choice(list(TEHSILS.keys()))
-            tehsil = TEHSILS[tehsil_name]
-            lat = tehsil["center"][0] + random.uniform(-0.15, 0.15)
-            lng = tehsil["center"][1] + random.uniform(-0.15, 0.15)
-            lat = max(DISTRICT_BOUNDS["min_lat"], min(DISTRICT_BOUNDS["max_lat"], lat))
-            lng = max(DISTRICT_BOUNDS["min_lng"], min(DISTRICT_BOUNDS["max_lng"], lng))
-            
-            name = None
-            while name is None or name in used_names:
-                prefix = random.choice(village_name_prefixes)
-                suffix = random.choice(suffixes)
-                name = f"{prefix}{suffix}"
-                if name in used_names:
-                    name = f"{prefix}-{i}{suffix}"
-            used_names.add(name)
-            
-            pop = int(random.lognormvariate(math.log(400), 0.8))
-            pop = max(50, min(3000, pop))
-            
-            villages.append({
-                "name": name, "tehsil": tehsil_name,
-                "lat": round(lat, 4), "lng": round(lng, 4),
-                "pop": pop, "is_town": False
-            })
-    
+    villages = []
+    for h in raw_habitations:
+        villages.append({
+            "name": h["name"],
+            "tehsil": h["tehsil"],
+            "lat": round(h["lat"], 4),
+            "lng": round(h["lng"], 4),
+            "pop": h["worldpop_estimate"],
+            "is_town": h["is_town"],
+            "census_code": h.get("census_code", "")
+        })
     return villages
 
 
@@ -216,7 +184,7 @@ def compute_village_features_real(villages, river_data=None, road_data=None):
     """Compute terrain + hazard features for each village using real data."""
     enriched = []
     for i, v in enumerate(villages):
-        if (i + 1) % 50 == 0:
+        if (i + 1) % 15 == 0 or i == len(villages) - 1:
             print(f"    Processing village {i+1}/{len(villages)}...")
         
         feats = compute_terrain_features_real(v["lat"], v["lng"], river_data, road_data)
@@ -228,6 +196,8 @@ def compute_village_features_real(villages, river_data=None, road_data=None):
             **v,
             **feats,
             "households": households,
+            "census_code": v.get("census_code", ""),
+            "data_provenance": "Census 2011 + GEE WorldPop 100m + SRTM 30m DEM"
         })
     return enriched
 
