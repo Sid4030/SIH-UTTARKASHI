@@ -384,6 +384,8 @@ def compute_temporal_recurrence(
         dlon = (lon - e_lon) * 95
         dist_km = math.sqrt(dlat**2 + dlon**2)
         
+        closest_dist = min(closest_dist, dist_km)
+        
         if dist_km <= search_radius_km:
             # Temporal decay weight
             years_ago = max(0, CURRENT_YEAR - e_year)
@@ -397,10 +399,13 @@ def compute_temporal_recurrence(
             
             weighted_score += temporal_weight * spatial_weight * severity_weight
             event_count += 1
-            closest_dist = min(closest_dist, dist_km)
     
     if event_count == 0:
-        return 0.05
+        if closest_dist < float('inf'):
+            # Continuous exponential decay with distance from nearest disaster epicenter
+            decay_score = 0.25 * math.exp(-closest_dist / 15.0)
+            return round(max(0.0001, decay_score), 4)
+        return 0.0
     
     # Normalize to [0, 1]
     # Based on calibration: a single recent severe event at <2km scores ~0.5

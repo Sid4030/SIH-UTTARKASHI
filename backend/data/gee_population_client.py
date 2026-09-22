@@ -22,8 +22,8 @@ OUTPUT_DIR = DATA_DIR.parent / "output"
 # Population figures from District Census Handbook (DCHB) Uttarkashi, Directorate of Census Operations, Uttarakhand
 AUTHENTIC_UTTARKASHI_HABITATIONS = [
     # --- Bhatwari Tehsil (Upper & Mid Bhagirathi Valley) ---
-    {"name": "Uttarkashi Town", "tehsil": "Bhatwari", "lat": 30.727, "lng": 78.445, "census_code": "040445", "census_pop": 17471, "worldpop_centroid_core": 492, "is_town": True},
-    {"name": "Gangotri", "tehsil": "Bhatwari", "lat": 30.995, "lng": 78.940, "census_code": "040412", "census_pop": 600, "worldpop_centroid_core": 73, "is_town": False},
+    {"name": "Uttarkashi Town", "tehsil": "Bhatwari", "lat": 30.727, "lng": 78.445, "census_code": "040445", "census_pop": 17475, "worldpop_centroid_core": 492, "is_town": True},
+    {"name": "Gangotri", "tehsil": "Bhatwari", "lat": 30.995, "lng": 78.940, "census_code": "040412", "census_pop": 110, "worldpop_centroid_core": 73, "is_town": False},
     {"name": "Harsil", "tehsil": "Bhatwari", "lat": 31.036, "lng": 78.738, "census_code": "040415", "census_pop": 1200, "worldpop_centroid_core": 70, "is_town": False},
     {"name": "Dharali", "tehsil": "Bhatwari", "lat": 31.023, "lng": 78.784, "census_code": "040416", "census_pop": 800, "worldpop_centroid_core": 11, "is_town": False},
     {"name": "Bhatwari", "tehsil": "Bhatwari", "lat": 30.800, "lng": 78.585, "census_code": "040425", "census_pop": 2500, "worldpop_centroid_core": 218, "is_town": False},
@@ -50,7 +50,7 @@ AUTHENTIC_UTTARKASHI_HABITATIONS = [
     {"name": "Matli", "tehsil": "Dunda", "lat": 30.660, "lng": 78.420, "census_code": "040470", "census_pop": 1200, "worldpop_centroid_core": 165, "is_town": False},
 
     # --- Chinyalisaur Tehsil (Tehri Reservoir Basin) ---
-    {"name": "Chinyalisaur", "tehsil": "Chinyalisaur", "lat": 30.520, "lng": 78.240, "census_code": "040512", "census_pop": 5640, "worldpop_centroid_core": 430, "is_town": True},
+    {"name": "Chinyalisaur", "tehsil": "Chinyalisaur", "lat": 30.520, "lng": 78.240, "census_code": "040512", "census_pop": 15487, "worldpop_centroid_core": 430, "is_town": True},
     {"name": "Lakhwar", "tehsil": "Chinyalisaur", "lat": 30.510, "lng": 78.270, "census_code": "040515", "census_pop": 900, "worldpop_centroid_core": 112, "is_town": False},
     {"name": "Jakhol Chinyalisaur", "tehsil": "Chinyalisaur", "lat": 30.490, "lng": 78.200, "census_code": "040520", "census_pop": 600, "worldpop_centroid_core": 76, "is_town": False},
     {"name": "Dharasu", "tehsil": "Chinyalisaur", "lat": 30.550, "lng": 78.310, "census_code": "040508", "census_pop": 1400, "worldpop_centroid_core": 158, "is_town": False},

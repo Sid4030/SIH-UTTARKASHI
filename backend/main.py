@@ -1168,6 +1168,18 @@ def get_dual_brain_status():
     }
 
 
+@app.get("/api/model/ai-architecture")
+def get_ai_architecture():
+    """
+    Returns the exact mathematical and architectural specification of the AI models:
+    - Deep Multi-Layer Perceptron (MLP) Neural Network: 5 layers, 3,393 weights/biases, Adam optimizer, loss trajectory
+    - Histogram Gradient Boosted Decision Trees (HistGBDT): 150 trees, max depth 6
+    - Physics-Informed Machine Learning (PIML): Mohr-Coulomb limit equilibrium constraint
+    """
+    model = get_dual_brain_model()
+    return model.get_network_architecture_summary()
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)

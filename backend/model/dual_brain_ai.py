@@ -172,6 +172,112 @@ class DualBrainHazardModel:
         }
         return self.training_metrics
 
+    def get_network_architecture_summary(self) -> Dict[str, Any]:
+        """
+        Returns full verifiable technical specification of the Deep MLP Neural Network
+        and GBDT ensemble, including layer dimensions, trainable weights, optimizer,
+        and loss trajectory.
+        """
+        if not self.is_trained:
+            return {"status": "NOT_TRAINED", "error": "Model has not been trained on district grid yet"}
+
+        mlp_weights_count = sum(w.size for w in self.mlp_model.coefs_)
+        mlp_biases_count = sum(b.size for b in self.mlp_model.intercepts_)
+        total_trainable_params = mlp_weights_count + mlp_biases_count
+
+        layer_breakdown = [
+            {
+                "layer_index": 0,
+                "layer_type": "Input",
+                "units": len(FEATURE_NAMES),
+                "features": FEATURE_NAMES,
+                "trainable_params": 0
+            },
+            {
+                "layer_index": 1,
+                "layer_type": "Dense",
+                "units": 64,
+                "activation": "ReLU",
+                "weight_matrix_shape": list(self.mlp_model.coefs_[0].shape),
+                "bias_vector_shape": list(self.mlp_model.intercepts_[0].shape),
+                "weights_count": int(self.mlp_model.coefs_[0].size),
+                "biases_count": int(self.mlp_model.intercepts_[0].size),
+                "trainable_params": int(self.mlp_model.coefs_[0].size + self.mlp_model.intercepts_[0].size)
+            },
+            {
+                "layer_index": 2,
+                "layer_type": "Dense",
+                "units": 32,
+                "activation": "ReLU",
+                "weight_matrix_shape": list(self.mlp_model.coefs_[1].shape),
+                "bias_vector_shape": list(self.mlp_model.intercepts_[1].shape),
+                "weights_count": int(self.mlp_model.coefs_[1].size),
+                "biases_count": int(self.mlp_model.intercepts_[1].size),
+                "trainable_params": int(self.mlp_model.coefs_[1].size + self.mlp_model.intercepts_[1].size)
+            },
+            {
+                "layer_index": 3,
+                "layer_type": "Dense",
+                "units": 16,
+                "activation": "ReLU",
+                "weight_matrix_shape": list(self.mlp_model.coefs_[2].shape),
+                "bias_vector_shape": list(self.mlp_model.intercepts_[2].shape),
+                "weights_count": int(self.mlp_model.coefs_[2].size),
+                "biases_count": int(self.mlp_model.intercepts_[2].size),
+                "trainable_params": int(self.mlp_model.coefs_[2].size + self.mlp_model.intercepts_[2].size)
+            },
+            {
+                "layer_index": 4,
+                "layer_type": "Output (Regression)",
+                "units": 1,
+                "activation": "Identity / Linear",
+                "weight_matrix_shape": list(self.mlp_model.coefs_[3].shape),
+                "bias_vector_shape": list(self.mlp_model.intercepts_[3].shape),
+                "weights_count": int(self.mlp_model.coefs_[3].size),
+                "biases_count": int(self.mlp_model.intercepts_[3].size),
+                "trainable_params": int(self.mlp_model.coefs_[3].size + self.mlp_model.intercepts_[3].size)
+            }
+        ]
+
+        loss_curve = [round(float(l), 5) for l in getattr(self.mlp_model, "loss_curve_", [])]
+
+        return {
+            "model_architecture": "Physics-Informed Dual-Brain Geospatial Surrogate",
+            "components": {
+                "neural_network": {
+                    "framework": "Deep Multi-Layer Perceptron (MLP)",
+                    "layers_count": self.mlp_model.n_layers_,
+                    "hidden_layers": [64, 32, 16],
+                    "total_trainable_parameters": total_trainable_params,
+                    "weights_count": mlp_weights_count,
+                    "biases_count": mlp_biases_count,
+                    "activation_function": "Rectified Linear Unit (ReLU)",
+                    "optimizer": "Adam (Adaptive Moment Estimation: beta1=0.9, beta2=0.999, eps=1e-8)",
+                    "learning_rate_initial": 0.01,
+                    "regularization": "L2 Ridge Penalty (alpha=0.005)",
+                    "epochs_trained": self.mlp_model.n_iter_,
+                    "initial_training_loss": loss_curve[0] if loss_curve else None,
+                    "final_training_loss": loss_curve[-1] if loss_curve else None,
+                    "loss_curve_sample": loss_curve[::max(1, len(loss_curve) // 8)],
+                    "layer_details": layer_breakdown
+                },
+                "gradient_boosted_trees": {
+                    "framework": "Histogram Gradient Boosted Decision Trees (HistGBDT / XGBoost)",
+                    "total_trees": int(getattr(self.gbdt_model, "n_iter_", 150)),
+                    "max_depth": 6,
+                    "learning_rate": 0.08,
+                    "min_samples_per_leaf": 15,
+                    "l2_regularization": 1.5
+                },
+                "physics_limit_equilibrium": {
+                    "law": "Mohr-Coulomb Infinite Slope Limit Equilibrium with Dynamic Seismic & Pore Pressure",
+                    "governing_equation": "FS = (c' + (gamma*z*cos^2(beta) - u - gamma*z*kh*sin(beta)*cos(beta))*tan(phi')) / (gamma*z*sin(beta)*cos(beta) + gamma*z*kh*cos^2(beta))",
+                    "override_rule": "If Factor of Safety (FOS) < 1.0, zone is physically guaranteed RED, regardless of any ML regression output."
+                }
+            },
+            "training_metrics": self.training_metrics
+        }
+
     def predict_point(
         self,
         lat: float,

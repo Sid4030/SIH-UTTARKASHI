@@ -9,24 +9,24 @@
         "coordinates": [
           [
             [
-              78.19999999999999,
-              30.479999999999997
+              78.03999999999999,
+              31.04
             ],
             [
-              78.22,
-              30.479999999999997
+              78.06,
+              31.04
             ],
             [
-              78.22,
-              30.5
+              78.06,
+              31.060000000000002
             ],
             [
-              78.19999999999999,
-              30.5
+              78.03999999999999,
+              31.060000000000002
             ],
             [
-              78.19999999999999,
-              30.479999999999997
+              78.03999999999999,
+              31.04
             ]
           ]
         ]
@@ -34,24 +34,24 @@
       "properties": {
         "id": 1,
         "name": "Safe Haven Zone 1 (Scrubland)",
-        "suitability_score": 3.458,
-        "rating": "Moderate",
-        "carrying_capacity": 1600,
-        "buildable_area_hectares": 51.5,
+        "suitability_score": 3.675,
+        "rating": "Good",
+        "carrying_capacity": 1200,
+        "buildable_area_hectares": 27.0,
         "ndma_standard": "45 m2/person + 70 lpcd water",
-        "elevation": 963.8,
-        "slope": 8.81,
-        "dist_river_km": 3.96,
-        "dist_road_km": 4.3830811080787,
+        "elevation": 1306.0,
+        "slope": 13.17,
+        "dist_river_km": 7.31,
+        "dist_road_km": 0.9499999999998181,
         "lulc_class": "scrubland",
         "ahp_method": "eigenvector",
         "scores": {
-          "hazard_safety": 3.13,
+          "hazard_safety": 3.17,
           "slope_suitability": 4,
-          "water_access": 4,
-          "road_connectivity": 3,
+          "water_access": 3,
+          "road_connectivity": 5,
           "land_availability": 3,
-          "elevation_suitability": 4
+          "elevation_suitability": 5
         }
       }
     },
@@ -63,24 +63,24 @@
         "coordinates": [
           [
             [
-              79.0,
-              31.04
+              78.05999999999999,
+              31.08
             ],
             [
-              79.02000000000001,
-              31.04
+              78.08,
+              31.08
             ],
             [
-              79.02000000000001,
-              31.060000000000002
+              78.08,
+              31.1
             ],
             [
-              79.0,
-              31.060000000000002
+              78.05999999999999,
+              31.1
             ],
             [
-              79.0,
-              31.04
+              78.05999999999999,
+              31.08
             ]
           ]
         ]
@@ -88,24 +88,24 @@
       "properties": {
         "id": 2,
         "name": "Safe Haven Zone 2 (Scrubland)",
-        "suitability_score": 3.39,
-        "rating": "Moderate",
-        "carrying_capacity": 1600,
-        "buildable_area_hectares": 100.1,
+        "suitability_score": 3.664,
+        "rating": "Good",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
         "ndma_standard": "45 m2/person + 70 lpcd water",
-        "elevation": 3360.5,
-        "slope": 0.13,
-        "dist_river_km": 5.7,
-        "dist_road_km": 9.027376418428972,
+        "elevation": 1386.6,
+        "slope": 20.0,
+        "dist_river_km": 3.06,
+        "dist_road_km": 3.058529058223607,
         "lulc_class": "scrubland",
         "ahp_method": "eigenvector",
         "scores": {
-          "hazard_safety": 3.16,
-          "slope_suitability": 5,
-          "water_access": 4,
-          "road_connectivity": 2,
+          "hazard_safety": 3.41,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 3,
           "land_availability": 3,
-          "elevation_suitability": 3
+          "elevation_suitability": 5
         }
       }
     },
@@ -117,24 +117,24 @@
         "coordinates": [
           [
             [
-              78.19999999999999,
-              30.439999999999998
+              78.16,
+              30.9
             ],
             [
-              78.22,
-              30.439999999999998
+              78.18,
+              30.9
             ],
             [
-              78.22,
-              30.46
+              78.18,
+              30.92
             ],
             [
-              78.19999999999999,
-              30.46
+              78.16,
+              30.92
             ],
             [
-              78.19999999999999,
-              30.439999999999998
+              78.16,
+              30.9
             ]
           ]
         ]
@@ -142,24 +142,888 @@
       "properties": {
         "id": 3,
         "name": "Safe Haven Zone 3 (Scrubland)",
-        "suitability_score": 3.223,
-        "rating": "Moderate",
-        "carrying_capacity": 1200,
-        "buildable_area_hectares": 43.3,
+        "suitability_score": 3.568,
+        "rating": "Good",
+        "carrying_capacity": 2000,
+        "buildable_area_hectares": 14.4,
         "ndma_standard": "45 m2/person + 70 lpcd water",
-        "elevation": 975.2,
-        "slope": 10.27,
-        "dist_river_km": 6.73,
-        "dist_road_km": 8.276194777794721,
+        "elevation": 1938.0,
+        "slope": 15.42,
+        "dist_river_km": 3.06,
+        "dist_road_km": 4.330848646627968,
         "lulc_class": "scrubland",
         "ahp_method": "eigenvector",
         "scores": {
-          "hazard_safety": 3.31,
-          "slope_suitability": 4,
+          "hazard_safety": 3.15,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.11999999999999,
+              31.08
+            ],
+            [
+              78.14,
+              31.08
+            ],
+            [
+              78.14,
+              31.1
+            ],
+            [
+              78.11999999999999,
+              31.1
+            ],
+            [
+              78.11999999999999,
+              31.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 4,
+        "name": "Safe Haven Zone 4 (Scrubland)",
+        "suitability_score": 3.55,
+        "rating": "Good",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1551.0,
+        "slope": 20.0,
+        "dist_river_km": 3.06,
+        "dist_road_km": 3.058529058224454,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.1,
+          "slope_suitability": 3,
+          "water_access": 5,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              31.08
+            ],
+            [
+              78.06,
+              31.08
+            ],
+            [
+              78.06,
+              31.1
+            ],
+            [
+              78.03999999999999,
+              31.1
+            ],
+            [
+              78.03999999999999,
+              31.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 5,
+        "name": "Safe Haven Zone 5 (Scrubland)",
+        "suitability_score": 3.501,
+        "rating": "Good",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1562.5,
+        "slope": 20.0,
+        "dist_river_km": 4.88,
+        "dist_road_km": 4.5404955676661665,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.41,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.799999999999997
+            ],
+            [
+              78.2,
+              30.799999999999997
+            ],
+            [
+              78.2,
+              30.82
+            ],
+            [
+              78.17999999999999,
+              30.82
+            ],
+            [
+              78.17999999999999,
+              30.799999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 6,
+        "name": "Safe Haven Zone 6 (Scrubland)",
+        "suitability_score": 3.39,
+        "rating": "Moderate",
+        "carrying_capacity": 1600,
+        "buildable_area_hectares": 9.4,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1211.0,
+        "slope": 16.33,
+        "dist_river_km": 5.84,
+        "dist_road_km": 7.244176971885416,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.11,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.17999999999999,
+              30.479999999999997
+            ],
+            [
+              78.2,
+              30.479999999999997
+            ],
+            [
+              78.2,
+              30.5
+            ],
+            [
+              78.17999999999999,
+              30.5
+            ],
+            [
+              78.17999999999999,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "Safe Haven Zone 7 (Scrubland)",
+        "suitability_score": 3.374,
+        "rating": "Moderate",
+        "carrying_capacity": 1600,
+        "buildable_area_hectares": 8.3,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1213.0,
+        "slope": 16.51,
+        "dist_river_km": 5.81,
+        "dist_road_km": 5.8009826753741365,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.07,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              31.119999999999997
+            ],
+            [
+              78.06,
+              31.119999999999997
+            ],
+            [
+              78.06,
+              31.14
+            ],
+            [
+              78.03999999999999,
+              31.14
+            ],
+            [
+              78.03999999999999,
+              31.119999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 8,
+        "name": "Safe Haven Zone 8 (Scrubland)",
+        "suitability_score": 3.358,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1924.0,
+        "slope": 17.15,
+        "dist_river_km": 5.8,
+        "dist_road_km": 5.800982675373875,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.02,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.03999999999999,
+              30.88
+            ],
+            [
+              78.06,
+              30.88
+            ],
+            [
+              78.06,
+              30.900000000000002
+            ],
+            [
+              78.03999999999999,
+              30.900000000000002
+            ],
+            [
+              78.03999999999999,
+              30.88
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 9,
+        "name": "Safe Haven Zone 9 (Scrubland)",
+        "suitability_score": 3.351,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1552.0,
+        "slope": 18.32,
+        "dist_river_km": 4.88,
+        "dist_road_km": 5.052613185273626,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.01,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              31.06
+            ],
+            [
+              78.04,
+              31.06
+            ],
+            [
+              78.04,
+              31.080000000000002
+            ],
+            [
+              78.02,
+              31.080000000000002
+            ],
+            [
+              78.02,
+              31.06
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 10,
+        "name": "Safe Haven Zone 10 (Scrubland)",
+        "suitability_score": 3.345,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1647.0,
+        "slope": 20.0,
+        "dist_river_km": 7.44,
+        "dist_road_km": 3.612602939709262,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.43,
+          "slope_suitability": 3,
           "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              31.08
+            ],
+            [
+              78.04,
+              31.08
+            ],
+            [
+              78.04,
+              31.1
+            ],
+            [
+              78.02,
+              31.1
+            ],
+            [
+              78.02,
+              31.08
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 11,
+        "name": "Safe Haven Zone 11 (Scrubland)",
+        "suitability_score": 3.345,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1735.1,
+        "slope": 20.0,
+        "dist_river_km": 6.74,
+        "dist_road_km": 5.275992797568372,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.43,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.47999999999999,
+              30.619999999999997
+            ],
+            [
+              78.5,
+              30.619999999999997
+            ],
+            [
+              78.5,
+              30.64
+            ],
+            [
+              78.47999999999999,
+              30.64
+            ],
+            [
+              78.47999999999999,
+              30.619999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 12,
+        "name": "Safe Haven Zone 12 (Scrubland)",
+        "suitability_score": 3.341,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1995.0,
+        "slope": 19.03,
+        "dist_river_km": 8.66,
+        "dist_road_km": 1.1100000000001273,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.05,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 4,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.52,
+              30.979999999999997
+            ],
+            [
+              78.54,
+              30.979999999999997
+            ],
+            [
+              78.54,
+              31.0
+            ],
+            [
+              78.52,
+              31.0
+            ],
+            [
+              78.52,
+              30.979999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Safe Haven Zone 13 (Scrubland)",
+        "suitability_score": 3.309,
+        "rating": "Moderate",
+        "carrying_capacity": 1200,
+        "buildable_area_hectares": 56.5,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 4798.0,
+        "slope": 7.91,
+        "dist_river_km": 7.68,
+        "dist_road_km": 7.600000000000364,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.26,
+          "slope_suitability": 5,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.02,
+              31.18
+            ],
+            [
+              78.04,
+              31.18
+            ],
+            [
+              78.04,
+              31.200000000000003
+            ],
+            [
+              78.02,
+              31.200000000000003
+            ],
+            [
+              78.02,
+              31.18
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 14,
+        "name": "Safe Haven Zone 14 (Scrubland)",
+        "suitability_score": 3.284,
+        "rating": "Moderate",
+        "carrying_capacity": 2000,
+        "buildable_area_hectares": 38.9,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 3520.0,
+        "slope": 11.05,
+        "dist_river_km": 3.06,
+        "dist_road_km": 12.000941629721341,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.09,
+          "slope_suitability": 4,
+          "water_access": 5,
           "road_connectivity": 2,
           "land_availability": 3,
-          "elevation_suitability": 4
+          "elevation_suitability": 2
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.0,
+              30.86
+            ],
+            [
+              78.02000000000001,
+              30.86
+            ],
+            [
+              78.02000000000001,
+              30.880000000000003
+            ],
+            [
+              78.0,
+              30.880000000000003
+            ],
+            [
+              78.0,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Safe Haven Zone 15 (Scrubland)",
+        "suitability_score": 3.275,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 2019.0,
+        "slope": 17.57,
+        "dist_river_km": 7.01,
+        "dist_road_km": 7.680631484454386,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.24,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.3,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.439999999999998
+            ],
+            [
+              78.32000000000001,
+              30.46
+            ],
+            [
+              78.3,
+              30.46
+            ],
+            [
+              78.3,
+              30.439999999999998
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 16,
+        "name": "Safe Haven Zone 16 (Scrubland)",
+        "suitability_score": 3.274,
+        "rating": "Moderate",
+        "carrying_capacity": 1200,
+        "buildable_area_hectares": 16.3,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1822.0,
+        "slope": 15.09,
+        "dist_river_km": 7.96,
+        "dist_road_km": 7.667828897413237,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.24,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.24,
+              30.86
+            ],
+            [
+              78.26,
+              30.86
+            ],
+            [
+              78.26,
+              30.880000000000003
+            ],
+            [
+              78.24,
+              30.880000000000003
+            ],
+            [
+              78.24,
+              30.86
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Safe Haven Zone 17 (Scrubland)",
+        "suitability_score": 3.256,
+        "rating": "Moderate",
+        "carrying_capacity": 1157,
+        "buildable_area_hectares": 5.2,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1737.0,
+        "slope": 17.07,
+        "dist_river_km": 5.8,
+        "dist_road_km": 11.051146999293058,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.12,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 2,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.32,
+              30.479999999999997
+            ],
+            [
+              78.34,
+              30.479999999999997
+            ],
+            [
+              78.34,
+              30.5
+            ],
+            [
+              78.32,
+              30.5
+            ],
+            [
+              78.32,
+              30.479999999999997
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Safe Haven Zone 18 (Scrubland)",
+        "suitability_score": 3.233,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 1389.0,
+        "slope": 17.41,
+        "dist_river_km": 7.24,
+        "dist_road_km": 6.117058116447731,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.13,
+          "slope_suitability": 3,
+          "water_access": 3,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 5
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.82,
+              31.0
+            ],
+            [
+              78.84,
+              31.0
+            ],
+            [
+              78.84,
+              31.020000000000003
+            ],
+            [
+              78.82,
+              31.020000000000003
+            ],
+            [
+              78.82,
+              31.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "id": 19,
+        "name": "Safe Haven Zone 19 (Scrubland)",
+        "suitability_score": 3.227,
+        "rating": "Moderate",
+        "carrying_capacity": 1120,
+        "buildable_area_hectares": 5.0,
+        "ndma_standard": "45 m2/person + 70 lpcd water",
+        "elevation": 4361.0,
+        "slope": 20.0,
+        "dist_river_km": 4.38,
+        "dist_road_km": 3.0469996454547585,
+        "lulc_class": "scrubland",
+        "ahp_method": "eigenvector",
+        "scores": {
+          "hazard_safety": 3.42,
+          "slope_suitability": 3,
+          "water_access": 4,
+          "road_connectivity": 3,
+          "land_availability": 3,
+          "elevation_suitability": 2
         }
       }
     }

@@ -214,6 +214,8 @@ def compute_safe_zones_thrive(thrive_grid, villages_geojson,
     for cell in thrive_grid:
         if cell["thrive_score"] >= 0.40:
             continue  # Skip hazardous cells
+        if cell.get("slope", 15) > 20.0:
+            continue  # Resettlement sites must be on buildable terraces (<20° slope) to prevent cut-slope failure
 
         dist_river = cell.get("dist_river_km", 5.0)
         dist_road = cell.get("dist_road_km", compute_real_road_distance(
@@ -300,8 +302,7 @@ def compute_relocation_priorities_thrive(villages_geojson, safe_zones, disaster_
     priorities = []
     capacity_ledger = {i: sz["carrying_capacity"] for i, sz in enumerate(safe_zones)}
 
-    candidates = [v for v in villages_geojson["features"]
-                  if v["properties"].get("zone") in ["red", "orange"]]
+    candidates = list(villages_geojson["features"])
     candidates.sort(key=lambda v: v["properties"].get("vulnerability_index", 0), reverse=True)
 
     for village in candidates:
@@ -343,22 +344,32 @@ def compute_relocation_priorities_thrive(villages_geojson, safe_zones, disaster_
         pop_weight = min(20.0, (math.log10(max(pop, 10)) / 4.0) * 20.0)
         priority_score = round(min(100.0, (vi * 0.60) + pop_weight + zone_weight), 1)
 
-        # Timeline classification
-        if zone == "red" and (vi >= 65.0 or dist_disaster < 2.5 or slope > 30.0):
+        # Timeline classification (DM Act Sec 30 & 34 Grounded Tiers)
+        is_immediate = (
+            (zone == "red") or
+            (vi >= 60.0) or
+            (vi >= 57.0 and (slope > 25.0 or dist_disaster < 3.0))
+        )
+        is_short_term = (
+            (zone == "orange") or
+            (vi >= 50.0)
+        )
+
+        if is_immediate:
             timeline = "immediate"
             urgency_level = "CRITICAL / IMMEDIATE"
             rationale = (
-                f"IMMEDIATE EVACUATION: THRIVE score {props.get('hazard_probability', 0)*100:.0f}% "
+                f"IMMEDIATE RELOCATION: THRIVE score {props.get('hazard_probability', 0)*100:.0f}% "
                 f"(Landslide: {thrive_dims.get('landslide_susceptibility', 0)*100:.0f}%, "
                 f"Flood: {thrive_dims.get('flood_susceptibility', 0)*100:.0f}%, "
                 f"Cloudburst: {thrive_dims.get('cloudburst_susceptibility', 0)*100:.0f}%). "
                 f"{pop:,} residents on {slope:.1f}° slope, {dist_disaster:.1f}km from {nearest_disaster}."
             )
             action = (
-                f"Invoke DM Act Sec 30: Mandatory pre-monsoon evacuation to Safe Site Alpha-{best_idx+1 if best_idx else 1} "
+                f"Invoke DM Act Sec 30: Priority pre-monsoon evacuation to Safe Site Alpha-{best_idx+1 if best_idx else 1} "
                 f"({best_dist:.1f}km, Road: {dist_road:.1f}km). SDRF permanent rehabilitation package."
             )
-        elif zone == "red" or (zone == "orange" and vi >= 58.0):
+        elif is_short_term:
             timeline = "short_term"
             urgency_level = "HIGH RISK / SHORT-TERM"
             rationale = (

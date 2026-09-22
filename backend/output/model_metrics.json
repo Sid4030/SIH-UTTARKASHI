@@ -30,9 +30,10 @@
   },
   "total_grid_cells": 3111,
   "zone_counts": {
-    "orange": 2330,
-    "yellow": 743,
-    "red": 38
+    "green": 32,
+    "yellow": 1219,
+    "orange": 1663,
+    "red": 197
   },
   "thrive_weights": {
     "landslide": 0.3,

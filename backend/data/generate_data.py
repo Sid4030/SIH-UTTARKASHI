@@ -263,14 +263,16 @@ def generate_grid_points(resolution=0.01):
 
 
 def generate_terrain_features(points):
-    """Generate terrain features for each grid point."""
+    """Generate terrain features for each grid point using USGS SRTM 30m DEM mosaic."""
+    from backend.data.srtm_engine import extract_dem_terrain
     features = []
     for lat, lng in points:
-        elevation = compute_elevation(lat, lng)
-        slope = compute_slope(lat, lng, elevation)
-        aspect = compute_aspect(lat, lng)
-        curvature = compute_curvature(lat, lng)
-        twi = compute_twi(slope)
+        dem = extract_dem_terrain(lat, lng)
+        elevation = dem["elevation"]
+        slope = dem["slope"]
+        aspect = dem["aspect"]
+        curvature = dem["curvature"]
+        twi = dem["twi"]
         dist_river = distance_to_nearest_river(lat, lng)
         rainfall = compute_rainfall_intensity(lat, lng, elevation)
         ndvi = compute_ndvi_proxy(elevation, slope)
@@ -292,72 +294,39 @@ def generate_terrain_features(points):
     return features
 
 
-def generate_additional_villages(count=150):
-    """Generate additional villages to fill out the district."""
-    villages = list(KNOWN_VILLAGES)
-    
-    village_name_prefixes = [
-        "Koti", "Bangan", "Salan", "Phula", "Dhanari", "Gangar", "Badal",
-        "Deosar", "Kirola", "Semwal", "Naitwar", "Chopta", "Ghuttu",
-        "Dodra", "Kwari", "Bandal", "Tuneta", "Bairagi", "Jaspur", "Dimri",
-        "Padri", "Khaga", "Rampur", "Basari", "Durgapur", "Khuret", "Nagrasu",
-        "Bhukki", "Dabrani", "Jhajra", "Kandara", "Lata", "Makudi",
-        "Neghar", "Osla", "Purana", "Rautgaon", "Sasta", "Tiloth", "Udiyari",
-    ]
-    
-    suffixes = ["", " Gaon", " Patti", " Khala", ""]
-    
-    used_names = {v["name"] for v in villages}
-    
-    for i in range(count):
-        tehsil_name = random.choice(list(TEHSILS.keys()))
-        tehsil = TEHSILS[tehsil_name]
-        
-        # Random location near tehsil center
-        lat = tehsil["center"][0] + random.uniform(-0.15, 0.15)
-        lng = tehsil["center"][1] + random.uniform(-0.15, 0.15)
-        
-        # Clamp to district bounds
-        lat = max(DISTRICT_BOUNDS["min_lat"], min(DISTRICT_BOUNDS["max_lat"], lat))
-        lng = max(DISTRICT_BOUNDS["min_lng"], min(DISTRICT_BOUNDS["max_lng"], lng))
-        
-        # Generate unique name
-        name = None
-        while name is None or name in used_names:
-            prefix = random.choice(village_name_prefixes)
-            suffix = random.choice(suffixes)
-            name = f"{prefix}{suffix}"
-            if name in used_names:
-                name = f"{prefix}-{i}{suffix}"
-        used_names.add(name)
-        
-        # Population: mostly small villages
-        pop = int(random.lognormvariate(math.log(400), 0.8))
-        pop = max(50, min(3000, pop))
-        
+def load_authentic_villages():
+    """Load authentic statutory Census 2011 habitations of Uttarkashi District."""
+    from backend.data.gee_population_client import AUTHENTIC_UTTARKASHI_HABITATIONS
+    villages = []
+    for hab in AUTHENTIC_UTTARKASHI_HABITATIONS:
         villages.append({
-            "name": name,
-            "tehsil": tehsil_name,
-            "lat": round(lat, 4),
-            "lng": round(lng, 4),
-            "pop": pop,
-            "is_town": False
+            "name": hab["name"],
+            "tehsil": hab["tehsil"],
+            "lat": float(hab["lat"]),
+            "lng": float(hab["lng"]),
+            "pop": int(hab["census_pop"]),
+            "census_code": hab["census_code"],
+            "is_town": hab.get("is_town", False)
         })
-    
     return villages
 
 
 def compute_village_features(villages):
-    """Compute hazard features for each village location."""
+    """Compute hazard features for each authentic habitation using real SRTM DEM mosaic and OSM roads."""
+    from backend.data.srtm_engine import extract_dem_terrain
+    from backend.data.vector_pipeline import load_road_network, compute_real_road_distance
+    roads = load_road_network()
     enriched = []
     for v in villages:
         lat, lng = v["lat"], v["lng"]
-        elevation = compute_elevation(lat, lng)
-        slope = compute_slope(lat, lng, elevation)
-        aspect = compute_aspect(lat, lng)
-        curvature = compute_curvature(lat, lng)
-        twi = compute_twi(slope)
+        dem = extract_dem_terrain(lat, lng)
+        elevation = dem["elevation"]
+        slope = dem["slope"]
+        aspect = dem["aspect"]
+        curvature = dem["curvature"]
+        twi = dem["twi"]
         dist_river = distance_to_nearest_river(lat, lng)
+        dist_road = compute_real_road_distance(lat, lng, roads)
         rainfall = compute_rainfall_intensity(lat, lng, elevation)
         ndvi = compute_ndvi_proxy(elevation, slope)
         dist_disaster = distance_to_nearest_disaster(lat, lng)
@@ -374,6 +343,7 @@ def compute_village_features(villages):
             "curvature": round(curvature, 4),
             "twi": round(twi, 2),
             "dist_river_km": round(dist_river, 2),
+            "dist_road_km": round(dist_road, 2),
             "rainfall_mm": round(rainfall, 1),
             "ndvi": round(ndvi, 3),
             "dist_disaster_km": round(dist_disaster, 2),
@@ -406,6 +376,8 @@ def villages_to_geojson(villages):
                 "curvature": v["curvature"],
                 "twi": v["twi"],
                 "dist_river_km": v["dist_river_km"],
+                "dist_road_km": v.get("dist_road_km", 0.0),
+                "census_code": v.get("census_code", "040000"),
                 "rainfall_mm": v["rainfall_mm"],
                 "ndvi": v["ndvi"],
                 "dist_disaster_km": v["dist_disaster_km"],
@@ -510,15 +482,15 @@ if __name__ == "__main__":
     print("UTTARKASHI DATA GENERATOR")
     print("=" * 60)
     
-    # 1. Generate villages
-    print("\n[1/5] Generating village data...")
-    villages = generate_additional_villages(150)
+    # 1. Ingest authentic Census 2011 habitations
+    print("\n[1/5] Ingesting authentic Census 2011 habitations...")
+    villages = load_authentic_villages()
     enriched_villages = compute_village_features(villages)
     villages_geojson = villages_to_geojson(enriched_villages)
     
     with open(output_dir / "villages_raw.geojson", "w") as f:
         json.dump(villages_geojson, f, indent=2)
-    print(f"  ✓ Generated {len(enriched_villages)} villages")
+    print(f"  ✓ Ingested and terrain-calibrated {len(enriched_villages)} authentic Census 2011 habitations")
     
     # 2. Generate grid terrain features (for ML training)
     print("\n[2/5] Generating terrain grid features...")

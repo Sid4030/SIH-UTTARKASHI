@@ -255,43 +255,20 @@ def extract_dynamic_world_lulc(lat: float, lng: float) -> Dict[str, Any]:
 # OFFLINE FALLBACK FUNCTIONS (Pre-verified satellite extractions)
 # ============================================================================
 
-def _get_cached_terrain(lat: float, lng: float) -> Dict[str, float]:
-    """Get terrain data from pre-computed SRTM cache."""
-    if CACHE_FILE.exists():
-        try:
-            with open(CACHE_FILE) as f:
-                cache = json.load(f)
-            # Find nearest cached point
-            min_dist = float('inf')
-            best = None
-            for entry in cache if isinstance(cache, list) else cache.get("points", []):
-                d = math.sqrt((lat - entry.get("lat", 0))**2 + (lng - entry.get("lng", 0))**2)
-                if d < min_dist:
-                    min_dist = d
-                    best = entry
-            if best and min_dist < 0.05:  # ~5km
-                return {
-                    "elevation": best.get("elevation", 2000),
-                    "slope": best.get("slope", 15),
-                    "aspect": best.get("aspect", 180),
-                    "twi": best.get("twi", 8),
-                    "curvature": best.get("curvature", 0),
-                    "source": "SRTM_CACHE",
-                }
-        except Exception:
-            pass
-    
-    # Estimate from lat/lng (elevation roughly correlates with latitude in Uttarkashi)
-    base_elev = 1100 + (lat - 30.4) * 2500
-    slope_est = 15 + (base_elev - 1500) * 0.008
-    return {
-        "elevation": round(base_elev, 1),
-        "slope": round(max(3, min(55, slope_est)), 2),
-        "aspect": round((lng - 78.0) * 360 + 180, 1) % 360,
-        "twi": round(max(3, 12 - slope_est * 0.15), 2),
-        "curvature": 0.0,
-        "source": "ESTIMATED",
-    }
+def _get_cached_terrain(lat: float, lng: float) -> Dict[str, Any]:
+    """Get physically genuine terrain data directly from USGS SRTM 30m GeoTIFF mosaic."""
+    try:
+        from backend.data.srtm_engine import extract_dem_terrain
+        return extract_dem_terrain(lat, lng)
+    except Exception as e:
+        return {
+            "elevation": 1800.0,
+            "slope": 20.0,
+            "aspect": 180.0,
+            "twi": 8.0,
+            "curvature": 0.0,
+            "source": "FALLBACK"
+        }
 
 
 def _estimate_ndvi_from_elevation(lat: float, lng: float) -> Dict[str, float]:
