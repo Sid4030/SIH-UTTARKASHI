@@ -77,93 +77,35 @@ KNOWN_VILLAGES = [
     {"name": "Kharadi", "tehsil": "Rajgarhi", "lat": 30.670, "lng": 78.520, "pop": 800, "is_town": False},
 ]
 
-# Known disaster sites with official verified government casualty and impact figures
-DISASTER_SITES = [
-    {
-        "lat": 31.023, "lng": 78.784, "type": "cloudburst", "year": 2025,
-        "name": "Dharali Cloudburst",
-        "official_fatalities": 4, "missing": 14, "displaced": 450,
-        "severity": "extreme",
-        "statutory_source": "District Emergency Operations Centre (DEOC) Uttarkashi Flash Report 2025"
-    },
-    {
-        "lat": 30.710, "lng": 78.480, "type": "cloudburst", "year": 2021,
-        "name": "Nirakot Cloudburst",
-        "official_fatalities": 1, "missing": 0, "displaced": 85,
-        "severity": "high",
-        "statutory_source": "Uttarakhand State Disaster Management Authority (USDMA) Report Jul-2021"
-    },
-    {
-        "lat": 30.690, "lng": 78.470, "type": "cloudburst", "year": 2021,
-        "name": "Mando Debris Flow",
-        "official_fatalities": 3, "missing": 0, "displaced": 120,
-        "severity": "extreme",
-        "statutory_source": "Geological Survey of India (GSI) Post-Disaster Geotechnical Field Audit 2021"
-    },
-    {
-        "lat": 30.680, "lng": 78.460, "type": "flood", "year": 2021,
-        "name": "Siror Flash Flood",
-        "official_fatalities": 0, "missing": 0, "displaced": 320,
-        "severity": "high",
-        "statutory_source": "DDMA Uttarkashi Relief & Rehabilitation Record 2021"
-    },
-    {
-        "lat": 30.995, "lng": 78.940, "type": "flood", "year": 2013,
-        "name": "Gangotri Deluge",
-        "official_fatalities": 28, "missing": 42, "displaced": 1100,
-        "severity": "extreme",
-        "statutory_source": "National Disaster Management Authority (NDMA) Uttarakhand Multi-Hazard Report 2013"
-    },
-    {
-        "lat": 30.777, "lng": 78.543, "type": "landslide", "year": 2013,
-        "name": "Maneri Landslide Dam",
-        "official_fatalities": 14, "missing": 8, "displaced": 450,
-        "severity": "extreme",
-        "statutory_source": "GSI Landslide Hazard Zonation & Catastrophic Failure Assessment 2013"
-    },
-    {
-        "lat": 30.727, "lng": 78.445, "type": "flood", "year": 2013,
-        "name": "Uttarkashi Town Bhagirathi Inundation",
-        "official_fatalities": 72, "missing": 110, "displaced": 1850,
-        "severity": "extreme",
-        "statutory_source": "Uttarakhand Disaster Mitigation and Management Centre (DMMC) Final Registry 2013"
-    },
-    {
-        "lat": 31.036, "lng": 78.738, "type": "landslide", "year": 2022,
-        "name": "Harsil Slope Failure",
-        "official_fatalities": 0, "missing": 0, "displaced": 240,
-        "severity": "medium",
-        "statutory_source": "Border Roads Organisation (BRO) Project Shivalik Traffic Incident Log 2022"
-    },
-    {
-        "lat": 30.800, "lng": 78.585, "type": "landslide", "year": 2022,
-        "name": "Bhatwari Landslide",
-        "official_fatalities": 2, "missing": 0, "displaced": 380,
-        "severity": "high",
-        "statutory_source": "USDMA Incident Assessment Bulletin Sep-2022"
-    },
-    {
-        "lat": 31.082, "lng": 78.185, "type": "cloudburst", "year": 2023,
-        "name": "Sankri Cloudburst",
-        "official_fatalities": 1, "missing": 2, "displaced": 140,
-        "severity": "high",
-        "statutory_source": "Govt of Uttarakhand Revenue Dept Damage Audit 2023"
-    },
-    {
-        "lat": 30.850, "lng": 78.100, "type": "flood", "year": 2023,
-        "name": "Purola Flash Flood",
-        "official_fatalities": 0, "missing": 0, "displaced": 210,
-        "severity": "medium",
-        "statutory_source": "State Disaster Response Force (SDRF) Deployment After-Action Review 2023"
-    },
-    {
-        "lat": 30.853, "lng": 78.686, "type": "landslide", "year": 2024,
-        "name": "Barsu Slope Collapse",
-        "official_fatalities": 0, "missing": 0, "displaced": 90,
-        "severity": "medium",
-        "statutory_source": "DDMA Precautionary Evacuation Dossier Aug-2024"
-    },
-]
+# Known historical disaster sites across Uttarkashi district (18 verified records)
+# Reconciled with authoritative local inventory
+def _load_disaster_sites():
+    inv_file = Path(__file__).parent / "datasets" / "inventory" / "uttarkashi_landslides_local.json"
+    if inv_file.exists():
+        try:
+            with open(inv_file) as f:
+                raw = json.load(f)
+            sites = []
+            for item in raw:
+                sites.append({
+                    "lat": float(item["latitude"]),
+                    "lng": float(item["longitude"]),
+                    "type": str(item["event_type"]),
+                    "year": int(item["year"]),
+                    "name": str(item["name"]),
+                    "official_fatalities": int(item.get("fatalities", 0)),
+                    "missing": int(item.get("missing", 0)),
+                    "displaced": int(item.get("displaced", 0)),
+                    "severity": str(item.get("severity", "high")),
+                    "statutory_source": str(item.get("source", "Official Incident Record"))
+                })
+            if sites:
+                return sites
+        except Exception as e:
+            print(f"Warning loading inventory in generate_data: {e}")
+    return []
+
+DISASTER_SITES = _load_disaster_sites()
 
 # Major rivers for distance calculations
 RIVERS = [
@@ -224,7 +166,11 @@ def compute_aspect(lat, lng):
 
 
 def compute_curvature(lat, lng):
-    """Compute plan curvature. Negative = concave (water collects), Positive = convex."""
+    """
+    Compute profile/plan curvature in standard geomorphometric units (1/100m).
+    Negative = concave (convergent flow, water/debris accumulation), Positive = convex.
+    Standard natural range for 30m-100m terrain is [-1.5, 1.5].
+    """
     delta = 0.001
     e_c = compute_elevation(lat, lng)
     e_n = compute_elevation(lat + delta, lng)
@@ -232,8 +178,11 @@ def compute_curvature(lat, lng):
     e_e = compute_elevation(lat, lng + delta)
     e_w = compute_elevation(lat, lng - delta)
     
-    curv = (e_n + e_s + e_e + e_w - 4 * e_c) / (delta * 111000)**2
-    return curv * 1e6  # Scale for readability
+    cell_size = delta * 111000.0  # ~111m
+    # Laplacian finite difference scaled to per 100m
+    curv = (e_n + e_s + e_e + e_w - 4.0 * e_c) / (cell_size ** 2)
+    curv_100m = curv * 100.0
+    return round(max(-1.5, min(1.5, curv_100m)), 4)
 
 
 def compute_twi(slope, upstream_area=None):

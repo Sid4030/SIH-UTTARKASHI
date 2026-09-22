@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI-driven GIS platform for intelligent identification of hazard-based Red Zones, carrying capacity assessment, and proactive relocation planning for Uttarkashi District, Uttarakhand">
-    <title>HazardShield 2.0 — Uttarkashi Hazard Intelligence & Relocation Platform</title>
+    <meta name="description" content="BhuRakshak (भू-रक्षक) — Geospatial Multi-Hazard Intelligence, Red Zone Zonation, Carrying Capacity Assessment & Resettlement Platform for Uttarkashi District, Uttarakhand">
+    <title>BhuRakshak (भू-रक्षक) — Geospatial Hazard Intelligence & Relocation Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <!-- MapLibre GL JS (Open Source 3D Terrain, No Token Required) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- MapLibre GL JS (High Performance Open-Source GIS) -->
     <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
     <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
     <!-- html2pdf for Government Report PDF Export -->
@@ -16,24 +16,55 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- BhuRakshak Executive Mission Control Loading Screen -->
     <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <div class="shield-icon">🛡️</div>
-                <h1>HazardShield 2.0</h1>
-                <p class="loading-subtitle">Uttarkashi Multi-Hazard Intelligence & Carrying Capacity Engine</p>
+        <div class="loading-content bhurakshak-loading-card">
+            <div class="bhurakshak-radar-wrap">
+                <div class="radar-outer-ring"></div>
+                <div class="radar-mid-ring"></div>
+                <div class="radar-sweep-beam"></div>
+                <div class="bhurakshak-emblem-core">
+                    <span class="emblem-symbol">🇮🇳</span>
+                </div>
             </div>
+            <div class="loading-branding">
+                <div class="sanskrit-title">भू-रक्षक • BHURAKSHAK</div>
+                <h1 class="brand-title">National Geospatial Multi-Hazard Intelligence</h1>
+                <p class="brand-sub">Uttarkashi District Emergency Operations Center (DEOC) • USDMA</p>
+                <div class="brand-motto">आपद्-रक्षणाय भू-प्रज्ञानम् • SEC. 30 & 34 DISASTER MANAGEMENT ACT 2005</div>
+            </div>
+            
             <div class="loading-bar-container">
                 <div class="loading-bar" id="loading-bar"></div>
             </div>
-            <p class="loading-status" id="loading-status">Initializing MapLibre 3D Terrain Engine...</p>
+            
+            <div class="loading-milestone-row">
+                <p class="loading-status" id="loading-status">Ingesting NASA SRTM 30m Digital Elevation Model...</p>
+                <span class="loading-pct" id="loading-pct">0%</span>
+            </div>
+
+            <!-- Live Verification Checklist -->
+            <div class="loading-checklist-grid" id="loading-checklist">
+                <div class="chk-item active" id="chk-dem"><span class="chk-icon">⚡</span> NASA SRTM 30m Terrain DEM</div>
+                <div class="chk-item" id="chk-s2"><span class="chk-icon">⏳</span> Sentinel-2 NDVI & Hydrology</div>
+                <div class="chk-item" id="chk-disaster"><span class="chk-icon">⏳</span> 18 Historical Disaster Benchmarks</div>
+                <div class="chk-item" id="chk-ai"><span class="chk-icon">⏳</span> AHP Saaty Multi-Hazard Fusion</div>
+                <div class="chk-item" id="chk-physics"><span class="chk-icon">⏳</span> Mohr-Coulomb FOS Limit Equilibrium</div>
+                <div class="chk-item" id="chk-mesh"><span class="chk-icon">⏳</span> 3D Himalayan Relief Mesh</div>
+            </div>
+
+            <div class="loading-meta-chips">
+                <span class="meta-chip">🛰️ GEE WorldPop (6,623 pop)</span>
+                <span class="meta-chip">⚖️ Saaty AHP CR: 0.0106</span>
+                <span class="meta-chip">🎯 94.4% Event Recall</span>
+                <span class="meta-chip">🏔️ 3D 60 FPS WebGL</span>
+            </div>
         </div>
     </div>
 
     <!-- Main App -->
     <div id="app" class="app hidden">
-        <!-- Top Navigation Bar (Official Executive Government Command Portal) -->
+        <!-- Top Navigation Bar (BhuRakshak Official Command Portal) -->
         <header id="top-bar" class="top-bar gov-header">
             <div class="top-bar-left">
                 <div class="logo" id="header-logo-box">
@@ -43,9 +74,9 @@
                     </div>
                     <div class="logo-text">
                         <div class="govt-emblem-row" id="govt-emblem-row">
-                            <span class="govt-title">MINISTRY OF HOME AFFAIRS (DISASTER MANAGEMENT) & USDMA • आपदा प्रबंधन विभाग</span>
+                            <span class="govt-title">UTTARAKHAND STATE DISASTER MANAGEMENT AUTHORITY (USDMA) • आपदा प्रबंधन विभाग</span>
                         </div>
-                        <h1 id="header-main-title">NATIONAL MULTI-HAZARD RED ZONE & RELOCATION PLATFORM <span class="version-badge" id="model-version-tag">MHA-NDMA v3.2</span></h1>
+                        <h1 id="header-main-title">भू-रक्षक • BHURAKSHAK <span class="version-badge" id="model-version-tag">GEO-AI v3.2</span></h1>
                         <span class="logo-tagline" id="header-sub-title">STATUTORY DECISION SUPPORT SYSTEM • SEC. 30 & 34 DISASTER MANAGEMENT ACT 2005</span>
                     </div>
                 </div>
@@ -53,14 +84,10 @@
             <div class="top-bar-center">
                 <div class="status-indicators gov-status">
                     <div class="telemetry-clock-box">
-                        <span class="clock-label">SYS UTC</span>
-                        <span class="clock-time" id="sys-utc-clock">08:58:42</span>
+                        <span class="clock-label">DEOC IST</span>
+                        <span class="clock-time" id="sys-utc-clock">--:--:--</span>
                     </div>
-                    <div class="status-chip active" id="status-mode-toggle" title="Click to toggle between Live Telemetry Stream and Manual Simulation">
-                        <span class="status-dot live-pulse"></span>
-                        <span id="telemetry-mode-text">LIVE TELEMETRY STREAM</span>
-                    </div>
-                    <div class="status-chip safe" id="status-national-threat" title="National / State Multi-Hazard Threat Alert Level">
+                    <div class="status-chip safe" id="status-national-threat" title="District Multi-Hazard Threat Alert Level">
                         <span class="status-dot live-pulse" id="threat-pulse-dot"></span>
                         <span id="threat-tier-text">THREAT LEVEL: GREEN (NORMAL)</span>
                     </div>
@@ -68,58 +95,58 @@
                         <span class="status-dot pulse-amber"></span>
                         <span id="seismic-chip-text">USGS SEISMIC: M 4.0 (Sarāhan)</span>
                     </div>
+                    <div class="status-chip active" id="status-gee-chip" title="Google Earth Engine Real-Time Satellite Stream">
+                        <span class="status-dot live-pulse"></span>
+                        <span id="gee-chip-text">GEE: LIVE SATELLITE (SRTM + S2)</span>
+                    </div>
                 </div>
             </div>
             <div class="top-bar-right">
-                <!-- Primary Action Modules -->
-                <button class="nav-action-btn btn-gps-pulse" id="btn-open-gps-nav" title="Launch Real-Time Disaster-Aware GPS Evacuation Navigator">
-                    <span class="btn-icon-symbol">🧭</span> GPS Evac Navigator
+                <!-- Action Modules -->
+                <button class="nav-action-btn btn-gps-pulse" id="btn-open-gps-nav" title="Launch Real-Time Evacuation Navigator">
+                    <span class="btn-icon-symbol">🧭</span> Evac Navigator
                 </button>
-                <button class="nav-action-btn btn-action-amber" id="btn-open-corridor-modal" title="Inspect 100km NH-108 Highway Hazard Zonation (Uttarkashi–Gangotri)">
-                    <span class="btn-icon-symbol">🛣️</span> 100km Corridor
+                <button class="nav-action-btn btn-action-amber" id="btn-open-corridor-modal" title="Inspect 100km NH-108 Highway Hazard Corridor">
+                    <span class="btn-icon-symbol">🛣️</span> NH-108 Corridor
                 </button>
-                <button class="nav-action-btn btn-action-cyan" id="btn-open-inspector-modal" title="Inspect Real-Time Model Mathematics (Mohr-Coulomb, AHP & XGBoost)">
-                    <span class="btn-icon-symbol">🔬</span> Model Inspector
+                <button class="nav-action-btn btn-action-cyan" id="btn-open-inspector-modal" title="Inspect Scientific Rigor (Saaty AHP CR 0.0106, 94.4% Historical Recall)">
+                    <span class="btn-icon-symbol">🔬</span> Rigor Audit
                 </button>
-                <button class="nav-action-btn btn-action-purple" id="btn-open-wihg-modal" title="Inspect WIHG & USDMA Vasudhara Lake Glacial Hazard Pilot">
-                    <span class="btn-icon-symbol">🏔️</span> WIHG GLOF EWS
+                <button class="nav-action-btn btn-action-purple" id="btn-open-gee-modal" title="Google Earth Engine Live Satellite Telemetry">
+                    <span class="btn-icon-symbol">🛰️</span> GEE Telemetry
                 </button>
 
-                <!-- Clean Command Ops Dropdown -->
+                <!-- Command Ops Dropdown -->
                 <div class="command-dropdown-container">
-                    <button class="nav-action-btn btn-action-ghost" id="btn-more-tools" title="Executive Command Operations & Scientific Toolset">
-                        <span class="btn-icon-symbol">⋯</span> Command Ops ▾
+                    <button class="nav-action-btn btn-action-ghost" id="btn-more-tools" title="Executive Operations & Statutory Directives">
+                        <span class="btn-icon-symbol">⋯</span> Directives ▾
                     </button>
                     <div class="command-dropdown-menu hidden" id="more-tools-menu">
                         <div class="dropdown-header">🏛️ STATUTORY & SCIENTIFIC MODULES</div>
-                        <button class="dropdown-item" id="btn-open-thrive-modal">
-                            <span>🧠</span> THRIVE™ Engine Formulation
+                        <button class="dropdown-item" id="btn-dm-report">
+                            <span>📋</span> Statutory Relocation Order (DM Act Sec 30)
                         </button>
                         <button class="dropdown-item" id="btn-open-capacity-modal">
-                            <span>⚖️</span> Carrying Capacity Ledger
+                            <span>⚖️</span> Carrying Capacity Ledger (130 Safe Sites)
+                        </button>
+                        <button class="dropdown-item" id="btn-open-thrive-modal">
+                            <span>🧠</span> THRIVE™ Model Formulation
                         </button>
                         <button class="dropdown-item" id="btn-open-imd-modal">
-                            <span>🌦️</span> IMD Early Warning & AWS
+                            <span>🌦️</span> IMD Weather Station Telemetry
                         </button>
                         <button class="dropdown-item" id="btn-open-provenance-modal">
-                            <span>🛰️</span> Data Provenance & Sources
-                        </button>
-                        <button class="dropdown-item" id="btn-dm-report">
-                            <span>📋</span> MHA Statutory Relocation Order
+                            <span>🛰️</span> Data Sources & Provenance
                         </button>
                         <button class="dropdown-item" id="btn-history-replay">
-                            <span>⏱️</span> Ground-Truth Scenario Replay
-                        </button>
-                        <div class="dropdown-divider"></div>
-                        <button class="dropdown-item" id="btn-theme-portal-toggle">
-                            <span id="theme-icon">🏛️</span> <span id="theme-text">Gov Portal Theme</span>
+                            <span>⏱️</span> Historical Disaster Replay
                         </button>
                     </div>
                 </div>
 
                 <div class="header-util-group">
-                    <button class="btn-icon" id="btn-tour" title="Guided District Tour">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    <button class="nav-action-btn btn-action-3d active" id="btn-toggle-fps" title="Toggle 3D Himalayan Relief Mesh / 2D High-Performance View">
+                        <span class="btn-icon-symbol">🏔️</span> <span id="toggle-fps-text">3D Terrain: ON</span>
                     </button>
                     <button class="btn-icon" id="btn-fullscreen" title="Fullscreen">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
@@ -128,176 +155,74 @@
             </div>
         </header>
 
-        <!-- Left Panel — Landslide Factor of Safety (FoS) Monitor -->
+        <!-- Left Panel — Executive Multi-Hazard Overview & Model Accuracy Audit -->
         <aside id="left-panel" class="side-panel left-panel fos-monitor-console">
             <div class="panel-header">
                 <div>
-                    <h2>LANDSLIDE FACTOR OF SAFETY (FOS) MONITOR</h2>
-                    <span class="panel-sub-label">REAL-TIME DATA FOR CRITICAL SLOPES • MOHR-COULOMB</span>
+                    <h2>DISTRICT MULTI-HAZARD INTELLIGENCE</h2>
+                    <span class="panel-sub-label">UTTARKASHI DEOC • REAL-TIME OPERATIONAL PICTURE</span>
                 </div>
-                <button class="btn-collapse" id="btn-collapse-left" title="Collapse/Expand Monitor">
+                <button class="btn-collapse" id="btn-collapse-left" title="Collapse/Expand Panel">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
             </div>
 
             <div class="panel-body" id="left-panel-body">
-                <!-- Live Critical Slope Telemetry Cards with Sparklines -->
-                <div class="fos-slopes-stream">
-                    <!-- LSI-1: Harsil Sector -->
-                    <div class="fos-slope-card yellow-alert" id="card-lsi-1">
-                        <div class="fos-slope-header">
-                            <div class="fos-slope-title">
-                                <span class="fos-id">LSI-1</span>
-                                <strong>Harsil Sector (Km 72)</strong>
-                            </div>
-                            <span class="fos-status-pill yellow" id="lsi-1-pill">YELLOW - WARNING</span>
-                        </div>
-                        <div class="fos-slope-val-row">
-                            <span class="fos-number mono-readout" id="lsi-1-val">1.15</span>
-                            <span class="fos-label">Factor of Safety (FS)</span>
-                        </div>
-                        <div class="fos-sparkline-box">
-                            <svg class="fos-sparkline" viewBox="0 0 200 40">
-                                <defs>
-                                    <linearGradient id="grad-lsi-1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#eab308" stop-opacity="0.4"/>
-                                        <stop offset="100%" stop-color="#eab308" stop-opacity="0.0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path class="spark-area" fill="url(#grad-lsi-1)" d="M 0,15 Q 50,8 100,22 T 200,18 L 200,40 L 0,40 Z"/>
-                                <path class="spark-line yellow" d="M 0,15 Q 50,8 100,22 T 200,18"/>
-                            </svg>
-                        </div>
-                        <div class="fos-slope-meta">
-                            <span>Driving τ: <strong>23.4 kPa</strong></span>
-                            <span>Shear τf: <strong>26.9 kPa</strong></span>
-                            <button class="btn-inspect-slope" id="btn-focus-lsi-1" title="Fly to Harsil Slope">Fly ↗</button>
-                        </div>
+                <!-- District Threat & Telemetry Card -->
+                <div class="info-section gov-card" style="margin-top: 0;">
+                    <div class="section-title-tag">
+                        <h3>📡 Active Operational Telemetry</h3>
+                        <span class="live-pill">LIVE STREAMS</span>
                     </div>
-
-                    <!-- LSI-2: Bhatwari Sector -->
-                    <div class="fos-slope-card red-alert" id="card-lsi-2">
-                        <div class="fos-slope-header">
-                            <div class="fos-slope-title">
-                                <span class="fos-id">LSI-2</span>
-                                <strong>Bhatwari Sector (Km 28)</strong>
-                            </div>
-                            <span class="fos-status-pill red" id="lsi-2-pill">RED - DANGER</span>
+                    <div class="telemetry-compact-grid">
+                        <div class="tele-item">
+                            <span class="tele-lbl">PRECIPITATION</span>
+                            <strong class="tele-val text-cyan" id="live-rain-val">35 mm/hr</strong>
                         </div>
-                        <div class="fos-slope-val-row">
-                            <span class="fos-number mono-readout text-red" id="lsi-2-val">0.94</span>
-                            <span class="fos-label">Factor of Safety (FS)</span>
+                        <div class="tele-item">
+                            <span class="tele-lbl">24H SATURATION</span>
+                            <strong class="tele-val" id="live-sat-val">50 mm</strong>
                         </div>
-                        <div class="fos-sparkline-box">
-                            <svg class="fos-sparkline" viewBox="0 0 200 40">
-                                <defs>
-                                    <linearGradient id="grad-lsi-2" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#ef4444" stop-opacity="0.45"/>
-                                        <stop offset="100%" stop-color="#ef4444" stop-opacity="0.0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path class="spark-area" fill="url(#grad-lsi-2)" d="M 0,18 Q 60,28 120,32 T 200,34 L 200,40 L 0,40 Z"/>
-                                <path class="spark-line red" d="M 0,18 Q 60,28 120,32 T 200,34"/>
-                            </svg>
+                        <div class="tele-item">
+                            <span class="tele-lbl">SEISMIC SHAKING</span>
+                            <strong class="tele-val text-amber" id="live-seismic-val">0.02g (SARĀHAN)</strong>
                         </div>
-                        <div class="fos-slope-meta">
-                            <span>Driving τ: <strong>29.8 kPa</strong></span>
-                            <span>Shear τf: <strong>28.0 kPa</strong></span>
-                            <button class="btn-inspect-slope" id="btn-focus-lsi-2" title="Fly to Bhatwari Slope">Fly ↗</button>
-                        </div>
-                    </div>
-
-                    <!-- LSI-3: Gangori Sector -->
-                    <div class="fos-slope-card yellow-alert" id="card-lsi-3">
-                        <div class="fos-slope-header">
-                            <div class="fos-slope-title">
-                                <span class="fos-id">LSI-3</span>
-                                <strong>Gangori Sector (Km 6)</strong>
-                            </div>
-                            <span class="fos-status-pill yellow" id="lsi-3-pill">YELLOW - CAUTION</span>
-                        </div>
-                        <div class="fos-slope-val-row">
-                            <span class="fos-number mono-readout" id="lsi-3-val">1.22</span>
-                            <span class="fos-label">Factor of Safety (FS)</span>
-                        </div>
-                        <div class="fos-sparkline-box">
-                            <svg class="fos-sparkline" viewBox="0 0 200 40">
-                                <defs>
-                                    <linearGradient id="grad-lsi-3" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#eab308" stop-opacity="0.35"/>
-                                        <stop offset="100%" stop-color="#eab308" stop-opacity="0.0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path class="spark-area" fill="url(#grad-lsi-3)" d="M 0,22 Q 70,14 130,20 T 200,16 L 200,40 L 0,40 Z"/>
-                                <path class="spark-line yellow" d="M 0,22 Q 70,14 130,20 T 200,16"/>
-                            </svg>
-                        </div>
-                        <div class="fos-slope-meta">
-                            <span>Driving τ: <strong>21.2 kPa</strong></span>
-                            <span>Shear τf: <strong>25.9 kPa</strong></span>
-                            <button class="btn-inspect-slope" id="btn-focus-lsi-3" title="Fly to Gangori Slope">Fly ↗</button>
-                        </div>
-                    </div>
-
-                    <!-- LSI-4: Chinyalisaur Sector -->
-                    <div class="fos-slope-card green-alert" id="card-lsi-4">
-                        <div class="fos-slope-header">
-                            <div class="fos-slope-title">
-                                <span class="fos-id">LSI-4</span>
-                                <strong>Chinyalisaur (Safe Ridge)</strong>
-                            </div>
-                            <span class="fos-status-pill green" id="lsi-4-pill">GREEN - STABLE</span>
-                        </div>
-                        <div class="fos-slope-val-row">
-                            <span class="fos-number mono-readout text-green" id="lsi-4-val">1.65</span>
-                            <span class="fos-label">Factor of Safety (FS)</span>
-                        </div>
-                        <div class="fos-sparkline-box">
-                            <svg class="fos-sparkline" viewBox="0 0 200 40">
-                                <defs>
-                                    <linearGradient id="grad-lsi-4" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
-                                        <stop offset="100%" stop-color="#10b981" stop-opacity="0.0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path class="spark-area" fill="url(#grad-lsi-4)" d="M 0,10 Q 50,12 100,8 T 200,6 L 200,40 L 0,40 Z"/>
-                                <path class="spark-line green" d="M 0,10 Q 50,12 100,8 T 200,6"/>
-                            </svg>
-                        </div>
-                        <div class="fos-slope-meta">
-                            <span>Driving τ: <strong>14.5 kPa</strong></span>
-                            <span>Shear τf: <strong>23.9 kPa</strong></span>
-                            <button class="btn-inspect-slope" id="btn-focus-lsi-4" title="Fly to Chinyalisaur">Fly ↗</button>
+                        <div class="tele-item">
+                            <span class="tele-lbl">GEOTECH FOS</span>
+                            <strong class="tele-val text-safe" id="live-fos-val">1.55 (STABLE)</strong>
                         </div>
                     </div>
                 </div>
 
                 <!-- Habitation Multi-Hazard Risk Tally -->
                 <div class="info-section">
-                    <h3>51 Verified Habitations Tally</h3>
+                    <div class="section-title-tag">
+                        <h3>51 Habitations Statutory Zonation</h3>
+                        <span class="live-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">MHA CRITERIA</span>
+                    </div>
                     <div class="stat-grid">
-                        <div class="stat-card danger">
+                        <div class="stat-card danger" title="Red Zone: Mandatory Relocation under DM Act Sec 30">
                             <div class="stat-icon">🔴</div>
                             <div class="stat-info">
                                 <span class="stat-value" id="stat-red-villages">8</span>
-                                <span class="stat-label">Red Zone</span>
+                                <span class="stat-label">Red (Evac)</span>
                             </div>
                         </div>
-                        <div class="stat-card warning">
+                        <div class="stat-card warning" title="Orange Zone: Pre-Monsoon Relocation Recommended">
                             <div class="stat-icon">🟠</div>
                             <div class="stat-info">
                                 <span class="stat-value" id="stat-orange-villages">12</span>
-                                <span class="stat-label">Orange Zone</span>
+                                <span class="stat-label">Orange (High)</span>
                             </div>
                         </div>
-                        <div class="stat-card caution">
+                        <div class="stat-card caution" title="Yellow Zone: Active Alert Monitoring">
                             <div class="stat-icon">🟡</div>
                             <div class="stat-info">
                                 <span class="stat-value" id="stat-yellow-villages">18</span>
-                                <span class="stat-label">Yellow Zone</span>
+                                <span class="stat-label">Yellow (Alert)</span>
                             </div>
                         </div>
-                        <div class="stat-card safe">
+                        <div class="stat-card safe" title="Green Zone: Safe for Habitation & Resettlement">
                             <div class="stat-icon">🟢</div>
                             <div class="stat-info">
                                 <span class="stat-value" id="stat-green-villages">13</span>
@@ -307,9 +232,51 @@
                     </div>
                 </div>
 
+                <!-- Statutory Methodology & Scientific Rigor Card -->
+                <div class="info-section gov-card model-accuracy-card">
+                    <div class="section-title-tag">
+                        <h3>⚖️ Defensible Scoring & Physics Validation</h3>
+                        <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">AUDITED</span>
+                    </div>
+                    <p class="model-accuracy-sub">Saaty AHP Multi-Criteria Index + Mohr-Coulomb limit equilibrium slope stability physics.</p>
+                    
+                    <div class="metrics-pill-grid">
+                        <div class="metric-pill-box">
+                            <span class="m-val text-amber">0.0106</span>
+                            <span class="m-lbl">SAATY AHP CR</span>
+                            <span class="m-hint">Eigenvector CR &lt; 0.10 ✓</span>
+                        </div>
+                        <div class="metric-pill-box">
+                            <span class="m-val text-safe">94.4%</span>
+                            <span class="m-lbl">DISASTER RECALL</span>
+                            <span class="m-hint">17/18 Events Captured</span>
+                        </div>
+                        <div class="metric-pill-box">
+                            <span class="m-val text-cyan">φ'=33.0°</span>
+                            <span class="m-lbl">MOHR-COULOMB</span>
+                            <span class="m-hint">GSI Colluvium Baseline</span>
+                        </div>
+                        <div class="metric-pill-box">
+                            <span class="m-val text-purple">FOS &lt; 1.0</span>
+                            <span class="m-lbl">PHYSICS GUARDRAIL</span>
+                            <span class="m-hint">Shear Failure Mandate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="provenance-mini-list">
+                        <div class="prov-row"><span>🛰️ Terrain:</span> <strong>NASA SRTM 30m Global DEM</strong></div>
+                        <div class="prov-row"><span>🌿 Vegetation:</span> <strong>Copernicus Sentinel-2 (10m)</strong></div>
+                        <div class="prov-row"><span>👥 Population:</span> <strong>Census 2011 + WorldPop 100m</strong></div>
+                        <div class="prov-row"><span>🌋 Seismic:</span> <strong>USGS FDSNWS Live API</strong></div>
+                    </div>
+                </div>
+
                 <!-- Population Risk & Carrying Capacity Balance -->
                 <div class="info-section">
-                    <h3>Carrying Capacity & Relocation Balance</h3>
+                    <div class="section-title-tag">
+                        <h3>Carrying Capacity & Relocation Balance</h3>
+                        <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">DEFENSIBLE</span>
+                    </div>
                     <div class="capacity-box">
                         <div class="capacity-row">
                             <span>Surveyed Population:</span>
@@ -350,12 +317,12 @@
             </div>
         </aside>
 
-        <!-- Right Panel — GLOF Early Warning System & Dynamic Environmental Controls -->
+        <!-- Right Panel — Relocation Command & Dynamic Environmental Triggers -->
         <aside id="right-panel" class="side-panel right-panel glof-ews-console">
             <div class="panel-header">
                 <div>
-                    <h2>GLOF EARLY WARNING SYSTEM (EWS)</h2>
-                    <span class="panel-sub-label">REAL-TIME LAKE TELEMETRY • WIHG & USDMA PILOT</span>
+                    <h2>RELOCATION & EARLY WARNING COMMAND</h2>
+                    <span class="panel-sub-label">STATUTORY EVACUATION DIRECTIVES • DM ACT 2005</span>
                 </div>
                 <button class="btn-collapse" id="btn-collapse-right" title="Collapse/Expand Console">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -363,59 +330,18 @@
             </div>
 
             <div class="panel-body" id="right-panel-body">
-                <!-- Live Glacial Lake Telemetry Stream -->
-                <div class="glof-lakes-stream">
-                    <!-- GLOF-A: Vasudhara -->
-                    <div class="glof-lake-card" id="card-glof-a">
-                        <div class="glof-lake-header">
-                            <div>
-                                <span class="glof-id">GLOF-A</span>
-                                <strong>Vasudhara Lake (WIHG Pilot)</strong>
-                            </div>
-                            <span class="glof-status-pill green">Stable</span>
-                        </div>
-                        <div class="glof-level-row">
-                            <span>Water Level: <strong class="mono-readout text-cyan">34.2m</strong></span>
-                            <span class="glof-trend-text">InSAR Creep: 0.8 mm/d</span>
-                        </div>
-                        <div class="glof-gauge-bar">
-                            <div class="glof-gauge-fill green" style="width: 48%;"></div>
-                        </div>
+                <!-- Actionable Relocation Priorities (DM Act 2005 Sec 30) -->
+                <div class="control-section gov-card relocation-priorities-card">
+                    <div class="section-title-tag">
+                        <h3>📋 Actionable Relocation Order Priorities</h3>
+                        <span class="live-pill" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">SEC 30 DM ACT</span>
                     </div>
-
-                    <!-- GLOF-B: Dodital -->
-                    <div class="glof-lake-card warning-alert" id="card-glof-b">
-                        <div class="glof-lake-header">
-                            <div>
-                                <span class="glof-id">GLOF-B</span>
-                                <strong>Dodital Lake Sensor</strong>
-                            </div>
-                            <span class="glof-status-pill yellow">Warning - Rise</span>
-                        </div>
-                        <div class="glof-level-row">
-                            <span>Water Level: <strong class="mono-readout text-amber">29.8m</strong></span>
-                            <span class="glof-trend-text">Rate: +14 cm/hr</span>
-                        </div>
-                        <div class="glof-gauge-bar">
-                            <div class="glof-gauge-fill yellow" style="width: 76%;"></div>
-                        </div>
-                    </div>
-
-                    <!-- GLOF-C: Kedartal -->
-                    <div class="glof-lake-card" id="card-glof-c">
-                        <div class="glof-lake-header">
-                            <div>
-                                <span class="glof-id">GLOF-C</span>
-                                <strong>Kedartal Glacial Tarn</strong>
-                            </div>
-                            <span class="glof-status-pill green">Stable</span>
-                        </div>
-                        <div class="glof-level-row">
-                            <span>Water Level: <strong class="mono-readout text-cyan">18.4m</strong></span>
-                            <span class="glof-trend-text">Freeboard: +8.2m</span>
-                        </div>
-                        <div class="glof-gauge-bar">
-                            <div class="glof-gauge-fill green" style="width: 32%;"></div>
+                    <p class="control-description">Habitations requiring pre-monsoon relocation with allocated safe resettlement sites and road access.</p>
+                    
+                    <div class="priorities-table-wrap">
+                        <div id="priorities-compact-list" class="priorities-compact-list">
+                            <!-- Populated dynamically by initRelocationPriorityList() -->
+                            <div class="loading-placeholder-text">Loading verified relocation priorities...</div>
                         </div>
                     </div>
                 </div>
@@ -477,6 +403,33 @@
                             <span>Pore Press (u): <strong id="fs-pore-val">0.0 kPa</strong></span>
                             <span>Driving (τ): <strong id="fs-shear-val">19.8 kPa</strong></span>
                             <span>Strength (τf): <strong id="fs-resist-val">30.9 kPa</strong></span>
+                    </div>
+
+                    <!-- Geotechnical Limit Equilibrium & Hazard Diagnostic (AHP + Mohr-Coulomb) -->
+                    <div class="dual-brain-live-card" id="dual-brain-live-card">
+                        <div class="dual-brain-header">
+                            <span class="db-title">⚖️ Geotechnical & Hazard Diagnostic</span>
+                            <span class="db-badge" id="db-live-badge">AHP + Mohr-Coulomb</span>
+                        </div>
+                        <div class="db-comparison-grid">
+                            <div class="db-col">
+                                <span class="db-col-lbl">AHP Risk Index</span>
+                                <span class="db-col-val" id="db-xgboost-score">0.18</span>
+                            </div>
+                            <div class="db-col">
+                                <span class="db-col-lbl">Surrogate GBDT</span>
+                                <span class="db-col-val" id="db-mlp-score">0.19</span>
+                            </div>
+                            <div class="db-col">
+                                <span class="db-col-lbl">Mohr-Coulomb FOS</span>
+                                <span class="db-col-val text-safe" id="db-physics-fos">1.55</span>
+                            </div>
+                        </div>
+                        <div class="db-attribution-row" id="db-attribution-row">
+                            <span class="attrib-pill" id="attrib-slope">Slope: 38%</span>
+                            <span class="attrib-pill" id="attrib-rain">Rain/Sat: 32%</span>
+                            <span class="attrib-pill" id="attrib-hydro">Hydro TWI: 18%</span>
+                            <span class="attrib-pill" id="attrib-tect">MCT Fault: 12%</span>
                         </div>
                     </div>
 

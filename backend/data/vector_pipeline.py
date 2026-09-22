@@ -444,21 +444,46 @@ def compute_real_road_distance(lat: float, lon: float, road_data: dict = None) -
 
 
 def _estimate_road_distance_from_towns(lat: float, lon: float) -> float:
-    """Estimate road distance based on proximity to known towns."""
-    towns = [
-        (30.727, 78.445),  # Uttarkashi
+    """
+    Estimate road distance based on proximity to known highway network corridors:
+    NH-108 (Bhagirathi corridor), NH-134 (Yamuna corridor), and SH-17 (Tons corridor).
+    """
+    corridor_nodes = [
+        # NH-108 / NH-34 Bhagirathi Highway nodes
+        (30.550, 78.310),  # Dharasu Junction
         (30.520, 78.240),  # Chinyalisaur
+        (30.600, 78.380),  # Dunda
+        (30.660, 78.420),  # Matli
+        (30.727, 78.445),  # Uttarkashi Town
+        (30.735, 78.480),  # Gangori
+        (30.777, 78.543),  # Maneri
+        (30.800, 78.585),  # Bhatwari
+        (30.810, 78.630),  # Sukhi
+        (30.850, 78.650),  # Jhala
+        (31.036, 78.738),  # Harsil
+        (31.023, 78.784),  # Dharali
+        (30.780, 78.510),  # Lanka
+        (30.995, 78.940),  # Gangotri
+        # NH-134 Yamunotri Highway nodes
         (30.614, 78.355),  # Barkot
+        (30.700, 78.500),  # Naugaon
+        (30.670, 78.520),  # Kharadi
+        (30.650, 78.550),  # Rajgarhi
+        (30.985, 78.442),  # Janki Chatti
+        (30.990, 78.450),  # Kharsali
+        # SH-17 Tons Valley Road nodes
         (30.850, 78.100),  # Purola
         (31.100, 78.100),  # Mori
+        (31.050, 78.150),  # Netwar
+        (31.082, 78.185),  # Sankri
     ]
     min_dist = float('inf')
-    for t_lat, t_lon in towns:
-        dlat = (lat - t_lat) * 111
-        dlon = (lon - t_lon) * 95
+    for t_lat, t_lon in corridor_nodes:
+        dlat = (lat - t_lat) * 111.0
+        dlon = (lon - t_lon) * 95.0
         dist = math.sqrt(dlat**2 + dlon**2)
         min_dist = min(min_dist, dist)
-    return min_dist
+    return round(float(min_dist), 2)
 
 
 def load_census_villages() -> List[Dict[str, Any]]:

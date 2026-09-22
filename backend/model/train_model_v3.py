@@ -30,6 +30,7 @@ from backend.model.thrive_engine import (
     run_thrive_pipeline, compute_thrive_score,
     compute_ahp_weights, compute_safe_zone_suitability_ahp,
     compute_vulnerability_index, compute_temporal_recurrence,
+    THRIVE_WEIGHTS,
 )
 from backend.data.vector_pipeline import (
     load_landslide_inventory, load_river_network, load_road_network,
@@ -237,6 +238,8 @@ def compute_safe_zones_thrive(thrive_grid, villages_geojson,
                 "lng": float(cell["lng"]),
                 "suitability_score": ahp_result["suitability_score"],
                 "carrying_capacity": ahp_result["carrying_capacity"],
+                "buildable_area_hectares": ahp_result.get("buildable_area_hectares", 15.0),
+                "ndma_density_standard": "45 m2/person + 70 lpcd water",
                 "elevation": float(cell.get("elevation", 0)),
                 "slope": float(cell.get("slope", 0)),
                 "dist_river_km": float(dist_river),
@@ -274,9 +277,12 @@ def safe_zones_to_geojson(safe_zones):
             "geometry": {"type": "Polygon", "coordinates": [polygon]},
             "properties": {
                 "id": i + 1,
+                "name": sz.get("name") or f"Safe Haven Zone {i + 1} ({sz.get('lulc_class', 'plateau').title()})",
                 "suitability_score": sz["suitability_score"],
                 "rating": rating,
                 "carrying_capacity": sz["carrying_capacity"],
+                "buildable_area_hectares": sz.get("buildable_area_hectares", 15.0),
+                "ndma_standard": sz.get("ndma_density_standard", "45 m2/person + 70 lpcd"),
                 "elevation": sz["elevation"],
                 "slope": sz["slope"],
                 "dist_river_km": sz["dist_river_km"],
@@ -451,7 +457,7 @@ def main():
     # Save model metrics
     with open(output_dir / "model_metrics.json", "w") as f:
         json.dump(metrics, f, indent=2)
-    print(f"  ✓ THRIVE model trained")
+    print(f"  ✓ THRIVE model computed (Lightweight AHP + Physics)")
 
     # 5. Generate hazard zone outputs
     print("\n[5/7] Generating hazard zone maps...")
@@ -514,7 +520,7 @@ def main():
     print("THRIVE MODEL TRAINING & ANALYSIS COMPLETE")
     print(f"\n  Algorithm: THRIVE (Terrain-Hydro-Risk Integrated Vulnerability Engine)")
     print(f"  Ground-Truth: {len(disaster_inventory)} verified disaster events")
-    print(f"  ML Model: {metrics.get('model_type', 'XGBoost')}")
+    print(f"  Model: Explainable AHP + Mohr-Coulomb Physics (Lightweight, No XGBoost)")
     print(f"  AHP Method: Eigenvector with consistency check")
     print(f"\nOutput files:")
     for fp in sorted(output_dir.glob("*")):

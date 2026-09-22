@@ -5811,3 +5811,441 @@ body.theme-govt-portal .action-order-box {
     color: #f8fafc;
     font-weight: 700;
 }
+
+/* ============================================================ */
+/* BHURAKSHAK (भू-रक्षक) ENHANCEMENTS & 60FPS PERFORMANCE STYLES */
+/* ============================================================ */
+
+/* High-Performance GPU Compositing */
+.map-container {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.bhurakshak-loading-card {
+    max-width: 480px;
+    padding: 36px 32px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(14, 165, 233, 0.15);
+    backdrop-filter: blur(16px);
+    text-align: center;
+}
+
+.bhurakshak-emblem-wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bhurakshak-pulse-ring {
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid rgba(56, 189, 248, 0.4);
+    animation: bhurakshak-ring-pulse 2s infinite ease-out;
+}
+
+@keyframes bhurakshak-ring-pulse {
+    0% { transform: scale(0.9); opacity: 0.8; }
+    50% { transform: scale(1.15); opacity: 0.2; }
+    100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.bhurakshak-emblem-core {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.25), rgba(59, 130, 246, 0.1));
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+.sanskrit-title {
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.brand-title {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 6px;
+}
+
+.brand-sub {
+    font-size: 13px;
+    color: #94a3b8;
+    margin: 0 0 10px;
+    line-height: 1.4;
+}
+
+.brand-motto {
+    font-size: 11px;
+    font-weight: 600;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.loading-milestone-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    color: #64748b;
+}
+
+.loading-pct {
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.loading-meta-chips {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    font-size: 11px;
+    color: #64748b;
+    flex-wrap: wrap;
+}
+
+.meta-chip {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Operational Telemetry Grid */
+.telemetry-compact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tele-item {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    padding: 8px 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tele-lbl {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 2px;
+}
+
+.tele-val {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    font-weight: 600;
+}
+
+/* Model Accuracy Audit Card */
+.model-accuracy-card {
+    border-left: 3px solid #10b981;
+}
+
+.model-accuracy-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    margin: 4px 0 12px;
+    line-height: 1.4;
+}
+
+.metrics-pill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.metric-pill-box {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-pill-box .m-val {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: var(--font-mono);
+}
+
+.metric-pill-box .m-lbl {
+    font-size: 9px;
+    font-weight: 700;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+}
+
+.metric-pill-box .m-hint {
+    font-size: 9px;
+    color: #64748b;
+    margin-top: 1px;
+}
+
+.provenance-mini-list {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.prov-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #94a3b8;
+}
+
+.prov-row strong {
+    color: #e2e8f0;
+    font-size: 10px;
+    font-family: var(--font-mono);
+}
+
+/* Relocation Priorities Card */
+.relocation-priorities-card {
+    border-left: 3px solid #ef4444;
+}
+
+.priorities-table-wrap {
+    max-height: 260px;
+    overflow-y: auto;
+    margin-top: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(56, 189, 248, 0.3) transparent;
+}
+
+/* ====== Executive Mission Control Loading Screen Enhancements ====== */
+.bhurakshak-radar-wrap {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radar-outer-ring {
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    border: 1px dashed rgba(56, 189, 248, 0.4);
+    animation: radar-spin 12s linear infinite;
+}
+
+.radar-mid-ring {
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(14, 165, 233, 0.6);
+    box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
+}
+
+.radar-sweep-beam {
+    position: absolute;
+    inset: -2px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, transparent 0deg, transparent 270deg, rgba(56, 189, 248, 0.45) 360deg);
+    animation: radar-sweep 2.2s linear infinite;
+}
+
+@keyframes radar-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes radar-sweep {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Loading Checklist Grid */
+.loading-checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+    text-align: left;
+    margin: 14px 0 16px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.chk-item {
+    font-size: 11px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease;
+}
+
+.chk-item.active {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.chk-item.done {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.chk-item.done .chk-icon {
+    color: #10b981;
+}
+
+/* 3D Action Button in Topbar */
+.btn-action-3d {
+    background: rgba(14, 165, 233, 0.18) !important;
+    border: 1px solid rgba(56, 189, 248, 0.5) !important;
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.btn-action-3d:hover {
+    background: rgba(14, 165, 233, 0.32) !important;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4) !important;
+}
+
+.btn-action-3d.mode-2d {
+    background: rgba(16, 185, 129, 0.15) !important;
+    border-color: rgba(16, 185, 129, 0.4) !important;
+    color: #10b981 !important;
+}
+
+/* Dual-Brain AI Live Card */
+.dual-brain-live-card {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    border-left: 3px solid #818cf8;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin: 12px 0 6px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dual-brain-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.db-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #cbd5e1;
+    letter-spacing: 0.3px;
+}
+
+.db-badge {
+    font-size: 9px;
+    font-weight: 700;
+    background: rgba(129, 140, 248, 0.2);
+    color: #a5b4fc;
+    padding: 2px 6px;
+    border-radius: 4px;
+    border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.db-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.db-col {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 6px;
+    padding: 6px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.db-col-lbl {
+    font-size: 8px;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.db-col-val {
+    font-size: 13px;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: #f8fafc;
+}
+
+.db-attribution-row {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.attrib-pill {
+    font-size: 9px;
+    font-family: var(--font-mono);
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(148, 163, 184, 0.15);
+    color: #cbd5e1;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+

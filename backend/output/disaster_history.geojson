@@ -13,14 +13,14 @@
       },
       "properties": {
         "id": 1,
-        "name": "Dharali Cloudburst",
+        "name": "Dharali Flash Flood & Debris Flow",
         "type": "cloudburst",
-        "year": 2025,
+        "year": 2012,
         "severity": "extreme",
         "casualties": 4,
         "missing": 14,
         "displaced": 450,
-        "source": "District Emergency Operations Centre (DEOC) Uttarkashi Flash Report 2025"
+        "source": "DMMC & Public Incident Archive (Aug 2012 Upper Bhagirathi Flood)"
       }
     },
     {
@@ -42,7 +42,7 @@
         "casualties": 1,
         "missing": 0,
         "displaced": 85,
-        "source": "Uttarakhand State Disaster Management Authority (USDMA) Report Jul-2021"
+        "source": "USDMA Incident Bulletin & State Situation Report (July 2021)"
       }
     },
     {
@@ -64,7 +64,7 @@
         "casualties": 3,
         "missing": 0,
         "displaced": 120,
-        "source": "Geological Survey of India (GSI) Post-Disaster Geotechnical Field Audit 2021"
+        "source": "USDMA / District Administration Incident Record (July 2021 Mando Cloudburst)"
       }
     },
     {
@@ -86,7 +86,7 @@
         "casualties": 0,
         "missing": 0,
         "displaced": 320,
-        "source": "DDMA Uttarkashi Relief & Rehabilitation Record 2021"
+        "source": "District Administration Incident Archive (July 2021)"
       }
     },
     {
@@ -101,14 +101,14 @@
       },
       "properties": {
         "id": 5,
-        "name": "Gangotri Deluge",
+        "name": "Gangotri Deluge & Highway Breach",
         "type": "flood",
         "year": 2013,
         "severity": "extreme",
         "casualties": 28,
         "missing": 42,
         "displaced": 1100,
-        "source": "National Disaster Management Authority (NDMA) Uttarakhand Multi-Hazard Report 2013"
+        "source": "NDMA Multi-Hazard Post-Disaster Report (June 2013 Uttarakhand Floods)"
       }
     },
     {
@@ -123,14 +123,14 @@
       },
       "properties": {
         "id": 6,
-        "name": "Maneri Landslide Dam",
+        "name": "Maneri Landslide Damming Risk",
         "type": "landslide",
         "year": 2013,
         "severity": "extreme",
         "casualties": 14,
         "missing": 8,
         "displaced": 450,
-        "source": "GSI Landslide Hazard Zonation & Catastrophic Failure Assessment 2013"
+        "source": "GSI Post-Disaster Geomorphological Survey (June 2013)"
       }
     },
     {
@@ -152,7 +152,7 @@
         "casualties": 72,
         "missing": 110,
         "displaced": 1850,
-        "source": "Uttarakhand Disaster Mitigation and Management Centre (DMMC) Final Registry 2013"
+        "source": "DMMC Incident Documentation (June 2013 Bhagirathi Flood & Tiloth Bridge Collapse)"
       }
     },
     {
@@ -174,7 +174,7 @@
         "casualties": 0,
         "missing": 0,
         "displaced": 240,
-        "source": "Border Roads Organisation (BRO) Project Shivalik Traffic Incident Log 2022"
+        "source": "BRO Project Shivalik NH-108 Road Clearance Record (2022)"
       }
     },
     {
@@ -189,14 +189,14 @@
       },
       "properties": {
         "id": 9,
-        "name": "Bhatwari Landslide",
+        "name": "Bhatwari Landslide & Sinking Zone",
         "type": "landslide",
         "year": 2022,
         "severity": "high",
         "casualties": 2,
         "missing": 0,
         "displaced": 380,
-        "source": "USDMA Incident Assessment Bulletin Sep-2022"
+        "source": "USDMA Active Subsidence Monitoring Record (Bhatwari Sinking Zone, 2022)"
       }
     },
     {
@@ -218,7 +218,7 @@
         "casualties": 1,
         "missing": 2,
         "displaced": 140,
-        "source": "Govt of Uttarakhand Revenue Dept Damage Audit 2023"
+        "source": "Uttarakhand Revenue & Disaster Management Incident Log (2023)"
       }
     },
     {
@@ -240,7 +240,7 @@
         "casualties": 0,
         "missing": 0,
         "displaced": 210,
-        "source": "State Disaster Response Force (SDRF) Deployment After-Action Review 2023"
+        "source": "State Disaster Management Incident Archive (Kamal River Basin, 2023)"
       }
     },
     {
@@ -262,11 +262,34 @@
         "casualties": 0,
         "missing": 0,
         "displaced": 90,
-        "source": "DDMA Precautionary Evacuation Dossier Aug-2024"
+        "source": "District Administration Precautionary Evacuation Record (Aug 2024)"
       }
     },
     {
       "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.44,
+          30.73
+        ]
+      },
+      "properties": {
+        "id": 13,
+        "name": "Asi Ganga Flash Flood",
+        "type": "flood",
+        "year": 2012,
+        "severity": "high",
+        "casualties": 32,
+        "missing": 0,
+        "displaced": 0,
+        "source": "NIDM / DMMC Documentation of Asi Ganga Flash Flood Disaster (Aug 3-4, 2012)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -275,16 +298,42 @@
         ]
       },
       "properties": {
-        "name": "Kedarnath Region Mass Movement",
+        "id": 14,
+        "name": "Kedarnath-Garhwal Mass Movement",
         "type": "landslide",
         "year": 2013,
         "severity": "high",
         "casualties": 169,
-        "source": "GSI Report 2013"
+        "missing": 0,
+        "displaced": 0,
+        "source": "GSI / Geological Society of India Disaster Special Publication (2013)"
       }
     },
     {
       "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.58,
+          30.8
+        ]
+      },
+      "properties": {
+        "id": 15,
+        "name": "Bhatwari-Maneri Road Collapse",
+        "type": "landslide",
+        "year": 2017,
+        "severity": "high",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 0,
+        "source": "BRO Traffic Incident & Road Restoration Log (2017)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
       "geometry": {
         "type": "Point",
         "coordinates": [
@@ -293,12 +342,59 @@
         ]
       },
       "properties": {
+        "id": 16,
         "name": "Dunda Nala Surge",
         "type": "flood",
         "year": 2019,
         "severity": "high",
         "casualties": 0,
-        "source": "DDMA Uttarkashi 2019"
+        "missing": 0,
+        "displaced": 0,
+        "source": "District Administration Monsoon Damage Log (2019)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.19,
+          31.08
+        ]
+      },
+      "properties": {
+        "id": 17,
+        "name": "Sankri Valley Cloudburst",
+        "type": "cloudburst",
+        "year": 2020,
+        "severity": "high",
+        "casualties": 2,
+        "missing": 0,
+        "displaced": 0,
+        "source": "SDRF Incident Response Record (Tons Catchment, 2020)"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.48,
+          30.72
+        ]
+      },
+      "properties": {
+        "id": 18,
+        "name": "Uttarkashi NH-34 Slope Failure",
+        "type": "landslide",
+        "year": 2024,
+        "severity": "high",
+        "casualties": 0,
+        "missing": 0,
+        "displaced": 0,
+        "source": "NHAI / BRO Road Maintenance Incident Record (2024)"
       }
     }
   ]

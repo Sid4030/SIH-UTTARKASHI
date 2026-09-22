@@ -260,9 +260,10 @@ class RasterDEM:
         e_e = self.get_elevation(lat, lon + delta)
         e_w = self.get_elevation(lat, lon - delta)
 
-        cell_size = delta * 111000
-        curv = (e_n + e_s + e_e + e_w - 4 * e_c) / (cell_size ** 2)
-        return curv * 1e6  # Scale for readability
+        cell_size = delta * 111000.0
+        curv = (e_n + e_s + e_e + e_w - 4.0 * e_c) / (cell_size ** 2)
+        curv_100m = curv * 100.0
+        return round(max(-1.5, min(1.5, curv_100m)), 4)
 
     def compute_twi(self, lat: float, lon: float, slope: float = None) -> float:
         """
