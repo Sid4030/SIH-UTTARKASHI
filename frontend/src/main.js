@@ -300,9 +300,101 @@ function initMap() {
 }
 
 // ============================================================
+// GOOGLE EARTH ENGINE (GEE) LIVE SATELLITE TILES
+// ============================================================
+async function initGeeSatelliteLayers(map) {
+    try {
+        const res = await fetch(`${CONFIG.API_URL}/gee/tiles`);
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data || !data.layers) return;
+
+        state.geeTileLayers = data.layers;
+
+        // Position under boundary or first vector layer
+        const beforeLayerId = map.getLayer('boundary-glow') ? 'boundary-glow' : undefined;
+
+        // 1. GEE Sentinel-2 RGB True Color (10m Optical)
+        if (data.layers.sentinel2_rgb && !map.getSource('gee-s2-src')) {
+            map.addSource('gee-s2-src', {
+                type: 'raster',
+                tiles: [data.layers.sentinel2_rgb.tile_url],
+                tileSize: 256,
+                attribution: data.layers.sentinel2_rgb.attribution
+            });
+            map.addLayer({
+                id: 'gee-s2-layer',
+                type: 'raster',
+                source: 'gee-s2-src',
+                layout: { visibility: 'visible' },
+                paint: { 'raster-opacity': 0.85 }
+            }, beforeLayerId);
+        }
+
+        // 2. GEE Sentinel-2 NDVI (Vegetation & Scarring)
+        if (data.layers.sentinel2_ndvi && !map.getSource('gee-ndvi-src')) {
+            map.addSource('gee-ndvi-src', {
+                type: 'raster',
+                tiles: [data.layers.sentinel2_ndvi.tile_url],
+                tileSize: 256,
+                attribution: data.layers.sentinel2_ndvi.attribution
+            });
+            map.addLayer({
+                id: 'gee-ndvi-layer',
+                type: 'raster',
+                source: 'gee-ndvi-src',
+                layout: { visibility: 'none' },
+                paint: { 'raster-opacity': 0.75 }
+            }, beforeLayerId);
+        }
+
+        // 3. GEE Dynamic World 10m LULC
+        if (data.layers.dynamic_world && !map.getSource('gee-dw-src')) {
+            map.addSource('gee-dw-src', {
+                type: 'raster',
+                tiles: [data.layers.dynamic_world.tile_url],
+                tileSize: 256,
+                attribution: data.layers.dynamic_world.attribution
+            });
+            map.addLayer({
+                id: 'gee-dw-layer',
+                type: 'raster',
+                source: 'gee-dw-src',
+                layout: { visibility: 'none' },
+                paint: { 'raster-opacity': 0.70 }
+            }, beforeLayerId);
+        }
+
+        // 4. GEE SRTM 30m Topographic Hillshade
+        if (data.layers.srtm_hillshade && !map.getSource('gee-srtm-src')) {
+            map.addSource('gee-srtm-src', {
+                type: 'raster',
+                tiles: [data.layers.srtm_hillshade.tile_url],
+                tileSize: 256,
+                attribution: data.layers.srtm_hillshade.attribution
+            });
+            map.addLayer({
+                id: 'gee-srtm-layer',
+                type: 'raster',
+                source: 'gee-srtm-src',
+                layout: { visibility: 'none' },
+                paint: { 'raster-opacity': 0.65 }
+            }, beforeLayerId);
+        }
+
+        console.log('✓ Google Earth Engine satellite raster layers mounted in MapLibre.');
+    } catch (e) {
+        console.warn('GEE tile layers setup notice:', e);
+    }
+}
+
+// ============================================================
 // MAP LAYERS
 // ============================================================
 function addGeoJSONLayers(map) {
+    // 0. Mount Google Earth Engine Live Satellite Rasters
+    initGeeSatelliteLayers(map);
+
     // 1. District Boundary (GADM Level 3 Verified — 8,016 km²)
     if (state.data.boundary) {
         map.addSource('boundary-src', { type: 'geojson', data: state.data.boundary });
@@ -1781,6 +1873,26 @@ function initUIControls() {
     setupLayerToggle('toggle-boundary', ['boundary-line', 'boundary-glow', 'boundary-fill', 'boundary-tehsil-lines', 'boundary-tehsil-labels']);
     setupLayerToggle('toggle-corridor', ['corridor-line', 'corridor-glow', 'corridor-labels']);
     setupLayerToggle('toggle-faults', ['faults-line', 'faults-buffer-fill', 'faults-buffer-line', 'faults-label']);
+
+    // Google Earth Engine Live Satellite Layer Toggles
+    setupLayerToggle('toggle-gee-sentinel2', ['gee-s2-layer']);
+    setupLayerToggle('toggle-gee-ndvi', ['gee-ndvi-layer']);
+    setupLayerToggle('toggle-gee-dw', ['gee-dw-layer']);
+    setupLayerToggle('toggle-gee-srtm', ['gee-srtm-layer']);
+
+    const geeOpacitySlider = document.getElementById('gee-satellite-opacity');
+    const geeOpacityVal = document.getElementById('gee-opacity-val');
+    if (geeOpacitySlider && geeOpacityVal) {
+        geeOpacitySlider.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            geeOpacityVal.textContent = Math.round(val * 100) + '%';
+            ['gee-s2-layer', 'gee-ndvi-layer', 'gee-dw-layer', 'gee-srtm-layer'].forEach(id => {
+                if (state.map && state.map.getLayer(id)) {
+                    state.map.setPaintProperty(id, 'raster-opacity', val);
+                }
+            });
+        });
+    }
 
     // Focus Hotspot Buttons
     setupFlyButton('btn-fly-overview', [78.45, 30.73], 9.8, 55, -15);

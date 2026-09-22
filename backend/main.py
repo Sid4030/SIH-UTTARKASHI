@@ -8,8 +8,10 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 from pathlib import Path
+import os
 import json
 import asyncio
+import os
 from datetime import datetime, timezone
 
 from backend.model.trigger_engine import (
@@ -826,6 +828,42 @@ def get_gee_satellite_status():
     status["total_habitations"] = pop_sync.get("total_habitations", 51)
     status["total_worldpop_sum"] = pop_sync.get("total_worldpop_sum", 6623)
     return status
+
+
+@app.get("/api/gee/tiles")
+def get_gee_tile_endpoints(refresh: bool = False):
+    """
+    Returns live Google Earth Engine raster XYZ tile endpoints for MapLibre GL JS:
+    - Copernicus Sentinel-2 Optical (10m True Color)
+    - Copernicus Sentinel-2 NDVI (Vegetation Vigor & Landslide Scarring)
+    - Google Dynamic World (10m Near-Real-Time Land Cover)
+    - USGS SRTM 30m Topographic Hillshade
+    """
+    from backend.data.gee_tile_service import get_gee_tile_layers
+    return get_gee_tile_layers(force_refresh=refresh)
+
+
+@app.get("/api/gee/extract")
+def extract_gee_satellite_telemetry(lat: float = 30.7268, lng: float = 78.4430):
+    """
+    Live GEE extraction endpoint: queries Sentinel-2, SRTM, and Dynamic World
+    for any coordinate in Uttarkashi district in real time.
+    """
+    from backend.data.gee_terrain_client import (
+        extract_srtm_terrain, extract_sentinel2_ndvi, extract_dynamic_world_lulc
+    )
+    terrain = extract_srtm_terrain(lat, lng)
+    veg = extract_sentinel2_ndvi(lat, lng)
+    lulc = extract_dynamic_world_lulc(lat, lng)
+    return {
+        "status": "success",
+        "coordinates": {"lat": lat, "lng": lng},
+        "srtm_30m": terrain,
+        "sentinel2_10m": veg,
+        "dynamic_world_10m": lulc,
+        "gee_project": os.environ.get("GEE_PROJECT_ID", "bhu-rakshak-509111"),
+        "timestamp_utc": datetime.now(timezone.utc).isoformat()
+    }
 
 
 @app.get("/api/wihg/glof-telemetry")
