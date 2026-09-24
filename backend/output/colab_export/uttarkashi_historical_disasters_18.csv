@@ -1,0 +1,19 @@
+latitude,longitude,event_type,year,name,fatalities,missing,displaced,severity,source,is_verified
+31.023,78.784,cloudburst,2012,Dharali Flash Flood & Debris Flow,4,14,450,extreme,DMMC & Public Incident Archive (Aug 2012 Upper Bhagirathi Flood),True
+30.71,78.48,cloudburst,2021,Nirakot Cloudburst,1,0,85,high,USDMA Incident Bulletin & State Situation Report (July 2021),True
+30.69,78.47,cloudburst,2021,Mando Debris Flow,3,0,120,extreme,USDMA / District Administration Incident Record (July 2021 Mando Cloudburst),True
+30.68,78.46,flood,2021,Siror Flash Flood,0,0,320,high,District Administration Incident Archive (July 2021),True
+30.995,78.94,flood,2013,Gangotri Deluge & Highway Breach,28,42,1100,extreme,NDMA Multi-Hazard Post-Disaster Report (June 2013 Uttarakhand Floods),True
+30.777,78.543,landslide,2013,Maneri Landslide Damming Risk,14,8,450,extreme,GSI Post-Disaster Geomorphological Survey (June 2013),True
+30.727,78.445,flood,2013,Uttarkashi Town Bhagirathi Inundation,72,110,1850,extreme,DMMC Incident Documentation (June 2013 Bhagirathi Flood & Tiloth Bridge Collapse),True
+31.036,78.738,landslide,2022,Harsil Slope Failure,0,0,240,medium,BRO Project Shivalik NH-108 Road Clearance Record (2022),True
+30.8,78.585,landslide,2022,Bhatwari Landslide & Sinking Zone,2,0,380,high,"USDMA Active Subsidence Monitoring Record (Bhatwari Sinking Zone, 2022)",True
+31.082,78.185,cloudburst,2023,Sankri Cloudburst,1,2,140,high,Uttarakhand Revenue & Disaster Management Incident Log (2023),True
+30.85,78.1,flood,2023,Purola Flash Flood,0,0,210,medium,"State Disaster Management Incident Archive (Kamal River Basin, 2023)",True
+30.853,78.686,landslide,2024,Barsu Slope Collapse,0,0,90,medium,District Administration Precautionary Evacuation Record (Aug 2024),True
+30.73,78.44,flood,2012,Asi Ganga Flash Flood,32,0,0,high,"NIDM / DMMC Documentation of Asi Ganga Flash Flood Disaster (Aug 3-4, 2012)",True
+31.0,78.92,landslide,2013,Kedarnath-Garhwal Mass Movement,169,0,0,high,GSI / Geological Society of India Disaster Special Publication (2013),True
+30.8,78.58,landslide,2017,Bhatwari-Maneri Road Collapse,0,0,0,high,BRO Traffic Incident & Road Restoration Log (2017),True
+30.61,78.37,flood,2019,Dunda Nala Surge,0,0,0,high,District Administration Monsoon Damage Log (2019),True
+31.08,78.19,cloudburst,2020,Sankri Valley Cloudburst,2,0,0,high,"SDRF Incident Response Record (Tons Catchment, 2020)",True
+30.72,78.48,landslide,2024,Uttarkashi NH-34 Slope Failure,0,0,0,high,NHAI / BRO Road Maintenance Incident Record (2024),True

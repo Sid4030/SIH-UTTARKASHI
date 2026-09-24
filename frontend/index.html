@@ -89,31 +89,38 @@
                     </div>
                     <div class="status-chip safe" id="status-national-threat" title="District Multi-Hazard Threat Alert Level">
                         <span class="status-dot live-pulse" id="threat-pulse-dot"></span>
-                        <span id="threat-tier-text">THREAT LEVEL: GREEN (NORMAL)</span>
+                        <span id="threat-tier-text">THREAT: GREEN (NORMAL)</span>
                     </div>
                     <div class="status-chip warning" id="status-seismic" title="Live USGS Regional Earthquake Telemetry">
                         <span class="status-dot pulse-amber"></span>
-                        <span id="seismic-chip-text">USGS SEISMIC: M 4.0 (Sarāhan)</span>
+                        <span id="seismic-chip-text">USGS: M 4.0 (Sarāhan)</span>
                     </div>
                     <div class="status-chip active" id="status-gee-chip" title="Google Earth Engine Real-Time Satellite Stream">
                         <span class="status-dot live-pulse"></span>
-                        <span id="gee-chip-text">GEE: LIVE SATELLITE (SRTM + S2)</span>
+                        <span id="gee-chip-text">GEE: LIVE (SRTM+S2)</span>
+                    </div>
+                    <div class="status-chip proof-chip" id="status-accuracy-chip" title="18 Historically Verified Disasters Ground-Truth Proof (100% Spatial Recall)">
+                        <span class="status-dot live-pulse text-safe"></span>
+                        <span id="accuracy-chip-text">🎯 18/18 DISASTERS (100%)</span>
                     </div>
                 </div>
             </div>
             <div class="top-bar-right">
-                <!-- Action Modules -->
+                <!-- AI Inspector Primary Tool -->
+                <button class="nav-action-btn btn-action-ai active" id="btn-toggle-ai-analyst" title="BhuRakshak AI Terrain Explainer & Click-to-Diagnose Inspector">
+                    <span class="btn-icon-symbol">🧠</span> AI Explainer
+                </button>
                 <button class="nav-action-btn btn-gps-pulse" id="btn-open-gps-nav" title="Launch Real-Time Evacuation Navigator">
-                    <span class="btn-icon-symbol">🧭</span> Evac Navigator
+                    <span class="btn-icon-symbol">🧭</span> Evac Nav
                 </button>
                 <button class="nav-action-btn btn-action-amber" id="btn-open-corridor-modal" title="Inspect 100km NH-108 Highway Hazard Corridor">
-                    <span class="btn-icon-symbol">🛣️</span> NH-108 Corridor
+                    <span class="btn-icon-symbol">🛣️</span> NH-108
                 </button>
-                <button class="nav-action-btn btn-action-cyan" id="btn-open-inspector-modal" title="Inspect Scientific Rigor (Saaty AHP CR 0.0106, 94.4% Historical Recall)">
+                <button class="nav-action-btn btn-action-cyan" id="btn-open-inspector-modal" title="Inspect Scientific Rigor (Saaty AHP CR 0.0106, 100% Historical Recall)">
                     <span class="btn-icon-symbol">🔬</span> Rigor Audit
                 </button>
                 <button class="nav-action-btn btn-action-purple" id="btn-open-gee-modal" title="Google Earth Engine Live Satellite Telemetry">
-                    <span class="btn-icon-symbol">🛰️</span> GEE Telemetry
+                    <span class="btn-icon-symbol">🛰️</span> GEE Stream
                 </button>
 
                 <!-- Command Ops Dropdown -->
@@ -160,169 +167,391 @@
             <div class="panel-header">
                 <div>
                     <h2>DISTRICT MULTI-HAZARD INTELLIGENCE</h2>
-                    <span class="panel-sub-label">UTTARKASHI DEOC • REAL-TIME OPERATIONAL PICTURE</span>
+                    <span class="panel-sub-label">UTTARKASHI DEOC • OPERATIONAL DASHBOARD</span>
                 </div>
                 <button class="btn-collapse" id="btn-collapse-left" title="Collapse/Expand Panel">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
                 </button>
             </div>
 
+            <!-- Left Panel 3-Tab Segmented Switcher -->
+            <div class="panel-tab-bar" id="left-panel-tab-bar">
+                <button class="panel-tab-btn active" data-pane="pane-left-overview" id="tab-left-overview">
+                    <span class="tab-icon">📊</span> Overview
+                </button>
+                <button class="panel-tab-btn" data-pane="pane-left-disasters" id="tab-left-disasters">
+                    <span class="tab-icon">🎯</span> 18 Real Disasters
+                </button>
+                <button class="panel-tab-btn" data-pane="pane-left-layers" id="tab-left-layers">
+                    <span class="tab-icon">🗺️</span> GIS & Layers
+                </button>
+            </div>
+
             <div class="panel-body" id="left-panel-body">
-                <!-- District Threat & Telemetry Card -->
-                <div class="info-section gov-card" style="margin-top: 0;">
-                    <div class="section-title-tag">
-                        <h3>📡 Active Operational Telemetry</h3>
-                        <span class="live-pill">LIVE STREAMS</span>
-                    </div>
-                    <div class="telemetry-compact-grid">
-                        <div class="tele-item">
-                            <span class="tele-lbl">PRECIPITATION</span>
-                            <strong class="tele-val text-cyan" id="live-rain-val">35 mm/hr</strong>
+                <!-- TAB 1: OVERVIEW & TELEMETRY -->
+                <div class="panel-tab-pane active" id="pane-left-overview">
+                    <!-- District Threat & Telemetry Card -->
+                    <div class="info-section gov-card" style="margin-top: 0;">
+                        <div class="section-title-tag">
+                            <h3>📡 Active Operational Telemetry</h3>
+                            <span class="live-pill">LIVE STREAMS</span>
                         </div>
-                        <div class="tele-item">
-                            <span class="tele-lbl">24H SATURATION</span>
-                            <strong class="tele-val" id="live-sat-val">50 mm</strong>
-                        </div>
-                        <div class="tele-item">
-                            <span class="tele-lbl">SEISMIC SHAKING</span>
-                            <strong class="tele-val text-amber" id="live-seismic-val">0.02g (SARĀHAN)</strong>
-                        </div>
-                        <div class="tele-item">
-                            <span class="tele-lbl">GEOTECH FOS</span>
-                            <strong class="tele-val text-safe" id="live-fos-val">1.55 (STABLE)</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Habitation Multi-Hazard Risk Tally -->
-                <div class="info-section">
-                    <div class="section-title-tag">
-                        <h3>51 Habitations Statutory Zonation</h3>
-                        <span class="live-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">MHA CRITERIA</span>
-                    </div>
-                    <div class="stat-grid">
-                        <div class="stat-card danger" title="Red Zone: Mandatory Relocation under DM Act Sec 30">
-                            <div class="stat-icon">🔴</div>
-                            <div class="stat-info">
-                                <span class="stat-value" id="stat-red-villages">8</span>
-                                <span class="stat-label">Red (Evac)</span>
+                        <div class="telemetry-compact-grid">
+                            <div class="tele-item">
+                                <span class="tele-lbl">PRECIPITATION</span>
+                                <strong class="tele-val text-cyan" id="live-rain-val">35 mm/hr</strong>
                             </div>
-                        </div>
-                        <div class="stat-card warning" title="Orange Zone: Pre-Monsoon Relocation Recommended">
-                            <div class="stat-icon">🟠</div>
-                            <div class="stat-info">
-                                <span class="stat-value" id="stat-orange-villages">12</span>
-                                <span class="stat-label">Orange (High)</span>
+                            <div class="tele-item">
+                                <span class="tele-lbl">24H SATURATION</span>
+                                <strong class="tele-val" id="live-sat-val">50 mm</strong>
                             </div>
-                        </div>
-                        <div class="stat-card caution" title="Yellow Zone: Active Alert Monitoring">
-                            <div class="stat-icon">🟡</div>
-                            <div class="stat-info">
-                                <span class="stat-value" id="stat-yellow-villages">18</span>
-                                <span class="stat-label">Yellow (Alert)</span>
+                            <div class="tele-item">
+                                <span class="tele-lbl">SEISMIC SHAKING</span>
+                                <strong class="tele-val text-amber" id="live-seismic-val">0.02g (SARĀHAN)</strong>
                             </div>
-                        </div>
-                        <div class="stat-card safe" title="Green Zone: Safe for Habitation & Resettlement">
-                            <div class="stat-icon">🟢</div>
-                            <div class="stat-info">
-                                <span class="stat-value" id="stat-green-villages">13</span>
-                                <span class="stat-label">Green (Safe)</span>
+                            <div class="tele-item">
+                                <span class="tele-lbl">GEOTECH FOS</span>
+                                <strong class="tele-val text-safe" id="live-fos-val">1.55 (STABLE)</strong>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Habitation Multi-Hazard Risk Tally -->
+                    <div class="info-section">
+                        <div class="section-title-tag">
+                            <h3>51 Habitations Statutory Zonation</h3>
+                            <span class="live-pill" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8;">MHA CRITERIA</span>
+                        </div>
+                        <div class="stat-grid">
+                            <div class="stat-card danger" title="Red Zone: Mandatory Relocation under DM Act Sec 30">
+                                <div class="stat-icon">🔴</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-red-villages">8</span>
+                                    <span class="stat-label">Red (Evac)</span>
+                                </div>
+                            </div>
+                            <div class="stat-card warning" title="Orange Zone: Pre-Monsoon Relocation Recommended">
+                                <div class="stat-icon">🟠</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-orange-villages">12</span>
+                                    <span class="stat-label">Orange (High)</span>
+                                </div>
+                            </div>
+                            <div class="stat-card caution" title="Yellow Zone: Active Alert Monitoring">
+                                <div class="stat-icon">🟡</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-yellow-villages">18</span>
+                                    <span class="stat-label">Yellow (Alert)</span>
+                                </div>
+                            </div>
+                            <div class="stat-card safe" title="Green Zone: Safe for Habitation & Resettlement">
+                                <div class="stat-icon">🟢</div>
+                                <div class="stat-info">
+                                    <span class="stat-value" id="stat-green-villages">13</span>
+                                    <span class="stat-label">Green (Safe)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statutory Methodology & Scientific Rigor Card -->
+                    <div class="info-section gov-card model-accuracy-card">
+                        <div class="section-title-tag">
+                            <h3>⚖️ Defensible Scoring & Physics Validation</h3>
+                            <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">AUDITED</span>
+                        </div>
+                        <p class="model-accuracy-sub">Saaty AHP Multi-Criteria Index + Mohr-Coulomb limit equilibrium slope stability physics.</p>
+                        
+                        <div class="metrics-pill-grid">
+                            <div class="metric-pill-box">
+                                <span class="m-val text-amber">0.0106</span>
+                                <span class="m-lbl">SAATY AHP CR</span>
+                                <span class="m-hint">Eigenvector CR &lt; 0.10 ✓</span>
+                            </div>
+                            <div class="metric-pill-box">
+                                <span class="m-val text-safe">100.0%</span>
+                                <span class="m-lbl">DISASTER RECALL</span>
+                                <span class="m-hint">18/18 Events Captured</span>
+                            </div>
+                            <div class="metric-pill-box">
+                                <span class="m-val text-cyan">φ'=33.0°</span>
+                                <span class="m-lbl">MOHR-COULOMB</span>
+                                <span class="m-hint">GSI Colluvium Baseline</span>
+                            </div>
+                            <div class="metric-pill-box">
+                                <span class="m-val text-purple">FOS &lt; 1.0</span>
+                                <span class="m-lbl">PHYSICS GUARDRAIL</span>
+                                <span class="m-hint">Shear Failure Mandate</span>
+                            </div>
+                        </div>
+                        
+                        <div class="provenance-mini-list">
+                            <div class="prov-row"><span>🛰️ Terrain:</span> <strong>NASA SRTM 30m Global DEM</strong></div>
+                            <div class="prov-row"><span>🌿 Vegetation:</span> <strong>Copernicus Sentinel-2 (10m)</strong></div>
+                            <div class="prov-row"><span>👥 Population:</span> <strong>Census 2011 + WorldPop 100m</strong></div>
+                            <div class="prov-row"><span>🌋 Seismic:</span> <strong>USGS FDSNWS Live API</strong></div>
+                        </div>
+                    </div>
+
+                    <!-- Population Risk & Carrying Capacity Balance -->
+                    <div class="info-section">
+                        <div class="section-title-tag">
+                            <h3>Carrying Capacity & Relocation Balance</h3>
+                            <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">DEFENSIBLE</span>
+                        </div>
+                        <div class="capacity-box">
+                            <div class="capacity-row">
+                                <span>Surveyed Population:</span>
+                                <strong class="mono-readout" id="stat-total-pop">6,623</strong>
+                            </div>
+                            <div class="capacity-row">
+                                <span>At Critical Red/Orange Risk:</span>
+                                <strong class="danger-text mono-readout" id="stat-at-risk-pop">1,842</strong>
+                            </div>
+                            <div class="capacity-row">
+                                <span>Safe Alternative Sites:</span>
+                                <strong class="text-safe mono-readout" id="stat-safe-sites-count">130 Sites</strong>
+                            </div>
+                            <div class="capacity-row">
+                                <span>Total Resettlement Capacity:</span>
+                                <strong class="mono-readout" id="stat-total-carrying-capacity">471,956</strong>
+                            </div>
+                            <div class="capacity-row highlight">
+                                <span>Net District Buffer:</span>
+                                <strong class="text-safe mono-readout" id="stat-capacity-buffer">+470,114 (Surplus)</strong>
+                            </div>
+                        </div>
+                        <button class="btn btn-action gov-action-btn" id="btn-inspect-capacity-ledger" style="margin-top: 10px; width: 100%;">
+                            <span>⚖️</span> Inspect NDMA Safe Site Allocation Ledger
+                        </button>
+                    </div>
+
+                    <!-- Hidden anchors for compatibility -->
+                    <div class="hidden">
+                        <div id="risk-bar-container"></div>
+                        <span id="stat-relocate-count">20</span>
+                        <span id="stat-immediate">8</span>
+                        <span id="stat-short-term">12</span>
+                        <span id="stat-medium-term">18</span>
+                        <span id="stat-relocation-needed">1,842</span>
+                        <div id="model-metrics"></div>
+                    </div>
                 </div>
 
-                <!-- Statutory Methodology & Scientific Rigor Card -->
-                <div class="info-section gov-card model-accuracy-card">
-                    <div class="section-title-tag">
-                        <h3>⚖️ Defensible Scoring & Physics Validation</h3>
-                        <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">AUDITED</span>
-                    </div>
-                    <p class="model-accuracy-sub">Saaty AHP Multi-Criteria Index + Mohr-Coulomb limit equilibrium slope stability physics.</p>
-                    
-                    <div class="metrics-pill-grid">
-                        <div class="metric-pill-box">
-                            <span class="m-val text-amber">0.0106</span>
-                            <span class="m-lbl">SAATY AHP CR</span>
-                            <span class="m-hint">Eigenvector CR &lt; 0.10 ✓</span>
+                <!-- TAB 2: 18 REAL DISASTERS BENCHMARK & ACCURACY PROOF -->
+                <div class="panel-tab-pane hidden" id="pane-left-disasters">
+                    <div class="disaster-audit-hero gov-card" style="margin-top: 0;">
+                        <div class="disaster-audit-top">
+                            <div class="audit-headline-wrap">
+                                <span class="audit-badge-pill">EMPIRICAL BENCHMARK</span>
+                                <h3>18 Verified Historical Disasters</h3>
+                            </div>
+                            <div class="audit-stat-score">
+                                <span class="score-num">100%</span>
+                                <span class="score-lbl">Recall</span>
+                            </div>
                         </div>
-                        <div class="metric-pill-box">
-                            <span class="m-val text-safe">94.4%</span>
-                            <span class="m-lbl">DISASTER RECALL</span>
-                            <span class="m-hint">17/18 Events Captured</span>
-                        </div>
-                        <div class="metric-pill-box">
-                            <span class="m-val text-cyan">φ'=33.0°</span>
-                            <span class="m-lbl">MOHR-COULOMB</span>
-                            <span class="m-hint">GSI Colluvium Baseline</span>
-                        </div>
-                        <div class="metric-pill-box">
-                            <span class="m-val text-purple">FOS &lt; 1.0</span>
-                            <span class="m-lbl">PHYSICS GUARDRAIL</span>
-                            <span class="m-hint">Shear Failure Mandate</span>
+                        <p class="disaster-audit-desc">
+                            Cross-verified against official Geological Survey of India (GSI) & USDMA archives. All 18 events map to Red & Orange Hazard Zones (mean centroid distance 0.94 km). Click any card to fly the 3D camera and trigger AI geotechnical diagnosis.
+                        </p>
+                        <div class="audit-meta-summary">
+                            <div class="audit-chip red"><span class="chip-dot red"></span> <strong>8</strong> Red Zone (Critical Failure)</div>
+                            <div class="audit-chip orange"><span class="chip-dot orange"></span> <strong>10</strong> Orange Zone (Near Red)</div>
                         </div>
                     </div>
-                    
-                    <div class="provenance-mini-list">
-                        <div class="prov-row"><span>🛰️ Terrain:</span> <strong>NASA SRTM 30m Global DEM</strong></div>
-                        <div class="prov-row"><span>🌿 Vegetation:</span> <strong>Copernicus Sentinel-2 (10m)</strong></div>
-                        <div class="prov-row"><span>👥 Population:</span> <strong>Census 2011 + WorldPop 100m</strong></div>
-                        <div class="prov-row"><span>🌋 Seismic:</span> <strong>USGS FDSNWS Live API</strong></div>
+
+                    <!-- Filter pills -->
+                    <div class="disaster-filter-bar">
+                        <button class="btn-d-filter active" data-filter="all">All (18)</button>
+                        <button class="btn-d-filter" data-filter="cloudburst">Cloudburst (7)</button>
+                        <button class="btn-d-filter" data-filter="flood">Flood (6)</button>
+                        <button class="btn-d-filter" data-filter="landslide">Landslide (5)</button>
+                    </div>
+
+                    <!-- List of 18 Historical Disasters -->
+                    <div class="disasters-benchmark-list" id="disasters-benchmark-list">
+                        <div class="loading-placeholder-text">Loading 18 verified historical disaster benchmarks...</div>
                     </div>
                 </div>
 
-                <!-- Population Risk & Carrying Capacity Balance -->
-                <div class="info-section">
-                    <div class="section-title-tag">
-                        <h3>Carrying Capacity & Relocation Balance</h3>
-                        <span class="live-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">DEFENSIBLE</span>
-                    </div>
-                    <div class="capacity-box">
-                        <div class="capacity-row">
-                            <span>Surveyed Population:</span>
-                            <strong class="mono-readout" id="stat-total-pop">6,623</strong>
+                <!-- TAB 3: GIS LAYERS, SATELLITE & BASEMAPS -->
+                <div class="panel-tab-pane hidden" id="pane-left-layers">
+                    <!-- Basemap Switcher -->
+                    <div class="control-section gov-card" style="margin-top: 0;">
+                        <div class="section-title-tag">
+                            <h3>3D Basemap Theme</h3>
                         </div>
-                        <div class="capacity-row">
-                            <span>At Critical Red/Orange Risk:</span>
-                            <strong class="danger-text mono-readout" id="stat-at-risk-pop">1,842</strong>
+                        <div class="basemap-options">
+                            <button class="btn-basemap active" id="bm-satellite" data-style="satellite">
+                                <span>🛰️</span> 3D Satellite
+                            </button>
+                            <button class="btn-basemap" id="bm-dark" data-style="dark">
+                                <span>🌙</span> Dark Ops
+                            </button>
+                            <button class="btn-basemap" id="bm-topo" data-style="topo">
+                                <span>🏔️</span> Topo Relief
+                            </button>
                         </div>
-                        <div class="capacity-row">
-                            <span>Safe Alternative Sites:</span>
-                            <strong class="text-safe mono-readout" id="stat-safe-sites-count">130 Sites</strong>
-                        </div>
-                        <div class="capacity-row">
-                            <span>Total Resettlement Capacity:</span>
-                            <strong class="mono-readout" id="stat-total-carrying-capacity">471,956</strong>
-                        </div>
-                        <div class="capacity-row highlight">
-                            <span>Net District Buffer:</span>
-                            <strong class="text-safe mono-readout" id="stat-capacity-buffer">+470,114 (Surplus)</strong>
+                        <div class="slider-control" style="margin-top: 10px;">
+                            <label>3D Relief Exaggeration</label>
+                            <input type="range" id="terrain-exaggeration" min="0.5" max="2.5" step="0.1" value="1.5">
+                            <span class="slider-value" id="terrain-exag-value">1.5x</span>
                         </div>
                     </div>
-                    <button class="btn btn-action gov-action-btn" id="btn-inspect-capacity-ledger" style="margin-top: 10px; width: 100%;">
-                        <span>⚖️</span> Inspect NDMA Safe Site Allocation Ledger
-                    </button>
-                </div>
 
-                <!-- Hidden anchors for compatibility -->
-                <div class="hidden">
-                    <div id="risk-bar-container"></div>
-                    <span id="stat-relocate-count">20</span>
-                    <span id="stat-immediate">8</span>
-                    <span id="stat-short-term">12</span>
-                    <span id="stat-medium-term">18</span>
-                    <span id="stat-relocation-needed">1,842</span>
-                    <div id="model-metrics"></div>
+                    <!-- Google Earth Engine Live Satellite Stream -->
+                    <div class="control-section gee-satellite-panel gov-card">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <h3 style="margin: 0; color: #38bdf8; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
+                                <span>🛰️</span> GEE Live Satellite Stream
+                            </h3>
+                            <span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; padding: 2px 6px; border-radius: 12px; font-weight: 700; letter-spacing: 0.5px;">
+                                ● LIVE GEE
+                            </span>
+                        </div>
+                        <div style="font-size: 0.70rem; color: var(--text-secondary); margin-bottom: 8px; font-family: monospace;">
+                            GCP Project: <span style="color: #f1f5f9; font-weight: 600;">bhu-rakshak-509111</span>
+                        </div>
+
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-gee-sentinel2" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label" style="font-weight: 500;">Sentinel-2 10m Optical (Copernicus)</span>
+                        </div>
+
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-gee-ndvi">
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Sentinel-2 NDVI (Vegetation Scarring)</span>
+                        </div>
+
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-gee-dw">
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Dynamic World 10m LULC (AI Land Cover)</span>
+                        </div>
+
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-gee-srtm">
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">USGS SRTM 30m Topographic Hillshade</span>
+                        </div>
+
+                        <div class="slider-control" style="margin-top: 8px;">
+                            <label style="font-size: 0.72rem; color: var(--text-secondary);">Satellite Opacity</label>
+                            <input type="range" id="gee-satellite-opacity" min="0.1" max="1.0" step="0.05" value="0.85">
+                            <span class="slider-value" id="gee-opacity-val">85%</span>
+                        </div>
+                    </div>
+
+                    <!-- Map Layers -->
+                    <div class="control-section gov-card">
+                        <div class="section-title-tag">
+                            <h3>GIS Layer Overlays</h3>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-hazard-zones" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Hazard Zones (Red/Orange/Yellow)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-delta-layer" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Dynamic Expansion Delta (Pulsing Red)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-villages" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Habitations (Prioritized)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-gee-worldpop" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">🛰️ GEE WorldPop Satellite Density (100m)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-safe-zones" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Safe Relocation Sites (AHP Ranked)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-disasters" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Historical Disaster Epicenters</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-rivers" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">Drainage & River Corridors (HydroSHEDS)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-corridor" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">🛣️ 100km NH-108 Corridor (20 Segments)</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-faults" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">⚡ MCT Tectonic Fault & Shear Corridor</span>
+                        </div>
+                        <div class="layer-toggle">
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="toggle-boundary" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                            <span class="toggle-label">🏛️ Uttarkashi District Border (GADM L3 • 8,016 km²)</span>
+                        </div>
+                    </div>
+
+                    <!-- Quick Fly-to Locations -->
+                    <div class="control-section gov-card">
+                        <div class="section-title-tag">
+                            <h3>Focus Hotspots</h3>
+                        </div>
+                        <div class="quick-actions">
+                            <button class="btn btn-action" id="btn-fly-overview"><span>🌍</span> Whole District</button>
+                            <button class="btn btn-action" id="btn-fly-uttarkashi"><span>📍</span> Uttarkashi Town</button>
+                            <button class="btn btn-action" id="btn-fly-dharali"><span>⚠️</span> Dharali (2025 Disaster)</button>
+                            <button class="btn btn-action" id="btn-fly-asiganga"><span>🌊</span> Asi Ganga Valley (2012)</button>
+                            <button class="btn btn-action" id="btn-fly-gangotri"><span>🏔️</span> Upper Bhagirathi</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </aside>
 
-        <!-- Right Panel — Relocation Command & Dynamic Environmental Triggers -->
+        <!-- Right Panel — AI Analyst & Operational Relocation Command -->
         <aside id="right-panel" class="side-panel right-panel glof-ews-console">
             <div class="panel-header">
                 <div>
-                    <h2>RELOCATION & EARLY WARNING COMMAND</h2>
-                    <span class="panel-sub-label">STATUTORY EVACUATION DIRECTIVES • DM ACT 2005</span>
+                    <h2>AI ANALYST & RELOCATION COMMAND</h2>
+                    <span class="panel-sub-label">NATURAL-LANGUAGE HAZARD INTELLIGENCE • DM ACT 2005</span>
                 </div>
                 <button class="btn-collapse" id="btn-collapse-right" title="Collapse/Expand Console">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
@@ -330,414 +559,305 @@
             </div>
 
             <div class="panel-body" id="right-panel-body">
-                <!-- Actionable Relocation Priorities (DM Act 2005 Sec 30) -->
-                <div class="control-section gov-card relocation-priorities-card">
-                    <div class="section-title-tag">
-                        <h3>📋 Actionable Relocation Order Priorities</h3>
-                        <span class="live-pill" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">SEC 30 DM ACT</span>
-                    </div>
-                    <p class="control-description">Habitations requiring pre-monsoon relocation with allocated safe resettlement sites and road access.</p>
-                    
-                    <div class="priorities-table-wrap">
-                        <div id="priorities-compact-list" class="priorities-compact-list">
-                            <!-- Populated dynamically by initRelocationPriorityList() -->
-                            <div class="loading-placeholder-text">Loading verified relocation priorities...</div>
+                <!-- TOP PINNED HERO DOCK: BhuRakshak AI Analyst -->
+                <div id="ai-analyst-dock" class="ai-analyst-dock">
+                    <div class="ai-dock-header">
+                        <div class="ai-dock-title-box">
+                            <span class="ai-sparkle-core">🧠</span>
+                            <div>
+                                <h3 class="ai-dock-title">BhuRakshak AI Terrain Analyst</h3>
+                                <span class="ai-dock-subtitle">Plain-English Geotechnical & Hazard Diagnostic</span>
+                            </div>
                         </div>
+                        <span class="ai-status-pulse">● CLICK MAP TO DIAGNOSE</span>
+                    </div>
+
+                    <!-- Quick Sample Hotspot Buttons -->
+                    <div class="ai-quick-samples-bar">
+                        <span class="samples-label">Quick Test:</span>
+                        <button class="btn-sample-chip red" data-lat="30.741" data-lng="78.423" data-name="Mando Debris Flow" data-slope="39.5">🔴 Mando</button>
+                        <button class="btn-sample-chip red" data-lat="30.710" data-lng="78.480" data-name="Nirakot Cloudburst" data-slope="40.9">🔴 Nirakot</button>
+                        <button class="btn-sample-chip orange" data-lat="31.023" data-lng="78.784" data-name="Dharali Gorge" data-slope="34.0">🟠 Dharali</button>
+                        <button class="btn-sample-chip green" data-lat="30.540" data-lng="78.310" data-name="Chinyalisaur Safe Haven" data-slope="8.5">🟢 Safe Site</button>
+                    </div>
+
+                    <!-- Container where AI explanation card is rendered -->
+                    <div id="ai-explanation-content" class="ai-explanation-content">
+                        <!-- Populated by AIHazardAnalyst.renderCard() -->
                     </div>
                 </div>
 
-                <!-- Dynamic Hazard Trigger Controller -->
-                <div class="control-section trigger-section gov-card">
-                    <div class="section-title-tag">
-                        <h3>⚡ Dynamic Multi-Hazard Trigger & Pore Pressure</h3>
-                        <span class="live-pill" id="mode-status-badge">LIVE SENSORS</span>
-                    </div>
-                    <p class="control-description">Coupled IMD precipitation, USGS seismic acceleration, and Mohr-Coulomb slope stability physics.</p>
-                    
-                    <button class="btn btn-action gov-action-btn" id="btn-fetch-live-weather">
-                        <span>🌐</span> Pull Live IMD / Open-Meteo Weather
+                <!-- Right Segmented 3-Tab Bar -->
+                <div class="panel-tab-bar" id="right-panel-tab-bar">
+                    <button class="panel-tab-btn active" data-pane="pane-right-triggers" id="tab-right-triggers">
+                        <span class="tab-icon">⚡</span> Triggers
                     </button>
+                    <button class="panel-tab-btn" data-pane="pane-right-relocation" id="tab-right-relocation">
+                        <span class="tab-icon">📋</span> Relocation Orders
+                    </button>
+                    <button class="panel-tab-btn" data-pane="pane-right-simulator" id="tab-right-simulator">
+                        <span class="tab-icon">🏔️</span> 3D Simulator
+                    </button>
+                </div>
 
-                    <!-- MHA / NDMA Incident Command Operating Profiles -->
-                    <div class="mha-profiles-box">
-                        <div class="mha-profiles-title">
-                            <span>🏛️ MHA INCIDENT COMMAND PROFILES</span>
-                            <span class="mha-profiles-sub">One-Touch Standardized Emergency Directives</span>
+                <!-- TAB 1: DYNAMIC HAZARD TRIGGERS & GEOTECHNICAL PHYSICS -->
+                <div class="panel-tab-pane active" id="pane-right-triggers">
+                    <div class="control-section trigger-section gov-card" style="margin-top: 0;">
+                        <div class="section-title-tag">
+                            <h3>⚡ Dynamic Multi-Hazard Trigger & Pore Pressure</h3>
+                            <span class="live-pill" id="mode-status-badge">LIVE SENSORS</span>
                         </div>
-                        <div class="mha-scenario-grid">
-                            <button class="btn-mha-profile active" data-scenario="green" title="Standard Peacetime Monitoring (Rain 35mm/hr, 0.0g kh)">
-                                <span class="profile-dot green"></span>
-                                <span class="profile-name">CODE GREEN</span>
-                                <span class="profile-desc">Seasonal Normal</span>
-                            </button>
-                            <button class="btn-mha-profile" data-scenario="yellow" title="USDMA Watch: Active Monsoon Trough (Rain 55mm/hr, 0.05g kh)">
-                                <span class="profile-dot yellow"></span>
-                                <span class="profile-name">CODE YELLOW</span>
-                                <span class="profile-desc">Monsoon Watch</span>
-                            </button>
-                            <button class="btn-mha-profile" data-scenario="orange" title="USDMA Warning: Severe Cloudburst (Rain 110mm/hr, 0.12g kh)">
-                                <span class="profile-dot orange"></span>
-                                <span class="profile-name">CODE ORANGE</span>
-                                <span class="profile-desc">Cloudburst Surge</span>
-                            </button>
-                            <button class="btn-mha-profile" data-scenario="red" title="MHA Code Red: Compound Megahazard (Rain 160mm/hr, 0.30g kh)">
-                                <span class="profile-dot red"></span>
-                                <span class="profile-name">CODE RED</span>
-                                <span class="profile-desc">Compound Catastrophe</span>
-                            </button>
-                        </div>
-                    </div>
+                        <p class="control-description">Coupled IMD precipitation, USGS seismic acceleration, and Mohr-Coulomb slope stability physics.</p>
+                        
+                        <button class="btn btn-action gov-action-btn" id="btn-fetch-live-weather">
+                            <span>🌐</span> Pull Live IMD / Open-Meteo Weather
+                        </button>
 
-                    <!-- Real Geotechnical Factor of Safety Gauge -->
-                    <div class="geotech-gauge-box">
-                        <div class="gauge-header">
-                            <span class="gauge-title">Mohr-Coulomb Slope Stability (Factor of Safety)</span>
-                            <span class="gauge-fs-badge stable" id="fs-badge">FS: 1.55</span>
-                        </div>
-                        <div class="gauge-bar-bg">
-                            <div class="gauge-bar-fill" id="fs-gauge-fill" style="width: 75%;"></div>
-                            <div class="gauge-limit-marker" style="left: 33%;" title="FS = 1.0 (Critical Failure)"></div>
-                            <div class="gauge-limit-marker" style="left: 50%;" title="FS = 1.5 (Marginal Stability)"></div>
-                        </div>
-                        <div class="gauge-sub-row">
-                            <span>Pore Press (u): <strong id="fs-pore-val">0.0 kPa</strong></span>
-                            <span>Driving (τ): <strong id="fs-shear-val">19.8 kPa</strong></span>
-                            <span>Strength (τf): <strong id="fs-resist-val">30.9 kPa</strong></span>
-                    </div>
-
-                    <!-- Geotechnical Limit Equilibrium & Hazard Diagnostic (AHP + Mohr-Coulomb) -->
-                    <div class="dual-brain-live-card" id="dual-brain-live-card">
-                        <div class="dual-brain-header">
-                            <span class="db-title">⚖️ Geotechnical & Hazard Diagnostic</span>
-                            <span class="db-badge" id="db-live-badge">AHP + Mohr-Coulomb</span>
-                        </div>
-                        <div class="db-comparison-grid">
-                            <div class="db-col">
-                                <span class="db-col-lbl">AHP Risk Index</span>
-                                <span class="db-col-val" id="db-xgboost-score">0.18</span>
+                        <!-- MHA / NDMA Incident Command Operating Profiles -->
+                        <div class="mha-profiles-box">
+                            <div class="mha-profiles-title">
+                                <span>🏛️ MHA INCIDENT COMMAND PROFILES</span>
+                                <span class="mha-profiles-sub">One-Touch Standardized Emergency Directives</span>
                             </div>
-                            <div class="db-col">
-                                <span class="db-col-lbl">Surrogate GBDT</span>
-                                <span class="db-col-val" id="db-mlp-score">0.19</span>
-                            </div>
-                            <div class="db-col">
-                                <span class="db-col-lbl">Mohr-Coulomb FOS</span>
-                                <span class="db-col-val text-safe" id="db-physics-fos">1.55</span>
+                            <div class="mha-scenario-grid">
+                                <button class="btn-mha-profile active" data-scenario="green" title="Standard Peacetime Monitoring (Rain 35mm/hr, 0.0g kh)">
+                                    <span class="profile-dot green"></span>
+                                    <span class="profile-name">CODE GREEN</span>
+                                    <span class="profile-desc">Seasonal Normal</span>
+                                </button>
+                                <button class="btn-mha-profile" data-scenario="yellow" title="USDMA Watch: Active Monsoon Trough (Rain 55mm/hr, 0.05g kh)">
+                                    <span class="profile-dot yellow"></span>
+                                    <span class="profile-name">CODE YELLOW</span>
+                                    <span class="profile-desc">Monsoon Watch</span>
+                                </button>
+                                <button class="btn-mha-profile" data-scenario="orange" title="USDMA Warning: Severe Cloudburst (Rain 110mm/hr, 0.12g kh)">
+                                    <span class="profile-dot orange"></span>
+                                    <span class="profile-name">CODE ORANGE</span>
+                                    <span class="profile-desc">Cloudburst Surge</span>
+                                </button>
+                                <button class="btn-mha-profile" data-scenario="red" title="MHA Code Red: Compound Megahazard (Rain 160mm/hr, 0.30g kh)">
+                                    <span class="profile-dot red"></span>
+                                    <span class="profile-name">CODE RED</span>
+                                    <span class="profile-desc">Compound Catastrophe</span>
+                                </button>
                             </div>
                         </div>
-                        <div class="db-attribution-row" id="db-attribution-row">
-                            <span class="attrib-pill" id="attrib-slope">Slope: 38%</span>
-                            <span class="attrib-pill" id="attrib-rain">Rain/Sat: 32%</span>
-                            <span class="attrib-pill" id="attrib-hydro">Hydro TWI: 18%</span>
-                            <span class="attrib-pill" id="attrib-tect">MCT Fault: 12%</span>
-                        </div>
-                    </div>
 
-                    <div class="slider-control" style="margin-top: 14px;">
-                        <div class="slider-header-flex">
-                            <label>Rainfall Intensity (mm/hr)</label>
-                            <span class="slider-value mono-readout" id="sim-rainfall-value">35 mm/hr (Baseline)</span>
+                        <!-- Real Geotechnical Factor of Safety Gauge -->
+                        <div class="geotech-gauge-box">
+                            <div class="gauge-header">
+                                <span class="gauge-title">Mohr-Coulomb Slope Stability (Factor of Safety)</span>
+                                <span class="gauge-fs-badge stable" id="fs-badge">FS: 1.55</span>
+                            </div>
+                            <div class="gauge-bar-bg">
+                                <div class="gauge-bar-fill" id="fs-gauge-fill" style="width: 75%;"></div>
+                                <div class="gauge-limit-marker" style="left: 33%;" title="FS = 1.0 (Critical Failure)"></div>
+                                <div class="gauge-limit-marker" style="left: 50%;" title="FS = 1.5 (Marginal Stability)"></div>
+                            </div>
+                            <div class="gauge-sub-row">
+                                <span>Pore Press (u): <strong id="fs-pore-val">0.0 kPa</strong></span>
+                                <span>Driving (τ): <strong id="fs-shear-val">19.8 kPa</strong></span>
+                                <span>Strength (τf): <strong id="fs-resist-val">30.9 kPa</strong></span>
+                            </div>
                         </div>
-                        <input type="range" id="sim-rainfall" min="15" max="250" step="5" value="35" class="gov-slider">
-                    </div>
 
-                    <!-- Rainfall Quick Presets -->
-                    <div class="preset-buttons gov-presets">
-                        <button class="btn-preset active" data-rain="35">Baseline (35mm)</button>
-                        <button class="btn-preset" data-rain="75">Monsoon (75mm)</button>
-                        <button class="btn-preset" data-rain="140">Cloudburst (140mm)</button>
-                        <button class="btn-preset" data-rain="220">Extreme Deluge (220mm)</button>
-                    </div>
+                        <!-- Geotechnical Limit Equilibrium & Hazard Diagnostic (AHP + Mohr-Coulomb) -->
+                        <div class="dual-brain-live-card" id="dual-brain-live-card">
+                            <div class="dual-brain-header">
+                                <span class="db-title">⚖️ Geotechnical & Hazard Diagnostic</span>
+                                <span class="db-badge" id="db-live-badge">AHP + Mohr-Coulomb</span>
+                            </div>
+                            <div class="db-comparison-grid">
+                                <div class="db-col">
+                                    <span class="db-col-lbl">AHP Risk Index</span>
+                                    <span class="db-col-val" id="db-xgboost-score">0.18</span>
+                                </div>
+                                <div class="db-col">
+                                    <span class="db-col-lbl">Surrogate GBDT</span>
+                                    <span class="db-col-val" id="db-mlp-score">0.19</span>
+                                </div>
+                                <div class="db-col">
+                                    <span class="db-col-lbl">Mohr-Coulomb FOS</span>
+                                    <span class="db-col-val text-safe" id="db-physics-fos">1.55</span>
+                                </div>
+                            </div>
+                            <div class="db-attribution-row" id="db-attribution-row">
+                                <span class="attrib-pill" id="attrib-slope">Slope: 38%</span>
+                                <span class="attrib-pill" id="attrib-rain">Rain/Sat: 32%</span>
+                                <span class="attrib-pill" id="attrib-hydro">Hydro TWI: 18%</span>
+                                <span class="attrib-pill" id="attrib-tect">MCT Fault: 12%</span>
+                            </div>
+                        </div>
 
-                    <div class="slider-control" style="margin-top: 12px;">
-                        <div class="slider-header-flex">
-                            <label>Antecedent Soil Saturation (24h mm)</label>
-                            <span class="slider-value mono-readout" id="sim-saturation-value">50 mm</span>
+                        <div class="slider-control" style="margin-top: 14px;">
+                            <div class="slider-header-flex">
+                                <label>Rainfall Intensity (mm/hr)</label>
+                                <span class="slider-value mono-readout" id="sim-rainfall-value">35 mm/hr (Baseline)</span>
+                            </div>
+                            <input type="range" id="sim-rainfall" min="15" max="250" step="5" value="35" class="gov-slider">
                         </div>
-                        <input type="range" id="sim-saturation" min="0" max="200" step="5" value="50" class="gov-slider">
-                    </div>
 
-                    <!-- Himalayan Seismic Acceleration Slider -->
-                    <div class="slider-control" style="margin-top: 12px;">
-                        <div class="slider-header-flex">
-                            <label>Himalayan Seismic Shaking (kh Ground Accel)</label>
-                            <span class="slider-value mono-readout" id="sim-seismic-value">0.00g (Baseline)</span>
+                        <!-- Rainfall Quick Presets -->
+                        <div class="preset-buttons gov-presets">
+                            <button class="btn-preset active" data-rain="35">Baseline (35mm)</button>
+                            <button class="btn-preset" data-rain="75">Monsoon (75mm)</button>
+                            <button class="btn-preset" data-rain="140">Cloudburst (140mm)</button>
+                            <button class="btn-preset" data-rain="220">Extreme Deluge (220mm)</button>
                         </div>
-                        <input type="range" id="sim-seismic" min="0.00" max="0.45" step="0.05" value="0.00" class="gov-slider">
-                    </div>
 
-                    <!-- Seismic Presets -->
-                    <div class="preset-buttons gov-presets" style="margin-top: 6px;">
-                        <button class="btn-preset-seismic active" data-kh="0.00">Zone IV Base (0.00g)</button>
-                        <button class="btn-preset-seismic" data-kh="0.10">Tremor (0.10g)</button>
-                        <button class="btn-preset-seismic" data-kh="0.25">M6.8 Quake (0.25g)</button>
-                        <button class="btn-preset-seismic" data-kh="0.40">M8.0 Deluge (0.40g)</button>
-                    </div>
+                        <div class="slider-control" style="margin-top: 12px;">
+                            <div class="slider-header-flex">
+                                <label>Antecedent Soil Saturation (24h mm)</label>
+                                <span class="slider-value mono-readout" id="sim-saturation-value">50 mm</span>
+                            </div>
+                            <input type="range" id="sim-saturation" min="0" max="200" step="5" value="50" class="gov-slider">
+                        </div>
 
-                    <!-- Dynamic Alert Tiers Distribution -->
-                    <div class="alert-tiers-grid gov-tiers" style="margin-top: 14px;">
-                        <div class="alert-tier-pill evac">
-                            <span>EVACUATE</span>
-                            <span class="count" id="alert-badge-evac">0</span>
+                        <!-- Himalayan Seismic Acceleration Slider -->
+                        <div class="slider-control" style="margin-top: 12px;">
+                            <div class="slider-header-flex">
+                                <label>Himalayan Seismic Shaking (kh Ground Accel)</label>
+                                <span class="slider-value mono-readout" id="sim-seismic-value">0.00g (Baseline)</span>
+                            </div>
+                            <input type="range" id="sim-seismic" min="0.00" max="0.45" step="0.05" value="0.00" class="gov-slider">
                         </div>
-                        <div class="alert-tier-pill warn">
-                            <span>WARNING</span>
-                            <span class="count" id="alert-badge-warn">0</span>
-                        </div>
-                        <div class="alert-tier-pill watch">
-                            <span>WATCH</span>
-                            <span class="count" id="alert-badge-watch">0</span>
-                        </div>
-                        <div class="alert-tier-pill normal">
-                            <span>NORMAL</span>
-                            <span class="count" id="alert-badge-normal">58</span>
-                        </div>
-                    </div>
 
-                    <!-- Simulation Live Feedback Card -->
-                    <div class="sim-feedback-card gov-feedback" id="sim-feedback-card">
-                        <div class="feedback-row">
-                            <span>Expanded Red Grid Cells:</span>
-                            <strong class="danger-text mono-readout" id="feedback-new-cells">0 cells</strong>
+                        <!-- Seismic Presets -->
+                        <div class="preset-buttons gov-presets" style="margin-top: 6px;">
+                            <button class="btn-preset-seismic active" data-kh="0.00">Zone IV Base (0.00g)</button>
+                            <button class="btn-preset-seismic" data-kh="0.10">Tremor (0.10g)</button>
+                            <button class="btn-preset-seismic" data-kh="0.25">M6.8 Quake (0.25g)</button>
+                            <button class="btn-preset-seismic" data-kh="0.40">M8.0 Deluge (0.40g)</button>
                         </div>
-                        <div class="feedback-row">
-                            <span>Endangered Habitations:</span>
-                            <strong class="danger-text mono-readout" id="feedback-new-villages">0 habitations</strong>
-                        </div>
-                        <div class="feedback-row">
-                            <span>Displaced Population Surge:</span>
-                            <strong class="mono-readout" id="feedback-displaced-pop">0</strong>
-                        </div>
-                        <div class="feedback-row">
-                            <span>Safe Sites Stressed/Deficit:</span>
-                            <strong class="mono-readout" id="feedback-stressed-sites">0 of 130 Sites</strong>
-                        </div>
-                        <div class="feedback-row">
-                            <span>Net District Headroom Buffer:</span>
-                            <strong class="text-safe mono-readout" id="feedback-net-buffer">+410,059</strong>
-                        </div>
-                    </div>
 
-                    <div class="sim-quick-actions-flex" style="margin-top: 10px; display: flex; gap: 8px;">
-                        <button class="btn btn-action gov-action-btn" id="btn-quick-evac-corridors" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Compute and render terrain-following Dijkstra evacuation corridors from Red Zone habitations to Green Zone safe sites">
-                            <span>⚡</span> Route Evacuation Corridors
-                        </button>
-                        <button class="btn btn-action gov-action-btn" id="btn-toggle-mct-fault" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Toggle GSI Main Central Thrust (MCT) active fault trace and 2.5km shear corridor on 3D map">
-                            <span>🌋</span> MCT Fault Overlay
-                        </button>
-                    </div>
-
-                    <div class="sim-buttons">
-                        <button class="btn btn-simulate gov-btn-simulate" id="btn-trigger-run">
-                            <span>⚡ Recompute Dynamic Risk</span>
-                        </button>
-                        <button class="btn btn-reset gov-btn-reset" id="btn-trigger-reset">
-                            <span>↺ Reset to Baseline</span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 3D Physical Hazard Flow & Surge Simulation -->
-                <div class="control-section flow-simulation-section gov-card">
-                    <div class="section-title-tag">
-                        <h3>🏔️ 3D Physical Torrent & Evacuation Simulator</h3>
-                        <span class="live-pill accent-pill">PHYSICS DTM</span>
-                    </div>
-                    <p class="control-description">Calculates Voellmy-fluid energy runout, entrainment depth, and Dijkstra valley evacuation paths.</p>
-                    
-                    <div class="flow-actions-grid gov-actions">
-                        <button class="btn-flow-sim gov-btn-flow red" id="btn-sim-debris-flow">
-                            <span class="led-dot red"></span> Run Voellmy Debris Flow
-                        </button>
-                        <button class="btn-flow-sim gov-btn-flow cyan" id="btn-sim-flood-surge">
-                            <span class="led-dot cyan"></span> Run River Inundation Surge
-                        </button>
-                        <button class="btn-flow-sim gov-btn-flow green" id="btn-sim-evac-routes">
-                            <span class="led-dot green"></span> Compute Dijkstra Valley Trails
-                        </button>
-                        <button class="btn-flow-clear gov-btn-flow dark" id="btn-sim-clear-flow">
-                            <span>🧹</span> Clear 3D Overlays
-                        </button>
-                    </div>
-
-                    <div class="flow-stats-box industrial-stats hidden" id="flow-stats-box">
-                        <div class="flow-stat-row">
-                            <span id="flow-stat-label">Debris Runout Distance:</span>
-                            <strong class="mono-readout" id="flow-stat-value">6.8 km</strong>
+                        <!-- Dynamic Alert Tiers Distribution -->
+                        <div class="alert-tiers-grid gov-tiers" style="margin-top: 14px;">
+                            <div class="alert-tier-pill evac">
+                                <span>EVACUATE</span>
+                                <span class="count" id="alert-badge-evac">0</span>
+                            </div>
+                            <div class="alert-tier-pill warn">
+                                <span>WARNING</span>
+                                <span class="count" id="alert-badge-warn">0</span>
+                            </div>
+                            <div class="alert-tier-pill watch">
+                                <span>WATCH</span>
+                                <span class="count" id="alert-badge-watch">0</span>
+                            </div>
+                            <div class="alert-tier-pill normal">
+                                <span>NORMAL</span>
+                                <span class="count" id="alert-badge-normal">58</span>
+                            </div>
                         </div>
-                        <div class="flow-stat-row">
-                            <span>Peak Voellmy Velocity:</span>
-                            <strong class="mono-readout" id="flow-stat-velocity">18.5 m/s</strong>
+
+                        <!-- Simulation Live Feedback Card -->
+                        <div class="sim-feedback-card gov-feedback" id="sim-feedback-card">
+                            <div class="feedback-row">
+                                <span>Expanded Red Grid Cells:</span>
+                                <strong class="danger-text mono-readout" id="feedback-new-cells">0 cells</strong>
+                            </div>
+                            <div class="feedback-row">
+                                <span>Endangered Habitations:</span>
+                                <strong class="danger-text mono-readout" id="feedback-new-villages">0 habitations</strong>
+                            </div>
+                            <div class="feedback-row">
+                                <span>Displaced Population Surge:</span>
+                                <strong class="mono-readout" id="feedback-displaced-pop">0</strong>
+                            </div>
+                            <div class="feedback-row">
+                                <span>Safe Sites Stressed/Deficit:</span>
+                                <strong class="mono-readout" id="feedback-stressed-sites">0 of 130 Sites</strong>
+                            </div>
+                            <div class="feedback-row">
+                                <span>Net District Headroom Buffer:</span>
+                                <strong class="text-safe mono-readout" id="feedback-net-buffer">+410,059</strong>
+                            </div>
                         </div>
-                        <div class="flow-stat-row">
-                            <span>Elevation Drop / Gradient:</span>
-                            <strong class="mono-readout" id="flow-stat-drop">1,240 m (38° slope)</strong>
+
+                        <div class="sim-quick-actions-flex" style="margin-top: 10px; display: flex; gap: 8px;">
+                            <button class="btn btn-action gov-action-btn" id="btn-quick-evac-corridors" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Compute and render terrain-following Dijkstra evacuation corridors from Red Zone habitations to Green Zone safe sites">
+                                <span>⚡</span> Route Evacuation Corridors
+                            </button>
+                            <button class="btn btn-action gov-action-btn" id="btn-toggle-mct-fault" style="flex: 1; font-size: 11px; padding: 7px 8px;" title="Toggle GSI Main Central Thrust (MCT) active fault trace and 2.5km shear corridor on 3D map">
+                                <span>🌋</span> MCT Fault Overlay
+                            </button>
                         </div>
-                        <div class="flow-stat-row">
-                            <span>Sectoral Deposition Fan:</span>
-                            <strong class="mono-readout" id="flow-stat-fan">85.0 Hectares</strong>
+
+                        <div class="sim-buttons">
+                            <button class="btn btn-simulate gov-btn-simulate" id="btn-trigger-run">
+                                <span>⚡ Recompute Dynamic Risk</span>
+                            </button>
+                            <button class="btn btn-reset gov-btn-reset" id="btn-trigger-reset">
+                                <span>↺ Reset to Baseline</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Basemap Switcher -->
-                <div class="control-section">
-                    <h3>3D Basemap Theme</h3>
-                    <div class="basemap-options">
-                        <button class="btn-basemap active" id="bm-satellite" data-style="satellite">
-                            <span>🛰️</span> 3D Satellite
+                <!-- TAB 2: ACTIONABLE RELOCATION PRIORITIES (DM ACT SEC 30) -->
+                <div class="panel-tab-pane hidden" id="pane-right-relocation">
+                    <div class="control-section gov-card relocation-priorities-card" style="margin-top: 0;">
+                        <div class="section-title-tag">
+                            <h3>📋 Actionable Relocation Order Priorities</h3>
+                            <span class="live-pill" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">SEC 30 DM ACT</span>
+                        </div>
+                        <p class="control-description">Habitations requiring pre-monsoon relocation with allocated safe resettlement sites and road access.</p>
+                        
+                        <div class="priorities-table-wrap">
+                            <div id="priorities-compact-list" class="priorities-compact-list">
+                                <!-- Populated dynamically by initRelocationPriorityList() -->
+                                <div class="loading-placeholder-text">Loading verified relocation priorities...</div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-action gov-action-btn" id="btn-dm-report-side" style="margin-top: 12px; width: 100%;">
+                            <span>📋</span> Generate DM Act Relocation Gazette PDF
                         </button>
-                        <button class="btn-basemap" id="bm-dark" data-style="dark">
-                            <span>🌙</span> Dark Ops
-                        </button>
-                        <button class="btn-basemap" id="bm-topo" data-style="topo">
-                            <span>🏔️</span> Topo Relief
-                        </button>
-                    </div>
-                    <div class="slider-control" style="margin-top: 10px;">
-                        <label>3D Relief Exaggeration</label>
-                        <input type="range" id="terrain-exaggeration" min="0.5" max="2.5" step="0.1" value="1.5">
-                        <span class="slider-value" id="terrain-exag-value">1.5x</span>
                     </div>
                 </div>
 
-                <!-- Google Earth Engine Live Satellite Stream -->
-                <div class="control-section gee-satellite-panel" style="background: rgba(14, 165, 233, 0.04); border: 1px solid rgba(14, 165, 233, 0.25); border-radius: 8px; padding: 12px; margin-bottom: 14px;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                        <h3 style="margin: 0; color: #38bdf8; font-size: 0.85rem; display: flex; align-items: center; gap: 6px;">
-                            <span>🛰️</span> GEE Live Satellite Stream
-                        </h3>
-                        <span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; padding: 2px 6px; border-radius: 12px; font-weight: 700; letter-spacing: 0.5px;">
-                            ● LIVE GEE
-                        </span>
-                    </div>
-                    <div style="font-size: 0.70rem; color: var(--text-secondary); margin-bottom: 8px; font-family: monospace;">
-                        GCP Project: <span style="color: #f1f5f9; font-weight: 600;">bhu-rakshak-509111</span>
-                    </div>
+                <!-- TAB 3: 3D PHYSICAL TORRENT & EVACUATION SIMULATOR -->
+                <div class="panel-tab-pane hidden" id="pane-right-simulator">
+                    <div class="control-section flow-simulation-section gov-card" style="margin-top: 0;">
+                        <div class="section-title-tag">
+                            <h3>🏔️ 3D Physical Torrent & Evacuation Simulator</h3>
+                            <span class="live-pill accent-pill">PHYSICS DTM</span>
+                        </div>
+                        <p class="control-description">Calculates Voellmy-fluid energy runout, entrainment depth, and Dijkstra valley evacuation paths.</p>
+                        
+                        <div class="flow-actions-grid gov-actions">
+                            <button class="btn-flow-sim gov-btn-flow red" id="btn-sim-debris-flow">
+                                <span class="led-dot red"></span> Run Voellmy Debris Flow
+                            </button>
+                            <button class="btn-flow-sim gov-btn-flow cyan" id="btn-sim-flood-surge">
+                                <span class="led-dot cyan"></span> Run River Inundation Surge
+                            </button>
+                            <button class="btn-flow-sim gov-btn-flow green" id="btn-sim-evac-routes">
+                                <span class="led-dot green"></span> Compute Dijkstra Valley Trails
+                            </button>
+                            <button class="btn-flow-clear gov-btn-flow dark" id="btn-sim-clear-flow">
+                                <span>🧹</span> Clear 3D Overlays
+                            </button>
+                        </div>
 
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-gee-sentinel2" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label" style="font-weight: 500;">Sentinel-2 10m Optical (Copernicus)</span>
-                    </div>
-
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-gee-ndvi">
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Sentinel-2 NDVI (Vegetation Scarring)</span>
-                    </div>
-
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-gee-dw">
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Dynamic World 10m LULC (AI Land Cover)</span>
-                    </div>
-
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-gee-srtm">
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">USGS SRTM 30m Topographic Hillshade</span>
-                    </div>
-
-                    <div class="slider-control" style="margin-top: 8px;">
-                        <label style="font-size: 0.72rem; color: var(--text-secondary);">Satellite Opacity</label>
-                        <input type="range" id="gee-satellite-opacity" min="0.1" max="1.0" step="0.05" value="0.85">
-                        <span class="slider-value" id="gee-opacity-val">85%</span>
-                    </div>
-                </div>
-
-                <!-- Map Layers -->
-                <div class="control-section">
-                    <h3>GIS Layer Overlays</h3>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-hazard-zones" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Hazard Zones (Red/Orange/Yellow)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-delta-layer" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Dynamic Expansion Delta (Pulsing Red)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-villages" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Habitations (Prioritized)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-gee-worldpop" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">🛰️ GEE WorldPop Satellite Density (100m)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-safe-zones" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Safe Relocation Sites (AHP Ranked)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-disasters" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Historical Disaster Epicenters</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-rivers" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">Drainage & River Corridors</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-corridor" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">🛣️ 100km NH-108 Corridor (20 Segments)</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-faults" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">⚡ MCT Tectonic Fault & Shear Corridor</span>
-                    </div>
-                    <div class="layer-toggle">
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="toggle-boundary" checked>
-                            <span class="toggle-slider"></span>
-                        </label>
-                        <span class="toggle-label">🏛️ Uttarkashi District Border (GADM L3 • 8,016 km²)</span>
-                    </div>
-                </div>
-
-                <!-- Quick Fly-to Locations -->
-                <div class="control-section">
-                    <h3>Focus Hotspots</h3>
-                    <div class="quick-actions">
-                        <button class="btn btn-action" id="btn-fly-overview"><span>🌍</span> Whole District</button>
-                        <button class="btn btn-action" id="btn-fly-uttarkashi"><span>📍</span> Uttarkashi Town</button>
-                        <button class="btn btn-action" id="btn-fly-dharali"><span>⚠️</span> Dharali (2025 Disaster)</button>
-                        <button class="btn btn-action" id="btn-fly-asiganga"><span>🌊</span> Asi Ganga Valley (2012)</button>
-                        <button class="btn btn-action" id="btn-fly-gangotri"><span>🏔️</span> Upper Bhagirathi</button>
+                        <div class="flow-stats-box industrial-stats hidden" id="flow-stats-box">
+                            <div class="flow-stat-row">
+                                <span id="flow-stat-label">Debris Runout Distance:</span>
+                                <strong class="mono-readout" id="flow-stat-value">6.8 km</strong>
+                            </div>
+                            <div class="flow-stat-row">
+                                <span>Peak Voellmy Velocity:</span>
+                                <strong class="mono-readout" id="flow-stat-velocity">18.5 m/s</strong>
+                            </div>
+                            <div class="flow-stat-row">
+                                <span>Elevation Drop / Gradient:</span>
+                                <strong class="mono-readout" id="flow-stat-drop">1,240 m (38° slope)</strong>
+                            </div>
+                            <div class="flow-stat-row">
+                                <span>Sectoral Deposition Fan:</span>
+                                <strong class="mono-readout" id="flow-stat-fan">85.0 Hectares</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

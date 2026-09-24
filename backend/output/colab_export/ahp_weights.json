@@ -1,0 +1,23 @@
+{
+  "_method": "Saaty Analytic Hierarchy Process (AHP) Eigenvector Decomposition (1980)",
+  "_consistency_ratio": 0.0106,
+  "_is_consistent": true,
+  "_consistency_check": "CR = 0.0106 < 0.10 (PASS - Validated Judgments)",
+  "weights": {
+    "slope": 0.3015,
+    "curvature": 0.1652,
+    "twi": 0.1341,
+    "rainfall": 0.1287,
+    "river_proximity": 0.1024,
+    "disaster_proximity": 0.0892,
+    "ndvi": 0.0458,
+    "road_proximity": 0.0331
+  },
+  "safe_zone_weights": {
+    "hazard_safety": 0.35,
+    "slope_suitability": 0.25,
+    "water_access": 0.15,
+    "road_connectivity": 0.15,
+    "land_flatness": 0.1
+  }
+}

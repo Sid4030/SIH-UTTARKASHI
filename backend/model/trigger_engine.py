@@ -361,24 +361,34 @@ TEHSIL_CENTROIDS = {
 
 def fetch_live_rainfall(lat: float = 30.73, lng: float = 78.45):
     """
-    Fetches real-time precipitation intensity and 24h antecedent rainfall
-    from Open-Meteo's free public weather API (no token required).
+    Fetches real-time precipitation intensity, 24h antecedent rainfall, and 7-day cumulative
+    precipitation from Open-Meteo's free public weather API (no token or auth required).
+    Drafted in Cell 9 of Bhurakshak.ipynb.
     """
-    url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&hourly=precipitation&past_days=1&forecast_days=1"
+    url = f"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lng}&hourly=precipitation&daily=precipitation_sum&past_days=7&forecast_days=1&timezone=auto"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "HazardShield-GIS/2.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "Uttarkashi-Hazard-Platform/3.2"})
         with urllib.request.urlopen(req, timeout=5) as response:
             data = json.loads(response.read().decode())
             hourly_precip = data.get("hourly", {}).get("precipitation", [])
+            daily_precip = data.get("daily", {}).get("precipitation_sum", [])
+            
+            rain_daily = [x for x in daily_precip if x is not None]
+            cum_7day = sum(rain_daily) if rain_daily else 35.0
+            avg_daily = (cum_7day / len(rain_daily)) if rain_daily else 35.0
+
             if hourly_precip:
                 # Latest available hour
                 intensity_now = float(hourly_precip[-1] or 0.0)
                 # Antecedent last 24 hours
-                antecedent_24h = float(sum(p for p in hourly_precip[-24:] if p is not None))
+                hourly_valid = [p for p in hourly_precip[-24:] if p is not None]
+                antecedent_24h = float(sum(hourly_valid)) if hourly_valid else avg_daily * 1.5
                 return {
-                    "source": "Open-Meteo Live Telemetry",
+                    "source": "Open-Meteo Live Zero-Auth Telemetry",
                     "intensity_mm_hr": round(intensity_now, 2),
                     "antecedent_24h_mm": round(antecedent_24h, 2),
+                    "cumulative_7day_mm": round(float(cum_7day), 2),
+                    "avg_daily_mm": round(float(avg_daily), 2),
                     "timestamp": datetime.now(timezone.utc).isoformat()
                 }
     except Exception:
@@ -389,6 +399,8 @@ def fetch_live_rainfall(lat: float = 30.73, lng: float = 78.45):
         "source": "Simulated Hydrological Baseline (Offline Mode)",
         "intensity_mm_hr": 14.5,
         "antecedent_24h_mm": 42.0,
+        "cumulative_7day_mm": 105.0,
+        "avg_daily_mm": 15.0,
         "timestamp": datetime.now(timezone.utc).isoformat()
     }
 

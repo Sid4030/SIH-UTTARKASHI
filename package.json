@@ -1,0 +1,11 @@
+{
+  "name": "uttarkashi-hazard-platform",
+  "version": "3.2.0",
+  "description": "BhuRakshak Geospatial Multi-Hazard Intelligence Platform for Uttarkashi District",
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "start": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "preview": "npm --prefix frontend run preview"
+  }
+}

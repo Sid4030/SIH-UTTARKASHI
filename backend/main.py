@@ -39,6 +39,7 @@ from backend.model.continuous_learning import (
     ingest_ground_truth_incident,
     execute_continuous_retraining
 )
+from backend.api_service import router as scoring_service_router, artifacts as service_artifacts
 
 app = FastAPI(
     title="BhuRakshak (भू-रक्षक) — Geospatial Multi-Hazard Intelligence Platform",
@@ -54,6 +55,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.on_event("startup")
+def startup_event():
+    service_artifacts.load_artifacts()
+
+app.include_router(scoring_service_router)
+app.include_router(scoring_service_router, prefix="/api")
 
 
 # Data directory
@@ -783,8 +791,10 @@ def get_live_weather(lat: float = 30.73, lng: float = 78.45):
         "longitude": lng,
         "intensity_mm_hr": telemetry.get("intensity_mm_hr", 0.0),
         "antecedent_24h_mm": telemetry.get("antecedent_24h_mm", 0.0),
+        "cumulative_7day_mm": telemetry.get("cumulative_7day_mm", 35.0),
+        "avg_daily_mm": telemetry.get("avg_daily_mm", 5.0),
         "timestamp_utc": telemetry.get("last_fetched_utc"),
-        "source": telemetry.get("weather_source", "Open-Meteo ECMWF/GFS Blend")
+        "source": telemetry.get("weather_source", "Open-Meteo Zero-Auth Telemetry")
     }
 
 
