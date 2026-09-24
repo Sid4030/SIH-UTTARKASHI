@@ -1,4 +1,4 @@
-# 🛡️ HazardShield 3.2 — National Multi-Hazard Red Zone Identification & Relocation Decision Platform
+# 🛡️ BhuRakshak — National Multi-Hazard Red Zone Identification & Relocation Decision Platform
 
 > **Statutory AI Decision Support System for Ministry of Home Affairs (MHA), National Disaster Management Authority (NDMA), and Uttarakhand State Disaster Management Authority (USDMA)**  
 > *Grounded in Sections 30 & 34 of the Disaster Management Act 2005 and NDMA Hilly Terrain Resettlement Guidelines.*
