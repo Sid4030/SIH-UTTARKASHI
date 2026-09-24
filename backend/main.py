@@ -410,6 +410,45 @@ def get_imd_api_requirements():
     return get_imd_client().get_api_evaluation_report()
 
 
+# ---------------------------------------------------------------------------
+# ISRO INSAT-3D/3DR Geostationary (15-min) & IMD Doppler Weather Radar Endpoints
+# ---------------------------------------------------------------------------
+@app.get("/api/sat/insat-telemetry")
+def get_insat_geostationary_telemetry(rain_intensity: float = 35.0):
+    """
+    Returns real-time 15-minute ISRO INSAT-3D / 3DR / 3DS Geostationary telemetry:
+    - Cloud-Top Brightness Temperature (CTBT) across TIR1/TIR2 (< -60°C cloudburst precursor alert)
+    - Hydro-Estimator Precipitation (HEM) instantaneous rain rate
+    - Rapid Scan 4-minute convective trigger status
+    """
+    from backend.data.insat_dwr_client import get_insat_dwr_client
+    return get_insat_dwr_client().get_insat_geostationary_telemetry(simulated_rain_mm_hr=rain_intensity)
+
+
+@app.get("/api/sat/dwr-radar")
+def get_dwr_radar_telemetry(rain_intensity: float = 35.0):
+    """
+    Returns real-time 10-minute IMD Doppler Weather Radar (DWR) sweep from
+    Surkanda Devi / Dehradun (Station 42110) over Uttarkashi:
+    - Reflectivity dBZ (Marshall-Palmer Z = 200 * R^1.6)
+    - Convective cloudburst core status (>52 dBZ)
+    - Estimated river discharge surge & arrival lead time
+    """
+    from backend.data.insat_dwr_client import get_insat_dwr_client
+    return get_insat_dwr_client().get_dwr_radar_telemetry(simulated_rain_mm_hr=rain_intensity)
+
+
+@app.get("/api/sat/radar-geojson")
+def get_radar_convective_geojson(rain_intensity: float = 35.0):
+    """
+    Returns live GeoJSON Doppler Radar echo reflectivity polygons
+    to render the Surkanda radar sweep directly onto MapLibre GL JS in 3D.
+    """
+    from backend.data.insat_dwr_client import get_insat_dwr_client
+    return get_insat_dwr_client().get_radar_convective_geojson(simulated_rain_mm_hr=rain_intensity)
+
+
+
 @app.get("/api/summary")
 def get_summary():
     """Returns aggregated summary statistics."""

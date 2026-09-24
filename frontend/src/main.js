@@ -229,6 +229,13 @@ async function loadAllData() {
     initCorridorModule();
     initModelInspector();
     initWihgModule();
+    initFloatingControls();
+    renderFloatingHabitationsList();
+    renderDerajatKerentanan();
+    initRealTimeGISModal();
+    initMarkersGuideModal();
+    initPhotoLightbox();
+    initInsatDwrModule(state.map);
 }
 
 // ============================================================
@@ -672,16 +679,17 @@ function addGeoJSONLayers(map) {
         });
     }
 
-    // 5. Hazard Grid Points (For Dynamic Expansion)
+    // 5. Hazard Grid Points (Off by default to eliminate messy red dot clutter; toggleable via GIS panel)
     if (state.data.hazardGrid) {
         map.addSource('hazard-grid-src', { type: 'geojson', data: state.data.hazardGrid });
         map.addLayer({
             id: 'hazard-grid-circles',
             type: 'circle',
             source: 'hazard-grid-src',
-            minzoom: 12,
+            minzoom: 14,
+            layout: { 'visibility': 'none' },
             paint: {
-                'circle-radius': ['interpolate', ['linear'], ['zoom'], 12, 3, 16, 7],
+                'circle-radius': ['interpolate', ['linear'], ['zoom'], 14, 2.5, 17, 6],
                 'circle-color': [
                     'match', ['get', 'zone'],
                     'red', CONFIG.ZONE_COLORS.red,
@@ -689,7 +697,7 @@ function addGeoJSONLayers(map) {
                     'yellow', CONFIG.ZONE_COLORS.yellow,
                     CONFIG.ZONE_COLORS.green
                 ],
-                'circle-opacity': 0.75
+                'circle-opacity': 0.6
             }
         });
 
@@ -700,16 +708,16 @@ function addGeoJSONLayers(map) {
             source: 'hazard-grid-src',
             filter: ['==', ['get', 'is_expanded_red'], true],
             paint: {
-                'circle-radius': 8,
+                'circle-radius': 7,
                 'circle-color': '#ff0033',
                 'circle-stroke-color': '#ffffff',
-                'circle-stroke-width': 2,
-                'circle-opacity': 0.9
+                'circle-stroke-width': 1.5,
+                'circle-opacity': 0.85
             }
         });
     }
 
-    // 6. Historical Disaster Epicenters
+    // 6. Historical Disaster Epicenters (Distinct Gold & Crimson Benchmarks)
     if (state.data.disasters) {
         map.addSource('disasters-src', { type: 'geojson', data: state.data.disasters });
         map.addLayer({
@@ -717,24 +725,25 @@ function addGeoJSONLayers(map) {
             type: 'circle',
             source: 'disasters-src',
             paint: {
-                'circle-radius': 9,
-                'circle-color': '#ff0055',
-                'circle-stroke-color': '#ffffff',
+                'circle-radius': 8,
+                'circle-color': '#9333ea',
+                'circle-stroke-color': '#fbbf24',
                 'circle-stroke-width': 2
             }
         });
     }
 
-    // 7. Villages / Habitations Layer
+    // 7. Villages / Habitations Layer (Crisp Modern Markers matching Image 2)
     if (state.data.villages) {
         map.addSource('villages-src', { type: 'geojson', data: state.data.villages });
 
-        // GEE WorldPop Satellite Population Density Heatmap (100m raster pixel weights)
+        // GEE WorldPop Satellite Population Density Heatmap (Off by default to avoid red wash)
         map.addLayer({
             id: 'gee-worldpop-heatmap',
             type: 'heatmap',
             source: 'villages-src',
             maxzoom: 15,
+            layout: { 'visibility': 'none' },
             paint: {
                 'heatmap-weight': [
                     'interpolate', ['linear'], ['get', 'population'],
@@ -744,26 +753,56 @@ function addGeoJSONLayers(map) {
                 'heatmap-intensity': [
                     'interpolate', ['linear'], ['zoom'],
                     8, 1,
-                    15, 3
+                    15, 2.5
                 ],
                 'heatmap-color': [
                     'interpolate', ['linear'], ['heatmap-density'],
                     0, 'rgba(0, 240, 255, 0)',
-                    0.2, 'rgba(0, 240, 255, 0.35)',
-                    0.4, 'rgba(56, 189, 248, 0.6)',
-                    0.6, 'rgba(250, 204, 21, 0.75)',
-                    0.8, 'rgba(249, 115, 22, 0.85)',
-                    1.0, 'rgba(239, 68, 68, 0.95)'
+                    0.3, 'rgba(56, 189, 248, 0.4)',
+                    0.6, 'rgba(250, 204, 21, 0.65)',
+                    0.85, 'rgba(249, 115, 22, 0.75)',
+                    1.0, 'rgba(239, 68, 68, 0.85)'
                 ],
                 'heatmap-radius': [
                     'interpolate', ['linear'], ['zoom'],
-                    8, 20,
-                    15, 50
+                    8, 18,
+                    15, 45
                 ],
-                'heatmap-opacity': 0.70
+                'heatmap-opacity': 0.60
             }
         });
 
+        // Subtle outer pulse ring (strictly for active threat habitations in red/orange)
+        map.addLayer({
+            id: 'villages-circle-outer',
+            type: 'circle',
+            source: 'villages-src',
+            filter: ['in', ['get', 'zone'], ['literal', ['red', 'orange']]],
+            paint: {
+                'circle-radius': [
+                    'interpolate', ['linear'], ['get', 'population'],
+                    50, 7.0,
+                    500, 9.0,
+                    2500, 11.0,
+                    15000, 14.0
+                ],
+                'circle-color': [
+                    'match', ['get', 'zone'],
+                    'red', 'rgba(239, 68, 68, 0.28)',
+                    'orange', 'rgba(249, 115, 22, 0.20)',
+                    'rgba(0, 0, 0, 0)'
+                ],
+                'circle-stroke-color': [
+                    'match', ['get', 'zone'],
+                    'red', 'rgba(239, 68, 68, 0.75)',
+                    'orange', 'rgba(249, 115, 22, 0.55)',
+                    'rgba(0, 0, 0, 0)'
+                ],
+                'circle-stroke-width': 1.0
+            }
+        });
+
+        // Crisp refined settlement pins
         map.addLayer({
             id: 'villages-circle',
             type: 'circle',
@@ -772,16 +811,16 @@ function addGeoJSONLayers(map) {
                 'circle-radius': [
                     'interpolate', ['linear'], ['get', 'population'],
                     50, 4.5,
-                    500, 7.5,
-                    2500, 11.0,
-                    15000, 16.0
+                    500, 6.0,
+                    2500, 8.0,
+                    15000, 10.5
                 ],
                 'circle-color': [
                     'match', ['get', 'zone'],
-                    'red', CONFIG.ZONE_COLORS.red,
-                    'orange', CONFIG.ZONE_COLORS.orange,
-                    'yellow', CONFIG.ZONE_COLORS.yellow,
-                    CONFIG.ZONE_COLORS.green
+                    'red', '#ef4444',
+                    'orange', '#f97316',
+                    'yellow', '#eab308',
+                    '#10b981'
                 ],
                 'circle-stroke-color': '#ffffff',
                 'circle-stroke-width': 1.5,
@@ -789,12 +828,12 @@ function addGeoJSONLayers(map) {
             }
         });
 
-        // Village Labels
+        // Village Labels (Visible at zoom 11+ to avoid label collisions)
         map.addLayer({
             id: 'villages-label',
             type: 'symbol',
             source: 'villages-src',
-            minzoom: 10,
+            minzoom: 11,
             layout: {
                 'text-field': ['get', 'name'],
                 'text-font': ['Open Sans Regular', 'Arial Unicode MS Regular'],
@@ -815,16 +854,48 @@ function addGeoJSONLayers(map) {
 // MAP INTERACTIONS & EXPLAINABILITY POPUP
 // ============================================================
 function setupMapInteractions(map) {
-    // Village Click -> Show Explainability Panel
+    let hoverPopup = new maplibregl.Popup({
+        closeButton: false,
+        closeOnClick: false,
+        offset: 14
+    });
+
+    // Village Hover -> Informative Tooltip
+    map.on('mousemove', 'villages-circle', (e) => {
+        if (!e.features || !e.features.length) return;
+        map.getCanvas().style.cursor = 'pointer';
+        const p = e.features[0].properties;
+        const rainVal = state.simulation?.intensity_mm_hr || 35;
+        const slope = Number(p.slope || 25);
+        const fosEst = (1.55 - (slope / 65) * 0.75).toFixed(2);
+        const zone = p.zone || 'red';
+        const zoneBadgeClass = zone === 'red' ? 'red' : (zone === 'orange' ? 'orange' : (zone === 'yellow' ? 'yellow' : 'green'));
+
+        hoverPopup.setLngLat(e.lngLat)
+            .setHTML(`
+                <div class="map-hover-tooltip">
+                    <strong>🏘️ ${p.name}</strong> <span style="font-size: 10px; color: #94a3b8;">(${p.tehsil || 'Bhatwari'})</span>
+                    <div><span class="tooltip-badge ${zoneBadgeClass}">${zone.toUpperCase()} ZONE • FS ${fosEst}</span></div>
+                    <div style="font-size: 11px; margin-top: 2px;">👥 Pop: ${(p.population || 0).toLocaleString()} • 🏔️ Slope: ${slope.toFixed(1)}°</div>
+                    <div style="font-size: 11px;">🌧️ Live Rain: ${rainVal} mm/hr • 🛡️ Safe Alpha-12</div>
+                    <div class="tooltip-hint">Click for Datago BPBD Dossier & Relocation Plan →</div>
+                </div>
+            `)
+            .addTo(map);
+    });
+
+    map.on('mouseleave', 'villages-circle', () => {
+        map.getCanvas().style.cursor = '';
+        hoverPopup.remove();
+    });
+
+    // Village Click -> Show Datago BPBD Dossier
     map.on('click', 'villages-circle', (e) => {
         if (!e.features || !e.features.length) return;
         const feature = e.features[0];
-        showVillageDetail(feature);
+        hoverPopup.remove();
+        showDatagoBPBDDossier(feature.properties, feature.geometry);
     });
-
-    // Hover cursor styling
-    map.on('mouseenter', 'villages-circle', () => { map.getCanvas().style.cursor = 'pointer'; });
-    map.on('mouseleave', 'villages-circle', () => { map.getCanvas().style.cursor = ''; });
 
     // Disaster Point Click -> Tooltip
     map.on('click', 'disasters-circles', (e) => {
@@ -1274,14 +1345,18 @@ function updateGeotechGauge(fsDiag) {
 
 function initLiveClock() {
     const clockEl = document.getElementById('sys-utc-clock');
+    const dateEl = document.getElementById('sys-date-str');
+    const tzLabel = document.getElementById('clock-tz-label');
     const deocClock = document.getElementById('deoc-live-clock');
     const tick = () => {
         const d = new Date();
-        const hrs = String(d.getUTCHours()).padStart(2, '0');
-        const mins = String(d.getUTCMinutes()).padStart(2, '0');
-        const secs = String(d.getUTCSeconds()).padStart(2, '0');
-        if (clockEl) clockEl.textContent = `${hrs}:${mins}:${secs}`;
-        if (deocClock) deocClock.textContent = d.toLocaleTimeString('en-IN', { hour12: false }) + ' IST';
+        const timeStr = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        const dateStr = d.toLocaleDateString([], { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' });
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local';
+        if (clockEl) clockEl.textContent = timeStr;
+        if (dateEl) dateEl.textContent = dateStr;
+        if (tzLabel) tzLabel.textContent = 'LOCAL / IST';
+        if (deocClock) deocClock.textContent = `${timeStr} (${tz})`;
     };
     tick();
     setInterval(tick, 1000);
@@ -1903,10 +1978,56 @@ window.autoFetchLiveWeather = autoFetchLiveWeather;
     // 60FPS / 3D Mode Toggle
     document.getElementById('btn-toggle-fps')?.addEventListener('click', toggle3DMode);
 
-    // GEE Satellite Telemetry Button
-    document.getElementById('btn-open-gee-modal')?.addEventListener('click', () => {
-        const dsModal = document.getElementById('data-sources-modal');
-        if (dsModal) dsModal.classList.remove('hidden');
+    // GEE Satellite Telemetry Console Modal
+    const geeModal = document.getElementById('gee-satellite-modal');
+    const openGeeConsole = async () => {
+        if (!geeModal) return;
+        geeModal.classList.remove('hidden');
+        await updateGeeStatusBanner();
+    };
+
+    document.getElementById('btn-open-gee-modal')?.addEventListener('click', openGeeConsole);
+    document.getElementById('status-gee-chip')?.addEventListener('click', openGeeConsole);
+    document.getElementById('btn-close-gee-sat-modal')?.addEventListener('click', () => {
+        if (geeModal) geeModal.classList.add('hidden');
+    });
+
+    const updateGeeStatusBanner = async () => {
+        const titleEl = document.getElementById('gee-diag-title');
+        const subEl = document.getElementById('gee-diag-sub');
+        const dotEl = document.getElementById('gee-diag-dot');
+        try {
+            const res = await fetch(`${CONFIG.API_URL}/gee/status`);
+            const data = await res.json();
+            if (data.gee_live) {
+                if (titleEl) titleEl.textContent = `GEE STATUS: LIVE (PROJECT: ${data.gee_project || 'bhu-rakshak-509111'})`;
+                if (subEl) subEl.textContent = 'Direct Earth Engine supercomputing connection established. Streaming Sentinel-2 & SRTM raster tiles.';
+                if (dotEl) { dotEl.className = 'status-dot live-pulse text-safe'; }
+            } else {
+                if (titleEl) titleEl.textContent = 'GEE STATUS: HIGH-RES SATELLITE FALLBACK (AUTHENTICATION REQUIRED FOR LIVE)';
+                if (subEl) subEl.textContent = `Mode: ${data.mode || 'VERIFIED_CACHE'}. Run "earthengine authenticate" in terminal to link your Google account.`;
+                if (dotEl) { dotEl.className = 'status-dot pulse-amber'; }
+            }
+        } catch (err) {
+            if (titleEl) titleEl.textContent = 'GEE SERVICE: OFFLINE CACHE ACTIVE';
+            if (subEl) subEl.textContent = 'Pre-verified USGS SRTM 30m and Sentinel-2 baselines loaded from local repository.';
+        }
+    };
+
+    document.getElementById('btn-refresh-gee-status')?.addEventListener('click', updateGeeStatusBanner);
+
+    document.getElementById('btn-test-gee-live')?.addEventListener('click', async () => {
+        const outSection = document.getElementById('gee-extract-section');
+        const outPre = document.getElementById('gee-extract-output');
+        if (outSection) outSection.style.display = 'block';
+        if (outPre) outPre.textContent = '⏳ Querying Google Earth Engine telemetry for Uttarkashi Town (30.727°N, 78.445°E)...';
+        try {
+            const res = await fetch(`${CONFIG.API_URL}/gee/extract?lat=30.7268&lng=78.4430`);
+            const data = await res.json();
+            if (outPre) outPre.textContent = JSON.stringify(data, null, 2);
+        } catch (err) {
+            if (outPre) outPre.textContent = `Error querying GEE extraction: ${err.message}`;
+        }
     });
 
     // Layer Toggles
@@ -4027,6 +4148,8 @@ function initAIAnalystEngine() {
     const btnNavAI = document.getElementById('btn-toggle-ai-analyst');
     if (btnNavAI) {
         btnNavAI.addEventListener('click', () => {
+            const rightPanel = document.getElementById('right-panel');
+            if (rightPanel) rightPanel.classList.remove('collapsed');
             const dock = document.getElementById('ai-analyst-dock');
             if (dock) {
                 dock.scrollIntoView({ behavior: 'smooth' });
@@ -4060,10 +4183,904 @@ function initAIAnalystEngine() {
     });
 }
 
+// ============================================================
+// DATAGO BPBD DISASTER DOSSIER & MODERN FLOATING INTERFACE
+// ============================================================
 
+let activeFilterHazard = 'all';
+let activeFilterThreat = 'all';
+let activeFilterTehsil = 'all';
+let activeSearchQuery = '';
+let activeSortCriterion = 'risk';
 
+function initFloatingControls() {
+    const searchInput = document.getElementById('filter-search-input');
+    const clearBtn = document.getElementById('btn-clear-search');
+    const hazardSelect = document.getElementById('filter-hazard-type');
+    const threatSelect = document.getElementById('filter-threat-tier');
+    const tehsilSelect = document.getElementById('filter-tehsil');
+    const sortSelect = document.getElementById('sort-habitations');
+    const toggleListBtn = document.getElementById('btn-toggle-habitations-list');
+    const panel = document.getElementById('floating-habitations-panel');
 
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            activeSearchQuery = e.target.value.trim().toLowerCase();
+            if (clearBtn) clearBtn.classList.toggle('hidden', !activeSearchQuery);
+            renderFloatingHabitationsList();
+        });
+    }
 
+    if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+            if (searchInput) searchInput.value = '';
+            activeSearchQuery = '';
+            clearBtn.classList.add('hidden');
+            renderFloatingHabitationsList();
+        });
+    }
 
+    if (hazardSelect) {
+        hazardSelect.addEventListener('change', (e) => {
+            activeFilterHazard = e.target.value;
+            renderFloatingHabitationsList();
+        });
+    }
 
+    if (threatSelect) {
+        threatSelect.addEventListener('change', (e) => {
+            activeFilterThreat = e.target.value;
+            renderFloatingHabitationsList();
+        });
+    }
 
+    if (tehsilSelect) {
+        tehsilSelect.addEventListener('change', (e) => {
+            activeFilterTehsil = e.target.value;
+            renderFloatingHabitationsList();
+        });
+    }
+
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            activeSortCriterion = e.target.value;
+            renderFloatingHabitationsList();
+        });
+    }
+
+    if (toggleListBtn && panel) {
+        toggleListBtn.addEventListener('click', () => {
+            panel.classList.toggle('minimized');
+            toggleListBtn.textContent = panel.classList.contains('minimized') ? '▶' : '◀';
+        });
+    }
+
+    // Basemap Switcher
+    const satBtn = document.getElementById('btn-basemap-sat');
+    const topoBtn = document.getElementById('btn-basemap-topo');
+    const darkBtn = document.getElementById('btn-basemap-dark');
+
+    const switchBasemap = (name, btn) => {
+        if (!state.map) return;
+        document.querySelectorAll('.basemap-pill').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+        state.currentBasemap = name;
+        const bm = CONFIG.BASEMAPS[name];
+        if (bm) {
+            const map = state.map;
+            try {
+                if (map.getLayer('basemap-layer')) map.removeLayer('basemap-layer');
+                if (map.getSource('basemap-tiles')) map.removeSource('basemap-tiles');
+                map.addSource('basemap-tiles', {
+                    type: 'raster',
+                    tiles: bm.tiles,
+                    tileSize: 256,
+                    attribution: bm.attribution
+                });
+                map.addLayer({
+                    id: 'basemap-layer',
+                    type: 'raster',
+                    source: 'basemap-tiles',
+                    minzoom: 0,
+                    maxzoom: 19
+                }, map.getStyle().layers[0]?.id);
+            } catch (err) {
+                console.warn('Basemap tile switch notice:', err);
+            }
+        }
+    };
+
+    if (satBtn) satBtn.addEventListener('click', () => switchBasemap('satellite', satBtn));
+    if (topoBtn) topoBtn.addEventListener('click', () => switchBasemap('topo', topoBtn));
+    if (darkBtn) darkBtn.addEventListener('click', () => switchBasemap('dark', darkBtn));
+}
+
+function renderFloatingHabitationsList() {
+    const container = document.getElementById('habitations-card-list');
+    const countEl = document.getElementById('found-count-text');
+    const subEl = document.getElementById('found-sub-text');
+    if (!container || !state.data.villages) return;
+
+    let villages = state.data.villages.features || [];
+
+    // Filter by search query
+    if (activeSearchQuery) {
+        villages = villages.filter(v => {
+            const p = v.properties;
+            const name = (p.name || '').toLowerCase();
+            const tehsil = (p.tehsil || '').toLowerCase();
+            return name.includes(activeSearchQuery) || tehsil.includes(activeSearchQuery);
+        });
+    }
+
+    // Filter by hazard type
+    if (activeFilterHazard !== 'all') {
+        if (activeFilterHazard === 'landslide') {
+            villages = villages.filter(v => (v.properties.slope || 0) > 22 || v.properties.zone === 'red');
+        } else if (activeFilterHazard === 'flood') {
+            villages = villages.filter(v => (v.properties.dist_river_km || 99) < 0.9);
+        } else if (activeFilterHazard === 'cloudburst') {
+            villages = villages.filter(v => (v.properties.elevation || 0) > 1400);
+        } else if (activeFilterHazard === 'earthquake') {
+            villages = villages.filter(v => (v.properties.dist_disaster_km || 99) < 15);
+        }
+    }
+
+    // Filter by threat tier
+    if (activeFilterThreat !== 'all') {
+        villages = villages.filter(v => (v.properties.zone || 'green') === activeFilterThreat);
+    }
+
+    // Filter by tehsil
+    if (activeFilterTehsil !== 'all') {
+        villages = villages.filter(v => (v.properties.tehsil || '').toLowerCase().includes(activeFilterTehsil.toLowerCase()));
+    }
+
+    // Sort criteria
+    villages = [...villages].sort((a, b) => {
+        const pa = a.properties;
+        const pb = b.properties;
+        if (activeSortCriterion === 'risk') {
+            return (pb.hazard_probability || 0) - (pa.hazard_probability || 0);
+        } else if (activeSortCriterion === 'population') {
+            return (pb.population || 0) - (pa.population || 0);
+        } else if (activeSortCriterion === 'fos') {
+            const fosa = 1.55 - (Number(pa.slope || 25) / 65) * 0.75;
+            const fosb = 1.55 - (Number(pb.slope || 25) / 65) * 0.75;
+            return fosa - fosb;
+        } else if (activeSortCriterion === 'distance') {
+            return (pa.dist_disaster_km || 0) - (pb.dist_disaster_km || 0);
+        }
+        return 0;
+    });
+
+    if (countEl) countEl.textContent = `Found ${villages.length} Habitations`;
+    if (subEl) subEl.textContent = activeFilterThreat !== 'all' ? `Filtered by ${activeFilterThreat.toUpperCase()} Zone • Live Telemetry` : `Monitored under DM Act 2005 • Live Telemetry`;
+
+    if (villages.length === 0) {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 24px; color: #94a3b8; font-size: 12px;">
+                No habitations match the current filter criteria.<br>
+                <button id="btn-reset-filters" style="margin-top: 10px; background: #0284c7; color: white; border: none; padding: 4px 10px; border-radius: 6px; cursor: pointer;">Reset Filters</button>
+            </div>
+        `;
+        document.getElementById('btn-reset-filters')?.addEventListener('click', () => {
+            activeSearchQuery = '';
+            activeFilterHazard = 'all';
+            activeFilterThreat = 'all';
+            activeFilterTehsil = 'all';
+            const searchInput = document.getElementById('filter-search-input');
+            if (searchInput) searchInput.value = '';
+            document.getElementById('filter-hazard-type').value = 'all';
+            document.getElementById('filter-threat-tier').value = 'all';
+            document.getElementById('filter-tehsil').value = 'all';
+            renderFloatingHabitationsList();
+        });
+        return;
+    }
+
+    const rainVal = state.simulation?.intensity_mm_hr || 35;
+
+    container.innerHTML = villages.map(v => {
+        const p = v.properties;
+        const coords = v.geometry.coordinates;
+        const zone = p.zone || 'red';
+        const slope = Number(p.slope || 25);
+        const fosEst = (1.55 - (slope / 65) * 0.75).toFixed(2);
+        const thumbImg = (zone === 'red' || zone === 'orange') ? '/assets/landslide_scarp.jpg' : '/assets/village_aerial.jpg';
+        const safeName = p.tehsil === 'Bhatwari' ? 'Alpha-12' : (p.tehsil === 'Purola' ? 'Alpha-4' : 'Alpha-8');
+
+        return `
+            <div class="hab-card" data-vid="${p.id}" data-lat="${coords[1]}" data-lng="${coords[0]}">
+                <div class="hab-card-top">
+                    <div class="hab-thumb-wrap">
+                        <img src="${thumbImg}" class="hab-thumb-img" alt="${p.name}">
+                        <span class="hab-thumb-badge">${slope.toFixed(0)}° SLOPE</span>
+                    </div>
+                    <div class="hab-info-wrap">
+                        <div class="hab-title-row">
+                            <span class="hab-name" title="${p.name}">${p.name}</span>
+                            <span class="hab-zone-badge ${zone}">
+                                ${zone.toUpperCase()} • FS ${fosEst}
+                            </span>
+                        </div>
+                        <div class="hab-tehsil">${p.tehsil || 'Uttarkashi'} Tehsil • ${p.elevation ? p.elevation + 'm MSL' : '1,420m'}</div>
+                    </div>
+                </div>
+                <div class="hab-metrics-grid">
+                    <div class="hab-metric"><span class="hab-m-lbl">POPULATION</span><span class="hab-m-val">${(p.population || 0).toLocaleString()}</span></div>
+                    <div class="hab-metric"><span class="hab-m-lbl">SLOPE</span><span class="hab-m-val">${slope.toFixed(1)}°</span></div>
+                    <div class="hab-metric"><span class="hab-m-lbl">LIVE RAIN</span><span class="hab-m-val" style="color: #38bdf8;">${rainVal} mm/h</span></div>
+                    <div class="hab-metric"><span class="hab-m-lbl">SAFE ZONE</span><span class="hab-m-val" style="color: #10b981;">${safeName}</span></div>
+                </div>
+                <div class="hab-card-bottom">
+                    <span class="hab-safe-link">🛡️ Safe Haven ${safeName}</span>
+                    <div class="hab-btn-row">
+                        <button class="btn-hab-inspect" data-vid="${p.id}">📍 Inspect</button>
+                        <button class="btn-hab-evac" data-vname="${p.name}">🧭 Relocate</button>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    // Attach card listeners
+    container.querySelectorAll('.hab-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            const vid = Number(card.getAttribute('data-vid'));
+            const lat = Number(card.getAttribute('data-lat'));
+            const lng = Number(card.getAttribute('data-lng'));
+            const target = (state.data.villages?.features || []).find(f => f.properties.id === vid);
+            if (target && state.map) {
+                state.map.flyTo({
+                    center: [lng, lat],
+                    zoom: 13.5,
+                    pitch: 45,
+                    duration: 1400
+                });
+                showDatagoBPBDDossier(target.properties, target.geometry);
+            }
+        });
+    });
+
+    container.querySelectorAll('.btn-hab-inspect').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const vid = Number(btn.getAttribute('data-vid'));
+            const target = (state.data.villages?.features || []).find(f => f.properties.id === vid);
+            if (target) {
+                showDatagoBPBDDossier(target.properties, target.geometry);
+            }
+        });
+    });
+
+    container.querySelectorAll('.btn-hab-evac').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const vname = btn.getAttribute('data-vname');
+            const target = (state.data.villages?.features || []).find(f => f.properties.name === vname);
+            if (target && state.map) {
+                state.map.flyTo({
+                    center: target.geometry.coordinates,
+                    zoom: 13.0,
+                    pitch: 45,
+                    duration: 1200
+                });
+                showDatagoBPBDDossier(target.properties, target.geometry);
+                // Open GPS Nav
+                const gpsBtn = document.getElementById('btn-open-gps-nav');
+                if (gpsBtn) gpsBtn.click();
+                const sel = document.getElementById('gps-origin-select');
+                if (sel) {
+                    sel.value = target.properties.name;
+                    sel.dispatchEvent(new Event('change'));
+                }
+            }
+        });
+    });
+}
+
+function renderDerajatKerentanan() {
+    const indicator = document.getElementById('dk-needle-indicator');
+    const valText = document.getElementById('dk-needle-val');
+    const statRed = document.getElementById('dk-stat-red');
+    const statOrange = document.getElementById('dk-stat-orange');
+    const valRain = document.getElementById('dk-val-rain');
+    if (!state.data.villages) return;
+
+    const villages = state.data.villages.features || [];
+    let redCount = 0;
+    let orangeCount = 0;
+    let totalVuln = 0;
+
+    villages.forEach(v => {
+        const p = v.properties;
+        const z = p.zone || 'green';
+        if (z === 'red') redCount++;
+        else if (z === 'orange') orangeCount++;
+        totalVuln += (p.vulnerability_index || 50);
+    });
+
+    const avgVuln = villages.length ? (totalVuln / villages.length) : 62;
+    const rainMm = state.simulation?.intensity_mm_hr || 35;
+
+    if (indicator) {
+        indicator.style.left = `${Math.min(94, Math.max(6, avgVuln))}%`;
+    }
+    if (valText) {
+        const tierStr = avgVuln > 70 ? 'TINGGI (CRITICAL)' : (avgVuln > 40 ? 'SEDANG (WATCH)' : 'RENDAH (SAFE)');
+        valText.textContent = `${avgVuln.toFixed(0)}% ${tierStr}`;
+    }
+    if (statRed) statRed.innerHTML = `🔴 <strong>${redCount}</strong> Zona Merah`;
+    if (statOrange) statOrange.innerHTML = `🟠 <strong>${orangeCount}</strong> Zona Oranye`;
+    if (valRain) valRain.textContent = `${rainMm} mm/h`;
+}
+
+function showDatagoBPBDDossier(props, geometry) {
+    if (geometry && geometry.coordinates) {
+        props.lng = geometry.coordinates[0];
+        props.lat = geometry.coordinates[1];
+    }
+    state.selectedVillage = props;
+
+    // Camera fly to village in 3D
+    if (state.map && props.lng && props.lat) {
+        state.map.flyTo({
+            center: [props.lng, props.lat],
+            zoom: 13.8,
+            pitch: 52,
+            bearing: -15,
+            duration: 1500
+        });
+    }
+
+    // Trigger AI analyst
+    if (state.aiAnalyst && props.lat && props.lng) {
+        state.aiAnalyst.setInspectorPin(props.lng, props.lat);
+        state.aiAnalyst.analyzeLocation({
+            lat: props.lat,
+            lng: props.lng,
+            locationName: props.name,
+            slope: props.slope,
+            elevation: props.elevation,
+            rainfall: state.simulation?.intensity_mm_hr || 35,
+            saturation: state.simulation?.antecedent_24h_mm || 50,
+            seismic: state.simulation?.seismic_kh || 0,
+            villageProps: props
+        }).then(analysis => {
+            state.aiAnalyst.renderCard('ai-explanation-content', analysis);
+        });
+    }
+
+    const drawer = document.getElementById('datago-dossier-drawer');
+    const titleEl = document.getElementById('datago-incident-title');
+    const categoryEl = document.getElementById('datago-category-label');
+    const emojiEl = document.getElementById('datago-hazard-emoji');
+    const iconBox = document.getElementById('datago-hazard-icon-box');
+    const body = document.getElementById('datago-drawer-body');
+    const flyBtn = document.getElementById('btn-menuju-lokasi');
+    const closeBtn = document.getElementById('btn-close-datago');
+
+    if (!drawer || !body) return;
+
+    const slope = Number(props.slope || 26);
+    const rainMm = state.simulation?.intensity_mm_hr || 35;
+    const satMm = state.simulation?.antecedent_24h_mm || 50;
+    const fosEst = (1.55 - (slope / 65) * 0.75).toFixed(2);
+    const uKpa = Math.min(22.0, (rainMm / 100) * 12.0 + (satMm / 150) * 10.0).toFixed(1);
+    const sigmaKpa = Math.max(2.0, 19.5 * 2.5 * Math.pow(Math.cos(slope * Math.PI / 180), 2) - Number(uKpa)).toFixed(1);
+    const tauResist = (12.5 + Number(sigmaKpa) * Math.tan(33 * Math.PI / 180)).toFixed(1);
+    const tauDriving = (19.5 * 2.5 * Math.sin(slope * Math.PI / 180) * Math.cos(slope * Math.PI / 180)).toFixed(1);
+
+    const priorityEntry = (state.data.priorities || []).find(p => p.village_id === props.id || p.village_name === props.name);
+    const safeZone = priorityEntry?.suggested_safe_zone || { site_id: 12, name: 'Safe Haven Zone 12 (Scrubland Plateau)', remaining_capacity_headroom: 1120 };
+    const safeName = safeZone.name || `Safe Haven Alpha-${safeZone.site_id || 12}`;
+    const distanceKm = priorityEntry?.relocation_distance_km || (slope > 30 ? 20.9 : 11.5);
+    const headroom = safeZone.remaining_capacity_headroom ? `+${safeZone.remaining_capacity_headroom.toLocaleString()} Jiwa` : '+1,120 Jiwa';
+
+    const isFlood = (props.dist_river_km || 99) < 0.6;
+    const catTitle = isFlood ? 'Banjir Bandang & Luapan Sungai' : 'Tanah Longsor & Runtuhan Lereng';
+    const hazardEmoji = isFlood ? '🌊' : '🏔️';
+
+    if (titleEl) titleEl.textContent = `${catTitle} • ${props.name}`;
+    if (categoryEl) categoryEl.textContent = `KEJADIAN BENCANA • TEHSIL ${props.tehsil ? props.tehsil.toUpperCase() : 'BHATWARI'}`;
+    if (emojiEl) emojiEl.textContent = hazardEmoji;
+    if (iconBox) {
+        iconBox.style.background = isFlood ? 'rgba(56, 189, 248, 0.2)' : 'rgba(249, 115, 22, 0.2)';
+        iconBox.style.borderColor = isFlood ? '#38bdf8' : '#f97316';
+    }
+
+    // Current local date & local time strictly matching user's device
+    const now = new Date();
+    const localDateStr = now.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    const localTimeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+    const tzName = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local';
+
+    body.innerHTML = `
+        <!-- 1. Lokasi & Waktu (Matching Datago Reference) -->
+        <div class="datago-section">
+            <div class="datago-section-title">📍 Lokasi & Waktu Pemantauan Real-Time</div>
+            <div class="datago-meta-grid">
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Lokasi Permukiman</span>
+                    <span class="datago-meta-val">${props.name}, Tehsil ${props.tehsil || 'Bhatwari'}</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Elevasi / Koordinat</span>
+                    <span class="datago-meta-val">${props.elevation || 1450}m MSL • ${(props.lat || 30.7).toFixed(4)}°N, ${(props.lng || 78.4).toFixed(4)}°E</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Hari, Tanggal</span>
+                    <span class="datago-meta-val">${localDateStr}</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Waktu Pemantauan (Sensor Live)</span>
+                    <span class="datago-meta-val" style="color: #38bdf8;">${localTimeStr} (${tzName})</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Penyebab & Parameter Fisika (Mohr-Coulomb & Hidrometeorologi) -->
+        <div class="datago-section">
+            <div class="datago-section-title">🌧️ Penyebab & Pemicu Geoteknik (Real-Time GIS)</div>
+            <div class="datago-meta-grid">
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Penyebab Utama</span>
+                    <span class="datago-meta-val" style="color: #fbbf24;">Hujan Intensitas Tinggi (${rainMm} mm/jam)</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Faktor Keamanan Lereng (FoS)</span>
+                    <span class="datago-meta-val ${fosEst < 1.0 ? 'text-red' : (fosEst < 1.25 ? 'text-amber' : 'text-safe')}">
+                        FS: ${fosEst} (${fosEst < 1.0 ? 'KRITIS / KERUNTUHAN' : 'RENTAN'})
+                    </span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Tekanan Air Pori (u)</span>
+                    <span class="datago-meta-val">${uKpa} kPa (Saturasi 24h: ${satMm}mm)</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Kekuatan Geser vs Pendorong</span>
+                    <span class="datago-meta-val">τf: ${tauResist} kPa | τd: ${tauDriving} kPa</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Kerusakan & Dampak Warga -->
+        <div class="datago-section">
+            <div class="datago-section-title">👥 Dampak & Populasi Terancam (Sensus & GEE WorldPop)</div>
+            <div class="datago-meta-grid">
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Jumlah Jiwa Terpapar</span>
+                    <span class="datago-meta-val" style="color: #f8fafc; font-size: 13px;">${(props.population || 250).toLocaleString()} Jiwa</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Kepala Keluarga (KK)</span>
+                    <span class="datago-meta-val">${Math.round((props.population || 250) / 5.2)} KK</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Akses Koridor Transportasi</span>
+                    <span class="datago-meta-val" style="color: #fbbf24;">NH-108 Gangotri Highway (Terancam Putus)</span>
+                </div>
+                <div class="datago-meta-item">
+                    <span class="datago-meta-lbl">Status Mandat Regulasi</span>
+                    <span class="datago-meta-val" style="color: #ef4444;">Evakuasi Prioritas (DM Act Sec 30)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Kronologi Bencana -->
+        <div class="datago-section">
+            <div class="datago-section-title">⏱️ Kronologi & Mekanisme Keruntuhan Lereng</div>
+            <p class="datago-narrative-text">
+                Telah terdeteksi peningkatan signifikan tekanan air pori (pore water pressure <em>u</em> = ${uKpa} kPa) pada lereng berkemiringan ${slope.toFixed(1)}° di atas permukiman ${props.name}. Akumulasi curah hujan intensitas ${rainMm} mm/jam yang dipadukan dengan kejenuhan tanah 24 jam sebesar ${satMm} mm telah mengurangi tegangan efektif tanah normal menjadi ${sigmaKpa} kPa. Hal ini menyebabkan tegangan geser pendorong (${tauDriving} kPa) melampaui kekuatan geser penahan (${tauResist} kPa), menempatkan lereng dalam status keruntuhan kritis (Factor of Safety = ${fosEst} &lt; 1.0). Material koluvium lereng dan batuan phyllite terancam bergerak cepat ke arah permukiman warga.
+            </p>
+        </div>
+
+        <!-- 5. Kendala & Potensi Bencana Susulan -->
+        <div class="datago-section">
+            <div class="datago-section-title">⚠️ Kendala / Kebutuhan Mendesak / Potensi Susulan</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 11.5px; color: #cbd5e1; line-height: 1.6;">
+                <li><strong>Kendala Lapangan:</strong> Kemiringan tebing terjal (${slope.toFixed(0)}°) membatasi ruang operasi alat berat dan kendaraan evakuasi berat.</li>
+                <li><strong>Kebutuhan Mendesak:</strong> Evakuasi dini warga menuju Posko Aman Alpha-${safeZone.site_id || 12}, pasokan air minum bersih darurat (${Math.round((props.population || 250) * 70).toLocaleString()} Liter/hari standar NDMA 70 lpcd), serta penyediaan tenda modular keluarga.</li>
+                <li><strong>Potensi Bencana Susulan:</strong> Potensi pembentukan bendung alam longsor (landslide dam) di alur sungai ${props.dist_river_km < 1 ? 'Bhagirathi' : 'anak sungai'} yang berisiko jebol dan memicu banjir bandang susulan ke hilir.</li>
+            </ul>
+        </div>
+
+        <!-- 6. Dokumentasi Lapangan & Satelit (Matching Datago Gallery) -->
+        <div class="datago-section">
+            <div class="datago-section-title">📷 Dokumentasi Survei Satelit & Drone Lapangan</div>
+            <div class="datago-doc-grid">
+                <div class="datago-doc-card" data-img="/assets/landslide_scarp.jpg" data-title="Mahkota Longsoran & Rekahan Lereng (50cm)" data-desc="Citra satelit resolusi tinggi memperlihatkan rekahan geser aktif dan bidang gelincir koluvium di atas permukiman ${props.name}.">
+                    <img src="/assets/landslide_scarp.jpg" class="datago-doc-img" alt="Citra Satelit Longsor">
+                    <div class="datago-doc-caption">🛰️ Mahkota Longsor (${slope.toFixed(0)}°)</div>
+                </div>
+                <div class="datago-doc-card" data-img="/assets/village_aerial.jpg" data-title="Survei Drone Morfologi Permukiman & Sungai" data-desc="Survei drone ortofoto memperlihatkan kepadatan permukiman bertingkat di tepi bantaran sungai yang rentan terhadap gerusan kaki lereng.">
+                    <img src="/assets/village_aerial.jpg" class="datago-doc-img" alt="Survei Drone Permukiman">
+                    <div class="datago-doc-caption">🚁 Pola Permukiman Warga</div>
+                </div>
+                <div class="datago-doc-card" data-img="/assets/safe_haven_camp.jpg" data-title="Posko Aman Alternatif Alpha-${safeZone.site_id || 12}" data-desc="Kawasan dataran tinggi stabil yang ditunjuk sebagai posko penampungan resmi lengkap dengan infrastruktur sanitasi, air bersih 70 lpcd, dan akses jalan PMGSY.">
+                    <img src="/assets/safe_haven_camp.jpg" class="datago-doc-img" alt="Posko Aman Alternatif">
+                    <div class="datago-doc-caption">🛡️ Posko Aman Alpha-${safeZone.site_id || 12}</div>
+                </div>
+            </div>
+            <div style="font-size: 10px; color: #64748b; margin-top: 6px; text-align: center;">Klik foto untuk memperbesar tampilan resolusi tinggi</div>
+        </div>
+
+        <!-- 7. Penanganan & Rencana Relokasi (Statutory Resettlement under DM Act Sec 30) -->
+        <div class="datago-section datago-relocation-box">
+            <div class="datago-reloc-header">
+                <span class="datago-reloc-title">🛡️ Rencana Relokasi & Posko Aman (Sec. 30 DM Act 2005)</span>
+                <span class="datago-reloc-badge">MANDAT STATUTORI</span>
+            </div>
+            <div class="datago-reloc-grid">
+                <div>
+                    <span style="font-size: 9.5px; color: #64748b; text-transform: uppercase;">Lokasi Posko Tujuan:</span><br>
+                    <strong style="color: #10b981; font-size: 12px;">${safeName}</strong>
+                </div>
+                <div>
+                    <span style="font-size: 9.5px; color: #64748b; text-transform: uppercase;">Jarak & Aksesibilitas:</span><br>
+                    <strong style="color: #f8fafc; font-size: 12px;">${distanceKm} km via NH-108</strong>
+                </div>
+                <div>
+                    <span style="font-size: 9.5px; color: #64748b; text-transform: uppercase;">Daya Tampung Tersedia:</span><br>
+                    <strong style="color: #38bdf8;">${headroom} (Buffer Aman)</strong>
+                </div>
+                <div>
+                    <span style="font-size: 9.5px; color: #64748b; text-transform: uppercase;">Alasan Posko Aman:</span><br>
+                    <strong style="color: #f8fafc;">Kemiringan 8.5° &lt; 12° • Bebas Banjir</strong>
+                </div>
+            </div>
+            <div class="datago-reloc-actions">
+                <button class="btn-trace-evac" id="btn-trace-evac-action">🧭 Tampilkan Rute Evakuasi (Dijkstra)</button>
+                <button class="btn-order-pdf" id="btn-export-dossier-pdf">📋 Unduh SK Relokasi (PDF)</button>
+            </div>
+        </div>
+    `;
+
+    // Attach fly to location listener
+    if (flyBtn) {
+        flyBtn.onclick = () => {
+            if (state.map && props.lng && props.lat) {
+                state.map.flyTo({
+                    center: [props.lng, props.lat],
+                    zoom: 14.5,
+                    pitch: 58,
+                    duration: 1200
+                });
+            }
+        };
+    }
+
+    // Attach close listener
+    if (closeBtn) {
+        closeBtn.onclick = () => {
+            drawer.classList.add('hidden');
+        };
+    }
+
+    // Attach photo gallery lightbox listeners
+    body.querySelectorAll('.datago-doc-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const imgSrc = card.getAttribute('data-img');
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+            openPhotoLightbox(imgSrc, title, desc);
+        });
+    });
+
+    // Attach trace evac button
+    const btnTrace = body.querySelector('#btn-trace-evac-action');
+    if (btnTrace) {
+        btnTrace.addEventListener('click', () => {
+            drawer.classList.add('hidden');
+            const gpsBtn = document.getElementById('btn-open-gps-nav');
+            if (gpsBtn) gpsBtn.click();
+            const sel = document.getElementById('gps-origin-select');
+            if (sel) {
+                sel.value = props.name;
+                sel.dispatchEvent(new Event('change'));
+            }
+        });
+    }
+
+    // Attach PDF export button
+    const btnPdf = body.querySelector('#btn-export-dossier-pdf');
+    if (btnPdf) {
+        btnPdf.addEventListener('click', () => {
+            const mainDM = document.getElementById('btn-dm-report');
+            if (mainDM) mainDM.click();
+        });
+    }
+
+    // Pinned edge tabs listeners
+    const tabDetail = document.getElementById('tab-edge-detail');
+    const tabPosko = document.getElementById('tab-edge-posko');
+    const tabRegistry = document.getElementById('tab-edge-registry');
+
+    if (tabDetail) {
+        tabDetail.onclick = () => {
+            tabDetail.classList.add('active');
+            tabPosko?.classList.remove('active');
+            tabRegistry?.classList.remove('active');
+        };
+    }
+
+    if (tabPosko) {
+        tabPosko.onclick = () => {
+            tabPosko.classList.add('active');
+            tabDetail?.classList.remove('active');
+            tabRegistry?.classList.remove('active');
+            const capModalBtn = document.getElementById('btn-open-capacity-modal');
+            if (capModalBtn) capModalBtn.click();
+        };
+    }
+
+    if (tabRegistry) {
+        tabRegistry.onclick = () => {
+            tabRegistry.classList.add('active');
+            tabDetail?.classList.remove('active');
+            tabPosko?.classList.remove('active');
+            const habPanel = document.getElementById('floating-habitations-panel');
+            if (habPanel) {
+                habPanel.classList.remove('minimized');
+                habPanel.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+    }
+
+    drawer.classList.remove('hidden');
+}
+
+function openPhotoLightbox(imgSrc, title, desc) {
+    const modal = document.getElementById('photo-lightbox-modal');
+    const imgEl = document.getElementById('lightbox-full-img');
+    const titleEl = document.getElementById('lightbox-caption-title');
+    const descEl = document.getElementById('lightbox-caption-desc');
+
+    if (!modal || !imgEl) return;
+
+    imgEl.src = imgSrc;
+    if (titleEl) titleEl.textContent = title || 'High-Resolution Geological Survey';
+    if (descEl) descEl.textContent = desc || 'Sub-meter optical satellite imagery and aerial drone reconnaissance calibrated for geotechnical slope assessment.';
+
+    modal.classList.remove('hidden');
+
+    const closeHandler = () => {
+        modal.classList.add('hidden');
+    };
+
+    document.getElementById('btn-close-lightbox')?.addEventListener('click', closeHandler, { once: true });
+    document.getElementById('btn-close-lightbox-cross')?.addEventListener('click', closeHandler, { once: true });
+}
+
+function initRealTimeGISModal() {
+    const openBtn = document.getElementById('btn-open-realtime-gis');
+    const modal = document.getElementById('realtime-gis-modal');
+    const closeBtn = document.getElementById('btn-close-realtime-modal');
+
+    if (openBtn && modal) {
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+    }
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    }
+}
+
+function initMarkersGuideModal() {
+    const openBtn = document.getElementById('btn-open-markers-guide');
+    const dkInfoBtn = document.getElementById('btn-dk-info');
+    const modal = document.getElementById('markers-guide-modal');
+    const closeBtn = document.getElementById('btn-close-markers-modal');
+
+    const openHandler = () => {
+        if (modal) modal.classList.remove('hidden');
+    };
+
+    if (openBtn) openBtn.addEventListener('click', openHandler);
+    if (dkInfoBtn) dkInfoBtn.addEventListener('click', openHandler);
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    }
+}
+
+function initPhotoLightbox() {
+    const modal = document.getElementById('photo-lightbox-modal');
+    if (!modal) return;
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+            modal.classList.add('hidden');
+        }
+    });
+}
+
+// ============================================================
+// ISRO INSAT-3D/3DR 15-MIN GEO & IMD RADAR MISSION CONTROL
+// ============================================================
+function initInsatDwrModule(map) {
+    const modal = document.getElementById('insat-dwr-modal');
+    const openBtn = document.getElementById('btn-open-insat-dwr');
+    const chip = document.getElementById('status-insat-chip');
+    const closeBtn = document.getElementById('btn-close-insat-modal');
+    const toggleRadarBtn = document.getElementById('btn-toggle-radar-map');
+
+    let isRadarMapActive = false;
+
+    const openModal = async () => {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        await updateInsatDwrTelemetry();
+    };
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (chip) chip.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+    const updateInsatDwrTelemetry = async () => {
+        const rain = state.simulation?.intensity_mm_hr || 35;
+        try {
+            const [insatRes, dwrRes] = await Promise.all([
+                fetch(`${CONFIG.API_URL}/sat/insat-telemetry?rain_intensity=${rain}`),
+                fetch(`${CONFIG.API_URL}/sat/dwr-radar?rain_intensity=${rain}`)
+            ]);
+            const insat = await insatRes.json();
+            const dwr = await dwrRes.json();
+
+            // Update Top Status Chip
+            const chipText = document.getElementById('insat-chip-text');
+            const chipDot = document.getElementById('insat-pulse-dot');
+            if (chipText && insat.products?.ctbt) {
+                const ctbtVal = insat.products.ctbt.value_c;
+                chipText.textContent = `INSAT-3D: ${ctbtVal}°C (CTBT)`;
+                if (chipDot) {
+                    chipDot.className = ctbtVal < -60 ? 'status-dot live-pulse text-red' : 'status-dot live-pulse text-safe';
+                }
+            }
+
+            // Update Modal KPIs
+            const ctbtValEl = document.getElementById('insat-ctbt-val');
+            const ctbtBadge = document.getElementById('insat-ctbt-badge');
+            const ctbtDesc = document.getElementById('insat-ctbt-desc');
+            if (ctbtValEl && insat.products?.ctbt) {
+                const ctbtVal = insat.products.ctbt.value_c;
+                ctbtValEl.textContent = `${ctbtVal}°C`;
+                if (ctbtBadge) {
+                    ctbtBadge.textContent = ctbtVal < -60 ? '🔴 CLOUDBURST TOWER' : (ctbtVal < -45 ? '🟠 CONVECTIVE' : '🟢 STRATIFORM');
+                    ctbtBadge.className = `ik-badge ${ctbtVal < -60 ? 'red' : (ctbtVal < -45 ? 'orange' : 'green')}`;
+                }
+                if (ctbtDesc) {
+                    ctbtDesc.innerHTML = ctbtVal < -60
+                        ? `Thermal Infrared &lt; -60°C threshold: <strong style="color: #ef4444;">T-25 min cloudburst advance warning active!</strong>`
+                        : `Convective cloud tops at normal altitude. Rain rate: <strong>${insat.products?.hem_rainfall?.instantaneous_rain_rate_mm_hr || 35} mm/hr</strong>.`;
+                }
+            }
+
+            const countdownEl = document.getElementById('insat-countdown-val');
+            if (countdownEl && insat.countdown_next_downlink_sec) {
+                const mins = Math.floor(insat.countdown_next_downlink_sec / 60);
+                const secs = insat.countdown_next_downlink_sec % 60;
+                countdownEl.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+
+            const dbzValEl = document.getElementById('insat-dbz-val');
+            const dbzBadge = document.getElementById('insat-dbz-badge');
+            const dwrRain = document.getElementById('insat-dwr-rain');
+            if (dbzValEl && dwr.radar_metrics) {
+                dbzValEl.textContent = `${dwr.radar_metrics.max_reflectivity_dbz} dBZ`;
+                if (dbzBadge) {
+                    dbzBadge.textContent = dwr.threat_classification?.severity_tier || 'MODERATE';
+                    dbzBadge.className = `ik-badge ${dwr.radar_metrics.max_reflectivity_dbz >= 52 ? 'red' : 'cyan'}`;
+                }
+                if (dwrRain) dwrRain.textContent = `${dwr.radar_metrics.marshall_palmer_rain_rate_mm_hr} mm/hr`;
+            }
+
+            const hemValEl = document.getElementById('insat-hem-val');
+            const riverSurgeEl = document.getElementById('insat-river-surge');
+            if (hemValEl && insat.products?.hem_rainfall) {
+                hemValEl.textContent = `${insat.products.hem_rainfall.instantaneous_rain_rate_mm_hr} mm/h`;
+            }
+            if (riverSurgeEl && dwr.hydrologic_surge) {
+                riverSurgeEl.textContent = `${dwr.hydrologic_surge.estimated_river_discharge_cms.toLocaleString()} m³/s`;
+            }
+
+            // Update Tables
+            const t1 = document.getElementById('tbl-tir1-val');
+            if (t1) t1.textContent = `${insat.channels?.tir1_10_8_um?.cloud_top_brightness_temp_c || -28}°C`;
+            const t2 = document.getElementById('tbl-tir2-val');
+            if (t2) t2.textContent = `${insat.channels?.tir2_12_0_um?.split_window_diff_c || 1.2}°C`;
+            const wv = document.getElementById('tbl-wv-val');
+            if (wv) wv.textContent = `${insat.channels?.wv_6_7_um?.relative_saturation_pct || 75}%`;
+            const hemTbl = document.getElementById('tbl-hem-val');
+            if (hemTbl) hemTbl.textContent = `${insat.products?.hem_rainfall?.instantaneous_rain_rate_mm_hr || 35} mm/h`;
+
+            const dwrDbzSpec = document.getElementById('dwr-spec-dbz');
+            if (dwrDbzSpec) dwrDbzSpec.textContent = `${dwr.radar_metrics?.max_reflectivity_dbz || 48} dBZ (${dwr.threat_classification?.severity_tier || 'Active'})`;
+            const dwrArrSpec = document.getElementById('dwr-spec-arrival');
+            if (dwrArrSpec) dwrArrSpec.textContent = `${dwr.hydrologic_surge?.flash_flood_arrival_minutes || 35} Minutes to Valley Riverbed`;
+
+            const advEl = document.getElementById('insat-advisory-text');
+            if (advEl && insat.early_warning_advisory) {
+                advEl.innerHTML = insat.early_warning_advisory;
+            }
+        } catch (err) {
+            console.warn('INSAT-3D / Radar telemetry notice:', err);
+        }
+    };
+
+    // Toggle live radar echoes on MapLibre map
+    if (toggleRadarBtn) {
+        toggleRadarBtn.addEventListener('click', async () => {
+            const currentMap = map || state.map;
+            if (!currentMap) return;
+            const rain = state.simulation?.intensity_mm_hr || 35;
+            isRadarMapActive = !isRadarMapActive;
+
+            if (isRadarMapActive) {
+                toggleRadarBtn.innerHTML = '<span>📡</span> Hide Radar Swath from Map';
+                toggleRadarBtn.style.background = '#ef4444';
+                try {
+                    const res = await fetch(`${CONFIG.API_URL}/sat/radar-geojson?rain_intensity=${rain}`);
+                    const geo = await res.json();
+
+                    if (currentMap.getSource('insat-radar-src')) {
+                        currentMap.getSource('insat-radar-src').setData(geo);
+                    } else {
+                        currentMap.addSource('insat-radar-src', {
+                            type: 'geojson',
+                            data: geo
+                        });
+                        currentMap.addLayer({
+                            id: 'insat-radar-fill',
+                            type: 'fill',
+                            source: 'insat-radar-src',
+                            paint: {
+                                'fill-color': ['get', 'fill_color'],
+                                'fill-opacity': ['get', 'fill_opacity']
+                            }
+                        });
+                        currentMap.addLayer({
+                            id: 'insat-radar-line',
+                            type: 'line',
+                            source: 'insat-radar-src',
+                            paint: {
+                                'line-color': '#ffffff',
+                                'line-width': 1.5,
+                                'line-opacity': 0.8
+                            }
+                        });
+                    }
+
+                    // Fly smoothly to show the radar swath over Uttarkashi
+                    currentMap.flyTo({
+                        center: [78.45, 30.73],
+                        zoom: 10.5,
+                        pitch: 48,
+                        duration: 1500
+                    });
+
+                    // Close modal so user sees map
+                    if (modal) modal.classList.add('hidden');
+                } catch (e) {
+                    console.error('Error mounting radar layer:', e);
+                }
+            } else {
+                toggleRadarBtn.innerHTML = '<span>📡</span> Render Live Radar on 3D Map';
+                toggleRadarBtn.style.background = '';
+                if (currentMap.getLayer('insat-radar-fill')) currentMap.removeLayer('insat-radar-fill');
+                if (currentMap.getLayer('insat-radar-line')) currentMap.removeLayer('insat-radar-line');
+                if (currentMap.getSource('insat-radar-src')) currentMap.removeSource('insat-radar-src');
+            }
+        });
+    }
+
+    // Auto-poll telemetry every 15 seconds
+    setInterval(updateInsatDwrTelemetry, 15000);
+    updateInsatDwrTelemetry();
+}

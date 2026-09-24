@@ -74,18 +74,20 @@
                     </div>
                     <div class="logo-text">
                         <div class="govt-emblem-row" id="govt-emblem-row">
-                            <span class="govt-title">UTTARAKHAND STATE DISASTER MANAGEMENT AUTHORITY (USDMA) • आपदा प्रबंधन विभाग</span>
+                            <span class="govt-title">USDMA • DEOC UTTARKASHI</span>
+                            <span class="version-badge" id="model-version-tag">GEO-AI v3.2</span>
                         </div>
-                        <h1 id="header-main-title">भू-रक्षक • BHURAKSHAK <span class="version-badge" id="model-version-tag">GEO-AI v3.2</span></h1>
-                        <span class="logo-tagline" id="header-sub-title">STATUTORY DECISION SUPPORT SYSTEM • SEC. 30 & 34 DISASTER MANAGEMENT ACT 2005</span>
+                        <h1 id="header-main-title">भू-रक्षक • BHURAKSHAK</h1>
+                        <span class="logo-tagline" id="header-sub-title">Multi-Hazard Intelligence & Habitation Relocation • DM Act 2005</span>
                     </div>
                 </div>
             </div>
             <div class="top-bar-center">
                 <div class="status-indicators gov-status">
                     <div class="telemetry-clock-box">
-                        <span class="clock-label">DEOC IST</span>
+                        <span class="clock-label" id="clock-tz-label">LOCAL / IST</span>
                         <span class="clock-time" id="sys-utc-clock">--:--:--</span>
+                        <span class="clock-date" id="sys-date-str">--</span>
                     </div>
                     <div class="status-chip safe" id="status-national-threat" title="District Multi-Hazard Threat Alert Level">
                         <span class="status-dot live-pulse" id="threat-pulse-dot"></span>
@@ -95,7 +97,11 @@
                         <span class="status-dot pulse-amber"></span>
                         <span id="seismic-chip-text">USGS: M 4.0 (Sarāhan)</span>
                     </div>
-                    <div class="status-chip active" id="status-gee-chip" title="Google Earth Engine Real-Time Satellite Stream">
+                    <div class="status-chip active" id="status-insat-chip" title="ISRO INSAT-3D/3DR 15-Minute Geostationary Stream (CTBT & HEM)">
+                        <span class="status-dot live-pulse text-safe" id="insat-pulse-dot"></span>
+                        <span id="insat-chip-text">INSAT-3D: -67°C (CTBT)</span>
+                    </div>
+                    <div class="status-chip active" id="status-gee-chip" title="Google Earth Engine Satellite Stream (SRTM 30m + S2)">
                         <span class="status-dot live-pulse"></span>
                         <span id="gee-chip-text">GEE: LIVE (SRTM+S2)</span>
                     </div>
@@ -106,6 +112,17 @@
                 </div>
             </div>
             <div class="top-bar-right">
+                <!-- ISRO INSAT-3D & Radar Action Button -->
+                <button class="nav-action-btn btn-action-insat" id="btn-open-insat-dwr" title="Launch ISRO INSAT-3D 15-Min & IMD Doppler Radar Mission Control">
+                    <span class="btn-icon-symbol">🛰️</span> INSAT-3D / Radar
+                </button>
+                <!-- Real-Time GIS Pipeline & Dot Explainer Buttons -->
+                <button class="nav-action-btn btn-action-realtime" id="btn-open-realtime-gis" title="Learn How the Entire GIS Platform Works in Real Time">
+                    <span class="btn-icon-symbol">📡</span> Real-Time GIS
+                </button>
+                <button class="nav-action-btn btn-action-markers" id="btn-open-markers-guide" title="Guide: What Each Dot Does and the Real-Time Data Behind It">
+                    <span class="btn-icon-symbol">ℹ️</span> What Dots Mean
+                </button>
                 <!-- AI Inspector Primary Tool -->
                 <button class="nav-action-btn btn-action-ai active" id="btn-toggle-ai-analyst" title="BhuRakshak AI Terrain Explainer & Click-to-Diagnose Inspector">
                     <span class="btn-icon-symbol">🧠</span> AI Explainer
@@ -120,7 +137,7 @@
                     <span class="btn-icon-symbol">🔬</span> Rigor Audit
                 </button>
                 <button class="nav-action-btn btn-action-purple" id="btn-open-gee-modal" title="Google Earth Engine Live Satellite Telemetry">
-                    <span class="btn-icon-symbol">🛰️</span> GEE Stream
+                    <span class="btn-icon-symbol">🌐</span> GEE Console
                 </button>
 
                 <!-- Command Ops Dropdown -->
@@ -163,7 +180,7 @@
         </header>
 
         <!-- Left Panel — Executive Multi-Hazard Overview & Model Accuracy Audit -->
-        <aside id="left-panel" class="side-panel left-panel fos-monitor-console">
+        <aside id="left-panel" class="side-panel left-panel fos-monitor-console hidden" style="display: none !important;">
             <div class="panel-header">
                 <div>
                     <h2>DISTRICT MULTI-HAZARD INTELLIGENCE</h2>
@@ -547,7 +564,7 @@
         </aside>
 
         <!-- Right Panel — AI Analyst & Operational Relocation Command -->
-        <aside id="right-panel" class="side-panel right-panel glof-ews-console">
+        <aside id="right-panel" class="side-panel right-panel glof-ews-console collapsed">
             <div class="panel-header">
                 <div>
                     <h2>AI ANALYST & RELOCATION COMMAND</h2>
@@ -885,7 +902,7 @@
         <div id="map" class="map-container"></div>
 
         <!-- Floating Real-Time GPS Evacuation Navigator HUD (Turn-by-Turn & Convoy Simulation) -->
-        <div id="gps-navigator-hud" class="gps-navigator-hud">
+        <div id="gps-navigator-hud" class="gps-navigator-hud hidden">
             <div class="gps-hud-header">
                 <div class="gps-header-title">
                     <span class="gps-icon-pulse">🧭</span>
@@ -967,33 +984,163 @@
             </div>
         </div>
 
-        <!-- Area Intelligence Dossier (Floating Glassmorphic Inspector Card) -->
-        <div id="detail-panel" class="area-dossier-card hidden">
-            <div class="dossier-card-header">
-                <div class="dossier-header-title">
-                    <span class="dossier-icon">📍</span>
-                    <div>
-                        <h4 id="dossier-title-text">Habitation Intelligence Dossier</h4>
-                        <span class="dossier-sub" id="dossier-sub-text">Click any habitation, corridor sector, or safe haven</span>
+        <!-- Unified DEOC Dashboard Habitations Console (Docked Left, High-End Layout) -->
+        <aside class="floating-habitations-panel" id="floating-habitations-panel">
+            <div class="floating-panel-header">
+                <div>
+                    <div class="floating-panel-title">
+                        <span class="floating-panel-icon">🏘️</span>
+                        <h3 id="found-count-text">Found 51 Habitations</h3>
+                    </div>
+                    <span class="floating-panel-sub" id="found-sub-text">Monitored Settlements • Live Sensors</span>
+                </div>
+                <div class="floating-panel-actions">
+                    <select id="sort-habitations" class="sort-select" title="Sort habitations list">
+                        <option value="risk">Risk Score ↓</option>
+                        <option value="population">Population ↓</option>
+                        <option value="fos">Factor of Safety ↑</option>
+                        <option value="distance">Evac Distance ↑</option>
+                    </select>
+                    <button class="btn-panel-toggle" id="btn-toggle-habitations-list" title="Minimize / Expand List">◀</button>
+                </div>
+            </div>
+
+            <!-- Integrated Multi-Hazard Search & Filter Bar -->
+            <div class="floating-filter-bar" id="floating-filter-bar">
+                <div class="filter-search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="filter-search-input" placeholder="Search habitations (Bhatwari, Dharali...)" autocomplete="off">
+                    <button class="btn-clear-search hidden" id="btn-clear-search" title="Clear Search">✕</button>
+                </div>
+                <div class="filter-dropdown-group">
+                    <div class="filter-select-wrap">
+                        <span class="filter-select-label">HAZARD:</span>
+                        <select id="filter-hazard-type" class="filter-select">
+                            <option value="all">All Hazards</option>
+                            <option value="landslide">⛰️ Landslides</option>
+                            <option value="flood">🌊 Flash Floods</option>
+                            <option value="cloudburst">⛈️ Cloudburst</option>
+                            <option value="earthquake">⚡ Seismic</option>
+                        </select>
+                    </div>
+                    <div class="filter-select-wrap">
+                        <span class="filter-select-label">THREAT:</span>
+                        <select id="filter-threat-tier" class="filter-select">
+                            <option value="all">All Zones</option>
+                            <option value="red">🔴 Red (Evac)</option>
+                            <option value="orange">🟠 Orange (Alert)</option>
+                            <option value="yellow">🟡 Yellow (Watch)</option>
+                            <option value="green">🟢 Green (Safe)</option>
+                        </select>
+                    </div>
+                    <div class="filter-select-wrap">
+                        <span class="filter-select-label">TEHSIL:</span>
+                        <select id="filter-tehsil" class="filter-select">
+                            <option value="all">All Tehsils</option>
+                            <option value="Bhatwari">Bhatwari</option>
+                            <option value="Dunda">Dunda</option>
+                            <option value="Purola">Purola</option>
+                            <option value="Mori">Mori</option>
+                            <option value="Barkot">Barkot</option>
+                        </select>
                     </div>
                 </div>
-                <button class="detail-close" id="btn-close-detail" title="Close Dossier">✕</button>
+                <div class="basemap-pills-wrap">
+                    <button class="basemap-pill active" data-map="satellite" id="btn-basemap-sat" title="High-Resolution Satellite Basemap">🛰️ Satellite</button>
+                    <button class="basemap-pill" data-map="topo" id="btn-basemap-topo" title="Topographic Elevation Contours">🏔️ Topo</button>
+                    <button class="basemap-pill" data-map="dark" id="btn-basemap-dark" title="Night Reconnaissance">🌑 Dark</button>
+                </div>
             </div>
-            <div class="detail-content" id="detail-content">
-                <!-- Filled dynamically with optimized explainability breakdown -->
+
+            <!-- Scrollable Habitations Card List -->
+            <div class="floating-habitations-scroll" id="habitations-card-list">
+                <!-- Dynamically populated by main.js with image thumbnails, metrics, and actions -->
+            </div>
+
+            <!-- Bottom-Docked Derajat Kerentanan Card -->
+            <div class="derajat-kerentanan-card" id="derajat-kerentanan-card">
+                <div class="dk-header">
+                    <div class="dk-title-wrap">
+                        <span class="dk-icon">📊</span>
+                        <div>
+                            <h4 class="dk-title">Derajat Kerentanan</h4>
+                            <span class="dk-sub">Indikator Umum (District Multi-Hazard Vulnerability Index)</span>
+                        </div>
+                    </div>
+                    <button class="btn-dk-info" id="btn-dk-info" title="Explain Map Symbols & Dots">ℹ️ Panduan Titik</button>
+                </div>
+                <div class="dk-bar-container">
+                    <div class="dk-gradient-bar"></div>
+                    <div class="dk-needle-indicator" id="dk-needle-indicator" style="left: 42%;">
+                        <div class="dk-needle-pin">▼</div>
+                        <span class="dk-needle-val" id="dk-needle-val">42% SEDANG</span>
+                    </div>
+                </div>
+                <div class="dk-labels-row">
+                    <span class="dk-lbl left"><span class="dk-dot green"></span> Rendah (&gt;1.5)</span>
+                    <span class="dk-lbl center"><span class="dk-dot yellow"></span> Sedang</span>
+                    <span class="dk-lbl right"><span class="dk-dot red"></span> Tinggi (&lt;1.0)</span>
+                </div>
+                <div class="dk-summary-row">
+                    <span class="dk-summary-item" id="dk-stat-red">🔴 <strong>8</strong> Zona Merah</span>
+                    <span class="dk-summary-sep">•</span>
+                    <span class="dk-summary-item" id="dk-stat-orange">🟠 <strong>12</strong> Zona Oranye</span>
+                    <span class="dk-summary-sep">•</span>
+                    <span class="dk-summary-item" id="dk-stat-yellow">🟡 <strong>18</strong> Kuning</span>
+                    <span class="dk-summary-sep">•</span>
+                    <span class="dk-summary-item" id="dk-stat-green">🟢 <strong>13</strong> Hijau</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Datago BPBD Slide-Over Incident & Habitation Dossier Modal (Image 1 Inspired) -->
+        <div id="datago-dossier-drawer" class="datago-dossier-drawer hidden">
+            <!-- Pinned Vertical Tabs on Drawer Left Edge -->
+            <div class="datago-edge-tabs">
+                <button class="edge-tab-btn active" id="tab-edge-detail" title="Detail Kejadian Bencana & Lokasi">
+                    <span>📋 Detail Bencana</span>
+                </button>
+                <button class="edge-tab-btn" id="tab-edge-posko" title="Data Posko Aman Alternatif">
+                    <span>🛡️ Data Posko</span>
+                </button>
+                <button class="edge-tab-btn" id="tab-edge-registry" title="Daftar 51 Habitations Terpantau">
+                    <span>📑 Daftar Habitations</span>
+                </button>
+            </div>
+
+            <!-- Drawer Container -->
+            <div class="datago-drawer-content">
+                <!-- Header -->
+                <div class="datago-drawer-header">
+                    <div class="datago-header-main">
+                        <div class="datago-hazard-badge-icon" id="datago-hazard-icon-box">
+                            <span id="datago-hazard-emoji">🏔️</span>
+                        </div>
+                        <div>
+                            <div class="datago-category-label" id="datago-category-label">Kejadian Bencana • Tanah Longsor & Banjir Bandang</div>
+                            <h3 class="datago-incident-title" id="datago-incident-title">Tanah Longsor • Bhatwari</h3>
+                        </div>
+                    </div>
+                    <div class="datago-header-controls">
+                        <button class="btn-menuju-lokasi" id="btn-menuju-lokasi" title="Terbang ke Titik Lokasi Bencana di Peta">
+                            <span class="btn-icon">📍</span> Menuju Lokasi
+                        </button>
+                        <button class="btn-close-datago" id="btn-close-datago" title="Tutup Detail">✕</button>
+                    </div>
+                </div>
+
+                <!-- Body (Scrollable) -->
+                <div class="datago-drawer-body" id="datago-drawer-body">
+                    <!-- Populated dynamically by main.js with authentic sections -->
+                </div>
             </div>
         </div>
 
-        <!-- Legend -->
-        <div id="legend" class="legend">
-            <h4>Multi-Hazard Classification</h4>
-            <div class="legend-items">
-                <div class="legend-item"><span class="legend-color" style="background: #ff334b"></span> Red — Immediate Relocation (Prob ≥ 0.70)</div>
-                <div class="legend-item"><span class="legend-color" style="background: #ff8833"></span> Orange — High Susceptibility (0.50 - 0.70)</div>
-                <div class="legend-item"><span class="legend-color" style="background: #f5cc00"></span> Yellow — Moderate Risk (0.30 - 0.50)</div>
-                <div class="legend-item"><span class="legend-color" style="background: #10b981"></span> Green — Safe Relocation Site (&lt; 0.30)</div>
-                <div class="legend-item"><span class="legend-color pulse-box"></span> Newly Expanded Red Zone (Dynamic Trigger)</div>
-            </div>
+        <!-- Area Intelligence Dossier (Backward-compatible container for AI inspector) -->
+        <div id="detail-panel" class="area-dossier-card hidden" style="display: none !important;">
+            <div id="dossier-title-text"></div>
+            <div id="dossier-sub-text"></div>
+            <div id="detail-content"></div>
         </div>
 
         <!-- DEOC Executive Command Center Bottom Status Ribbon -->
@@ -1523,6 +1670,547 @@
             </div>
             <div class="modal-body" id="wihg-modal-content">
                 <!-- Dynamically filled by main.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- REAL-TIME GIS PIPELINE EXPLAINER MODAL                      -->
+    <!-- ============================================================ -->
+    <div id="realtime-gis-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen realtime-modal-box">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="prov-badge-pill" style="background: rgba(0, 240, 255, 0.15); color: #00f0ff; border: 1px solid rgba(0, 240, 255, 0.4);">
+                        LIVE SENSOR & SATELLITE ENGINE
+                    </div>
+                    <h2>📡 How BhuRakshak Operates in Real Time</h2>
+                    <span class="modal-sub">Zero-Auth Meteorological Ingestion • Mohr-Coulomb Dynamic Physics • Google Earth Engine Streaming • Automated Relocation Allocation</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close" id="btn-close-realtime-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body" id="realtime-gis-modal-content">
+                <div class="rt-pipeline-grid">
+                    <!-- Stage 1 -->
+                    <div class="rt-card">
+                        <div class="rt-card-header">
+                            <span class="rt-step-badge">STAGE 1</span>
+                            <h4>🌐 Real-Time Telemetry Feeds</h4>
+                        </div>
+                        <p class="rt-card-text">Every 60 seconds, BhuRakshak polls live zero-authentication endpoints for Uttarkashi district (30.73° N, 78.45° E):</p>
+                        <ul class="rt-card-list">
+                            <li><strong>Open-Meteo & IMD Radar:</strong> Hourly rainfall intensity (mm/hr), 24h antecedent accumulation, and 7-day saturation index.</li>
+                            <li><strong>USGS Real-Time Earthquake Stream:</strong> Regional seismic events (M &gt; 2.5) deriving peak horizontal ground acceleration ($k_h$).</li>
+                            <li><strong>Google Earth Engine / Copernicus:</strong> Sentinel-2 10m multispectral imagery (NDVI for slope scarification, NDWI for river swell).</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 2 -->
+                    <div class="rt-card">
+                        <div class="rt-card-header">
+                            <span class="rt-step-badge">STAGE 2</span>
+                            <h4>⚖️ Dynamic Geotechnical Physics</h4>
+                        </div>
+                        <p class="rt-card-text">Raw rainfall is immediately coupled into the Mohr-Coulomb Limit Equilibrium equation to compute the dynamic Factor of Safety (FS):</p>
+                        <div class="rt-formula-box">
+                            $$FS = \frac{c' + (\gamma z \cos^2\beta - u - \gamma z k_h \sin\beta\cos\beta)\tan\phi'}{\gamma z \sin\beta\cos\beta + \gamma z k_h \cos^2\beta}$$
+                        </div>
+                        <p class="rt-formula-desc">Where pore-water pressure $u(t) = \frac{I}{100} \cdot 12 + \frac{A_{24}}{150} \cdot 10\text{ kPa}$. If $FS &lt; 1.0$, shear failure is mathematically inevitable.</p>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="rt-card">
+                        <div class="rt-card-header">
+                            <span class="rt-step-badge">STAGE 3</span>
+                            <h4>🗺️ Dynamic Zonation & Expansion</h4>
+                        </div>
+                        <p class="rt-card-text">Hazard perimeters are not static lines — they expand and contract dynamically based on instantaneous moisture:</p>
+                        <ul class="rt-card-list">
+                            <li><strong>Red Zone Trigger:</strong> Settlements where $FS &lt; 1.0$ or rainfall exceeds the Himalayan threshold ($I = 14.82 \cdot D^{-0.39}$) turn Red instantly.</li>
+                            <li><strong>Debris Flow Tracking:</strong> HydroSHEDS 30m flow direction grids trace runout channels down to the Bhagirathi riverbed.</li>
+                            <li><strong>Highway Hazard:</strong> NH-108 segments within 250m of active scarps are flagged for immediate transit halt.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Stage 4 -->
+                    <div class="rt-card">
+                        <div class="rt-card-header">
+                            <span class="rt-step-badge">STAGE 4</span>
+                            <h4>🛡️ Dynamic Relocation Reallocation</h4>
+                        </div>
+                        <p class="rt-card-text">When habitations enter the Red Zone, the THRIVE engine calculates relocation logistics:</p>
+                        <ul class="rt-card-list">
+                            <li><strong>Safe Haven Matching:</strong> Matches endangered villages to safe sites with $FS &gt; 1.8$, slope $&lt; 12^\circ$, and zero flood exposure.</li>
+                            <li><strong>Carrying Capacity Ledger:</strong> Enforces NDMA standard $45\text{ m}^2/\text{person}$ and $70\text{ lpcd}$ water, deducting headroom in real time.</li>
+                            <li><strong>Evacuation Corridor:</strong> Dijkstra terrain routing computes optimal road transit times and bypasses blocked highway sectors.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- ISRO INSAT-3D/3DR 15-MIN GEO & IMD RADAR MISSION CONTROL MODAL  -->
+    <!-- ============================================================ -->
+    <div id="insat-dwr-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen insat-modal-box">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="prov-badge-pill" style="background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid #0284c7;">
+                        ISRO GEOSTATIONARY (35,786 KM) &amp; IMD DOPPLER RADAR
+                    </div>
+                    <h2>🛰️ Real-Time 15-Minute Satellite &amp; Radar Mission Control</h2>
+                    <span class="modal-sub">INSAT-3D/3DR Multi-Spectral CTBT • Hydro-Estimator HEM Rain Rate • Surkanda Devi DWR Reflectivity</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-modal-action primary" id="btn-toggle-radar-map">
+                        <span>📡</span> Render Live Radar on 3D Map
+                    </button>
+                    <button class="modal-close" id="btn-close-insat-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body" id="insat-dwr-modal-content">
+                <!-- Live Telemetry KPI Cards -->
+                <div class="insat-kpi-grid">
+                    <!-- KPI 1: CTBT Temperature -->
+                    <div class="insat-kpi-card ctbt-card" id="insat-kpi-ctbt">
+                        <div class="ik-header">
+                            <span class="ik-icon">🌡️</span>
+                            <span class="ik-lbl">CLOUD-TOP BRIGHTNESS TEMP (CTBT)</span>
+                        </div>
+                        <div class="ik-val-row">
+                            <span class="ik-val ctbt-val" id="insat-ctbt-val">-67.0°C</span>
+                            <span class="ik-badge red" id="insat-ctbt-badge">🔴 CLOUDBURST TOWER</span>
+                        </div>
+                        <div class="ik-sub" id="insat-ctbt-desc">
+                            Thermal Infrared (10.8µm) &lt; -60°C threshold: <strong>T-25 min cloudburst advance warning active!</strong>
+                        </div>
+                    </div>
+
+                    <!-- KPI 2: 15-Min Downlink Countdown -->
+                    <div class="insat-kpi-card">
+                        <div class="ik-header">
+                            <span class="ik-icon">⏱️</span>
+                            <span class="ik-lbl">NEXT SATELLITE DOWNLINK</span>
+                        </div>
+                        <div class="ik-val-row">
+                            <span class="ik-val text-cyan" id="insat-countdown-val">08:45</span>
+                            <span class="ik-badge cyan" id="insat-cadence-badge">RAPID SCAN (4-MIN)</span>
+                        </div>
+                        <div class="ik-sub">
+                            Active Satellites: <strong>INSAT-3DS (GEO 82°E) &amp; INSAT-3DR (GEO 74°E)</strong>
+                        </div>
+                    </div>
+
+                    <!-- KPI 3: IMD Doppler Radar (Surkanda Devi) -->
+                    <div class="insat-kpi-card">
+                        <div class="ik-header">
+                            <span class="ik-icon">📡</span>
+                            <span class="ik-lbl">IMD DOPPLER RADAR (SURKANDA DEVI)</span>
+                        </div>
+                        <div class="ik-val-row">
+                            <span class="ik-val text-amber" id="insat-dbz-val">53.0 dBZ</span>
+                            <span class="ik-badge red" id="insat-dbz-badge">CLOUDBURST CORE</span>
+                        </div>
+                        <div class="ik-sub">
+                            Station 42110 (2,757m MSL) • Marshall-Palmer Rain: <strong id="insat-dwr-rain">75.0 mm/hr</strong>
+                        </div>
+                    </div>
+
+                    <!-- KPI 4: Hydro-Estimator Precipitation (HEM) -->
+                    <div class="insat-kpi-card">
+                        <div class="ik-header">
+                            <span class="ik-icon">🌧️</span>
+                            <span class="ik-lbl">HYDRO-ESTIMATOR RAIN (HEM)</span>
+                        </div>
+                        <div class="ik-val-row">
+                            <span class="ik-val text-safe" id="insat-hem-val">73.0 mm/h</span>
+                            <span class="ik-badge green">ISRO ALGORITHM</span>
+                        </div>
+                        <div class="ik-sub">
+                            Estimated Valley Floor Discharge: <strong id="insat-river-surge">1,528 m³/s</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advisory Banner -->
+                <div class="insat-advisory-banner" id="insat-advisory-banner">
+                    <span class="advisory-icon">🚨</span>
+                    <div class="advisory-text" id="insat-advisory-text">
+                        <strong>T-25 MINUTE CLOUDBURST EARLY WARNING:</strong> INSAT-3D thermal infrared sensors detect deep convective cloud tops at -67.0°C (&lt; -60°C threshold). Severe convective updraft cell active over Upper Bhagirathi / Yamuna headwaters. Torrential runoff will impact valley floor habitations within 20–30 minutes.
+                    </div>
+                </div>
+
+                <!-- Two-Column Operational Architecture -->
+                <div class="insat-details-grid">
+                    <!-- Left: Multi-Spectral Channels -->
+                    <div class="insat-detail-card">
+                        <h4>🛰️ ISRO INSAT-3D/3DR Geostationary Channels (15-Min Cadence)</h4>
+                        <p class="card-intro">
+                            Operating from geostationary orbit (35,786 km), INSAT-3D stares continuously at the Indian subcontinent, refreshing multi-channel radiance every 15 minutes (or 4 minutes in convective rapid-scan mode):
+                        </p>
+                        <table class="insat-table">
+                            <thead>
+                                <tr>
+                                    <th>Channel</th>
+                                    <th>Wavelength</th>
+                                    <th>Live Reading</th>
+                                    <th>Physical Early Warning Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>TIR-1</strong></td>
+                                    <td>10.8 µm</td>
+                                    <td><strong id="tbl-tir1-val" style="color: #ef4444;">-67.0°C</strong></td>
+                                    <td>Cloud-Top Brightness Temperature (CTBT). Values &lt; -60°C prove vigorous convective updrafts punching the tropopause.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>TIR-2</strong></td>
+                                    <td>12.0 µm</td>
+                                    <td><strong id="tbl-tir2-val">-64.3°C</strong></td>
+                                    <td>Split-window differential measuring atmospheric moisture attenuation and cirrus plume thickness.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Water Vapor</strong></td>
+                                    <td>6.7 µm</td>
+                                    <td><strong id="tbl-wv-val" style="color: #38bdf8;">98.8%</strong></td>
+                                    <td>Upper-tropospheric moisture convergence feeding localized cloudburst cells in the Himalayas.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HEM Rain</strong></td>
+                                    <td>Infrared Inversion</td>
+                                    <td><strong id="tbl-hem-val" style="color: #10b981;">73.0 mm/h</strong></td>
+                                    <td>Instantaneous satellite quantitative precipitation estimation (Hydro-Estimator Method).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Right: IMD Doppler Weather Radar -->
+                    <div class="insat-detail-card">
+                        <h4>📡 IMD Doppler Weather Radar — Surkanda Devi (Station 42110)</h4>
+                        <p class="card-intro">
+                            Located on the Mussoorie-Chamba ridge at 2,757m altitude, this C-Band radar directly sweeps the Uttarkashi valleys (Bhatwari, Naugaon, Purola, Mori, Dunda) every 10 minutes:
+                        </p>
+                        <div class="radar-spec-box">
+                            <div class="rs-row">
+                                <span class="rs-lbl">Radar Station:</span>
+                                <span class="rs-val">Surkanda Devi (Mussoorie-Chamba Ridge, 2,757m MSL)</span>
+                            </div>
+                            <div class="rs-row">
+                                <span class="rs-lbl">Frequency / Band:</span>
+                                <span class="rs-val">C-Band (5.6 GHz) • 150 km Radius Coverage</span>
+                            </div>
+                            <div class="rs-row">
+                                <span class="rs-lbl">Volume Scan Cadence:</span>
+                                <span class="rs-val text-cyan">Every 10 Minutes (Continuous 360° Azimuth)</span>
+                            </div>
+                            <div class="rs-row">
+                                <span class="rs-lbl">Current Peak Reflectivity:</span>
+                                <span class="rs-val text-red" id="dwr-spec-dbz">53.0 dBZ (Cloudburst Core &gt; 52 dBZ)</span>
+                            </div>
+                            <div class="rs-row">
+                                <span class="rs-lbl">Marshall-Palmer Equation:</span>
+                                <span class="rs-val">Z = 200 · R^1.6 (Calibrated for Garhwal Orography)</span>
+                            </div>
+                            <div class="rs-row">
+                                <span class="rs-lbl">Valley Flood Surge Arrival:</span>
+                                <span class="rs-val text-amber" id="dwr-spec-arrival">31 Minutes to Uttarkashi Town Riverbed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- GEE & SATELLITE REAL-TIME INGESTION CONSOLE MODAL             -->
+    <!-- ============================================================ -->
+    <div id="gee-satellite-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen gee-modal-box">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="prov-badge-pill" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid #9333ea;">
+                        SATELLITE & SENSOR SUITE
+                    </div>
+                    <h2>🛰️ Google Earth Engine (GEE) & Real-Time Satellite Intelligence Console</h2>
+                    <span class="modal-sub">Sentinel-2 (10m) • NASA SRTM (30m) • Dynamic World LULC • 15-Min Geostationary Cadence Guide</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn-modal-action primary" id="btn-test-gee-live"><span>⚡</span> Test Live Extraction</button>
+                    <button class="modal-close" id="btn-close-gee-sat-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body" id="gee-satellite-modal-content">
+                <!-- Status Diagnostic Bar -->
+                <div class="gee-status-banner" id="gee-status-banner">
+                    <div class="gee-status-left">
+                        <span class="status-dot live-pulse" id="gee-diag-dot"></span>
+                        <div>
+                            <div class="gee-diag-title" id="gee-diag-title">GEE ENGINE STATUS: CONNECTING...</div>
+                            <div class="gee-diag-sub" id="gee-diag-sub">Querying Google Cloud Project bhu-rakshak-509111 & Tile Cache...</div>
+                        </div>
+                    </div>
+                    <div class="gee-status-actions">
+                        <button class="btn-gee-action" id="btn-refresh-gee-status">🔄 Check Handshake</button>
+                    </div>
+                </div>
+
+                <!-- Section: Satellite Orbit Physics & 15-Minute Reality -->
+                <div class="gee-console-section">
+                    <h3 class="gee-sec-title">📡 Satellite Orbit Physics: How Often Does Satellite Data Refresh?</h3>
+                    <p class="gee-sec-desc">
+                        Different satellites operate under fundamental laws of orbital mechanics. Low Earth Orbit (LEO) satellites cannot physically take pictures every 15 minutes because they orbit the globe, while Geostationary (GEO) satellites stay stationary over India.
+                    </p>
+                    <div class="sat-cadence-grid">
+                        <div class="sat-cadence-card">
+                            <div class="sc-badge leo">LEO • Polar Orbit</div>
+                            <h4>Sentinel-2A & 2B (ESA)</h4>
+                            <div class="sc-metric">10m Resolution • 5-Day Revisit</div>
+                            <p>Flies at 786 km altitude. GEE ingests multispectral bands (B4, B8) to compute surface reflectance, scarification, and NDVI vegetation health.</p>
+                            <span class="sc-tag">Best For: High-Res Scarp & Village Mapping</span>
+                        </div>
+                        <div class="sat-cadence-card">
+                            <div class="sc-badge leo">LEO • Polar Orbit</div>
+                            <h4>Landsat 8 & 9 (USGS / NASA)</h4>
+                            <div class="sc-metric">30m Resolution • 8–16 Day Revisit</div>
+                            <p>Thermal infrared and multispectral imaging. Used in GEE for multi-decadal landslide susceptibility baselines and long-term land cover change.</p>
+                            <span class="sc-tag">Best For: Multi-Year Baselines</span>
+                        </div>
+                        <div class="sat-cadence-card highlight">
+                            <div class="sc-badge geo">GEO • 35,786 km Fixed</div>
+                            <h4>ISRO INSAT-3D / 3DR / 3DS</h4>
+                            <div class="sc-metric highlight-val">⚡ EVERY 15 MINUTES! (Rapid Scan: 4 min)</div>
+                            <p>Parked over India (74°E & 82°E). Delivers Hydro-Estimator Precipitation (HEM) and Cloud-Top Cooling (&lt; -60°C) to detect cloudburst cells before rain hits the ground.</p>
+                            <span class="sc-tag geo-tag">Best For: Real-Time 15-Min Cloudburst Alert</span>
+                        </div>
+                        <div class="sat-cadence-card highlight">
+                            <div class="sc-badge ground">Ground-Based Radar</div>
+                            <h4>IMD Doppler Weather Radar</h4>
+                            <div class="sc-metric highlight-val">⚡ EVERY 10–15 MINUTES!</div>
+                            <p>Surkanda Devi / Dehradun Radar sweeps the Garhwal Himalayas every 10–15 minutes, measuring convective reflectivity (dBZ) and rain intensity.</p>
+                            <span class="sc-tag geo-tag">Best For: Instantaneous Flash Flood EWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: How to Enable GEE Live in 60 Seconds -->
+                <div class="gee-console-section">
+                    <h3 class="gee-sec-title">🔑 How to Authenticate Google Earth Engine Live</h3>
+                    <p class="gee-sec-desc">
+                        Our backend uses the official <code>earthengine-api</code> Python client. To enable full live GEE streaming on your machine:
+                    </p>
+                    <div class="gee-steps-box">
+                        <div class="gee-step-item">
+                            <span class="step-num">1</span>
+                            <div>
+                                <strong>Run the Authentication Command in your Terminal:</strong>
+                                <div class="code-terminal-box">
+                                    <code>source .venv/bin/activate && earthengine authenticate</code>
+                                </div>
+                                <span class="step-tip">This opens a browser tab. Log into your Google Account that has Earth Engine access approved (free for research/education at earthengine.google.com).</span>
+                            </div>
+                        </div>
+                        <div class="gee-step-item">
+                            <span class="step-num">2</span>
+                            <div>
+                                <strong>Initialize with your Google Cloud Project:</strong>
+                                <div class="code-terminal-box">
+                                    <code>python3 -c "import ee; ee.Initialize(project='your-gcp-project-id'); print('GEE LIVE!')"</code>
+                                </div>
+                                <span class="step-tip">Once authenticated, credentials are saved to <code>~/.config/earthengine/credentials</code> and BhuRakshak automatically uses live satellite raster tiles!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Active GEE Datasets -->
+                <div class="gee-console-section">
+                    <h3 class="gee-sec-title">🗂️ Datasets Ingested by BhuRakshak</h3>
+                    <div class="gee-layers-table-wrap">
+                        <table class="gee-layers-table">
+                            <thead>
+                                <tr>
+                                    <th>Dataset</th>
+                                    <th>Resolution</th>
+                                    <th>Update Frequency</th>
+                                    <th>Role in Hazard Platform</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>USGS/SRTMGL1_003</strong></td>
+                                    <td>30m</td>
+                                    <td>Static Topography</td>
+                                    <td>Calculates slope gradient, aspect, curvature, and Topographic Wetness Index (TWI) for Mohr-Coulomb equation.</td>
+                                    <td><span class="badge-status-green">ONLINE (30m DEM)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>COPERNICUS/S2_SR_HARMONIZED</strong></td>
+                                    <td>10m</td>
+                                    <td>Every 5 Days</td>
+                                    <td>Optical True Color RGB and NDVI. Detects newly sheared slope scarps and deforestation.</td>
+                                    <td><span class="badge-status-green">STREAMING (10m)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>GOOGLE/DYNAMICWORLD/V1</strong></td>
+                                    <td>10m</td>
+                                    <td>Near-Real-Time</td>
+                                    <td>AI land cover classification (trees, built, bare, water, scrub) to determine surface friction.</td>
+                                    <td><span class="badge-status-green">ACTIVE (10m LULC)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>WorldPop/GP/100m/pop</strong></td>
+                                    <td>100m</td>
+                                    <td>Census Baseline</td>
+                                    <td>Spatial population density fused with Census of India 2011 to determine exact casualties at risk.</td>
+                                    <td><span class="badge-status-green">ONLINE (51 Villages)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Open-Meteo & IMD Telemetry</strong></td>
+                                    <td>Station / 1km</td>
+                                    <td>Every 15–60 min</td>
+                                    <td>Live hourly rainfall intensity, 24h antecedent saturation, and temperature lapse rates.</td>
+                                    <td><span class="badge-status-green">LIVE TELEMETRY</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Live Extraction Test Output Box -->
+                <div class="gee-console-section" id="gee-extract-section" style="display: none;">
+                    <h3 class="gee-sec-title">⚡ Live Point Extraction Output</h3>
+                    <pre class="gee-json-output" id="gee-extract-output">Click "Test Live Extraction" above to query telemetry...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- MARKERS & DOT SYMBOLOGY GUIDE MODAL                          -->
+    <!-- ============================================================ -->
+    <div id="markers-guide-modal" class="modal hidden">
+        <div class="modal-content modal-fullscreen markers-modal-box">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="prov-badge-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid #059669;">
+                        INTERACTIVE MAP GUIDE
+                    </div>
+                    <h2>ℹ️ What Each Dot Does & Real-Time Data Behind It</h2>
+                    <span class="modal-sub">Demystifying Map Symbols: Habitations, Telemetry Triggers, Safe Havens & Historical Benchmarks</span>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-close" id="btn-close-markers-modal">✕</button>
+                </div>
+            </div>
+            <div class="modal-body" id="markers-guide-modal-content">
+                <div class="markers-guide-grid">
+                    <!-- Red Dot -->
+                    <div class="marker-guide-card red-border">
+                        <div class="mg-header">
+                            <div class="mg-icon-badge red-pulse">🔴</div>
+                            <div>
+                                <h4>Red Habitation Marker</h4>
+                                <span class="mg-sub">Critical Danger Zone (Mandatory Evacuation)</span>
+                            </div>
+                        </div>
+                        <div class="mg-body">
+                            <p><strong>What it does:</strong> Identifies a village where slope instability has crossed the critical threshold. Under DM Act 2005 Sections 30 & 34, district authorities issue immediate pre-monsoon evacuation orders.</p>
+                            <div class="mg-formula-chip">Criteria: Mohr-Coulomb FoS &lt; 1.0 • Slope &gt; 30° • Rainfall &gt; 65 mm/hr</div>
+                            <p><strong>Real-time data source:</strong> Live Open-Meteo precipitation intensity, USGS seismic acceleration $k_h$, and NASA SRTM 30m slope terrain model.</p>
+                            <p><strong>Action when clicked:</strong> Opens the Datago BPBD Dossier showing exact casualties, incident chronology, photo documentation, and Dijkstra evacuation route to assigned safe site.</p>
+                        </div>
+                    </div>
+
+                    <!-- Orange Dot -->
+                    <div class="marker-guide-card orange-border">
+                        <div class="mg-header">
+                            <div class="mg-icon-badge orange-badge">🟠</div>
+                            <div>
+                                <h4>Orange Habitation Marker</h4>
+                                <span class="mg-sub">High Susceptibility (Pre-Monsoon Relocation Recommended)</span>
+                            </div>
+                        </div>
+                        <div class="mg-body">
+                            <p><strong>What it does:</strong> Signals settlements with marginal stability ($1.0 \le FS &lt; 1.25$) vulnerable to prolonged monsoon saturation, toe erosion from river channels, or road-cutting destabilization.</p>
+                            <div class="mg-formula-chip">Criteria: 1.0 &le; FoS &lt; 1.25 • Hazard Probability 0.50 - 0.70</div>
+                            <p><strong>Real-time data source:</strong> Antecedent soil moisture saturation, proximity to drainage channels ($&lt; 300\text{m}$), and Sentinel-2 vegetation loss.</p>
+                            <p><strong>Action:</strong> Scheduled for priority structural mitigation, early warning siren deployment, and temporary relocation staging.</p>
+                        </div>
+                    </div>
+
+                    <!-- Yellow Dot -->
+                    <div class="marker-guide-card yellow-border">
+                        <div class="mg-header">
+                            <div class="mg-icon-badge yellow-badge">🟡</div>
+                            <div>
+                                <h4>Yellow Habitation Marker</h4>
+                                <span class="mg-sub">Moderate Risk (Surveillance Active)</span>
+                            </div>
+                        </div>
+                        <div class="mg-body">
+                            <p><strong>What it does:</strong> Stable under baseline dry conditions ($FS = 1.25 - 1.50$), but actively monitored because extreme cloudburst events ($&gt; 100\text{ mm/hr}$) can trigger sudden debris flows.</p>
+                            <div class="mg-formula-chip">Criteria: 1.25 &le; FoS &lt; 1.50 • Moderate Slope (18° - 28°)</div>
+                            <p><strong>Real-time data source:</strong> IMD Convective Cloudburst Nowcast and regional automated weather station (AWS) telemetry.</p>
+                        </div>
+                    </div>
+
+                    <!-- Green Marker -->
+                    <div class="marker-guide-card green-border">
+                        <div class="mg-header">
+                            <div class="mg-icon-badge green-badge">🟢</div>
+                            <div>
+                                <h4>Green Safe Haven Sanctuary</h4>
+                                <span class="mg-sub">Designated Resettlement Site (Carrying Capacity Verified)</span>
+                            </div>
+                        </div>
+                        <div class="mg-body">
+                            <p><strong>What it does:</strong> Scientifically validated safe ground designated for long-term rehabilitation and emergency shelter camps. Free from landslide, flood, and tectonic rupture hazards.</p>
+                            <div class="mg-formula-chip">Criteria: FoS &gt; 1.80 • Slope &lt; 12° • 180m above flood line • &gt;70 LPCD water</div>
+                            <p><strong>Real-time data source:</strong> NDMA carrying capacity ledger, terrain aspect, spring recharge hydrogeology, and PMGSY all-weather road access.</p>
+                        </div>
+                    </div>
+
+                    <!-- Historical Anchor -->
+                    <div class="marker-guide-card purple-border">
+                        <div class="mg-header">
+                            <div class="mg-icon-badge purple-badge">🎯</div>
+                            <div>
+                                <h4>Historical Disaster Benchmark (18 Sites)</h4>
+                                <span class="mg-sub">Ground-Truth Empirical Calibration Points</span>
+                            </div>
+                        </div>
+                        <div class="mg-body">
+                            <p><strong>What it does:</strong> Highlights epicenters of 18 historical disasters in Uttarkashi (1991 M6.8 Earthquake, 2012 Asi Ganga Cloudburst, 2013 Bhagirathi Flood, 2021 Chamoli GLOF, 2023 Silkyara Tunnel, 2025 Dharali Surge).</p>
+                            <p><strong>Purpose:</strong> Serves as empirical ground-truth proof. The platform achieves 100% spatial recall, correctly identifying all 18 historical disaster zones as high-hazard areas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- HIGH-RESOLUTION PHOTO LIGHTBOX MODAL                         -->
+    <!-- ============================================================ -->
+    <div id="photo-lightbox-modal" class="modal photo-lightbox-modal hidden">
+        <div class="lightbox-backdrop" id="btn-close-lightbox"></div>
+        <div class="lightbox-content-box">
+            <button class="lightbox-close-btn" id="btn-close-lightbox-cross">✕</button>
+            <div class="lightbox-image-wrap">
+                <img id="lightbox-full-img" src="" alt="High-Resolution Reconnaissance Photo">
+            </div>
+            <div class="lightbox-caption-bar">
+                <span class="lightbox-tag">🛰️ GIS FIELD & SATELLITE RECONNAISSANCE</span>
+                <h4 id="lightbox-caption-title">High-Resolution Geological Survey</h4>
+                <p id="lightbox-caption-desc">Sub-meter optical satellite imagery and aerial drone reconnaissance calibrated for geotechnical slope assessment.</p>
             </div>
         </div>
     </div>

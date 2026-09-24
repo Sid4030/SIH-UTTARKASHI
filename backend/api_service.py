@@ -339,55 +339,77 @@ def generate_natural_language_explanation(
     if not drivers:
         drivers.append("Standard Himalayan terrain morphology")
 
-    # Generate plain-English explanation
+    # Compute dynamic geotechnical thresholds for this specific slope
+    rad = math.radians(slope)
+    sin_b = math.sin(rad)
+    cos_b = math.cos(rad)
+    phi_rad = math.radians(33.0)  # Typical friction angle for Himalayan colluvium / weathered phyllite
+    tan_phi = math.tan(phi_rad)
+    gamma_z = 19.5 * 2.5  # bulk unit weight * depth (kN/m2)
+    tau_driving = gamma_z * sin_b * cos_b
+    
+    # Critical pore-water pressure needed to reduce FS to 1.0 (Limit Equilibrium Failure)
+    if fos > 1.0 and tan_phi > 0.001:
+        delta_u_needed = max(0.5, ((fos - 1.0) * tau_driving) / tan_phi)
+        # Inverted rain intensity needed to generate delta_u (using u = 0.12 * I + 0.067 * Sat)
+        rain_trigger_mm = min(120.0, max(25.0, rain + (delta_u_needed / 0.12)))
+        # Newmark's critical seismic yield acceleration kc
+        kc_yield = max(0.04, min(0.35, (fos - 1.0) * sin_b))
+    else:
+        rain_trigger_mm = rain
+        kc_yield = 0.0
+
+    # Plain-English, scientifically rigorous geotechnical diagnosis
     if zone == "red":
-        threat_headline = "🔴 CRITICAL RED ZONE: Imminent Debris Torrent & Slope Failure Hazard"
+        threat_headline = "🔴 CRITICAL RED ZONE: Imminent Debris Torrent & Slope Shear Failure Hazard"
         summary = (
-            f"{loc_str} is classified in the Critical Red Zone due to a compounding lethal combination of "
-            f"extreme slope gradient ({slope:.1f}°), concentrated moisture convergence, and river toe undercutting. "
-            f"Resting within {dist_river * 1000:.0f} meters of the mountain drainage channel at {elevation:.0f}m altitude, "
-            f"rainfall of {rain:.0f} mm/hr and {sat:.0f} mm soil saturation elevate subsurface pore water pressure (u = {pore_press:.1f} kPa). "
-            f"Under Mohr-Coulomb limit equilibrium physics, this pore pressure lubricates the bedrock failure plane, "
-            f"causing the Factor of Safety to collapse below 1.0 (FS: {fos:.2f}). Gravitational driving stresses exceed rock shear strength, "
-            f"making sudden slope rupture inevitable without immediate evacuation."
+            f"{loc_str} is classified in the Critical Red Zone under GSI (Geological Survey of India) NLSM guidelines. "
+            f"The settlement is situated on a {slope:.1f}° mountain slope at {elevation:.0f}m MSL, within {dist_river * 1000:.0f}m "
+            f"of the active mountain drainage corridor. Current rainfall intensity of {rain:.0f} mm/hr coupled with {sat:.0f} mm "
+            f"antecedent 24h soil saturation generates a pore-water pressure of u = {pore_press:.1f} kPa along the colluvium-bedrock boundary. "
+            f"Under Mohr-Coulomb limit equilibrium evaluation, positive pore pressure drastically reduces effective normal stress, "
+            f"causing the Factor of Safety to fall to {fos:.2f} (< 1.0 failure threshold). Driving gravitational shear stresses exceed available "
+            f"shear strength, indicating active slope yield and high risk of rapid translational sliding or channelized debris flow."
         )
         recommendation = (
-            "Invoke Sections 30 & 34 of the Disaster Management Act 2005. Mandate immediate 24-hour evacuation "
-            "of all residents to nearest designated safe havens via Dijkstra valley trails. Impose strict vehicular transit embargo."
+            "Invoke Sections 30 & 34 of the Disaster Management Act 2005. Issue mandatory evacuation orders "
+            "for exposed riverside and toe-slope habitations to designated ridge-terrace safe havens. Restrict transit on vulnerable NH/PMGSY corridors."
         )
     elif zone == "orange":
-        threat_headline = "🟠 ORANGE ZONE: Near-Red Zone Threshold — High Vulnerability Alert"
+        threat_headline = "🟠 ORANGE ZONE: Marginally Stable Slope — High Hydrometeorological Sensitivity"
         summary = (
-            f"{loc_str} sits on the dangerous threshold of entering the Red Zone. "
-            f"While stable under benign dry weather, its steep {slope:.1f}° inclination and proximity to drainage corridors "
-            f"({dist_river:.1f} km from river) leave it highly sensitive to storm surges. "
-            f"With geotechnical Factor of Safety currently measured at {fos:.2f}, any cloudburst exceeding 70 mm/hr "
-            f"or seismic tremor above 0.10g will push pore water pressures across the critical threshold, triggering translational failure."
+            f"{loc_str} exhibits marginal slope stability (Factor of Safety: {fos:.2f}) under current conditions. "
+            f"While marginally stable in dry weather, its steep {slope:.1f}° gradient and position {dist_river:.1f} km from the river channel "
+            f"make it susceptible to hydraulic toe scouring, riverbed aggradation, and flash-flood runoff during intense rain spells. "
+            f"Geotechnical sensitivity analysis indicates that an incremental rainfall surge exceeding {rain_trigger_mm:.0f} mm/hr "
+            f"(or a co-seismic horizontal acceleration kc ≥ {kc_yield:.2f}g in this BIS 1893:2016 Seismic Zone IV/V belt) "
+            f"will deplete residual shear strength and drive the slope into translational failure."
         )
         recommendation = (
-            "Initiate pre-monsoon staging and deploy early warning tiltmeters. Prepare voluntary relocation packages "
-            "and execute bio-engineering slope stabilization (vetiver grass terraces + stone catchments)."
+            "Place district emergency response units on standby. Deploy slope inclinometers/tiltmeters for early displacement detection, "
+            "stage pre-monsoon relief supplies, and clear blocked drainage culverts to prevent concentrated surface water infiltration."
         )
     elif zone == "yellow":
-        threat_headline = "🟡 YELLOW ZONE: Moderate Risk — Active Surveillance Area"
+        threat_headline = "🟡 YELLOW ZONE: Moderate Susceptibility — Active Surveillance Area"
         summary = (
-            f"{loc_str} exhibits moderate hazard susceptibility (Composite Score: {score:.2f}). "
-            f"The slope ({slope:.1f}°) possesses adequate structural friction during standard weather (FS: {fos:.2f}), "
-            f"and sits outside immediate flash-flood inundation rims. However, surface runoff accumulation during prolonged monsoon "
-            f"spells requires watchful monitoring."
+            f"{loc_str} exhibits moderate hazard susceptibility (Composite Index: {score:.2f}, FS: {fos:.2f}). "
+            f"The topographical slope ({slope:.1f}°) maintains an adequate margin of safety against shear failure under baseline conditions, "
+            f"and the site is buffered {dist_river:.1f} km from active flash-flood corridors. However, localized surface runoff accumulation "
+            f"(Topographic Wetness Index: {twi:.1f}) and prolonged monsoon spells require continuous monitoring."
         )
         recommendation = (
-            "Maintain culvert clearings and active AWS weather monitoring. Conduct periodic community disaster drills."
+            "Maintain routine municipal culvert clearance and automated weather station surveillance. Conduct community awareness drills."
         )
     else:
-        threat_headline = "🟢 GREEN ZONE: Safe Habitation & High Carrying Capacity Resettlement Zone"
+        threat_headline = "🟢 GREEN ZONE: High Carrying Capacity Safe Resettlement Zone"
         summary = (
-            f"{loc_str} demonstrates high geotechnical stability. Situated on a broad Himalayan terrace with gentle gradient "
-            f"({slope:.1f}°), well-drained soil structure (TWI: {twi:.1f}), and safe standoff from river floodways ({dist_river:.1f} km). "
-            f"The Factor of Safety ({fos:.2f}) indicates robust shear strength with negligible failure probability."
+            f"{loc_str} demonstrates high geotechnical stability (Factor of Safety: {fos:.2f} ≥ 1.50). "
+            f"Located on an elevated bedrock terrace with gentle topography ({slope:.1f}°), well-drained soil structure (TWI: {twi:.1f}), "
+            f"and a safe standoff distance of {dist_river:.1f} km from flash-flood high-water marks, this area provides robust shear resistance "
+            f"with negligible landslide or inundation probability."
         )
         recommendation = (
-            "Approved for permanent habitation and post-disaster resettlement shelter construction under NDMA density guidelines."
+            "Designated as a certified resettlement and emergency shelter haven in compliance with NDMA hill-terrace carrying capacity standards."
         )
 
     return {
@@ -399,7 +421,9 @@ def generate_natural_language_explanation(
             "slope_angle_deg": slope,
             "factor_of_safety": fos,
             "pore_pressure_kpa": pore_press,
-            "stability_status": "UNSTABLE / FAILURE" if fos < 1.0 else ("MARGINAL" if fos < 1.25 else "STABLE")
+            "critical_rainfall_trigger_mm_hr": round(rain_trigger_mm, 1),
+            "critical_seismic_yield_kc": round(kc_yield, 3),
+            "stability_status": "FAILURE (FS < 1.0)" if fos < 1.0 else ("MARGINAL (1.0 ≤ FS < 1.3)" if fos < 1.30 else "STABLE (FS ≥ 1.3)")
         }
     }
 
