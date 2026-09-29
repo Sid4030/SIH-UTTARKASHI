@@ -756,7 +756,19 @@ def get_hazard_score(req: SingleHazardRequest):
         sat = live_weather["antecedent_24h_mm"]
         data_sources["antecedent_saturation"] = live_weather["source"]
 
-    kh = resolve(req.seismic_kh, 0.0, "seismic_kh", "wihg_seismic_telemetry")
+    if req.seismic_kh is not None and req.seismic_kh > 0:
+        kh = float(req.seismic_kh)
+        data_sources["seismic_kh"] = "user_input"
+    else:
+        # Fetch live seismic activity from USGS Earthquake API (free, no key)
+        try:
+            from backend.model.geotech_physics import fetch_recent_seismic_factor
+            kh_live, seismic_meta = fetch_recent_seismic_factor()
+            kh = kh_live
+            data_sources["seismic_kh"] = f"USGS Earthquake API ({seismic_meta.get('seismic_status', 'UNKNOWN')})"
+        except Exception as e:
+            kh = 0.0
+            data_sources["seismic_kh"] = f"USGS_FALLBACK (error: {e})"
 
     feat_dict = {
         "slope": slope, "elevation": elevation, "aspect": aspect, "curvature": curvature,

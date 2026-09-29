@@ -8,6 +8,26 @@ export default defineConfig({
             '/api': {
                 target: 'http://localhost:8000',
                 changeOrigin: true,
+                timeout: 3600000,
+                proxyTimeout: 3600000,
+            },
+            '/hazard-score': {
+                target: 'http://localhost:8000',
+                changeOrigin: true,
+                timeout: 3600000,
+                proxyTimeout: 3600000,
+            },
+            '/assess-habitations': {
+                target: 'http://localhost:8000',
+                changeOrigin: true,
+                timeout: 3600000,
+                proxyTimeout: 3600000,
+            },
+            '/relocation-plan': {
+                target: 'http://localhost:8000',
+                changeOrigin: true,
+                timeout: 3600000,
+                proxyTimeout: 3600000,
             }
         }
     },

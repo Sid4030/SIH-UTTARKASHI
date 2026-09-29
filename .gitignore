@@ -60,3 +60,13 @@ backend/data/datasets/inventory/*.png
 *.tif
 *.tiff
 
+# Brag & HyperFrames Launch Assets
+.agents/
+brag-output/
+*.mp4
+capture_app.js
+brag.jpg
+bhurakshak_solution_poster.jpg
+hero_uttarkashi_panoramic.jpg
+
+

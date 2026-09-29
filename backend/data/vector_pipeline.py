@@ -360,7 +360,6 @@ _RIVER_TREE = None
 _RIVER_POINTS = None
 _ROAD_TREE = None
 _ROAD_POINTS = None
-
 def _get_river_kdtree(river_data: dict = None):
     global _RIVER_TREE, _RIVER_POINTS
     if _RIVER_TREE is not None:
@@ -369,7 +368,7 @@ def _get_river_kdtree(river_data: dict = None):
         river_data = load_river_network()
     if not river_data or "features" not in river_data:
         return None
-    from scipy.spatial import cKDTree
+    from sklearn.neighbors import BallTree
     points = []
     for feat in river_data["features"]:
         geom = feat.get("geometry", {})
@@ -379,14 +378,17 @@ def _get_river_kdtree(river_data: dict = None):
             if not c:
                 return
             if isinstance(c[0], (int, float)):
-                points.append([c[1] * 111.0, c[0] * 95.0]) # lat_km, lon_km
+                # GeoJSON coordinates are [lon, lat]
+                # BallTree with haversine requires [lat_radians, lon_radians]
+                points.append([math.radians(c[1]), math.radians(c[0])])
             else:
                 for sub in c:
                     extract_coords(sub)
         extract_coords(coords)
     if points:
         _RIVER_POINTS = np.array(points)
-        _RIVER_TREE = cKDTree(_RIVER_POINTS)
+        # Spatial BallTree indexed with spherical Haversine metric for exact geodesic distances
+        _RIVER_TREE = BallTree(_RIVER_POINTS, metric='haversine')
     return _RIVER_TREE
 
 
@@ -398,14 +400,14 @@ def _get_road_kdtree(road_data: dict = None):
         road_data = load_road_network()
     if not road_data or "features" not in road_data:
         return None
-    from scipy.spatial import cKDTree
+    from sklearn.neighbors import BallTree
     points = []
     for feat in road_data.get("features", []):
         geom = feat.get("geometry", {})
         coords = geom.get("coordinates", [])
         if not coords:
             continue
-        # Densify along road linestrings to 0.2 km intervals for exact linear distance
+        # Densify along road linestrings to ~0.2 km intervals for exact linear distance
         for i in range(len(coords) - 1):
             p1 = coords[i]
             p2 = coords[i + 1]
@@ -419,27 +421,30 @@ def _get_road_kdtree(road_data: dict = None):
                 t = s / n_steps
                 lat_interp = lat1 + t * (lat2 - lat1)
                 lon_interp = lon1 + t * (lon2 - lon1)
-                points.append([lat_interp * 111.0, lon_interp * 95.0])
+                points.append([math.radians(lat_interp), math.radians(lon_interp)])
         # Add endpoint
         last = coords[-1]
-        points.append([last[1] * 111.0, last[0] * 95.0])
+        points.append([math.radians(last[1]), math.radians(last[0])])
 
     if points:
         _ROAD_POINTS = np.array(points)
-        _ROAD_TREE = cKDTree(_ROAD_POINTS)
+        _ROAD_TREE = BallTree(_ROAD_POINTS, metric='haversine')
     return _ROAD_TREE
 
 
 def compute_real_river_distance(lat: float, lon: float, river_data: dict = None) -> float:
     """
-    Compute distance to nearest river/stream from real vector data using cKDTree index.
-    Falls back to the hardcoded river approximation if no vector data available.
+    Compute geodesic distance to nearest HydroSHEDS / HydroRIVERS stream
+    using BallTree with Haversine metric.
+    Returns exact great-circle ground distance in kilometers.
     """
     tree = _get_river_kdtree(river_data)
     if tree is not None:
-        query_pt = [lat * 111.0, lon * 95.0]
-        dist, _ = tree.query(query_pt)
-        return float(dist)
+        query_pt = np.array([[math.radians(lat), math.radians(lon)]])
+        dist_rad, _ = tree.query(query_pt, k=1)
+        # Convert spherical distance (radians) to ground distance in km (Earth radius = 6371.0088 km)
+        dist_km = float(dist_rad[0][0]) * 6371.0088
+        return round(dist_km, 3)
 
     # Fallback to hardcoded rivers
     from backend.data.generate_data import distance_to_nearest_river
@@ -448,14 +453,15 @@ def compute_real_river_distance(lat: float, lon: float, river_data: dict = None)
 
 def compute_real_road_distance(lat: float, lon: float, road_data: dict = None) -> float:
     """
-    Compute distance to nearest road from real OSM data using cKDTree index.
-    Returns distance in km.
+    Compute geodesic distance to nearest OpenStreetMap road using BallTree with Haversine metric.
+    Returns exact great-circle ground distance in kilometers.
     """
     tree = _get_road_kdtree(road_data)
     if tree is not None:
-        query_pt = [lat * 111.0, lon * 95.0]
-        dist, _ = tree.query(query_pt)
-        return float(dist)
+        query_pt = np.array([[math.radians(lat), math.radians(lon)]])
+        dist_rad, _ = tree.query(query_pt, k=1)
+        dist_km = float(dist_rad[0][0]) * 6371.0088
+        return round(dist_km, 3)
 
     # Fallback: estimate from town distance
     return _estimate_road_distance_from_towns(lat, lon)

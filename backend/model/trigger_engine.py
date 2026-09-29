@@ -287,11 +287,16 @@ def generate_carrying_capacity_ledger(safe_zones: list, dispatched_evacuations: 
 # ---------------------------------------------------------------------------
 # 5. Dynamic Hazard Zones Polygon Generator (Continuous Spatial Contours)
 # ---------------------------------------------------------------------------
+_DYNAMIC_ZONE_SKELETONS = None
+
 def compute_dynamic_hazard_zones(hazard_grid: dict, resolution: float = 0.02) -> dict:
     """
     Generates real-time GeoJSON Polygons representing Multi-Hazard Red, Orange, Yellow, Green zones.
     Maps and updates hazard-based Red Zones dynamically when rainfall/seismic triggers occur.
+    Uses pre-computed spatial polygon skeletons to eliminate geometry allocation overhead.
     """
+    global _DYNAMIC_ZONE_SKELETONS
+
     zone_colors = {
         "red": "#ff334b",
         "orange": "#ff8833",
@@ -305,38 +310,52 @@ def compute_dynamic_hazard_zones(hazard_grid: dict, resolution: float = 0.02) ->
         "green": "Green Zone — Safe Relocation Reception Zone"
     }
 
-    features = []
-    half = resolution / 2.0
+    grid_features = hazard_grid.get("features", [])
+    n_features = len(grid_features)
 
-    for feat in hazard_grid.get("features", []):
-        coords = feat["geometry"]["coordinates"]
-        lng, lat = coords[0], coords[1]
+    # Initialize static polygon coordinate skeletons once
+    if _DYNAMIC_ZONE_SKELETONS is None or len(_DYNAMIC_ZONE_SKELETONS) != n_features:
+        half = resolution / 2.0
+        skeletons = []
+        for feat in grid_features:
+            coords = feat["geometry"]["coordinates"]
+            lng, lat = coords[0], coords[1]
+            polygon = [
+                [round(lng - half, 5), round(lat - half, 5)],
+                [round(lng + half, 5), round(lat - half, 5)],
+                [round(lng + half, 5), round(lat + half, 5)],
+                [round(lng - half, 5), round(lat + half, 5)],
+                [round(lng - half, 5), round(lat - half, 5)],
+            ]
+            skeletons.append({
+                "type": "Polygon",
+                "coordinates": [polygon],
+                "lat": lat,
+                "lng": lng
+            })
+        _DYNAMIC_ZONE_SKELETONS = skeletons
+
+    features = []
+    for i, feat in enumerate(grid_features):
         props = feat.get("properties", {})
         zone = props.get("zone", "green")
         prob = props.get("hazard_probability", 0.1)
         is_expanded = props.get("is_expanded_red", False)
-
-        polygon = [
-            [round(lng - half, 5), round(lat - half, 5)],
-            [round(lng + half, 5), round(lat - half, 5)],
-            [round(lng + half, 5), round(lat + half, 5)],
-            [round(lng - half, 5), round(lat + half, 5)],
-            [round(lng - half, 5), round(lat - half, 5)],
-        ]
+        skel = _DYNAMIC_ZONE_SKELETONS[i]
 
         features.append({
             "type": "Feature",
             "geometry": {
                 "type": "Polygon",
-                "coordinates": [polygon]
+                "coordinates": skel["coordinates"]
             },
             "properties": {
                 "zone": zone,
                 "label": zone_labels.get(zone, "Unknown"),
                 "color": zone_colors.get(zone, "#10b981"),
                 "hazard_probability": prob,
-                "cell_lat": lat,
-                "cell_lng": lng,
+                "cell_lat": skel["lat"],
+                "cell_lng": skel["lng"],
                 "is_expanded_red": is_expanded,
                 "slope": props.get("slope", 15.0),
                 "elevation": props.get("elevation", 1800.0)
@@ -344,6 +363,7 @@ def compute_dynamic_hazard_zones(hazard_grid: dict, resolution: float = 0.02) ->
         })
 
     return {"type": "FeatureCollection", "features": features}
+
 
 
 # ---------------------------------------------------------------------------
@@ -408,31 +428,40 @@ def fetch_live_rainfall(lat: float = 30.73, lng: float = 78.45):
 # ---------------------------------------------------------------------------
 # 7. Pipeline Orchestration
 # ---------------------------------------------------------------------------
+_VILLAGES_GEOJSON_CACHE = None
+_SAFE_ZONES_CACHE = None
+
 def run_trigger_pipeline(output_dir: Path,
                          intensity_mm_hr: float,
                          antecedent_24h_mm: float = 0.0,
                          seismic_kh: float = 0.0):
-    """Executes the complete Layer 2 trigger workflow off pre-computed disk files."""
+    """Executes the complete Layer 2 trigger workflow off pre-computed disk files with in-memory caching."""
+    global _VILLAGES_GEOJSON_CACHE, _SAFE_ZONES_CACHE
     output_dir = Path(output_dir)
 
-    with open(output_dir / "villages.geojson") as f:
-        villages_geojson = json.load(f)
+    if _VILLAGES_GEOJSON_CACHE is None:
+        with open(output_dir / "villages.geojson") as f:
+            _VILLAGES_GEOJSON_CACHE = json.load(f)
 
-    with open(output_dir / "safe_zones.geojson") as f:
-        safe_zones_geojson = json.load(f)
+    if _SAFE_ZONES_CACHE is None:
+        with open(output_dir / "safe_zones.geojson") as f:
+            safe_zones_geojson = json.load(f)
+        _SAFE_ZONES_CACHE = [
+            {
+                "lat": float(feat["geometry"]["coordinates"][0][0][1]),
+                "lng": float(feat["geometry"]["coordinates"][0][0][0]),
+                "suitability_score": float(feat["properties"]["suitability_score"]),
+                "carrying_capacity": int(feat["properties"]["carrying_capacity"]),
+                "dist_road_km": float(feat["properties"].get("dist_road_km", 1.2)),
+                "dist_river_km": float(feat["properties"].get("dist_river_km", 2.0)),
+                "slope": float(feat["properties"].get("slope", 6.5)),
+            }
+            for feat in safe_zones_geojson["features"]
+        ]
 
-    safe_zones = [
-        {
-            "lat": float(feat["geometry"]["coordinates"][0][0][1]),
-            "lng": float(feat["geometry"]["coordinates"][0][0][0]),
-            "suitability_score": float(feat["properties"]["suitability_score"]),
-            "carrying_capacity": int(feat["properties"]["carrying_capacity"]),
-            "dist_road_km": float(feat["properties"].get("dist_road_km", 1.2)),
-            "dist_river_km": float(feat["properties"].get("dist_river_km", 2.0)),
-            "slope": float(feat["properties"].get("slope", 6.5)),
-        }
-        for feat in safe_zones_geojson["features"]
-    ]
+    villages_geojson = _VILLAGES_GEOJSON_CACHE
+    safe_zones = _SAFE_ZONES_CACHE
+
 
     alerts = compute_dynamic_alerts(villages_geojson, intensity_mm_hr, antecedent_24h_mm, seismic_kh=seismic_kh)
     dispatched, ledger = match_alerts_to_safe_zones(alerts, safe_zones)

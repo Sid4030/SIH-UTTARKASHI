@@ -29,19 +29,19 @@
         "rainfall_mm": 120.1,
         "ndvi": 0.639,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.132,
-        "zone": "green",
-        "vulnerability_index": 13.2,
+        "hazard_probability": 0.632,
+        "zone": "orange",
+        "vulnerability_index": 63.2,
         "nearest_disaster": "Uttarkashi Town Bhagirathi Inundation",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.19,
+          "landslide_susceptibility": 0.1,
           "flood_susceptibility": 0.7,
           "cloudburst_susceptibility": 0.16,
           "population_vulnerability": 0.31,
           "historical_recurrence": 0.4401
         },
         "score_breakdown": {
-          "hazard_intensity": 19.0,
+          "hazard_intensity": 10.0,
           "flood_exposure": 70.0,
           "cloudburst_risk": 16.0,
           "population_exposure": 31.0,
@@ -49,7 +49,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.88
+        "factor_of_safety": 9.99
       }
     },
     {
@@ -80,9 +80,9 @@
         "rainfall_mm": 190.4,
         "ndvi": 0.608,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.674,
+        "hazard_probability": 0.5656,
         "zone": "orange",
-        "vulnerability_index": 67.4,
+        "vulnerability_index": 56.6,
         "nearest_disaster": "Gangotri Deluge & Highway Breach",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.53,
@@ -100,7 +100,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.03
+        "factor_of_safety": 1.176
       }
     },
     {
@@ -131,9 +131,9 @@
         "rainfall_mm": 193.9,
         "ndvi": 0.611,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.48,
-        "zone": "yellow",
-        "vulnerability_index": 48.0,
+        "hazard_probability": 0.5613,
+        "zone": "orange",
+        "vulnerability_index": 56.1,
         "nearest_disaster": "Harsil Slope Failure",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -151,7 +151,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.25
+        "factor_of_safety": 1.446
       }
     },
     {
@@ -182,9 +182,9 @@
         "rainfall_mm": 176.9,
         "ndvi": 0.597,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.59,
+        "hazard_probability": 0.5335,
         "zone": "orange",
-        "vulnerability_index": 59.0,
+        "vulnerability_index": 53.4,
         "nearest_disaster": "Dharali Flash Flood & Debris Flow",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.52,
@@ -202,7 +202,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.12
+        "factor_of_safety": 1.231
       }
     },
     {
@@ -233,9 +233,9 @@
         "rainfall_mm": 196.6,
         "ndvi": 0.666,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.562,
-        "zone": "orange",
-        "vulnerability_index": 56.2,
+        "hazard_probability": 0.715,
+        "zone": "red",
+        "vulnerability_index": 71.5,
         "nearest_disaster": "Bhatwari Landslide & Sinking Zone",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.42,
@@ -253,7 +253,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.16
+        "factor_of_safety": 1.637
       }
     },
     {
@@ -284,9 +284,9 @@
         "rainfall_mm": 191.1,
         "ndvi": 0.638,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.49,
-        "zone": "yellow",
-        "vulnerability_index": 49.0,
+        "hazard_probability": 0.5538,
+        "zone": "orange",
+        "vulnerability_index": 55.4,
         "nearest_disaster": "Maneri Landslide Damming Risk",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -335,7 +335,7 @@
         "rainfall_mm": 165.4,
         "ndvi": 0.647,
         "dist_disaster_km": 1.67,
-        "hazard_probability": 0.604,
+        "hazard_probability": 0.6042,
         "zone": "orange",
         "vulnerability_index": 60.4,
         "nearest_disaster": "Uttarkashi NH-34 Slope Failure",
@@ -355,7 +355,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.11
+        "factor_of_safety": 1.09
       }
     },
     {
@@ -386,9 +386,9 @@
         "rainfall_mm": 212.4,
         "ndvi": 0.566,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.78,
-        "zone": "red",
-        "vulnerability_index": 78.0,
+        "hazard_probability": 0.5758,
+        "zone": "orange",
+        "vulnerability_index": 57.6,
         "nearest_disaster": "Barsu Slope Collapse",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -406,7 +406,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.9
+        "factor_of_safety": 1.085
       }
     },
     {
@@ -437,9 +437,9 @@
         "rainfall_mm": 178.2,
         "ndvi": 0.6,
         "dist_disaster_km": 4.42,
-        "hazard_probability": 0.618,
-        "zone": "orange",
-        "vulnerability_index": 61.8,
+        "hazard_probability": 0.3817,
+        "zone": "yellow",
+        "vulnerability_index": 38.2,
         "nearest_disaster": "Bhatwari Landslide & Sinking Zone",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -457,7 +457,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.09
+        "factor_of_safety": 1.091
       }
     },
     {
@@ -488,9 +488,9 @@
         "rainfall_mm": 209.2,
         "ndvi": 0.573,
         "dist_disaster_km": 3.44,
-        "hazard_probability": 0.96,
+        "hazard_probability": 0.721,
         "zone": "red",
-        "vulnerability_index": 96.0,
+        "vulnerability_index": 72.1,
         "nearest_disaster": "Barsu Slope Collapse",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.62,
@@ -508,7 +508,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.78
+        "factor_of_safety": 1.221
       }
     },
     {
@@ -539,9 +539,9 @@
         "rainfall_mm": 183.5,
         "ndvi": 0.588,
         "dist_disaster_km": 3.15,
-        "hazard_probability": 0.548,
-        "zone": "orange",
-        "vulnerability_index": 54.8,
+        "hazard_probability": 0.3866,
+        "zone": "yellow",
+        "vulnerability_index": 38.7,
         "nearest_disaster": "Maneri Landslide Damming Risk",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.52,
@@ -559,7 +559,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.17
+        "factor_of_safety": 1.174
       }
     },
     {
@@ -590,9 +590,9 @@
         "rainfall_mm": 188.8,
         "ndvi": 0.629,
         "dist_disaster_km": 0.94,
-        "hazard_probability": 0.84,
+        "hazard_probability": 0.691,
         "zone": "red",
-        "vulnerability_index": 84.0,
+        "vulnerability_index": 69.1,
         "nearest_disaster": "Harsil Slope Failure",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.46,
@@ -610,7 +610,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.86
+        "factor_of_safety": 1.343
       }
     },
     {
@@ -641,9 +641,9 @@
         "rainfall_mm": 200.7,
         "ndvi": 0.554,
         "dist_disaster_km": 2.26,
-        "hazard_probability": 0.87,
-        "zone": "red",
-        "vulnerability_index": 87.0,
+        "hazard_probability": 0.4566,
+        "zone": "orange",
+        "vulnerability_index": 45.7,
         "nearest_disaster": "Maneri Landslide Damming Risk",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -661,7 +661,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.84
+        "factor_of_safety": 1.035
       }
     },
     {
@@ -692,19 +692,19 @@
         "rainfall_mm": 148.3,
         "ndvi": 0.629,
         "dist_disaster_km": 2.93,
-        "hazard_probability": 0.144,
-        "zone": "green",
-        "vulnerability_index": 14.4,
+        "hazard_probability": 0.3001,
+        "zone": "yellow",
+        "vulnerability_index": 30.0,
         "nearest_disaster": "Uttarkashi NH-34 Slope Failure",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.39,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.32,
           "cloudburst_susceptibility": 0.33,
           "population_vulnerability": 0.09,
           "historical_recurrence": 0.2096
         },
         "score_breakdown": {
-          "hazard_intensity": 39.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 32.0,
           "cloudburst_risk": 33.0,
           "population_exposure": 9.0,
@@ -712,7 +712,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.85
+        "factor_of_safety": 2.656
       }
     },
     {
@@ -743,9 +743,9 @@
         "rainfall_mm": 188.4,
         "ndvi": 0.631,
         "dist_disaster_km": 2.98,
-        "hazard_probability": 0.534,
-        "zone": "orange",
-        "vulnerability_index": 53.4,
+        "hazard_probability": 0.3825,
+        "zone": "yellow",
+        "vulnerability_index": 38.2,
         "nearest_disaster": "Maneri Landslide Damming Risk",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.49,
@@ -763,7 +763,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.19
+        "factor_of_safety": 1.179
       }
     },
     {
@@ -794,9 +794,9 @@
         "rainfall_mm": 157.4,
         "ndvi": 0.674,
         "dist_disaster_km": 3.25,
-        "hazard_probability": 0.36,
+        "hazard_probability": 0.3424,
         "zone": "yellow",
-        "vulnerability_index": 36.0,
+        "vulnerability_index": 34.2,
         "nearest_disaster": "Uttarkashi NH-34 Slope Failure",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.39,
@@ -814,7 +814,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.42
+        "factor_of_safety": 1.524
       }
     },
     {
@@ -845,9 +845,9 @@
         "rainfall_mm": 196.7,
         "ndvi": 0.579,
         "dist_disaster_km": 1.84,
-        "hazard_probability": 0.81,
-        "zone": "red",
-        "vulnerability_index": 81.0,
+        "hazard_probability": 0.5578,
+        "zone": "orange",
+        "vulnerability_index": 55.8,
         "nearest_disaster": "Maneri Landslide Damming Risk",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.52,
@@ -865,7 +865,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.88
+        "factor_of_safety": 1.082
       }
     },
     {
@@ -896,9 +896,9 @@
         "rainfall_mm": 196.7,
         "ndvi": 0.637,
         "dist_disaster_km": 0.73,
-        "hazard_probability": 0.5,
-        "zone": "yellow",
-        "vulnerability_index": 50.0,
+        "hazard_probability": 0.5988,
+        "zone": "orange",
+        "vulnerability_index": 59.9,
         "nearest_disaster": "Bhatwari-Maneri Road Collapse",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.44,
@@ -916,7 +916,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.22
+        "factor_of_safety": 1.336
       }
     },
     {
@@ -947,9 +947,9 @@
         "rainfall_mm": 173.8,
         "ndvi": 0.654,
         "dist_disaster_km": 1.46,
-        "hazard_probability": 0.93,
+        "hazard_probability": 0.721,
         "zone": "red",
-        "vulnerability_index": 93.0,
+        "vulnerability_index": 72.1,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.43,
@@ -967,7 +967,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.8
+        "factor_of_safety": 1.259
       }
     },
     {
@@ -998,9 +998,9 @@
         "rainfall_mm": 156.4,
         "ndvi": 0.588,
         "dist_disaster_km": 1.49,
-        "hazard_probability": 0.38,
-        "zone": "yellow",
-        "vulnerability_index": 38.0,
+        "hazard_probability": 0.5243,
+        "zone": "orange",
+        "vulnerability_index": 52.4,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.38,
@@ -1018,7 +1018,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.39
+        "factor_of_safety": 1.526
       }
     },
     {
@@ -1049,19 +1049,19 @@
         "rainfall_mm": 198.8,
         "ndvi": 0.688,
         "dist_disaster_km": 5.8,
-        "hazard_probability": 0.204,
-        "zone": "green",
-        "vulnerability_index": 20.4,
+        "hazard_probability": 0.3822,
+        "zone": "yellow",
+        "vulnerability_index": 38.2,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.28,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.32,
           "cloudburst_susceptibility": 0.53,
           "population_vulnerability": 0.2,
           "historical_recurrence": 0.0134
         },
         "score_breakdown": {
-          "hazard_intensity": 28.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 32.0,
           "cloudburst_risk": 53.0,
           "population_exposure": 20.0,
@@ -1069,7 +1069,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.7
+        "factor_of_safety": 2.186
       }
     },
     {
@@ -1100,9 +1100,9 @@
         "rainfall_mm": 204.9,
         "ndvi": 0.656,
         "dist_disaster_km": 3.61,
-        "hazard_probability": 0.42,
+        "hazard_probability": 0.351,
         "zone": "yellow",
-        "vulnerability_index": 42.0,
+        "vulnerability_index": 35.1,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.35,
@@ -1120,7 +1120,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.33
+        "factor_of_safety": 1.487
       }
     },
     {
@@ -1151,9 +1151,9 @@
         "rainfall_mm": 193.9,
         "ndvi": 0.613,
         "dist_disaster_km": 2.53,
-        "hazard_probability": 0.45,
+        "hazard_probability": 0.4051,
         "zone": "yellow",
-        "vulnerability_index": 45.0,
+        "vulnerability_index": 40.5,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.43,
@@ -1171,7 +1171,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.29
+        "factor_of_safety": 1.359
       }
     },
     {
@@ -1202,9 +1202,9 @@
         "rainfall_mm": 167.5,
         "ndvi": 0.604,
         "dist_disaster_km": 4.4,
-        "hazard_probability": 0.35,
+        "hazard_probability": 0.3671,
         "zone": "yellow",
-        "vulnerability_index": 35.0,
+        "vulnerability_index": 36.7,
         "nearest_disaster": "Siror Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.48,
@@ -1222,7 +1222,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.43
+        "factor_of_safety": 1.561
       }
     },
     {
@@ -1253,9 +1253,9 @@
         "rainfall_mm": 187.9,
         "ndvi": 0.643,
         "dist_disaster_km": 15.88,
-        "hazard_probability": 0.9,
-        "zone": "red",
-        "vulnerability_index": 90.0,
+        "hazard_probability": 0.4519,
+        "zone": "orange",
+        "vulnerability_index": 45.2,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.62,
@@ -1273,7 +1273,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.82
+        "factor_of_safety": 1.01
       }
     },
     {
@@ -1304,9 +1304,9 @@
         "rainfall_mm": 185.2,
         "ndvi": 0.614,
         "dist_disaster_km": 14.61,
-        "hazard_probability": 0.43,
+        "hazard_probability": 0.3355,
         "zone": "yellow",
-        "vulnerability_index": 43.0,
+        "vulnerability_index": 33.6,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.41,
@@ -1324,7 +1324,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.32
+        "factor_of_safety": 1.38
       }
     },
     {
@@ -1355,9 +1355,9 @@
         "rainfall_mm": 136.6,
         "ndvi": 0.619,
         "dist_disaster_km": 20.93,
-        "hazard_probability": 0.39,
+        "hazard_probability": 0.3199,
         "zone": "yellow",
-        "vulnerability_index": 39.0,
+        "vulnerability_index": 32.0,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.37,
@@ -1375,7 +1375,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.37
+        "factor_of_safety": 1.491
       }
     },
     {
@@ -1406,19 +1406,19 @@
         "rainfall_mm": 141.1,
         "ndvi": 0.561,
         "dist_disaster_km": 8.77,
-        "hazard_probability": 0.168,
-        "zone": "green",
-        "vulnerability_index": 16.8,
+        "hazard_probability": 0.498,
+        "zone": "orange",
+        "vulnerability_index": 49.8,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.28,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.49,
           "cloudburst_susceptibility": 0.11,
           "population_vulnerability": 0.24,
           "historical_recurrence": 0.1394
         },
         "score_breakdown": {
-          "hazard_intensity": 28.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 49.0,
           "cloudburst_risk": 11.0,
           "population_exposure": 24.0,
@@ -1426,7 +1426,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.79
+        "factor_of_safety": 2.221
       }
     },
     {
@@ -1457,9 +1457,9 @@
         "rainfall_mm": 202.4,
         "ndvi": 0.686,
         "dist_disaster_km": 12.73,
-        "hazard_probability": 0.228,
-        "zone": "green",
-        "vulnerability_index": 22.8,
+        "hazard_probability": 0.2915,
+        "zone": "yellow",
+        "vulnerability_index": 29.1,
         "nearest_disaster": "Dunda Nala Surge",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.26,
@@ -1477,7 +1477,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.64
+        "factor_of_safety": 1.919
       }
     },
     {
@@ -1508,19 +1508,19 @@
         "rainfall_mm": 190.4,
         "ndvi": 0.674,
         "dist_disaster_km": 8.32,
-        "hazard_probability": 0.688,
-        "zone": "orange",
-        "vulnerability_index": 68.8,
+        "hazard_probability": 0.745,
+        "zone": "red",
+        "vulnerability_index": 74.5,
         "nearest_disaster": "Sankri Cloudburst",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.36,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.65,
           "cloudburst_susceptibility": 0.45,
           "population_vulnerability": 0.31,
           "historical_recurrence": 0.1436
         },
         "score_breakdown": {
-          "hazard_intensity": 36.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 65.0,
           "cloudburst_risk": 45.0,
           "population_exposure": 31.0,
@@ -1528,7 +1528,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.02
+        "factor_of_safety": 2.556
       }
     },
     {
@@ -1559,9 +1559,9 @@
         "rainfall_mm": 213.6,
         "ndvi": 0.646,
         "dist_disaster_km": 4.87,
-        "hazard_probability": 0.66,
-        "zone": "orange",
-        "vulnerability_index": 66.0,
+        "hazard_probability": 0.4209,
+        "zone": "yellow",
+        "vulnerability_index": 42.1,
         "nearest_disaster": "Sankri Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.57,
@@ -1579,7 +1579,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.05
+        "factor_of_safety": 1.164
       }
     },
     {
@@ -1610,9 +1610,9 @@
         "rainfall_mm": 177.9,
         "ndvi": 0.631,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.632,
+        "hazard_probability": 0.646,
         "zone": "orange",
-        "vulnerability_index": 63.2,
+        "vulnerability_index": 64.6,
         "nearest_disaster": "Sankri Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.54,
@@ -1630,7 +1630,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.08
+        "factor_of_safety": 1.087
       }
     },
     {
@@ -1661,9 +1661,9 @@
         "rainfall_mm": 139.6,
         "ndvi": 0.649,
         "dist_disaster_km": 12.39,
-        "hazard_probability": 0.264,
+        "hazard_probability": 0.2634,
         "zone": "green",
-        "vulnerability_index": 26.4,
+        "vulnerability_index": 26.3,
         "nearest_disaster": "Sankri Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.31,
@@ -1681,7 +1681,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.55
+        "factor_of_safety": 1.779
       }
     },
     {
@@ -1712,9 +1712,9 @@
         "rainfall_mm": 205.6,
         "ndvi": 0.689,
         "dist_disaster_km": 7.23,
-        "hazard_probability": 0.41,
+        "hazard_probability": 0.3782,
         "zone": "yellow",
-        "vulnerability_index": 41.0,
+        "vulnerability_index": 37.8,
         "nearest_disaster": "Sankri Valley Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.38,
@@ -1732,7 +1732,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.35
+        "factor_of_safety": 1.619
       }
     },
     {
@@ -1763,9 +1763,9 @@
         "rainfall_mm": 177.9,
         "ndvi": 0.619,
         "dist_disaster_km": 4.38,
-        "hazard_probability": 0.44,
+        "hazard_probability": 0.3496,
         "zone": "yellow",
-        "vulnerability_index": 44.0,
+        "vulnerability_index": 35.0,
         "nearest_disaster": "Sankri Valley Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.46,
@@ -1783,7 +1783,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.3
+        "factor_of_safety": 1.406
       }
     },
     {
@@ -1814,9 +1814,9 @@
         "rainfall_mm": 185.1,
         "ndvi": 0.654,
         "dist_disaster_km": 1.21,
-        "hazard_probability": 0.276,
-        "zone": "green",
-        "vulnerability_index": 27.6,
+        "hazard_probability": 0.6075,
+        "zone": "orange",
+        "vulnerability_index": 60.7,
         "nearest_disaster": "Sankri Valley Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.26,
@@ -1834,7 +1834,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.52
+        "factor_of_safety": 1.845
       }
     },
     {
@@ -1865,19 +1865,19 @@
         "rainfall_mm": 206.4,
         "ndvi": 0.551,
         "dist_disaster_km": 11.6,
-        "hazard_probability": 0.33,
+        "hazard_probability": 0.3571,
         "zone": "yellow",
-        "vulnerability_index": 33.0,
+        "vulnerability_index": 35.7,
         "nearest_disaster": "Sankri Valley Cloudburst",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.29,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.25,
           "cloudburst_susceptibility": 0.37,
           "population_vulnerability": 0.34,
           "historical_recurrence": 0.1154
         },
         "score_breakdown": {
-          "hazard_intensity": 29.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 25.0,
           "cloudburst_risk": 37.0,
           "population_exposure": 34.0,
@@ -1885,7 +1885,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.46
+        "factor_of_safety": 2.109
       }
     },
     {
@@ -1916,9 +1916,9 @@
         "rainfall_mm": 162.8,
         "ndvi": 0.678,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.156,
-        "zone": "green",
-        "vulnerability_index": 15.6,
+        "hazard_probability": 0.566,
+        "zone": "orange",
+        "vulnerability_index": 56.6,
         "nearest_disaster": "Purola Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.24,
@@ -1936,7 +1936,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.82
+        "factor_of_safety": 2.801
       }
     },
     {
@@ -1967,9 +1967,9 @@
         "rainfall_mm": 172.0,
         "ndvi": 0.688,
         "dist_disaster_km": 2.92,
-        "hazard_probability": 0.192,
-        "zone": "green",
-        "vulnerability_index": 19.2,
+        "hazard_probability": 0.3118,
+        "zone": "yellow",
+        "vulnerability_index": 31.2,
         "nearest_disaster": "Purola Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.23,
@@ -1987,7 +1987,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.73
+        "factor_of_safety": 1.963
       }
     },
     {
@@ -2018,9 +2018,9 @@
         "rainfall_mm": 181.4,
         "ndvi": 0.653,
         "dist_disaster_km": 5.11,
-        "hazard_probability": 0.34,
+        "hazard_probability": 0.3303,
         "zone": "yellow",
-        "vulnerability_index": 34.0,
+        "vulnerability_index": 33.0,
         "nearest_disaster": "Purola Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.28,
@@ -2038,7 +2038,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.44
+        "factor_of_safety": 1.729
       }
     },
     {
@@ -2069,19 +2069,19 @@
         "rainfall_mm": 145.3,
         "ndvi": 0.71,
         "dist_disaster_km": 1.46,
-        "hazard_probability": 0.18,
-        "zone": "green",
-        "vulnerability_index": 18.0,
+        "hazard_probability": 0.543,
+        "zone": "orange",
+        "vulnerability_index": 54.3,
         "nearest_disaster": "Purola Flash Flood",
         "thrive_dimensions": {
-          "landslide_susceptibility": 0.27,
+          "landslide_susceptibility": 0.25,
           "flood_susceptibility": 0.45,
           "cloudburst_susceptibility": 0.33,
           "population_vulnerability": 0.24,
           "historical_recurrence": 0.1434
         },
         "score_breakdown": {
-          "hazard_intensity": 27.0,
+          "hazard_intensity": 25.0,
           "flood_exposure": 45.0,
           "cloudburst_risk": 33.0,
           "population_exposure": 24.0,
@@ -2089,7 +2089,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.76
+        "factor_of_safety": 2.337
       }
     },
     {
@@ -2120,9 +2120,9 @@
         "rainfall_mm": 166.0,
         "ndvi": 0.596,
         "dist_disaster_km": 8.8,
-        "hazard_probability": 0.37,
+        "hazard_probability": 0.3238,
         "zone": "yellow",
-        "vulnerability_index": 37.0,
+        "vulnerability_index": 32.4,
         "nearest_disaster": "Mando Debris Flow",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.38,
@@ -2140,7 +2140,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.4
+        "factor_of_safety": 1.643
       }
     },
     {
@@ -2171,9 +2171,9 @@
         "rainfall_mm": 185.8,
         "ndvi": 0.582,
         "dist_disaster_km": 5.24,
-        "hazard_probability": 0.75,
-        "zone": "red",
-        "vulnerability_index": 75.0,
+        "hazard_probability": 0.399,
+        "zone": "yellow",
+        "vulnerability_index": 39.9,
         "nearest_disaster": "Mando Debris Flow",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.52,
@@ -2191,7 +2191,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 0.92
+        "factor_of_safety": 1.099
       }
     },
     {
@@ -2222,9 +2222,9 @@
         "rainfall_mm": 182.5,
         "ndvi": 0.602,
         "dist_disaster_km": 2.2,
-        "hazard_probability": 0.47,
+        "hazard_probability": 0.4233,
         "zone": "yellow",
-        "vulnerability_index": 47.0,
+        "vulnerability_index": 42.3,
         "nearest_disaster": "Nirakot Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.44,
@@ -2242,7 +2242,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.26
+        "factor_of_safety": 1.258
       }
     },
     {
@@ -2273,9 +2273,9 @@
         "rainfall_mm": 177.0,
         "ndvi": 0.586,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.46,
-        "zone": "yellow",
-        "vulnerability_index": 46.0,
+        "hazard_probability": 0.6367,
+        "zone": "orange",
+        "vulnerability_index": 63.7,
         "nearest_disaster": "Siror Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.42,
@@ -2293,7 +2293,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.28
+        "factor_of_safety": 1.35
       }
     },
     {
@@ -2324,9 +2324,9 @@
         "rainfall_mm": 164.7,
         "ndvi": 0.622,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.216,
-        "zone": "green",
-        "vulnerability_index": 21.6,
+        "hazard_probability": 0.6826,
+        "zone": "red",
+        "vulnerability_index": 68.3,
         "nearest_disaster": "Nirakot Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.29,
@@ -2344,7 +2344,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.67
+        "factor_of_safety": 1.843
       }
     },
     {
@@ -2375,9 +2375,9 @@
         "rainfall_mm": 180.4,
         "ndvi": 0.61,
         "dist_disaster_km": 0.0,
-        "hazard_probability": 0.252,
-        "zone": "green",
-        "vulnerability_index": 25.2,
+        "hazard_probability": 0.6698,
+        "zone": "red",
+        "vulnerability_index": 67.0,
         "nearest_disaster": "Mando Debris Flow",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.34,
@@ -2395,7 +2395,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.58
+        "factor_of_safety": 1.877
       }
     },
     {
@@ -2426,9 +2426,9 @@
         "rainfall_mm": 171.7,
         "ndvi": 0.615,
         "dist_disaster_km": 1.46,
-        "hazard_probability": 0.4,
-        "zone": "yellow",
-        "vulnerability_index": 40.0,
+        "hazard_probability": 0.6311,
+        "zone": "orange",
+        "vulnerability_index": 63.1,
         "nearest_disaster": "Nirakot Cloudburst",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.4,
@@ -2446,7 +2446,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.36
+        "factor_of_safety": 1.518
       }
     },
     {
@@ -2477,9 +2477,9 @@
         "rainfall_mm": 185.4,
         "ndvi": 0.644,
         "dist_disaster_km": 24.36,
-        "hazard_probability": 0.576,
-        "zone": "orange",
-        "vulnerability_index": 57.6,
+        "hazard_probability": 0.4283,
+        "zone": "yellow",
+        "vulnerability_index": 42.8,
         "nearest_disaster": "Bhatwari-Maneri Road Collapse",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.58,
@@ -2497,7 +2497,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.14
+        "factor_of_safety": 1.244
       }
     },
     {
@@ -2528,9 +2528,9 @@
         "rainfall_mm": 189.6,
         "ndvi": 0.676,
         "dist_disaster_km": 24.44,
-        "hazard_probability": 0.646,
-        "zone": "orange",
-        "vulnerability_index": 64.6,
+        "hazard_probability": 0.4204,
+        "zone": "yellow",
+        "vulnerability_index": 42.0,
         "nearest_disaster": "Bhatwari-Maneri Road Collapse",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.51,
@@ -2548,7 +2548,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.06
+        "factor_of_safety": 1.178
       }
     },
     {
@@ -2579,9 +2579,9 @@
         "rainfall_mm": 178.8,
         "ndvi": 0.638,
         "dist_disaster_km": 5.28,
-        "hazard_probability": 0.24,
-        "zone": "green",
-        "vulnerability_index": 24.0,
+        "hazard_probability": 0.2997,
+        "zone": "yellow",
+        "vulnerability_index": 30.0,
         "nearest_disaster": "Siror Flash Flood",
         "thrive_dimensions": {
           "landslide_susceptibility": 0.28,
@@ -2599,7 +2599,7 @@
         },
         "is_inside_district_polygon": true,
         "boundary_status": "VERIFIED_STATUTORY_UTTARKASHI",
-        "factor_of_safety": 1.61
+        "factor_of_safety": 1.912
       }
     }
   ]

@@ -7,8 +7,9 @@ Implements peer-reviewed geotechnical mechanics used in operational early-warnin
 1. Infinite Slope Stability Model (Mohr-Coulomb Failure Criterion):
    Computes exact Factor of Safety (FS) driven by pore-water pressure from
    antecedent rainfall saturation and instantaneous intensity:
-   FS = [ c' + (gamma - m * gamma_w) * z * cos^2(theta) * tan(phi') ] /
-        [ gamma * z * sin(theta) * cos(theta) ]
+   FS = [ c' + (gamma * z * cos^2(theta) - u) * tan(phi') ] /
+        [ gamma * z * sin(theta) * cos(theta) + k_h * gamma * z * cos^2(theta) ]
+   where u = m * gamma_w * z is the isotropic scalar pore water pressure.
 
 2. Voellmy Fluid Energy-Balance Velocity:
    v = sqrt( 2 * g * delta_h * (sin(theta) - mu * cos(theta)) / sin(theta) )
@@ -82,19 +83,29 @@ def compute_factor_of_safety(slope_deg: float, intensity_mm_hr: float,
             "failure_probability": 0.02
         }
 
-    # Pore-water pressure (kPa)
-    u = m * gamma_w * z * (math.cos(theta)**2)
+    # 1. Pore-water pressure (kPa)
+    # Pore pressure u is an isotropic scalar pressure at depth z: u = m * gamma_w * z
+    # (Does not take a cos^2(theta) geometric reduction factor)
+    u = m * gamma_w * z
 
-    # Driving shear stress along failure plane (kPa)
-    # Includes pseudo-static seismic inertial force if seismic shaking is detected
+    # 2. Total normal stress on failure plane (kPa)
+    sigma_total = gamma * z * (math.cos(theta)**2)
+
+    # 3. Effective normal stress (kPa): sigma' = sigma - u
+    effective_normal_stress = max(0.0, sigma_total - u)
+
+    # 4. Driving shear stress along failure plane (kPa)
+    # Gravitational stress component + pseudostatic horizontal seismic stress component (force per unit area)
+    # Both terms expressed strictly in stress units (kPa = kN/m^2):
+    # tau_driving = gamma * z * sin(theta) * cos(theta) + k_h * gamma * z * cos^2(theta)
     tau_driving = (gamma * z * math.sin(theta) * math.cos(theta)) + (seismic_kh * gamma * z * (math.cos(theta)**2))
 
-    # Resisting shear strength via effective stress Mohr-Coulomb law (kPa)
-    normal_stress = gamma * z * (math.cos(theta)**2) - (seismic_kh * gamma * z * math.sin(theta) * math.cos(theta))
-    effective_normal_stress = max(0.0, normal_stress - u)
+    # 5. Resisting shear strength via effective stress Mohr-Coulomb criterion (kPa)
+    # tau_resisting = c' + (gamma * z * cos^2(theta) - u) * tan(phi')
     tau_resisting = c + (effective_normal_stress * math.tan(phi))
 
-    # Factor of Safety
+    # 6. Standard Geotechnical Factor of Safety:
+    # Fs = [ c' + (gamma * z * cos^2(theta) - u) * tan(phi') ] / [ gamma * z * sin(theta) * cos(theta) + k_h * gamma * z * cos^2(theta) ]
     fs = tau_resisting / max(0.01, tau_driving)
     fs_clamped = round(max(0.1, min(9.99, fs)), 3)
 

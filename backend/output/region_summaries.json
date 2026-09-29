@@ -1,0 +1,3771 @@
+[
+  {
+    "grid_id": 1,
+    "location_name": "Uttarkashi Town",
+    "coordinates": [
+      78.445,
+      30.727
+    ],
+    "elevation_m": 1126,
+    "slope_deg": 4.0,
+    "hazard_score": 0.132,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.88,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 120.1,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Uttarkashi Town** is located at coordinates (30.7270\u00b0N, 78.4450\u00b0E) at 1126m elevation in the low-elevation river terrace (1126m). The terrain features near-flat (4.0\u00b0) terrain with negligible slope failure risk. With a multi-hazard THRIVE probability of **0.13** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.88** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (120 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Historical Disaster Proximity (CRITICAL), River Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.6 km",
+        "contribution": 0.177,
+        "severity": "CRITICAL",
+        "explanation": "Within the active floodplain buffer (0.6 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "15.1",
+        "contribution": 0.12,
+        "severity": "HIGH",
+        "explanation": "TWI 15.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Steepness",
+        "value": "4.0\u00b0",
+        "contribution": 0.01,
+        "severity": "LOW",
+        "explanation": "near-flat (4.0\u00b0) terrain with negligible slope failure risk"
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.12",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 17475,
+    "families_at_risk": 3360,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965163Z"
+  },
+  {
+    "grid_id": 2,
+    "location_name": "Gangotri",
+    "coordinates": [
+      78.94,
+      30.995
+    ],
+    "elevation_m": 3071,
+    "slope_deg": 37.7,
+    "hazard_score": 0.674,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.03,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 190.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Gangotri** is located at coordinates (30.9950\u00b0N, 78.9400\u00b0E) at 3071m elevation in the high-altitude alpine zone (3071m) above the treeline. The terrain features very steep (37.7\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.67** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.03** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (190 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "37.7\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (37.7\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.7",
+        "contribution": 0.092,
+        "severity": "HIGH",
+        "explanation": "TWI 12.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.37",
+        "contribution": 0.014,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "6.2 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (6.2 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 110,
+    "families_at_risk": 21,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965542Z"
+  },
+  {
+    "grid_id": 3,
+    "location_name": "Harsil",
+    "coordinates": [
+      78.738,
+      31.036
+    ],
+    "elevation_m": 2614,
+    "slope_deg": 29.8,
+    "hazard_score": 0.48,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.25,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 193.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Harsil** is located at coordinates (31.0360\u00b0N, 78.7380\u00b0E) at 2614m elevation in the upper subalpine zone (2614m). The terrain features moderately steep (29.8\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.48** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.25** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (194 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), River Proximity (CRITICAL).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "29.8\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (29.8\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.7 km",
+        "contribution": 0.172,
+        "severity": "CRITICAL",
+        "explanation": "Within the active floodplain buffer (0.7 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.0",
+        "contribution": 0.096,
+        "severity": "HIGH",
+        "explanation": "TWI 13.0 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-1.10",
+        "contribution": 0.053,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 1200,
+    "families_at_risk": 230,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965595Z"
+  },
+  {
+    "grid_id": 4,
+    "location_name": "Dharali",
+    "coordinates": [
+      78.784,
+      31.023
+    ],
+    "elevation_m": 3120,
+    "slope_deg": 35.7,
+    "hazard_score": 0.59,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.12,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 176.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Dharali** is located at coordinates (31.0230\u00b0N, 78.7840\u00b0E) at 3120m elevation in the high-altitude alpine zone (3120m) above the treeline. The terrain features very steep (35.7\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.59** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.12** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (177 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), River Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "35.7\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (35.7\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.4 km",
+        "contribution": 0.103,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.4 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.37",
+        "contribution": 0.014,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.60",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.60 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 800,
+    "families_at_risk": 153,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965644Z"
+  },
+  {
+    "grid_id": 5,
+    "location_name": "Bhatwari",
+    "coordinates": [
+      78.585,
+      30.8
+    ],
+    "elevation_m": 2518,
+    "slope_deg": 26.1,
+    "hazard_score": 0.562,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.16,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 196.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Bhatwari** is located at coordinates (30.8000\u00b0N, 78.5850\u00b0E) at 2518m elevation in the upper subalpine zone (2518m). The terrain features moderately steep (26.1\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.56** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.16** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (197 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), River Proximity (CRITICAL).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "26.1\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (26.1\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.5 km",
+        "contribution": 0.181,
+        "severity": "CRITICAL",
+        "explanation": "Extremely close (0.5 km) to a major river channel \u2014 direct flash flood and toe-erosion exposure."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.1",
+        "contribution": 0.098,
+        "severity": "HIGH",
+        "explanation": "TWI 13.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.24",
+        "contribution": 0.008,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.67",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.67 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 2500,
+    "families_at_risk": 480,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965690Z"
+  },
+  {
+    "grid_id": 6,
+    "location_name": "Maneri",
+    "coordinates": [
+      78.543,
+      30.777
+    ],
+    "elevation_m": 2185,
+    "slope_deg": 35.7,
+    "hazard_score": 0.49,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.23,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 191.1,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Maneri** is located at coordinates (30.7770\u00b0N, 78.5430\u00b0E) at 2185m elevation in the mid-elevation montane zone (2185m). The terrain features very steep (35.7\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.49** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.23** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (191 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), River Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "35.7\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (35.7\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.8 km",
+        "contribution": 0.167,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (0.8 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 3000,
+    "families_at_risk": 576,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965732Z"
+  },
+  {
+    "grid_id": 7,
+    "location_name": "Gangori",
+    "coordinates": [
+      78.48,
+      30.735
+    ],
+    "elevation_m": 1748,
+    "slope_deg": 41.7,
+    "hazard_score": 0.604,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.11,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 165.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Gangori** is located at coordinates (30.7350\u00b0N, 78.4800\u00b0E) at 1748m elevation in the lower valley floor (1748m). The terrain features very steep (41.7\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.60** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.11** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (165 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.7\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.7\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.7 km",
+        "contribution": 0.174,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.6",
+        "contribution": 0.091,
+        "severity": "HIGH",
+        "explanation": "TWI 12.6 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.9 km",
+        "contribution": 0.084,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.9 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.37",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 1500,
+    "families_at_risk": 288,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965780Z"
+  },
+  {
+    "grid_id": 8,
+    "location_name": "Barsu",
+    "coordinates": [
+      78.686,
+      30.853
+    ],
+    "elevation_m": 2422,
+    "slope_deg": 41.7,
+    "hazard_score": 0.78,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.9,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 212.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Barsu** is located at coordinates (30.8530\u00b0N, 78.6860\u00b0E) at 2422m elevation in the mid-elevation montane zone (2422m). The terrain features very steep (41.7\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.78** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.90** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (212 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.7\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.7\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.5",
+        "contribution": 0.09,
+        "severity": "HIGH",
+        "explanation": "TWI 12.5 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.4 km",
+        "contribution": 0.062,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.4 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.57",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.57 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.90 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 86 families (450 citizens) from Barsu to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 450,
+    "families_at_risk": 86,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965820Z"
+  },
+  {
+    "grid_id": 9,
+    "location_name": "Sukhi",
+    "coordinates": [
+      78.63,
+      30.81
+    ],
+    "elevation_m": 1882,
+    "slope_deg": 41.4,
+    "hazard_score": 0.618,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.09,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 178.2,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Sukhi** is located at coordinates (30.8100\u00b0N, 78.6300\u00b0E) at 1882m elevation in the mid-elevation montane zone (1882m). The terrain features very steep (41.4\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.62** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.09** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (178 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.4\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.4\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "4.4 km",
+        "contribution": 0.098,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.6",
+        "contribution": 0.091,
+        "severity": "HIGH",
+        "explanation": "TWI 12.6 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.8 km",
+        "contribution": 0.007,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.8 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.60",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.60 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 380,
+    "families_at_risk": 73,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965865Z"
+  },
+  {
+    "grid_id": 10,
+    "location_name": "Jhala",
+    "coordinates": [
+      78.65,
+      30.85
+    ],
+    "elevation_m": 2324,
+    "slope_deg": 36.0,
+    "hazard_score": 0.96,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.78,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 209.2,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Jhala** is located at coordinates (30.8500\u00b0N, 78.6500\u00b0E) at 2324m elevation in the mid-elevation montane zone (2324m). The terrain features very steep (36.0\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.96** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.78** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (209 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), River Proximity (CRITICAL), Historical Disaster Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "36.0\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (36.0\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.0 km",
+        "contribution": 0.2,
+        "severity": "CRITICAL",
+        "explanation": "Extremely close (0.0 km) to a major river channel \u2014 direct flash flood and toe-erosion exposure."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "3.4 km",
+        "contribution": 0.125,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.57",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.57 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.47",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.78 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 57 families (300 citizens) from Jhala to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 300,
+    "families_at_risk": 57,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965911Z"
+  },
+  {
+    "grid_id": 11,
+    "location_name": "Lanka",
+    "coordinates": [
+      78.51,
+      30.78
+    ],
+    "elevation_m": 2088,
+    "slope_deg": 37.8,
+    "hazard_score": 0.548,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.17,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 183.5,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Lanka** is located at coordinates (30.7800\u00b0N, 78.5100\u00b0E) at 2088m elevation in the mid-elevation montane zone (2088m). The terrain features very steep (37.8\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.55** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.17** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (184 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "37.8\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (37.8\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "3.1 km",
+        "contribution": 0.133,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.7",
+        "contribution": 0.092,
+        "severity": "HIGH",
+        "explanation": "TWI 12.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.1 km",
+        "contribution": 0.078,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.1 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.59",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.59 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 520,
+    "families_at_risk": 100,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965952Z"
+  },
+  {
+    "grid_id": 12,
+    "location_name": "Mukhba",
+    "coordinates": [
+      78.745,
+      31.03
+    ],
+    "elevation_m": 2794,
+    "slope_deg": 32.4,
+    "hazard_score": 0.84,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.86,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 188.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Mukhba** is located at coordinates (31.0300\u00b0N, 78.7450\u00b0E) at 2794m elevation in the upper subalpine zone (2794m). The terrain features moderately steep (32.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.84** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.86** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (189 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), River Proximity (CRITICAL).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "32.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (32.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.9 km",
+        "contribution": 0.194,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.5 km",
+        "contribution": 0.181,
+        "severity": "CRITICAL",
+        "explanation": "Extremely close (0.5 km) to a major river channel \u2014 direct flash flood and toe-erosion exposure."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.63",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.63 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.24",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.86 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 125 families (650 citizens) from Mukhba to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 650,
+    "families_at_risk": 125,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.965991Z"
+  },
+  {
+    "grid_id": 13,
+    "location_name": "Didsari",
+    "coordinates": [
+      78.53,
+      30.76
+    ],
+    "elevation_m": 2217,
+    "slope_deg": 44.6,
+    "hazard_score": 0.87,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.84,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 200.7,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Didsari** is located at coordinates (30.7600\u00b0N, 78.5300\u00b0E) at 2217m elevation in the mid-elevation montane zone (2217m). The terrain features very steep (44.6\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.87** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.84** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (201 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (HIGH), River Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "44.6\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (44.6\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "2.3 km",
+        "contribution": 0.158,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "1.5 km",
+        "contribution": 0.142,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (1.5 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.4",
+        "contribution": 0.089,
+        "severity": "HIGH",
+        "explanation": "TWI 12.4 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.55",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.55 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.73",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.84 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 138 families (720 citizens) from Didsari to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 720,
+    "families_at_risk": 138,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966037Z"
+  },
+  {
+    "grid_id": 14,
+    "location_name": "Seku",
+    "coordinates": [
+      78.49,
+      30.745
+    ],
+    "elevation_m": 1296,
+    "slope_deg": 16.1,
+    "hazard_score": 0.144,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.85,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 148.3,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Seku** is located at coordinates (30.7450\u00b0N, 78.4900\u00b0E) at 1296m elevation in the lower valley floor (1296m). The terrain features gentle-to-moderate (16.1\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.14** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.85** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (148 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "16.1\u00b0",
+        "contribution": 0.202,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (16.1\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "2.9 km",
+        "contribution": 0.139,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.7",
+        "contribution": 0.104,
+        "severity": "HIGH",
+        "explanation": "TWI 13.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-1.34",
+        "contribution": 0.066,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.2 km",
+        "contribution": 0.034,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.2 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.63",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.63 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 420,
+    "families_at_risk": 80,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966084Z"
+  },
+  {
+    "grid_id": 15,
+    "location_name": "Netala",
+    "coordinates": [
+      78.525,
+      30.755
+    ],
+    "elevation_m": 1936,
+    "slope_deg": 37.6,
+    "hazard_score": 0.534,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.19,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 188.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Netala** is located at coordinates (30.7550\u00b0N, 78.5250\u00b0E) at 1936m elevation in the mid-elevation montane zone (1936m). The terrain features very steep (37.6\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.53** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.19** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (188 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (HIGH), River Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "37.6\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (37.6\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "3.0 km",
+        "contribution": 0.138,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.2 km",
+        "contribution": 0.112,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.2 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.7",
+        "contribution": 0.092,
+        "severity": "HIGH",
+        "explanation": "TWI 12.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.63",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.63 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 950,
+    "families_at_risk": 182,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966124Z"
+  },
+  {
+    "grid_id": 16,
+    "location_name": "Heena",
+    "coordinates": [
+      78.505,
+      30.74
+    ],
+    "elevation_m": 1347,
+    "slope_deg": 28.4,
+    "hazard_score": 0.36,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.42,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 157.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Heena** is located at coordinates (30.7400\u00b0N, 78.5050\u00b0E) at 1347m elevation in the lower valley floor (1347m). The terrain features moderately steep (28.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.36** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.42** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (157 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "28.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (28.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "3.2 km",
+        "contribution": 0.131,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.0",
+        "contribution": 0.096,
+        "severity": "HIGH",
+        "explanation": "TWI 13.0 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.98",
+        "contribution": 0.047,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.7 km",
+        "contribution": 0.012,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.7 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.67",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.67 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 810,
+    "families_at_risk": 155,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966162Z"
+  },
+  {
+    "grid_id": 17,
+    "location_name": "Lata",
+    "coordinates": [
+      78.56,
+      30.785
+    ],
+    "elevation_m": 2808,
+    "slope_deg": 41.9,
+    "hazard_score": 0.81,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.88,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 196.7,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Lata** is located at coordinates (30.7850\u00b0N, 78.5600\u00b0E) at 2808m elevation in the upper subalpine zone (2808m). The terrain features very steep (41.9\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.81** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.88** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (197 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), River Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.9\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.9\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.8 km",
+        "contribution": 0.169,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.5 km",
+        "contribution": 0.099,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.5 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.5",
+        "contribution": 0.09,
+        "severity": "HIGH",
+        "explanation": "TWI 12.5 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.58",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.58 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.88 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 75 families (390 citizens) from Lata to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 390,
+    "families_at_risk": 75,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966205Z"
+  },
+  {
+    "grid_id": 18,
+    "location_name": "Sainj",
+    "coordinates": [
+      78.575,
+      30.795
+    ],
+    "elevation_m": 2530,
+    "slope_deg": 32.5,
+    "hazard_score": 0.5,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.22,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 196.7,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Sainj** is located at coordinates (30.7950\u00b0N, 78.5750\u00b0E) at 2530m elevation in the upper subalpine zone (2530m). The terrain features moderately steep (32.5\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.50** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.22** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (197 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), River Proximity (CRITICAL).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "32.5\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (32.5\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.7 km",
+        "contribution": 0.2,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.7 km",
+        "contribution": 0.171,
+        "severity": "CRITICAL",
+        "explanation": "Within the active floodplain buffer (0.7 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.34",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 440,
+    "families_at_risk": 84,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966247Z"
+  },
+  {
+    "grid_id": 19,
+    "location_name": "Dunda",
+    "coordinates": [
+      78.38,
+      30.6
+    ],
+    "elevation_m": 1787,
+    "slope_deg": 34.8,
+    "hazard_score": 0.93,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.8,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 173.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Dunda** is located at coordinates (30.6000\u00b0N, 78.3800\u00b0E) at 1787m elevation in the lower valley floor (1787m). The terrain features moderately steep (34.8\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.93** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.80** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (174 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), River Proximity (CRITICAL), Historical Disaster Proximity (CRITICAL).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "34.8\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (34.8\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.0 km",
+        "contribution": 0.2,
+        "severity": "CRITICAL",
+        "explanation": "Extremely close (0.0 km) to a major river channel \u2014 direct flash flood and toe-erosion exposure."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.5 km",
+        "contribution": 0.18,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.12",
+        "contribution": 0.001,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.80 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 538 families (2800 citizens) from Dunda to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 2800,
+    "families_at_risk": 538,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966289Z"
+  },
+  {
+    "grid_id": 20,
+    "location_name": "Barkot",
+    "coordinates": [
+      78.355,
+      30.614
+    ],
+    "elevation_m": 1559,
+    "slope_deg": 28.4,
+    "hazard_score": 0.38,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.39,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 156.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Barkot** is located at coordinates (30.6140\u00b0N, 78.3550\u00b0E) at 1559m elevation in the lower valley floor (1559m). The terrain features moderately steep (28.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.38** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.39** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (156 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "28.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (28.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.5 km",
+        "contribution": 0.179,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.0",
+        "contribution": 0.096,
+        "severity": "HIGH",
+        "explanation": "TWI 13.0 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.8 km",
+        "contribution": 0.086,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.8 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.59",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.59 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 6720,
+    "families_at_risk": 1292,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966329Z"
+  },
+  {
+    "grid_id": 21,
+    "location_name": "Tikochi",
+    "coordinates": [
+      78.42,
+      30.58
+    ],
+    "elevation_m": 2452,
+    "slope_deg": 19.4,
+    "hazard_score": 0.204,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.7,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 198.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Tikochi** is located at coordinates (30.5800\u00b0N, 78.4200\u00b0E) at 2452m elevation in the mid-elevation montane zone (2452m). The terrain features gentle-to-moderate (19.4\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.20** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.70** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (199 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "19.4\u00b0",
+        "contribution": 0.261,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (19.4\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.5",
+        "contribution": 0.102,
+        "severity": "HIGH",
+        "explanation": "TWI 13.5 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "5.8 km",
+        "contribution": 0.061,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.4 km",
+        "contribution": 0.024,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.4 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.69",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.69 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.37",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 700,
+    "families_at_risk": 134,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966375Z"
+  },
+  {
+    "grid_id": 22,
+    "location_name": "Dhanari",
+    "coordinates": [
+      78.4,
+      30.59
+    ],
+    "elevation_m": 2466,
+    "slope_deg": 28.9,
+    "hazard_score": 0.42,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.33,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 204.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Dhanari** is located at coordinates (30.5900\u00b0N, 78.4000\u00b0E) at 2466m elevation in the mid-elevation montane zone (2466m). The terrain features moderately steep (28.9\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.42** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.33** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (205 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (HIGH), River Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "28.9\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (28.9\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "3.6 km",
+        "contribution": 0.121,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.2 km",
+        "contribution": 0.112,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.2 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.0",
+        "contribution": 0.096,
+        "severity": "HIGH",
+        "explanation": "TWI 13.0 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.24",
+        "contribution": 0.008,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.66",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.66 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 850,
+    "families_at_risk": 163,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966413Z"
+  },
+  {
+    "grid_id": 23,
+    "location_name": "Athali",
+    "coordinates": [
+      78.39,
+      30.625
+    ],
+    "elevation_m": 2035,
+    "slope_deg": 31.9,
+    "hazard_score": 0.45,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.29,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 193.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Athali** is located at coordinates (30.6250\u00b0N, 78.3900\u00b0E) at 2035m elevation in the mid-elevation montane zone (2035m). The terrain features moderately steep (31.9\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.45** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.29** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (194 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "31.9\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (31.9\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "2.5 km",
+        "contribution": 0.15,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.9 km",
+        "contribution": 0.083,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.9 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.00",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Planar slope geometry \u2014 neutral subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 610,
+    "families_at_risk": 117,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966459Z"
+  },
+  {
+    "grid_id": 24,
+    "location_name": "Matli",
+    "coordinates": [
+      78.42,
+      30.66
+    ],
+    "elevation_m": 1561,
+    "slope_deg": 27.6,
+    "hazard_score": 0.35,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.43,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 167.5,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Matli** is located at coordinates (30.6600\u00b0N, 78.4200\u00b0E) at 1561m elevation in the lower valley floor (1561m). The terrain features moderately steep (27.6\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.35** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.43** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (168 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), River Proximity (MODERATE), Historical Disaster Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "27.6\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (27.6\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.2 km",
+        "contribution": 0.111,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.2 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "4.4 km",
+        "contribution": 0.099,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.1",
+        "contribution": 0.097,
+        "severity": "HIGH",
+        "explanation": "TWI 13.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-1.50",
+        "contribution": 0.075,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.60",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.60 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 1200,
+    "families_at_risk": 230,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966500Z"
+  },
+  {
+    "grid_id": 25,
+    "location_name": "Chinyalisaur",
+    "coordinates": [
+      78.24,
+      30.52
+    ],
+    "elevation_m": 2103,
+    "slope_deg": 46.2,
+    "hazard_score": 0.9,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.82,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 187.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Chinyalisaur** is located at coordinates (30.5200\u00b0N, 78.2400\u00b0E) at 2103m elevation in the mid-elevation montane zone (2103m). The terrain features extremely steep (46.2\u00b0) cliff-face terrain prone to rockfall and rapid debris slides. With a multi-hazard THRIVE probability of **0.90** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.82** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (188 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), River Proximity (MODERATE), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "46.2\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "extremely steep (46.2\u00b0) cliff-face terrain prone to rockfall and rapid debris slides"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.4 km",
+        "contribution": 0.104,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.4 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.4",
+        "contribution": 0.089,
+        "severity": "HIGH",
+        "explanation": "TWI 12.4 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "15.9 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.10",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.82 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 2978 families (15487 citizens) from Chinyalisaur to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 15487,
+    "families_at_risk": 2978,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966544Z"
+  },
+  {
+    "grid_id": 26,
+    "location_name": "Lakhwar",
+    "coordinates": [
+      78.27,
+      30.51
+    ],
+    "elevation_m": 1859,
+    "slope_deg": 31.4,
+    "hazard_score": 0.43,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.32,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 185.2,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Lakhwar** is located at coordinates (30.5100\u00b0N, 78.2700\u00b0E) at 1859m elevation in the mid-elevation montane zone (1859m). The terrain features moderately steep (31.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.43** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.32** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (185 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), River Proximity (MODERATE), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "31.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (31.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "2.2 km",
+        "contribution": 0.112,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (2.2 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "14.6 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 900,
+    "families_at_risk": 173,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966584Z"
+  },
+  {
+    "grid_id": 27,
+    "location_name": "Jakhol Chinyalisaur",
+    "coordinates": [
+      78.2,
+      30.49
+    ],
+    "elevation_m": 1298,
+    "slope_deg": 29.9,
+    "hazard_score": 0.39,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.37,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 136.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Jakhol Chinyalisaur** is located at coordinates (30.4900\u00b0N, 78.2000\u00b0E) at 1298m elevation in the lower valley floor (1298m). The terrain features moderately steep (29.9\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.39** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.37** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (137 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Topographic Wetness (TWI) (HIGH), Slope Curvature (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "29.9\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (29.9\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.0",
+        "contribution": 0.096,
+        "severity": "HIGH",
+        "explanation": "TWI 13.0 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.24",
+        "contribution": 0.008,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.9 km",
+        "contribution": 0.005,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.9 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "20.9 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.62",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.62 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 600,
+    "families_at_risk": 115,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966629Z"
+  },
+  {
+    "grid_id": 28,
+    "location_name": "Dharasu",
+    "coordinates": [
+      78.31,
+      30.55
+    ],
+    "elevation_m": 1005,
+    "slope_deg": 19.6,
+    "hazard_score": 0.168,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.79,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 141.1,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Dharasu** is located at coordinates (30.5500\u00b0N, 78.3100\u00b0E) at 1005m elevation in the low-elevation river terrace (1005m). The terrain features gentle-to-moderate (19.6\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.17** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.79** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (141 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), River Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "19.6\u00b0",
+        "contribution": 0.265,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (19.6\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.9 km",
+        "contribution": 0.162,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (0.9 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.5",
+        "contribution": 0.102,
+        "severity": "HIGH",
+        "explanation": "TWI 13.5 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "8.8 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.56",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.56 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 1400,
+    "families_at_risk": 269,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966669Z"
+  },
+  {
+    "grid_id": 29,
+    "location_name": "Barethi",
+    "coordinates": [
+      78.28,
+      30.525
+    ],
+    "elevation_m": 2143,
+    "slope_deg": 22.1,
+    "hazard_score": 0.228,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.64,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 202.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Barethi** is located at coordinates (30.5250\u00b0N, 78.2800\u00b0E) at 2143m elevation in the mid-elevation montane zone (2143m). The terrain features gentle-to-moderate (22.1\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.23** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.64** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (202 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), River Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "22.1\u00b0",
+        "contribution": 0.312,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (22.1\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.1,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.4 km",
+        "contribution": 0.066,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.4 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "12.7 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.69",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.69 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 680,
+    "families_at_risk": 130,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966712Z"
+  },
+  {
+    "grid_id": 30,
+    "location_name": "Mori",
+    "coordinates": [
+      78.1,
+      31.1
+    ],
+    "elevation_m": 2301,
+    "slope_deg": 16.5,
+    "hazard_score": 0.688,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.02,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 190.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Mori** is located at coordinates (31.1000\u00b0N, 78.1000\u00b0E) at 2301m elevation in the mid-elevation montane zone (2301m). The terrain features gentle-to-moderate (16.5\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.69** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.02** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (190 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), River Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "16.5\u00b0",
+        "contribution": 0.209,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (16.5\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "0.0 km",
+        "contribution": 0.2,
+        "severity": "CRITICAL",
+        "explanation": "Extremely close (0.0 km) to a major river channel \u2014 direct flash flood and toe-erosion exposure."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.6",
+        "contribution": 0.104,
+        "severity": "HIGH",
+        "explanation": "TWI 13.6 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "8.3 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.67",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.67 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.35",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 1480,
+    "families_at_risk": 284,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966754Z"
+  },
+  {
+    "grid_id": 31,
+    "location_name": "Netwar",
+    "coordinates": [
+      78.15,
+      31.05
+    ],
+    "elevation_m": 2857,
+    "slope_deg": 38.2,
+    "hazard_score": 0.66,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.05,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 213.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Netwar** is located at coordinates (31.0500\u00b0N, 78.1500\u00b0E) at 2857m elevation in the upper subalpine zone (2857m). The terrain features very steep (38.2\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.66** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.05** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (214 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "38.2\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (38.2\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.7",
+        "contribution": 0.092,
+        "severity": "HIGH",
+        "explanation": "TWI 12.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "4.9 km",
+        "contribution": 0.086,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-1.47",
+        "contribution": 0.073,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "5.5 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (5.5 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 800,
+    "families_at_risk": 153,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966796Z"
+  },
+  {
+    "grid_id": 32,
+    "location_name": "Sankri",
+    "coordinates": [
+      78.185,
+      31.082
+    ],
+    "elevation_m": 1842,
+    "slope_deg": 41.6,
+    "hazard_score": 0.632,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.08,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 177.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Sankri** is located at coordinates (31.0820\u00b0N, 78.1850\u00b0E) at 1842m elevation in the mid-elevation montane zone (1842m). The terrain features very steep (41.6\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.63** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.08** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (178 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.6\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.6\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.6",
+        "contribution": 0.091,
+        "severity": "HIGH",
+        "explanation": "TWI 12.6 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.37",
+        "contribution": 0.014,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "8.3 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (8.3 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.63",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.63 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 600,
+    "families_at_risk": 115,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966837Z"
+  },
+  {
+    "grid_id": 33,
+    "location_name": "Taluka",
+    "coordinates": [
+      78.06,
+      31.05
+    ],
+    "elevation_m": 1592,
+    "slope_deg": 24.7,
+    "hazard_score": 0.264,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.55,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 139.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Taluka** is located at coordinates (31.0500\u00b0N, 78.0600\u00b0E) at 1592m elevation in the lower valley floor (1592m). The terrain features gentle-to-moderate (24.7\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.26** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.55** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (140 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), Slope Curvature (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "24.7\u00b0",
+        "contribution": 0.35,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (24.7\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.2",
+        "contribution": 0.099,
+        "severity": "HIGH",
+        "explanation": "TWI 13.2 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.86",
+        "contribution": 0.04,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "6.7 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (6.7 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "12.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 400,
+    "families_at_risk": 76,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966882Z"
+  },
+  {
+    "grid_id": 34,
+    "location_name": "Osla",
+    "coordinates": [
+      78.25,
+      31.12
+    ],
+    "elevation_m": 2522,
+    "slope_deg": 26.4,
+    "hazard_score": 0.41,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.35,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 205.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Osla** is located at coordinates (31.1200\u00b0N, 78.2500\u00b0E) at 2522m elevation in the upper subalpine zone (2522m). The terrain features moderately steep (26.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.41** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.35** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (206 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "26.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (26.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.1",
+        "contribution": 0.098,
+        "severity": "HIGH",
+        "explanation": "TWI 13.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "7.2 km",
+        "contribution": 0.021,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "14.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (14.4 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.69",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.69 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.50",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 550,
+    "families_at_risk": 105,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966920Z"
+  },
+  {
+    "grid_id": 35,
+    "location_name": "Gangad",
+    "coordinates": [
+      78.22,
+      31.11
+    ],
+    "elevation_m": 2053,
+    "slope_deg": 30.8,
+    "hazard_score": 0.44,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.3,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 177.9,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Gangad** is located at coordinates (31.1100\u00b0N, 78.2200\u00b0E) at 2053m elevation in the mid-elevation montane zone (2053m). The terrain features moderately steep (30.8\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.44** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.30** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (178 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "30.8\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (30.8\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "4.4 km",
+        "contribution": 0.1,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.86",
+        "contribution": 0.04,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "11.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (11.4 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.62",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.62 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 480,
+    "families_at_risk": 92,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.966963Z"
+  },
+  {
+    "grid_id": 36,
+    "location_name": "Dhatmir",
+    "coordinates": [
+      78.195,
+      31.09
+    ],
+    "elevation_m": 2090,
+    "slope_deg": 23.1,
+    "hazard_score": 0.276,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.52,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 185.1,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Dhatmir** is located at coordinates (31.0900\u00b0N, 78.1950\u00b0E) at 2090m elevation in the mid-elevation montane zone (2090m). The terrain features gentle-to-moderate (23.1\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.28** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.52** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (185 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "23.1\u00b0",
+        "contribution": 0.329,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (23.1\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.2 km",
+        "contribution": 0.187,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.099,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "9.1 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (9.1 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 370,
+    "families_at_risk": 71,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967003Z"
+  },
+  {
+    "grid_id": 37,
+    "location_name": "Fitadi",
+    "coordinates": [
+      78.29,
+      31.14
+    ],
+    "elevation_m": 3291,
+    "slope_deg": 20.1,
+    "hazard_score": 0.33,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.46,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 206.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Fitadi** is located at coordinates (31.1400\u00b0N, 78.2900\u00b0E) at 3291m elevation in the high-altitude alpine zone (3291m) above the treeline. The terrain features gentle-to-moderate (20.1\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.33** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.46** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (206 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), River Proximity (LOW).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "20.1\u00b0",
+        "contribution": 0.275,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (20.1\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.4",
+        "contribution": 0.101,
+        "severity": "HIGH",
+        "explanation": "TWI 13.4 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "18.6 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (18.6 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "11.6 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.55",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.55 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.37",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 310,
+    "families_at_risk": 59,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967047Z"
+  },
+  {
+    "grid_id": 38,
+    "location_name": "Purola",
+    "coordinates": [
+      78.1,
+      30.85
+    ],
+    "elevation_m": 1725,
+    "slope_deg": 15.1,
+    "hazard_score": 0.156,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.82,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 162.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Purola** is located at coordinates (30.8500\u00b0N, 78.1000\u00b0E) at 1725m elevation in the lower valley floor (1725m). The terrain features gentle-to-moderate (15.1\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.16** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.82** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (163 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Historical Disaster Proximity (CRITICAL), Slope Steepness (MODERATE), River Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Slope Steepness",
+        "value": "15.1\u00b0",
+        "contribution": 0.184,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (15.1\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "1.9 km",
+        "contribution": 0.124,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (1.9 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.7",
+        "contribution": 0.105,
+        "severity": "HIGH",
+        "explanation": "TWI 13.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.68",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.68 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.37",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 4920,
+    "families_at_risk": 946,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967087Z"
+  },
+  {
+    "grid_id": 39,
+    "location_name": "Rama Sera",
+    "coordinates": [
+      78.12,
+      30.87
+    ],
+    "elevation_m": 1792,
+    "slope_deg": 21.7,
+    "hazard_score": 0.192,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.73,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 172.0,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Rama Sera** is located at coordinates (30.8700\u00b0N, 78.1200\u00b0E) at 1792m elevation in the lower valley floor (1792m). The terrain features gentle-to-moderate (21.7\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.19** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.73** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (172 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "21.7\u00b0",
+        "contribution": 0.303,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (21.7\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "2.9 km",
+        "contribution": 0.14,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.1,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.6 km",
+        "contribution": 0.056,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.6 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.12",
+        "contribution": 0.001,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.69",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.69 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 780,
+    "families_at_risk": 150,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967129Z"
+  },
+  {
+    "grid_id": 40,
+    "location_name": "Gundiyat Gaon",
+    "coordinates": [
+      78.135,
+      30.885
+    ],
+    "elevation_m": 2043,
+    "slope_deg": 24.7,
+    "hazard_score": 0.34,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.44,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 181.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Gundiyat Gaon** is located at coordinates (30.8850\u00b0N, 78.1350\u00b0E) at 2043m elevation in the mid-elevation montane zone (2043m). The terrain features gentle-to-moderate (24.7\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.34** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.44** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (181 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "24.7\u00b0",
+        "contribution": 0.35,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (24.7\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.2",
+        "contribution": 0.099,
+        "severity": "HIGH",
+        "explanation": "TWI 13.2 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "5.1 km",
+        "contribution": 0.079,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.7 km",
+        "contribution": 0.051,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.7 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.65",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.65 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.98",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 640,
+    "families_at_risk": 123,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967171Z"
+  },
+  {
+    "grid_id": 41,
+    "location_name": "Hudoli",
+    "coordinates": [
+      78.09,
+      30.86
+    ],
+    "elevation_m": 1446,
+    "slope_deg": 18.5,
+    "hazard_score": 0.18,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.76,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 145.3,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Hudoli** is located at coordinates (30.8600\u00b0N, 78.0900\u00b0E) at 1446m elevation in the lower valley floor (1446m). The terrain features gentle-to-moderate (18.5\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.18** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.76** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (145 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (CRITICAL), River Proximity (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "18.5\u00b0",
+        "contribution": 0.245,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (18.5\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.5 km",
+        "contribution": 0.18,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "1.5 km",
+        "contribution": 0.142,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (1.5 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.5",
+        "contribution": 0.102,
+        "severity": "HIGH",
+        "explanation": "TWI 13.5 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.71",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.71 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 530,
+    "families_at_risk": 101,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967213Z"
+  },
+  {
+    "grid_id": 42,
+    "location_name": "Rajgarhi",
+    "coordinates": [
+      78.55,
+      30.65
+    ],
+    "elevation_m": 2127,
+    "slope_deg": 26.1,
+    "hazard_score": 0.37,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.4,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 166.0,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Rajgarhi** is located at coordinates (30.6500\u00b0N, 78.5500\u00b0E) at 2127m elevation in the mid-elevation montane zone (2127m). The terrain features moderately steep (26.1\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.37** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.40** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (166 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Topographic Wetness (TWI) (HIGH), River Proximity (LOW).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "26.1\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (26.1\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.1",
+        "contribution": 0.098,
+        "severity": "HIGH",
+        "explanation": "TWI 13.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "12.8 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (12.8 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "8.8 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.60",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.60 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 1220,
+    "families_at_risk": 234,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967253Z"
+  },
+  {
+    "grid_id": 43,
+    "location_name": "Kharadi",
+    "coordinates": [
+      78.52,
+      30.67
+    ],
+    "elevation_m": 2343,
+    "slope_deg": 41.0,
+    "hazard_score": 0.75,
+    "ahp_score": 0.4,
+    "zone": "red",
+    "factor_of_safety": 0.92,
+    "fos_status": "ACTIVE_SHEAR_FAILURE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 185.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Kharadi** is located at coordinates (30.6700\u00b0N, 78.5200\u00b0E) at 2343m elevation in the mid-elevation montane zone (2343m). The terrain features very steep (41.0\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.75** (AHP composite score: 0.40), this location is classified as a **Red Zone** (Multi-Hazard Prohibited Area) \u2014 permanent habitation is statutorily prohibited under DM Act 2005 Sec 30/34. Immediate evacuation is mandated. The Mohr-Coulomb Factor of Safety is **0.92** (< 1.0), indicating **active shear failure conditions** \u2014 the slope is physically failing and collapse is imminent or ongoing. Under **extreme rainfall** conditions (186 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "41.0\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (41.0\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.6",
+        "contribution": 0.091,
+        "severity": "HIGH",
+        "explanation": "TWI 12.6 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "5.2 km",
+        "contribution": 0.076,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "9.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (9.4 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.58",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.58 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "1.22",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "\u26a0\ufe0f CRITICAL: Factor of Safety 0.92 indicates active slope failure. Emergency evacuation protocol activated.",
+      "IMMEDIATE (< 30 days): Evacuate 153 families (800 citizens) from Kharadi to nearest verified Alpha-site under DM Act 2005 Sec 34(b).",
+      "Deploy automated IoT rain gauges and soil moisture sensors for 24/7 monitoring.",
+      "Commission emergency geotechnical slope survey by GSI/WIHG team."
+    ],
+    "population_at_risk": 800,
+    "families_at_risk": 153,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967298Z"
+  },
+  {
+    "grid_id": 44,
+    "location_name": "Naugaon",
+    "coordinates": [
+      78.5,
+      30.7
+    ],
+    "elevation_m": 2024,
+    "slope_deg": 34.8,
+    "hazard_score": 0.47,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.26,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 182.5,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Naugaon** is located at coordinates (30.7000\u00b0N, 78.5000\u00b0E) at 2024m elevation in the mid-elevation montane zone (2024m). The terrain features moderately steep (34.8\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.47** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.26** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (182 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "34.8\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (34.8\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "2.2 km",
+        "contribution": 0.16,
+        "severity": "HIGH",
+        "explanation": "Near verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.61",
+        "contribution": 0.027,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "5.8 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (5.8 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.60",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.60 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 3450,
+    "families_at_risk": 663,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967369Z"
+  },
+  {
+    "grid_id": 45,
+    "location_name": "Siror",
+    "coordinates": [
+      78.46,
+      30.68
+    ],
+    "elevation_m": 2007,
+    "slope_deg": 32.2,
+    "hazard_score": 0.46,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.28,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 177.0,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Siror** is located at coordinates (30.6800\u00b0N, 78.4600\u00b0E) at 2007m elevation in the mid-elevation montane zone (2007m). The terrain features moderately steep (32.2\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.46** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.28** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (177 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "32.2\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (32.2\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.9",
+        "contribution": 0.095,
+        "severity": "HIGH",
+        "explanation": "TWI 12.9 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.8 km",
+        "contribution": 0.048,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.8 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.59",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.59 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.00",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Planar slope geometry \u2014 neutral subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 1820,
+    "families_at_risk": 350,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967410Z"
+  },
+  {
+    "grid_id": 46,
+    "location_name": "Nirakot",
+    "coordinates": [
+      78.48,
+      30.71
+    ],
+    "elevation_m": 1742,
+    "slope_deg": 23.2,
+    "hazard_score": 0.216,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.67,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 164.7,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Nirakot** is located at coordinates (30.7100\u00b0N, 78.4800\u00b0E) at 1742m elevation in the lower valley floor (1742m). The terrain features gentle-to-moderate (23.2\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.22** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.67** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (165 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "23.2\u00b0",
+        "contribution": 0.331,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (23.2\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.099,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "3.6 km",
+        "contribution": 0.056,
+        "severity": "MODERATE",
+        "explanation": "Moderate distance (3.6 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.62",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.62 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.85",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 600,
+    "families_at_risk": 115,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967450Z"
+  },
+  {
+    "grid_id": 47,
+    "location_name": "Mando",
+    "coordinates": [
+      78.47,
+      30.69
+    ],
+    "elevation_m": 2106,
+    "slope_deg": 22.7,
+    "hazard_score": 0.252,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.58,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 180.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Mando** is located at coordinates (30.6900\u00b0N, 78.4700\u00b0E) at 2106m elevation in the mid-elevation montane zone (2106m). The terrain features gentle-to-moderate (22.7\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.25** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.58** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (180 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "22.7\u00b0",
+        "contribution": 0.321,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (22.7\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "0.0 km",
+        "contribution": 0.22,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.1,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.49",
+        "contribution": 0.021,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "4.8 km",
+        "contribution": 0.007,
+        "severity": "LOW",
+        "explanation": "Moderate distance (4.8 km) from nearest river \u2014 indirect flood risk through tributary backflow."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 400,
+    "families_at_risk": 76,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967493Z"
+  },
+  {
+    "grid_id": 48,
+    "location_name": "Kankrari",
+    "coordinates": [
+      78.49,
+      30.7
+    ],
+    "elevation_m": 1844,
+    "slope_deg": 28.4,
+    "hazard_score": 0.4,
+    "ahp_score": 0.4,
+    "zone": "yellow",
+    "factor_of_safety": 1.36,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 171.7,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Kankrari** is located at coordinates (30.7000\u00b0N, 78.4900\u00b0E) at 1844m elevation in the mid-elevation montane zone (1844m). The terrain features moderately steep (28.4\u00b0) hillside with significant mass movement potential. With a multi-hazard THRIVE probability of **0.40** (AHP composite score: 0.40), this location is classified as a **Yellow Zone** (Moderate Hazard Cautionary) \u2014 habitation is permitted with structural mitigation measures (bio-engineering retaining walls, drainage improvements). The Mohr-Coulomb Factor of Safety is **1.36** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (172 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (HIGH), Historical Disaster Proximity (CRITICAL), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "28.4\u00b0",
+        "contribution": 0.35,
+        "severity": "HIGH",
+        "explanation": "moderately steep (28.4\u00b0) hillside with significant mass movement potential"
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "1.5 km",
+        "contribution": 0.18,
+        "severity": "CRITICAL",
+        "explanation": "Within verified disaster scar corridor \u2014 high recurrence probability."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.1",
+        "contribution": 0.097,
+        "severity": "HIGH",
+        "explanation": "TWI 13.1 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "5.0 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (5.0 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.61",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.61 \u2014 dense vegetation cover providing strong root cohesion."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "0.49",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Convex slope geometry \u2014 sheds subsurface water flow."
+      }
+    ],
+    "recommended_actions": [
+      "MEDIUM-TERM (6\u201324 months): Commission bio-engineering slope stabilization (gabion walls, jute geotextiles, vetiver grass planting).",
+      "Upgrade drainage channels to prevent waterlogging-induced slope saturation.",
+      "Conduct annual monsoon preparedness drills with local communities."
+    ],
+    "population_at_risk": 350,
+    "families_at_risk": 67,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967531Z"
+  },
+  {
+    "grid_id": 49,
+    "location_name": "Janki Chatti",
+    "coordinates": [
+      78.442,
+      30.985
+    ],
+    "elevation_m": 3111,
+    "slope_deg": 35.3,
+    "hazard_score": 0.576,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.14,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 185.4,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Janki Chatti** is located at coordinates (30.9850\u00b0N, 78.4420\u00b0E) at 3111m elevation in the high-altitude alpine zone (3111m) above the treeline. The terrain features very steep (35.3\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.58** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.14** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (185 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), River Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "35.3\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (35.3\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "1.8 km",
+        "contribution": 0.127,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (1.8 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.8",
+        "contribution": 0.093,
+        "severity": "HIGH",
+        "explanation": "TWI 12.8 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-1.10",
+        "contribution": 0.053,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "24.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 920,
+    "families_at_risk": 176,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967577Z"
+  },
+  {
+    "grid_id": 50,
+    "location_name": "Kharsali",
+    "coordinates": [
+      78.45,
+      30.99
+    ],
+    "elevation_m": 3017,
+    "slope_deg": 37.6,
+    "hazard_score": 0.646,
+    "ahp_score": 0.4,
+    "zone": "orange",
+    "factor_of_safety": 1.06,
+    "fos_status": "MARGINALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 189.6,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Kharsali** is located at coordinates (30.9900\u00b0N, 78.4500\u00b0E) at 3017m elevation in the high-altitude alpine zone (3017m) above the treeline. The terrain features very steep (37.6\u00b0) mountain slope with high translational slide susceptibility. With a multi-hazard THRIVE probability of **0.65** (AHP composite score: 0.40), this location is classified as an **Orange Zone** (High Hazard Buffer) \u2014 under active monitoring with restricted new construction. Short-term relocation planning is underway. The Mohr-Coulomb Factor of Safety is **1.06** (1.0\u20131.5), indicating **marginally stable conditions** \u2014 any increase in pore water pressure or seismic loading will trigger failure. Under **extreme rainfall** conditions (190 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (CRITICAL), River Proximity (HIGH), Topographic Wetness (TWI) (HIGH).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "37.6\u00b0",
+        "contribution": 0.35,
+        "severity": "CRITICAL",
+        "explanation": "very steep (37.6\u00b0) mountain slope with high translational slide susceptibility"
+      },
+      {
+        "factor": "River Proximity",
+        "value": "1.1 km",
+        "contribution": 0.156,
+        "severity": "HIGH",
+        "explanation": "Within the active floodplain buffer (1.1 km from nearest river) \u2014 elevated inundation risk during monsoon surges."
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "12.7",
+        "contribution": 0.092,
+        "severity": "HIGH",
+        "explanation": "TWI 12.7 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.98",
+        "contribution": 0.047,
+        "severity": "HIGH",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "24.4 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.68",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.68 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "SHORT-TERM (1\u20136 months): Initiate topographical cadastral survey for relocation terrace plots near nearest Green Zone.",
+      "Restrict new construction permits. Existing structures require seismic retrofit assessment.",
+      "Install at least 2 automated rain gauges at critical elevation bands."
+    ],
+    "population_at_risk": 760,
+    "families_at_risk": 146,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967622Z"
+  },
+  {
+    "grid_id": 51,
+    "location_name": "Barnigad",
+    "coordinates": [
+      78.49,
+      30.64
+    ],
+    "elevation_m": 2186,
+    "slope_deg": 22.2,
+    "hazard_score": 0.24,
+    "ahp_score": 0.4,
+    "zone": "green",
+    "factor_of_safety": 1.61,
+    "fos_status": "CONDITIONALLY_STABLE",
+    "live_conditions": {
+      "rainfall_intensity_mm_hr": 178.8,
+      "antecedent_24h_mm": 50.0,
+      "seismic_kh": 0.0
+    },
+    "summary": "**Barnigad** is located at coordinates (30.6400\u00b0N, 78.4900\u00b0E) at 2186m elevation in the mid-elevation montane zone (2186m). The terrain features gentle-to-moderate (22.2\u00b0) slope with limited landslide risk. With a multi-hazard THRIVE probability of **0.24** (AHP composite score: 0.40), this location is classified as a **Green Zone** (Safe Terrain) \u2014 geotechnically stable, suitable for permanent habitation and potential resettlement receiving site. The Mohr-Coulomb Factor of Safety is **1.61** (1.5\u20132.5), indicating **conditionally stable terrain** under current moisture and seismic conditions. Under **extreme rainfall** conditions (179 mm/hr intensity, 50 mm 24h antecedent) \u2014 cloudburst-scale deluge triggering mass wasting across the catchment. The primary hazard drivers are: Slope Steepness (MODERATE), Topographic Wetness (TWI) (HIGH), Historical Disaster Proximity (MODERATE).",
+    "contributing_factors": [
+      {
+        "factor": "Slope Steepness",
+        "value": "22.2\u00b0",
+        "contribution": 0.313,
+        "severity": "MODERATE",
+        "explanation": "gentle-to-moderate (22.2\u00b0) slope with limited landslide risk"
+      },
+      {
+        "factor": "Topographic Wetness (TWI)",
+        "value": "13.3",
+        "contribution": 0.1,
+        "severity": "HIGH",
+        "explanation": "TWI 13.3 \u2014 high soil saturation accumulation potential."
+      },
+      {
+        "factor": "Historical Disaster Proximity",
+        "value": "5.3 km",
+        "contribution": 0.075,
+        "severity": "MODERATE",
+        "explanation": "Near verified disaster scar corridor \u2014 moderate recurrence probability."
+      },
+      {
+        "factor": "Slope Curvature",
+        "value": "-0.12",
+        "contribution": 0.001,
+        "severity": "MODERATE",
+        "explanation": "Concave slope geometry \u2014 concentrates subsurface water flow."
+      },
+      {
+        "factor": "River Proximity",
+        "value": "8.0 km",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "Well beyond river influence (8.0 km) \u2014 minimal direct flood exposure."
+      },
+      {
+        "factor": "Vegetation Cover (NDVI)",
+        "value": "0.64",
+        "contribution": 0.0,
+        "severity": "LOW",
+        "explanation": "NDVI 0.64 \u2014 dense vegetation cover providing strong root cohesion."
+      }
+    ],
+    "recommended_actions": [
+      "No immediate action required. Terrain is geotechnically stable for permanent habitation.",
+      "Assess carrying capacity for potential resettlement receiving \u2014 verify 70 LPCD water, < 14\u00b0 slope, PMGSY road access."
+    ],
+    "population_at_risk": 850,
+    "families_at_risk": 163,
+    "nearest_safe_site": null,
+    "generated_utc": "2026-09-25T14:30:57.967665Z"
+  }
+]

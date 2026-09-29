@@ -2,47 +2,92 @@
   "raster_sources": {
     "dem": {
       "loaded": true,
-      "source": "GeoTIFF",
+      "source": "USGS SRTM 30m DEM (NASA/NGA)",
       "path": "/Users/meow/.gemini/antigravity-ide/scratch/uttarkashi-hazard-platform/backend/data/datasets/rasters/uttarkashi_srtm_30m_mosaic.tif",
-      "resolution_m": 30.8
+      "resolution_m": 30.8,
+      "tiles": [
+        "n30_e078_1arc_v3.tif",
+        "n31_e078_1arc_v3.tif"
+      ],
+      "status": "GENUINE"
     },
     "ndvi": {
       "loaded": false,
-      "source": "Elevation-Based Proxy",
-      "path": null
+      "source": "Elevation-Based Proxy (pending Sentinel-2 GeoTIFF or GEE integration)",
+      "status": "PROXY \u2014 requires real Sentinel-2 NDVI raster for genuine scoring"
     },
     "lulc": {
       "loaded": false,
-      "source": "NDVI-Based Estimation"
+      "source": "NDVI-Based Estimation (pending Dynamic World or manual classification)",
+      "status": "PROXY"
     }
   },
   "vector_sources": {
     "boundary": {
       "available": true,
-      "source": "Official Administrative Boundary (100% Habitations Reconciled)"
+      "source": "GADM 4.1 Official Administrative Boundary (Uttarkashi District)",
+      "status": "GENUINE"
     },
     "roads": {
       "available": true,
-      "source": "OpenStreetMap Real Road Network (cKDTree)"
+      "source": "OpenStreetMap Overpass API (cKDTree indexed)",
+      "status": "GENUINE"
     },
     "rivers": {
       "available": true,
-      "source": "HydroSHEDS Authentic River Network (979 streams, cKDTree)"
+      "source": "HydroSHEDS Global River Network (979 streams, cKDTree indexed)",
+      "status": "GENUINE"
     },
     "inventory": {
       "available": true,
-      "source": "GSI Bhukosh / NASA Verified Disaster Inventory (18 events)"
+      "source": "GSI Bhukosh + ISRO Landslide Atlas Verified Inventory (18 events)",
+      "status": "GENUINE"
     },
     "villages": {
       "available": true,
-      "source": "Statutory Revenue Habitations (Census 2011)"
+      "source": "Census 2011 Statutory Revenue Habitations (51 villages)",
+      "note": "Village names verified; coordinates approximate (pending SoI geocoding)",
+      "status": "GENUINE_NAMES_APPROXIMATE_COORDS"
     }
   },
+  "live_sources": {
+    "rainfall": {
+      "source": "Open-Meteo Free API (7-day history + forecast)",
+      "api_key_required": false,
+      "status": "LIVE"
+    },
+    "seismic": {
+      "source": "USGS FDSNWS Earthquake Catalog API",
+      "api_key_required": false,
+      "status": "LIVE",
+      "last_fetch": {
+        "seismic_status": "QUIESCENT",
+        "max_magnitude": 0.0,
+        "acceleration_kh": 0.0
+      }
+    }
+  },
+  "model_pipeline": {
+    "hazard_scoring": "THRIVE Multi-Hazard Fusion (5 dimensions)",
+    "physics_validation": "Mohr-Coulomb Infinite Slope Factor of Safety",
+    "zone_classification": "Percentile-based from actual score distribution",
+    "safe_zone_identification": "Algorithmic terrain validation (slope, FoS, river distance, disaster proximity)",
+    "relocation_assignment": "Distance-weighted capacity-constrained optimization"
+  },
+  "honest_limitations": [
+    "NDVI is proxy (elevation-based), not from real Sentinel-2 satellite imagery",
+    "LULC is estimated, not from Dynamic World classification",
+    "Village coordinates are approximate, not from Survey of India precision",
+    "Population density is from Census 2011 (14 years old)",
+    "Road routing uses straight-line distance, not road-network graph",
+    "IMD weather station data requires government MoU (not available)",
+    "INSAT-3D/DWR radar requires ISRO data feed (not available)"
+  ],
   "disaster_inventory_events": 18,
   "total_villages": 51,
   "total_grid_points": 1575,
-  "generation_timestamp": "2026-09-23T18:31:59.952710+00:00",
-  "audit_status": "AUTHENTIC_DATASETS_VERIFIED",
+  "generation_timestamp": "2026-09-26T18:04:45.348897+00:00",
+  "audit_status": "REGENERATED_WITH_PHYSICS_VALIDATION",
   "spatial_clipping": {
     "status": "STRICTLY_CLIPPED_TO_UTTARKASHI_BOUNDARY",
     "habitations_enclosed": "51 / 51 (100%)",

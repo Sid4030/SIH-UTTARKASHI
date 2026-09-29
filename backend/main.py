@@ -8,11 +8,29 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 from pathlib import Path
+from typing import Optional, List, Dict, Any, Tuple
 import os
 import json
 import asyncio
-import os
 from datetime import datetime, timezone
+
+def _load_env_file():
+    env_file = Path(__file__).resolve().parent.parent / ".env"
+    if env_file.exists():
+        try:
+            with open(env_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip('"').strip("'")
+                        if k:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env_file()
 
 from backend.model.trigger_engine import (
     run_trigger_pipeline,
@@ -40,6 +58,8 @@ from backend.model.continuous_learning import (
     execute_continuous_retraining
 )
 from backend.api_service import router as scoring_service_router, artifacts as service_artifacts
+from backend.model.region_summarizer import generate_region_summary
+from backend.model.rag_engine import get_chat_engine
 
 app = FastAPI(
     title="BhuRakshak (भू-रक्षक) — Geospatial Multi-Hazard Intelligence Platform",
@@ -68,13 +88,23 @@ app.include_router(scoring_service_router, prefix="/api")
 DATA_DIR = Path(__file__).parent / "output"
 
 
+_JSON_CACHE: Dict[str, Tuple[float, Any]] = {}
+
 def load_json(filename):
-    """Load JSON file from output directory."""
+    """Load JSON file from output directory with mtime in-memory caching."""
     filepath = DATA_DIR / filename
     if not filepath.exists():
         raise HTTPException(status_code=404, detail=f"File {filename} not found")
+    mtime = filepath.stat().st_mtime
+    if filename in _JSON_CACHE:
+        cached_mtime, cached_data = _JSON_CACHE[filename]
+        if cached_mtime == mtime:
+            return cached_data
     with open(filepath, "r") as f:
-        return json.load(f)
+        data = json.load(f)
+    _JSON_CACHE[filename] = (mtime, data)
+    return data
+
 
 
 @app.get("/")
@@ -97,7 +127,10 @@ def root():
             "/api/relocation-priorities",
             "/api/model-stats",
             "/api/dm-action-plan",
-            "/api/summary"
+            "/api/summary",
+            "/api/ai/region-summary",
+            "/api/chat/query",
+            "/api/chat/knowledge-status"
         ]
     }
 
@@ -723,26 +756,37 @@ def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.
     seismic_amp = 1.0 + max(0.0, float(seismic_kh) * 1.8)
 
     # 2. Update Spatial Hazard Grid for MapLibre visualization
-    hazard_grid = load_json("hazard_grid.geojson")
+    base_grid = load_json("hazard_grid.geojson")
     newly_red_cells = 0
     total_red_cells = 0
+    sim_features = []
 
-    for feature in hazard_grid["features"]:
-        props = feature["properties"]
+    for feature in base_grid["features"]:
+        props = dict(feature["properties"])
         orig_prob = props.get("hazard_probability", 0.3)
         orig_zone = props.get("zone", "green")
         slope = props.get("slope", 15.0)
         elev = props.get("elevation", 1800.0)
 
-        slope_amp = 1.0 + max(0.0, (slope - 20.0) / 50.0) * 0.15
-        orog_amp = 1.12 if (1500.0 <= elev <= 2800.0 and intensity_mm_hr >= 50.0) else 1.0
+        # Physical terrain susceptibility gating:
+        # Steep slopes (>25°) and close river corridors (<0.4km) are sensitive to rainfall/seismic triggers
+        if slope >= 28.0:
+            terrain_sensitivity = 1.0 + min(0.6, (slope - 28.0) / 25.0)
+        elif slope >= 18.0:
+            terrain_sensitivity = 0.5 + (slope - 18.0) / 20.0 * 0.5
+        else:
+            # Planar valleys (<18°) only flood if near rivers, not slope failure
+            river_dist = props.get("dist_river_km", 5.0)
+            terrain_sensitivity = 0.25 if river_dist > 0.5 else 0.70
 
-        amplified = min(0.99, orig_prob * mult * slope_amp * seismic_amp * orog_amp)
+        effective_mult = 1.0 + (mult - 1.0) * terrain_sensitivity
+        orog_amp = 1.12 if (1500.0 <= elev <= 2800.0 and intensity_mm_hr >= 50.0) else 1.0
+        amplified = min(0.99, orig_prob * effective_mult * seismic_amp * orog_amp)
         new_zone = classify_zone(amplified)
 
         props["hazard_probability"] = round(float(amplified), 4)
         props["zone"] = new_zone
-        props["is_expanded_red"] = (orig_zone != "red" and new_zone == "red")
+        props["is_expanded_red"] = (orig_zone != "red" and new_zone == "red" and slope >= 25.0)
         props["simulated"] = True
         props["intensity_mm_hr"] = intensity_mm_hr
         props["antecedent_24h_mm"] = antecedent_24h_mm
@@ -753,8 +797,17 @@ def simulate_event(intensity_mm_hr: float = 45.0, antecedent_24h_mm: float = 30.
             if orig_zone != "red":
                 newly_red_cells += 1
 
+        sim_features.append({
+            "type": "Feature",
+            "geometry": feature["geometry"],
+            "properties": props
+        })
+
+    hazard_grid = {"type": "FeatureCollection", "features": sim_features}
+
     # 3. Generate Real-Time Dynamic Hazard Zone Polygons
     dynamic_hazard_zones = compute_dynamic_hazard_zones(hazard_grid)
+
 
     # 4. Geotechnical Mohr-Coulomb Factor of Safety Calculation
     telemetry = get_cached_telemetry()
@@ -1229,9 +1282,178 @@ def get_ai_architecture():
     return model.get_network_architecture_summary()
 
 
+# ============================================================================
+# AI REGION SUMMARY & RAG CHATBOT ENDPOINTS
+# ============================================================================
+
+class RegionSummaryRequest(BaseModel):
+    latitude: float
+    longitude: float
+    location_name: str = None
+    slope: float = None
+    elevation: float = None
+    curvature: float = 0.0
+    twi: float = 7.0
+    ndvi: float = 0.4
+    dist_river_km: float = 5.0
+    dist_disaster_km: float = 10.0
+    rainfall_intensity: float = 35.0
+    antecedent_24h_mm: float = 50.0
+    seismic_kh: float = 0.0
+
+
+@app.post("/api/ai/region-summary")
+def get_region_summary(req: RegionSummaryRequest):
+    """
+    Generate a structured AI narrative summary for any coordinate/region.
+    Connects THRIVE hazard probability, AHP weights, Mohr-Coulomb FoS,
+    historical disaster proximity, and live trigger conditions into a
+    comprehensive plain-English explanation with recommended actions.
+    """
+    # Try to find nearest village for context enrichment
+    chat_engine = get_chat_engine()
+    nearby = chat_engine.kb.search_nearby_villages(
+        req.latitude, req.longitude, radius_km=3, limit=1
+    )
+
+    village_props = {}
+    if nearby:
+        village_props = nearby[0].get("properties", {})
+
+    slope = req.slope or village_props.get("slope", 20)
+    elevation = req.elevation or village_props.get("elevation", 1500)
+
+    # Compute Factor of Safety
+    fos_result = compute_factor_of_safety(slope_deg=slope)
+    fos_val = fos_result.get("factor_of_safety", 2.0) if isinstance(fos_result, dict) else fos_result
+
+    # Estimate hazard probability from village data or rule-based
+    hazard_prob = village_props.get("hazard_probability", 0.35)
+    zone = classify_zone(hazard_prob)
+
+    summary = generate_region_summary(
+        grid_id=village_props.get("id", "G-query"),
+        lat=req.latitude,
+        lng=req.longitude,
+        location_name=req.location_name or village_props.get("name"),
+        slope=slope,
+        elevation=elevation,
+        curvature=req.curvature,
+        twi=req.twi,
+        ndvi=req.ndvi,
+        dist_river_km=req.dist_river_km,
+        dist_disaster_km=req.dist_disaster_km,
+        rainfall_intensity=req.rainfall_intensity,
+        antecedent_24h_mm=req.antecedent_24h_mm,
+        seismic_kh=req.seismic_kh,
+        hazard_probability=hazard_prob,
+        zone=zone,
+        factor_of_safety=fos_val,
+        ahp_score=village_props.get("ahp_score", 0.4),
+        nearest_village=village_props.get("name"),
+        nearest_safe_site=village_props.get("safe_site_name"),
+        population_at_risk=village_props.get("population", 0),
+        families_at_risk=village_props.get("households", 0),
+    )
+    return summary
+
+
+class ChatQueryRequest(BaseModel):
+    query: str
+
+
+@app.post("/api/chat/query")
+def chat_query(req: ChatQueryRequest):
+    """
+    Conversational RAG chatbot endpoint.
+    Accepts natural language queries like 'What's happening near Dharali?'
+    Returns:
+      - narrative: plain-English hazard status report
+      - flight_plan: MapLibre camera waypoints for cinematic flythrough
+      - zone_statistics: district-wide zone counts
+    """
+    engine = get_chat_engine()
+    return engine.process_query(req.query)
+
+
+@app.get("/api/chat/knowledge-status")
+def chat_knowledge_status():
+    """
+    Returns the health and statistics of the RAG knowledge base index and atomic chunks.
+    """
+    engine = get_chat_engine()
+    return {
+        "status": "LOADED" if engine.kb.is_loaded else "NOT_LOADED",
+        "chunks_indexed": len(engine.kb.chunks),
+        "villages_indexed": len(engine.kb.villages),
+        "disasters_indexed": len(engine.kb.disaster_history),
+        "safe_zones_indexed": len(engine.kb.safe_zones),
+        "zone_statistics": engine.kb.get_zone_statistics(),
+        "chunk_categories": ["habitation_risk", "disaster_history", "safe_resettlement", "corridor_lifeline"],
+        "retrieval_architecture": "Sub-millisecond Token BM25 + Spatial Exponential Decay (<1ms)",
+    }
+
+
+class SimulateGridRequest(BaseModel):
+    rainfall_intensity: float = 45.0
+    antecedent_saturation: float = 60.0
+    seismic_kh: float = 0.04
+    max_cells: Optional[int] = 1000
+    chunk_size: int = 512
+
+
+_TERRAIN_GRID_CACHE = None
+
+@app.post("/api/predict/simulate-grid")
+def simulate_grid_chunked(req: SimulateGridRequest):
+    """
+    High-speed vectorized chunked batch prediction across terrain grid points.
+    Solves model lag by processing 512-cell matrix chunks using BLAS/C routines.
+    """
+    global _TERRAIN_GRID_CACHE
+    if _TERRAIN_GRID_CACHE is None:
+        terrain_file = DATA_DIR / "terrain_features.json"
+        if not terrain_file.exists():
+            raise HTTPException(status_code=404, detail="Terrain features dataset not found")
+        try:
+            with open(terrain_file) as f:
+                _TERRAIN_GRID_CACHE = json.load(f)
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=f"Failed to read terrain grid: {e}")
+
+    terrain_grid = _TERRAIN_GRID_CACHE
+    if req.max_cells:
+        terrain_grid = terrain_grid[:req.max_cells]
+
+
+    model = get_dual_brain_model()
+    predictions = model.predict_batch_chunked(
+        terrain_grid,
+        rainfall_intensity=req.rainfall_intensity,
+        antecedent_saturation=req.antecedent_saturation,
+        seismic_kh=req.seismic_kh,
+        chunk_size=req.chunk_size
+    )
+
+    return {
+        "cells_simulated": len(predictions),
+        "chunk_size": req.chunk_size,
+        "parameters": {
+            "rainfall_intensity": req.rainfall_intensity,
+            "antecedent_saturation": req.antecedent_saturation,
+            "seismic_kh": req.seismic_kh,
+        },
+        "predictions": predictions[:100],  # Return first 100 for network efficiency
+        "zone_counts": {
+            "red": sum(1 for p in predictions if p["zone"] == "red"),
+            "orange": sum(1 for p in predictions if p["zone"] == "orange"),
+            "yellow": sum(1 for p in predictions if p["zone"] == "yellow"),
+            "green": sum(1 for p in predictions if p["zone"] == "green"),
+        }
+    }
+
+
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-
-

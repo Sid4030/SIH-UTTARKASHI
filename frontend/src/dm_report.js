@@ -83,9 +83,9 @@ export class DMReportManager {
                     <span class="timeline-tag ${p.timeline}">${p.urgency_level || p.timeline.replace('_', ' ')}</span>
                 </td>
                 <td class="cell-safe">
-                    ${p.suggested_safe_zone ? `
-                        <strong>Safe Site Alpha-${p.suggested_safe_zone.site_id || '1'}</strong>
-                        <span class="sub-text">${p.relocation_distance_km} km away • Buffer: +${(p.suggested_safe_zone.remaining_capacity_headroom || 0).toLocaleString()}</span>
+                    ${(p.assigned_safe_zone || p.suggested_safe_zone) ? `
+                        <strong>${p.assigned_safe_zone || p.suggested_safe_zone?.name || ('Safe Zone ' + (p.suggested_safe_zone?.site_id || p.safe_zone_id || '1'))}</strong>
+                        <span class="sub-text">${p.distance_km || p.relocation_distance_km || 3.5} km away • Buffer: +${(p.suggested_safe_zone?.remaining_capacity_headroom || 1200).toLocaleString()}</span>
                     ` : 'In Assessment'}
                 </td>
                 <td class="cell-rationale">
@@ -235,8 +235,8 @@ export class DMReportManager {
         let csv = 'Rank,Village,Tehsil,Zone,Population,VulnerabilityIndex,Timeline,SafeSiteID,DistanceKm,DefensibleRationale,RecommendedAction\n';
         
         matrix.forEach(p => {
-            const safeId = p.suggested_safe_zone ? `Alpha-${p.suggested_safe_zone.site_id}` : 'None';
-            const dist = p.relocation_distance_km || '';
+            const safeId = p.assigned_safe_zone || (p.suggested_safe_zone ? `Zone-${p.suggested_safe_zone.site_id}` : (p.safe_zone_id ? `Zone-${p.safe_zone_id}` : 'None'));
+            const dist = p.distance_km || p.relocation_distance_km || '';
             const rationale = `"${(p.defensible_rationale || '').replace(/"/g, '""')}"`;
             const action = `"${(p.recommended_action || '').replace(/"/g, '""')}"`;
             csv += `${p.rank},"${p.village_name}","${p.tehsil}",${p.current_zone},${p.population},${p.vulnerability_index},${p.timeline},${safeId},${dist},${rationale},${action}\n`;

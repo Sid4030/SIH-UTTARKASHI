@@ -1,0 +1,1779 @@
+[
+  {
+    "chunk_id": "CHK-GEO-UTTARKASHI-01",
+    "category": "geography",
+    "title": "Uttarkashi District: Geography, Administrative Boundaries & Coordinates",
+    "location": "Uttarkashi District",
+    "lat": 30.729,
+    "lng": 78.445,
+    "zone": "green",
+    "text": "Uttarkashi District is located in the northernmost frontier of Uttarakhand, India, high in the Garhwal Himalayas. Precise District Headquarters Coordinates: 30.729\u00b0 N, 78.445\u00b0 E, at an elevation of 1,158 meters above mean sea level. District Expanse: 8,016 km\u00b2 spanning elevations from 850m in lower valleys to over 7,000m at peaks like Chaukhamba and Satopanth. Boundaries: North bordered by the Tibet Autonomous Region (China); West and northwest by Himachal Pradesh (Kinnaur and Shimla); East by Chamoli District; Southeast by Rudraprayag District; South by Tehri Garhwal and Dehradun. Administrative subdivisions comprise 6 tehsils: Bhatwari, Purola, Mori, Dunda, Barkot, and Chinyalisaur. Hydrology: Cradle of two sacred Indian rivers\u2014the Bhagirathi (originating at Gaumukh, Gangotri Glacier) and the Yamuna (originating at Yamunotri Glacier). Tectonic setting: Sits along the Main Central Thrust (MCT), placing the entire district in the catastrophic Seismic Zone V.",
+    "metrics": {
+      "lat": 30.729,
+      "lng": 78.445,
+      "elevation_m": 1158,
+      "area_km2": 8016,
+      "seismic_zone": "V",
+      "tehsils_count": 6,
+      "river_basins": "Bhagirathi, Yamuna, Tons, Asi Ganga"
+    }
+  },
+  {
+    "chunk_id": "CHK-METH-ZONATION-AI-01",
+    "category": "zonation_methodology",
+    "title": "Scientific Methodology: GIS Multi-Criteria & AI Real-Time Zonation",
+    "location": "Uttarkashi District Multi-Hazard Framework",
+    "lat": 30.73,
+    "lng": 78.45,
+    "zone": "red",
+    "text": "Hazard Zonation Methodology (Red vs Green Zones): 1. Spatial Multi-Criteria GIS Susceptibility (AHP Saaty Matrix): NASA SRTM 30m Digital Elevation Model derives slope, aspect, curvature, and Topographic Wetness Index (TWI). Weights: Slope gradient (30%), Peak rainfall intensity (25%), Distance to MCT Tectonic Fault (15%), Lithology/Cohesion (15%), Sentinel-2 NDVI cover (15%). Consistency Ratio CR = 0.0106 (<0.10 statutory proof). 2. Geotechnical Limit Equilibrium Physics: Infinite slope Mohr-Coulomb equation calculates dynamic Factor of Safety (FoS) per grid cell: FoS = [c' + (gamma*z - u)*cos\u00b2(theta)*tan(phi')] / [gamma*z*sin(theta)*cos(theta)]. \ud83d\udd34 RED ZONE (FoS < 1.0): Critical failure threshold. Driving shear stresses exceed resisting strength. Slopes > 35\u00b0 or active river buffer < 300m. Mandatory evacuation ordered under DM Act 2005. \ud83d\udfe0 ORANGE ZONE (1.0 <= FoS < 1.25): High alert buffer. Requires continuous pore-pressure telemetry. \ud83d\udfe1 YELLOW ZONE (1.25 <= FoS < 1.5): Moderate risk watch zone. \ud83d\udfe2 GREEN ZONE (FoS >= 1.8): Resilient safe resettlement areas. Slopes < 12\u00b0, elevation clearance > 15m above 100-yr flood stage, > 2km from fault zone, verified drinking water and road connectivity. 3. AI Model Real-Time Training: XGBoost / Random Forest classifier trained on 18 historical disaster epicenters (100% spatial recall) and 500 negative non-failure cells. Fuses real-time 15-minute ISRO INSAT-3D/3DR brightness temperature (CTBT), IMD Doppler Weather Radar (DWR) reflectivity, and USGS seismic data to update boundaries dynamically without client lag. 4. Safe Relocation: Dijkstra terrain-following routing navigates residents from Red Zones along stable ridge spurs to Green Zones with verified carrying capacity headroom.",
+    "metrics": {
+      "saaty_ahp_cr": 0.0106,
+      "fos_red_limit": 1.0,
+      "fos_green_limit": 1.8,
+      "model_accuracy": 0.944,
+      "historical_recall": 1.0,
+      "slope_threshold_deg": 35.0
+    }
+  },
+  {
+    "chunk_id": "CHK-METH-SLOPE-GRID-01",
+    "category": "zonation_methodology",
+    "title": "Terrain Geomorphology: NASA SRTM 30m Slope & Continuous Grid Risk Computation",
+    "location": "Uttarkashi District Continuous Terrain Grid",
+    "lat": 30.73,
+    "lng": 78.45,
+    "zone": "red",
+    "text": "Slope Angle & Grid Cell Risk Derivation (Across Habitations and Wilderness alike): 1. Slope Angle Gradient Calculation: Derived using Horn's 3x3 finite-difference algorithm on NASA SRTM 30m Digital Elevation Model (DEM). For any target point or 30m grid cell, let z1..z9 be the 3x3 elevation neighborhood with grid resolution dx, dy: East-West partial gradient: dz/dx = ((z3 + 2*z6 + z9) - (z1 + 2*z4 + z7)) / (8 * dx). North-South partial gradient: dz/dy = ((z7 + 2*z8 + z9) - (z1 + 2*z2 + z3)) / (8 * dy). Terrain Slope Angle: theta = arctan(sqrt((dz/dx)^2 + (dz/dy)^2)) * (180 / pi). 2. Continuous Grid-Cell Risk (Non-Village Slopes): Every 30m raster cell across Uttarkashi's 8,016 km\u00b2 is continuously evaluated, even in uninhabited mountain faces and gorges along NH-108. Instability is computed via the effective-stress Mohr-Coulomb equation: FoS = [c' + (gamma*z - u)*cos\u00b2(theta)*tan(phi')] / [gamma*z*sin(theta)*cos(theta)], where pore-pressure u = gamma_w * z_w * cos\u00b2(theta) escalates dynamically with IMD Doppler rain radar saturation. 3. Genuine Multi-Tier Relocation Strategy: - Short-Term Emergency (0-72 hrs): Local elevated ridge terraces and school plateaus outside debris corridors (< 5 km, slope < 10\u00b0, > 20m above riverbed). - Mid-Term Staging (3 days - 4 weeks): Designated Safe Havens (e.g. Harsil Military Ridge, Safe Haven 20, Maneri Colony High Terrace) with verified water, medical aid, and Badri cow/sheep livestock corrals. - Long-Term Resettlement: Green zones with geotechnically stable FoS >= 1.80, buildable land > 15 hectares, capacity headroom > 1,000 persons under Section 30 DM Act 2005.",
+    "metrics": {
+      "dem_resolution_m": 30.0,
+      "algorithm": "Horn 3x3 Finite Difference",
+      "grid_cells_total": 8900000,
+      "fos_red_threshold": 1.0,
+      "short_term_max_dist_km": 5.0,
+      "safe_haven_headroom_target": 850
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-1",
+    "category": "habitation_risk",
+    "title": "Uttarkashi Town Micro-Catchment & Geotechnical Profile",
+    "location": "Uttarkashi Town",
+    "lat": 30.727,
+    "lng": 78.445,
+    "zone": "orange",
+    "text": "Uttarkashi Town is located in Bhatwari Tehsil at coordinates [30.727\u00b0N, 78.445\u00b0E] at an elevation of 1126m MSL on a 4.0\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 63% (0.63) and a Mohr-Coulomb Factor of Safety of 9.99 (geotechnically stable). Monitored population at risk: 17,475 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 3.98,
+      "elevation_m": 1126.0,
+      "factor_of_safety": 9.99,
+      "hazard_probability": 0.632,
+      "population": 17475,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-2",
+    "category": "habitation_risk",
+    "title": "Gangotri Micro-Catchment & Geotechnical Profile",
+    "location": "Gangotri",
+    "lat": 30.995,
+    "lng": 78.94,
+    "zone": "orange",
+    "text": "Gangotri is located in Bhatwari Tehsil at coordinates [30.995\u00b0N, 78.940\u00b0E] at an elevation of 3071m MSL on a 37.7\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 56% (0.57) and a Mohr-Coulomb Factor of Safety of 1.18 (marginally stable buffer). Monitored population at risk: 110 residents. Designated statutory safe evacuation reception destination: Gangotri Temple Trust High-Plinth Safe Haven (Capacity: 1,200 people).",
+    "metrics": {
+      "slope_deg": 37.71,
+      "elevation_m": 3071.0,
+      "factor_of_safety": 1.176,
+      "hazard_probability": 0.5656,
+      "population": 110,
+      "safe_site_destination": "Gangotri Temple Trust High-Plinth Safe Haven (Capacity: 1,200 people)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-3",
+    "category": "habitation_risk",
+    "title": "Harsil Micro-Catchment & Geotechnical Profile",
+    "location": "Harsil",
+    "lat": 31.036,
+    "lng": 78.738,
+    "zone": "orange",
+    "text": "Harsil is located in Bhatwari Tehsil at coordinates [31.036\u00b0N, 78.738\u00b0E] at an elevation of 2614m MSL on a 29.8\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 56% (0.56) and a Mohr-Coulomb Factor of Safety of 1.45 (marginally stable buffer). Monitored population at risk: 1,200 residents. Designated statutory safe evacuation reception destination: Harsil Military Ridge Safe Reception Plateau.",
+    "metrics": {
+      "slope_deg": 29.83,
+      "elevation_m": 2614.0,
+      "factor_of_safety": 1.446,
+      "hazard_probability": 0.5613,
+      "population": 1200,
+      "safe_site_destination": "Harsil Military Ridge Safe Reception Plateau",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-4",
+    "category": "habitation_risk",
+    "title": "Dharali Micro-Catchment & Geotechnical Profile",
+    "location": "Dharali",
+    "lat": 31.023,
+    "lng": 78.784,
+    "zone": "orange",
+    "text": "Dharali is located in Bhatwari Tehsil at coordinates [31.023\u00b0N, 78.784\u00b0E] at an elevation of 3120m MSL on a 35.7\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 53% (0.53) and a Mohr-Coulomb Factor of Safety of 1.23 (marginally stable buffer). Monitored population at risk: 800 residents. Designated statutory safe evacuation reception destination: Harsil Military Ridge Safe Reception Plateau (Capacity: 1,800 people).",
+    "metrics": {
+      "slope_deg": 35.71,
+      "elevation_m": 3120.0,
+      "factor_of_safety": 1.231,
+      "hazard_probability": 0.5335,
+      "population": 800,
+      "safe_site_destination": "Harsil Military Ridge Safe Reception Plateau (Capacity: 1,800 people)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-5",
+    "category": "habitation_risk",
+    "title": "Bhatwari Micro-Catchment & Geotechnical Profile",
+    "location": "Bhatwari",
+    "lat": 30.8,
+    "lng": 78.585,
+    "zone": "red",
+    "text": "Bhatwari is located in Bhatwari Tehsil at coordinates [30.800\u00b0N, 78.585\u00b0E] at an elevation of 2518m MSL on a 26.1\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 71% (0.71) and a Mohr-Coulomb Factor of Safety of 1.64 (geotechnically stable). Monitored population at risk: 2,500 residents. Designated statutory safe evacuation reception destination: Bhatwari Upper Spur Safe Site Bravo.",
+    "metrics": {
+      "slope_deg": 26.13,
+      "elevation_m": 2518.0,
+      "factor_of_safety": 1.637,
+      "hazard_probability": 0.715,
+      "population": 2500,
+      "safe_site_destination": "Bhatwari Upper Spur Safe Site Bravo",
+      "tehsil": "Bhatwari",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-6",
+    "category": "habitation_risk",
+    "title": "Maneri Micro-Catchment & Geotechnical Profile",
+    "location": "Maneri",
+    "lat": 30.777,
+    "lng": 78.543,
+    "zone": "orange",
+    "text": "Maneri is located in Bhatwari Tehsil at coordinates [30.777\u00b0N, 78.543\u00b0E] at an elevation of 2185m MSL on a 35.7\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 55% (0.55) and a Mohr-Coulomb Factor of Safety of 1.23 (marginally stable buffer). Monitored population at risk: 3,000 residents. Designated statutory safe evacuation reception destination: Maneri Colony High Terrace.",
+    "metrics": {
+      "slope_deg": 35.73,
+      "elevation_m": 2185.0,
+      "factor_of_safety": 1.23,
+      "hazard_probability": 0.5538,
+      "population": 3000,
+      "safe_site_destination": "Maneri Colony High Terrace",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-7",
+    "category": "habitation_risk",
+    "title": "Gangori Micro-Catchment & Geotechnical Profile",
+    "location": "Gangori",
+    "lat": 30.735,
+    "lng": 78.48,
+    "zone": "orange",
+    "text": "Gangori is located in Bhatwari Tehsil at coordinates [30.735\u00b0N, 78.480\u00b0E] at an elevation of 1748m MSL on a 41.7\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 60% (0.60) and a Mohr-Coulomb Factor of Safety of 1.09 (marginally stable buffer). Monitored population at risk: 1,500 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.66,
+      "elevation_m": 1748.0,
+      "factor_of_safety": 1.09,
+      "hazard_probability": 0.6042,
+      "population": 1500,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-8",
+    "category": "habitation_risk",
+    "title": "Barsu Micro-Catchment & Geotechnical Profile",
+    "location": "Barsu",
+    "lat": 30.853,
+    "lng": 78.686,
+    "zone": "orange",
+    "text": "Barsu is located in Bhatwari Tehsil at coordinates [30.853\u00b0N, 78.686\u00b0E] at an elevation of 2422m MSL on a 41.7\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 57% (0.58) and a Mohr-Coulomb Factor of Safety of 1.08 (marginally stable buffer). Monitored population at risk: 450 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.7,
+      "elevation_m": 2422.0,
+      "factor_of_safety": 1.085,
+      "hazard_probability": 0.5758,
+      "population": 450,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-9",
+    "category": "habitation_risk",
+    "title": "Sukhi Micro-Catchment & Geotechnical Profile",
+    "location": "Sukhi",
+    "lat": 30.81,
+    "lng": 78.63,
+    "zone": "yellow",
+    "text": "Sukhi is located in Bhatwari Tehsil at coordinates [30.810\u00b0N, 78.630\u00b0E] at an elevation of 1882m MSL on a 41.4\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 38% (0.38) and a Mohr-Coulomb Factor of Safety of 1.09 (marginally stable buffer). Monitored population at risk: 380 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.43,
+      "elevation_m": 1882.0,
+      "factor_of_safety": 1.091,
+      "hazard_probability": 0.3817,
+      "population": 380,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-10",
+    "category": "habitation_risk",
+    "title": "Jhala Micro-Catchment & Geotechnical Profile",
+    "location": "Jhala",
+    "lat": 30.85,
+    "lng": 78.65,
+    "zone": "red",
+    "text": "Jhala is located in Bhatwari Tehsil at coordinates [30.850\u00b0N, 78.650\u00b0E] at an elevation of 2324m MSL on a 36.0\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 72% (0.72) and a Mohr-Coulomb Factor of Safety of 1.22 (marginally stable buffer). Monitored population at risk: 300 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 36.05,
+      "elevation_m": 2324.0,
+      "factor_of_safety": 1.221,
+      "hazard_probability": 0.721,
+      "population": 300,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-11",
+    "category": "habitation_risk",
+    "title": "Lanka Micro-Catchment & Geotechnical Profile",
+    "location": "Lanka",
+    "lat": 30.78,
+    "lng": 78.51,
+    "zone": "yellow",
+    "text": "Lanka is located in Bhatwari Tehsil at coordinates [30.780\u00b0N, 78.510\u00b0E] at an elevation of 2088m MSL on a 37.8\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 38% (0.39) and a Mohr-Coulomb Factor of Safety of 1.17 (marginally stable buffer). Monitored population at risk: 520 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 37.76,
+      "elevation_m": 2088.0,
+      "factor_of_safety": 1.174,
+      "hazard_probability": 0.3866,
+      "population": 520,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-12",
+    "category": "habitation_risk",
+    "title": "Mukhba Micro-Catchment & Geotechnical Profile",
+    "location": "Mukhba",
+    "lat": 31.03,
+    "lng": 78.745,
+    "zone": "red",
+    "text": "Mukhba is located in Bhatwari Tehsil at coordinates [31.030\u00b0N, 78.745\u00b0E] at an elevation of 2794m MSL on a 32.4\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 69% (0.69) and a Mohr-Coulomb Factor of Safety of 1.34 (marginally stable buffer). Monitored population at risk: 650 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 32.35,
+      "elevation_m": 2794.0,
+      "factor_of_safety": 1.343,
+      "hazard_probability": 0.691,
+      "population": 650,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-13",
+    "category": "habitation_risk",
+    "title": "Didsari Micro-Catchment & Geotechnical Profile",
+    "location": "Didsari",
+    "lat": 30.76,
+    "lng": 78.53,
+    "zone": "orange",
+    "text": "Didsari is located in Bhatwari Tehsil at coordinates [30.760\u00b0N, 78.530\u00b0E] at an elevation of 2217m MSL on a 44.6\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 45% (0.46) and a Mohr-Coulomb Factor of Safety of 1.03 (marginally stable buffer). Monitored population at risk: 720 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 44.56,
+      "elevation_m": 2217.0,
+      "factor_of_safety": 1.035,
+      "hazard_probability": 0.4566,
+      "population": 720,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-14",
+    "category": "habitation_risk",
+    "title": "Seku Micro-Catchment & Geotechnical Profile",
+    "location": "Seku",
+    "lat": 30.745,
+    "lng": 78.49,
+    "zone": "yellow",
+    "text": "Seku is located in Bhatwari Tehsil at coordinates [30.745\u00b0N, 78.490\u00b0E] at an elevation of 1296m MSL on a 16.1\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 30% (0.30) and a Mohr-Coulomb Factor of Safety of 2.66 (geotechnically stable). Monitored population at risk: 420 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 16.13,
+      "elevation_m": 1296.0,
+      "factor_of_safety": 2.656,
+      "hazard_probability": 0.3001,
+      "population": 420,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-15",
+    "category": "habitation_risk",
+    "title": "Netala Micro-Catchment & Geotechnical Profile",
+    "location": "Netala",
+    "lat": 30.755,
+    "lng": 78.525,
+    "zone": "yellow",
+    "text": "Netala is located in Bhatwari Tehsil at coordinates [30.755\u00b0N, 78.525\u00b0E] at an elevation of 1936m MSL on a 37.6\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 38% (0.38) and a Mohr-Coulomb Factor of Safety of 1.18 (marginally stable buffer). Monitored population at risk: 950 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 37.58,
+      "elevation_m": 1936.0,
+      "factor_of_safety": 1.179,
+      "hazard_probability": 0.3825,
+      "population": 950,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-16",
+    "category": "habitation_risk",
+    "title": "Heena Micro-Catchment & Geotechnical Profile",
+    "location": "Heena",
+    "lat": 30.74,
+    "lng": 78.505,
+    "zone": "yellow",
+    "text": "Heena is located in Bhatwari Tehsil at coordinates [30.740\u00b0N, 78.505\u00b0E] at an elevation of 1347m MSL on a 28.4\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 34% (0.34) and a Mohr-Coulomb Factor of Safety of 1.52 (geotechnically stable). Monitored population at risk: 810 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 28.42,
+      "elevation_m": 1347.0,
+      "factor_of_safety": 1.524,
+      "hazard_probability": 0.3424,
+      "population": 810,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-17",
+    "category": "habitation_risk",
+    "title": "Lata Micro-Catchment & Geotechnical Profile",
+    "location": "Lata",
+    "lat": 30.785,
+    "lng": 78.56,
+    "zone": "orange",
+    "text": "Lata is located in Bhatwari Tehsil at coordinates [30.785\u00b0N, 78.560\u00b0E] at an elevation of 2808m MSL on a 41.9\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 55% (0.56) and a Mohr-Coulomb Factor of Safety of 1.08 (marginally stable buffer). Monitored population at risk: 390 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.88,
+      "elevation_m": 2808.0,
+      "factor_of_safety": 1.082,
+      "hazard_probability": 0.5578,
+      "population": 390,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-18",
+    "category": "habitation_risk",
+    "title": "Sainj Micro-Catchment & Geotechnical Profile",
+    "location": "Sainj",
+    "lat": 30.795,
+    "lng": 78.575,
+    "zone": "orange",
+    "text": "Sainj is located in Bhatwari Tehsil at coordinates [30.795\u00b0N, 78.575\u00b0E] at an elevation of 2530m MSL on a 32.5\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 59% (0.60) and a Mohr-Coulomb Factor of Safety of 1.34 (marginally stable buffer). Monitored population at risk: 440 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 4 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 32.53,
+      "elevation_m": 2530.0,
+      "factor_of_safety": 1.336,
+      "hazard_probability": 0.5988,
+      "population": 440,
+      "safe_site_destination": "Safe Haven Zone 4 (Dense Forest)",
+      "tehsil": "Bhatwari",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-19",
+    "category": "habitation_risk",
+    "title": "Dunda Micro-Catchment & Geotechnical Profile",
+    "location": "Dunda",
+    "lat": 30.6,
+    "lng": 78.38,
+    "zone": "red",
+    "text": "Dunda is located in Dunda Tehsil at coordinates [30.600\u00b0N, 78.380\u00b0E] at an elevation of 1787m MSL on a 34.8\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 72% (0.72) and a Mohr-Coulomb Factor of Safety of 1.26 (marginally stable buffer). Monitored population at risk: 2,800 residents. Designated statutory safe evacuation reception destination: Dunda Tehsil Resettlement Plateau.",
+    "metrics": {
+      "slope_deg": 34.8,
+      "elevation_m": 1787.0,
+      "factor_of_safety": 1.259,
+      "hazard_probability": 0.721,
+      "population": 2800,
+      "safe_site_destination": "Dunda Tehsil Resettlement Plateau",
+      "tehsil": "Dunda",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-20",
+    "category": "habitation_risk",
+    "title": "Barkot Micro-Catchment & Geotechnical Profile",
+    "location": "Barkot",
+    "lat": 30.614,
+    "lng": 78.355,
+    "zone": "orange",
+    "text": "Barkot is located in Dunda Tehsil at coordinates [30.614\u00b0N, 78.355\u00b0E] at an elevation of 1559m MSL on a 28.4\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 52% (0.52) and a Mohr-Coulomb Factor of Safety of 1.53 (geotechnically stable). Monitored population at risk: 6,720 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 3 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 28.41,
+      "elevation_m": 1559.0,
+      "factor_of_safety": 1.526,
+      "hazard_probability": 0.5243,
+      "population": 6720,
+      "safe_site_destination": "Safe Haven Zone 3 (Dense Forest)",
+      "tehsil": "Dunda",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-21",
+    "category": "habitation_risk",
+    "title": "Tikochi Micro-Catchment & Geotechnical Profile",
+    "location": "Tikochi",
+    "lat": 30.58,
+    "lng": 78.42,
+    "zone": "yellow",
+    "text": "Tikochi is located in Dunda Tehsil at coordinates [30.580\u00b0N, 78.420\u00b0E] at an elevation of 2452m MSL on a 19.4\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 38% (0.38) and a Mohr-Coulomb Factor of Safety of 2.19 (geotechnically stable). Monitored population at risk: 700 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 3 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 19.37,
+      "elevation_m": 2452.0,
+      "factor_of_safety": 2.186,
+      "hazard_probability": 0.3822,
+      "population": 700,
+      "safe_site_destination": "Safe Haven Zone 3 (Dense Forest)",
+      "tehsil": "Dunda",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-22",
+    "category": "habitation_risk",
+    "title": "Dhanari Micro-Catchment & Geotechnical Profile",
+    "location": "Dhanari",
+    "lat": 30.59,
+    "lng": 78.4,
+    "zone": "yellow",
+    "text": "Dhanari is located in Dunda Tehsil at coordinates [30.590\u00b0N, 78.400\u00b0E] at an elevation of 2466m MSL on a 28.9\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 35% (0.35) and a Mohr-Coulomb Factor of Safety of 1.49 (marginally stable buffer). Monitored population at risk: 850 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 3 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 28.94,
+      "elevation_m": 2466.0,
+      "factor_of_safety": 1.487,
+      "hazard_probability": 0.351,
+      "population": 850,
+      "safe_site_destination": "Safe Haven Zone 3 (Dense Forest)",
+      "tehsil": "Dunda",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-23",
+    "category": "habitation_risk",
+    "title": "Athali Micro-Catchment & Geotechnical Profile",
+    "location": "Athali",
+    "lat": 30.625,
+    "lng": 78.39,
+    "zone": "yellow",
+    "text": "Athali is located in Dunda Tehsil at coordinates [30.625\u00b0N, 78.390\u00b0E] at an elevation of 2035m MSL on a 31.9\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 40% (0.41) and a Mohr-Coulomb Factor of Safety of 1.36 (marginally stable buffer). Monitored population at risk: 610 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 3 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 31.93,
+      "elevation_m": 2035.0,
+      "factor_of_safety": 1.359,
+      "hazard_probability": 0.4051,
+      "population": 610,
+      "safe_site_destination": "Safe Haven Zone 3 (Dense Forest)",
+      "tehsil": "Dunda",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-24",
+    "category": "habitation_risk",
+    "title": "Matli Micro-Catchment & Geotechnical Profile",
+    "location": "Matli",
+    "lat": 30.66,
+    "lng": 78.42,
+    "zone": "yellow",
+    "text": "Matli is located in Dunda Tehsil at coordinates [30.660\u00b0N, 78.420\u00b0E] at an elevation of 1561m MSL on a 27.6\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 36% (0.37) and a Mohr-Coulomb Factor of Safety of 1.56 (geotechnically stable). Monitored population at risk: 1,200 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 19 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 27.59,
+      "elevation_m": 1561.0,
+      "factor_of_safety": 1.561,
+      "hazard_probability": 0.3671,
+      "population": 1200,
+      "safe_site_destination": "Safe Haven Zone 19 (Dense Forest)",
+      "tehsil": "Dunda",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-25",
+    "category": "habitation_risk",
+    "title": "Chinyalisaur Micro-Catchment & Geotechnical Profile",
+    "location": "Chinyalisaur",
+    "lat": 30.52,
+    "lng": 78.24,
+    "zone": "orange",
+    "text": "Chinyalisaur is located in Chinyalisaur Tehsil at coordinates [30.520\u00b0N, 78.240\u00b0E] at an elevation of 2103m MSL on a 46.2\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 45% (0.45) and a Mohr-Coulomb Factor of Safety of 1.01 (marginally stable buffer). Monitored population at risk: 15,487 residents. Designated statutory safe evacuation reception destination: Chinyalisaur Airstrip Logistics Command.",
+    "metrics": {
+      "slope_deg": 46.21,
+      "elevation_m": 2103.0,
+      "factor_of_safety": 1.01,
+      "hazard_probability": 0.4519,
+      "population": 15487,
+      "safe_site_destination": "Chinyalisaur Airstrip Logistics Command",
+      "tehsil": "Chinyalisaur",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-26",
+    "category": "habitation_risk",
+    "title": "Lakhwar Micro-Catchment & Geotechnical Profile",
+    "location": "Lakhwar",
+    "lat": 30.51,
+    "lng": 78.27,
+    "zone": "yellow",
+    "text": "Lakhwar is located in Chinyalisaur Tehsil at coordinates [30.510\u00b0N, 78.270\u00b0E] at an elevation of 1859m MSL on a 31.4\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 33% (0.34) and a Mohr-Coulomb Factor of Safety of 1.38 (marginally stable buffer). Monitored population at risk: 900 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 11 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 31.39,
+      "elevation_m": 1859.0,
+      "factor_of_safety": 1.38,
+      "hazard_probability": 0.3355,
+      "population": 900,
+      "safe_site_destination": "Safe Haven Zone 11 (Dense Forest)",
+      "tehsil": "Chinyalisaur",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-27",
+    "category": "habitation_risk",
+    "title": "Jakhol Chinyalisaur Micro-Catchment & Geotechnical Profile",
+    "location": "Jakhol Chinyalisaur",
+    "lat": 30.49,
+    "lng": 78.2,
+    "zone": "yellow",
+    "text": "Jakhol Chinyalisaur is located in Chinyalisaur Tehsil at coordinates [30.490\u00b0N, 78.200\u00b0E] at an elevation of 1298m MSL on a 29.9\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 31% (0.32) and a Mohr-Coulomb Factor of Safety of 1.49 (marginally stable buffer). Monitored population at risk: 600 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 9 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 29.89,
+      "elevation_m": 1298.0,
+      "factor_of_safety": 1.491,
+      "hazard_probability": 0.3199,
+      "population": 600,
+      "safe_site_destination": "Safe Haven Zone 9 (Dense Forest)",
+      "tehsil": "Chinyalisaur",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-28",
+    "category": "habitation_risk",
+    "title": "Dharasu Micro-Catchment & Geotechnical Profile",
+    "location": "Dharasu",
+    "lat": 30.55,
+    "lng": 78.31,
+    "zone": "orange",
+    "text": "Dharasu is located in Chinyalisaur Tehsil at coordinates [30.550\u00b0N, 78.310\u00b0E] at an elevation of 1005m MSL on a 19.6\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 49% (0.50) and a Mohr-Coulomb Factor of Safety of 2.22 (geotechnically stable). Monitored population at risk: 1,400 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 3 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 19.59,
+      "elevation_m": 1005.0,
+      "factor_of_safety": 2.221,
+      "hazard_probability": 0.498,
+      "population": 1400,
+      "safe_site_destination": "Safe Haven Zone 3 (Dense Forest)",
+      "tehsil": "Chinyalisaur",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-29",
+    "category": "habitation_risk",
+    "title": "Barethi Micro-Catchment & Geotechnical Profile",
+    "location": "Barethi",
+    "lat": 30.525,
+    "lng": 78.28,
+    "zone": "yellow",
+    "text": "Barethi is located in Chinyalisaur Tehsil at coordinates [30.525\u00b0N, 78.280\u00b0E] at an elevation of 2143m MSL on a 22.1\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 29% (0.29) and a Mohr-Coulomb Factor of Safety of 1.92 (geotechnically stable). Monitored population at risk: 680 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 11 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 22.15,
+      "elevation_m": 2143.0,
+      "factor_of_safety": 1.919,
+      "hazard_probability": 0.2915,
+      "population": 680,
+      "safe_site_destination": "Safe Haven Zone 11 (Dense Forest)",
+      "tehsil": "Chinyalisaur",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-30",
+    "category": "habitation_risk",
+    "title": "Mori Micro-Catchment & Geotechnical Profile",
+    "location": "Mori",
+    "lat": 31.1,
+    "lng": 78.1,
+    "zone": "red",
+    "text": "Mori is located in Mori Tehsil at coordinates [31.100\u00b0N, 78.100\u00b0E] at an elevation of 2301m MSL on a 16.5\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 74% (0.74) and a Mohr-Coulomb Factor of Safety of 2.56 (geotechnically stable). Monitored population at risk: 1,480 residents. Designated statutory safe evacuation reception destination: Mori Forest Division Safe Complex.",
+    "metrics": {
+      "slope_deg": 16.52,
+      "elevation_m": 2301.0,
+      "factor_of_safety": 2.556,
+      "hazard_probability": 0.745,
+      "population": 1480,
+      "safe_site_destination": "Mori Forest Division Safe Complex",
+      "tehsil": "Mori",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-31",
+    "category": "habitation_risk",
+    "title": "Netwar Micro-Catchment & Geotechnical Profile",
+    "location": "Netwar",
+    "lat": 31.05,
+    "lng": 78.15,
+    "zone": "yellow",
+    "text": "Netwar is located in Mori Tehsil at coordinates [31.050\u00b0N, 78.150\u00b0E] at an elevation of 2857m MSL on a 38.2\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 42% (0.42) and a Mohr-Coulomb Factor of Safety of 1.16 (marginally stable buffer). Monitored population at risk: 800 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 7 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 38.18,
+      "elevation_m": 2857.0,
+      "factor_of_safety": 1.164,
+      "hazard_probability": 0.4209,
+      "population": 800,
+      "safe_site_destination": "Safe Haven Zone 7 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-32",
+    "category": "habitation_risk",
+    "title": "Sankri Micro-Catchment & Geotechnical Profile",
+    "location": "Sankri",
+    "lat": 31.082,
+    "lng": 78.185,
+    "zone": "orange",
+    "text": "Sankri is located in Mori Tehsil at coordinates [31.082\u00b0N, 78.185\u00b0E] at an elevation of 1842m MSL on a 41.6\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 64% (0.65) and a Mohr-Coulomb Factor of Safety of 1.09 (marginally stable buffer). Monitored population at risk: 600 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 7 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.6,
+      "elevation_m": 1842.0,
+      "factor_of_safety": 1.087,
+      "hazard_probability": 0.646,
+      "population": 600,
+      "safe_site_destination": "Safe Haven Zone 7 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-33",
+    "category": "habitation_risk",
+    "title": "Taluka Micro-Catchment & Geotechnical Profile",
+    "location": "Taluka",
+    "lat": 31.05,
+    "lng": 78.06,
+    "zone": "green",
+    "text": "Taluka is located in Mori Tehsil at coordinates [31.050\u00b0N, 78.060\u00b0E] at an elevation of 1592m MSL on a 24.7\u00b0 slope. It is classified in the GREEN Hazard Zone with a multi-hazard probability score of 26% (0.26) and a Mohr-Coulomb Factor of Safety of 1.78 (geotechnically stable). Monitored population at risk: 400 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 7 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 24.68,
+      "elevation_m": 1592.0,
+      "factor_of_safety": 1.779,
+      "hazard_probability": 0.2634,
+      "population": 400,
+      "safe_site_destination": "Safe Haven Zone 7 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "green"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-34",
+    "category": "habitation_risk",
+    "title": "Osla Micro-Catchment & Geotechnical Profile",
+    "location": "Osla",
+    "lat": 31.12,
+    "lng": 78.25,
+    "zone": "yellow",
+    "text": "Osla is located in Mori Tehsil at coordinates [31.120\u00b0N, 78.250\u00b0E] at an elevation of 2522m MSL on a 26.4\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 37% (0.38) and a Mohr-Coulomb Factor of Safety of 1.62 (geotechnically stable). Monitored population at risk: 550 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 6 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 26.44,
+      "elevation_m": 2522.0,
+      "factor_of_safety": 1.619,
+      "hazard_probability": 0.3782,
+      "population": 550,
+      "safe_site_destination": "Safe Haven Zone 6 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-35",
+    "category": "habitation_risk",
+    "title": "Gangad Micro-Catchment & Geotechnical Profile",
+    "location": "Gangad",
+    "lat": 31.11,
+    "lng": 78.22,
+    "zone": "yellow",
+    "text": "Gangad is located in Mori Tehsil at coordinates [31.110\u00b0N, 78.220\u00b0E] at an elevation of 2053m MSL on a 30.8\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 34% (0.35) and a Mohr-Coulomb Factor of Safety of 1.41 (marginally stable buffer). Monitored population at risk: 480 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 6 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 30.77,
+      "elevation_m": 2053.0,
+      "factor_of_safety": 1.406,
+      "hazard_probability": 0.3496,
+      "population": 480,
+      "safe_site_destination": "Safe Haven Zone 6 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-36",
+    "category": "habitation_risk",
+    "title": "Dhatmir Micro-Catchment & Geotechnical Profile",
+    "location": "Dhatmir",
+    "lat": 31.09,
+    "lng": 78.195,
+    "zone": "orange",
+    "text": "Dhatmir is located in Mori Tehsil at coordinates [31.090\u00b0N, 78.195\u00b0E] at an elevation of 2090m MSL on a 23.1\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 60% (0.61) and a Mohr-Coulomb Factor of Safety of 1.84 (geotechnically stable). Monitored population at risk: 370 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 7 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 23.07,
+      "elevation_m": 2090.0,
+      "factor_of_safety": 1.845,
+      "hazard_probability": 0.6075,
+      "population": 370,
+      "safe_site_destination": "Safe Haven Zone 7 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-37",
+    "category": "habitation_risk",
+    "title": "Fitadi Micro-Catchment & Geotechnical Profile",
+    "location": "Fitadi",
+    "lat": 31.14,
+    "lng": 78.29,
+    "zone": "yellow",
+    "text": "Fitadi is located in Mori Tehsil at coordinates [31.140\u00b0N, 78.290\u00b0E] at an elevation of 3291m MSL on a 20.1\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 35% (0.36) and a Mohr-Coulomb Factor of Safety of 2.11 (geotechnically stable). Monitored population at risk: 310 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 6 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 20.1,
+      "elevation_m": 3291.0,
+      "factor_of_safety": 2.109,
+      "hazard_probability": 0.3571,
+      "population": 310,
+      "safe_site_destination": "Safe Haven Zone 6 (Dense Forest)",
+      "tehsil": "Mori",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-38",
+    "category": "habitation_risk",
+    "title": "Purola Micro-Catchment & Geotechnical Profile",
+    "location": "Purola",
+    "lat": 30.85,
+    "lng": 78.1,
+    "zone": "orange",
+    "text": "Purola is located in Purola Tehsil at coordinates [30.850\u00b0N, 78.100\u00b0E] at an elevation of 1725m MSL on a 15.1\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 56% (0.57) and a Mohr-Coulomb Factor of Safety of 2.80 (geotechnically stable). Monitored population at risk: 4,920 residents. Designated statutory safe evacuation reception destination: Purola Agrarian High Ground.",
+    "metrics": {
+      "slope_deg": 15.14,
+      "elevation_m": 1725.0,
+      "factor_of_safety": 2.801,
+      "hazard_probability": 0.566,
+      "population": 4920,
+      "safe_site_destination": "Purola Agrarian High Ground",
+      "tehsil": "Purola",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-39",
+    "category": "habitation_risk",
+    "title": "Rama Sera Micro-Catchment & Geotechnical Profile",
+    "location": "Rama Sera",
+    "lat": 30.87,
+    "lng": 78.12,
+    "zone": "yellow",
+    "text": "Rama Sera is located in Purola Tehsil at coordinates [30.870\u00b0N, 78.120\u00b0E] at an elevation of 1792m MSL on a 21.7\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 31% (0.31) and a Mohr-Coulomb Factor of Safety of 1.96 (geotechnically stable). Monitored population at risk: 780 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 5 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 21.66,
+      "elevation_m": 1792.0,
+      "factor_of_safety": 1.963,
+      "hazard_probability": 0.3118,
+      "population": 780,
+      "safe_site_destination": "Safe Haven Zone 5 (Dense Forest)",
+      "tehsil": "Purola",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-40",
+    "category": "habitation_risk",
+    "title": "Gundiyat Gaon Micro-Catchment & Geotechnical Profile",
+    "location": "Gundiyat Gaon",
+    "lat": 30.885,
+    "lng": 78.135,
+    "zone": "yellow",
+    "text": "Gundiyat Gaon is located in Purola Tehsil at coordinates [30.885\u00b0N, 78.135\u00b0E] at an elevation of 2043m MSL on a 24.7\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 33% (0.33) and a Mohr-Coulomb Factor of Safety of 1.73 (geotechnically stable). Monitored population at risk: 640 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 1 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 24.68,
+      "elevation_m": 2043.0,
+      "factor_of_safety": 1.729,
+      "hazard_probability": 0.3303,
+      "population": 640,
+      "safe_site_destination": "Safe Haven Zone 1 (Dense Forest)",
+      "tehsil": "Purola",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-41",
+    "category": "habitation_risk",
+    "title": "Hudoli Micro-Catchment & Geotechnical Profile",
+    "location": "Hudoli",
+    "lat": 30.86,
+    "lng": 78.09,
+    "zone": "orange",
+    "text": "Hudoli is located in Purola Tehsil at coordinates [30.860\u00b0N, 78.090\u00b0E] at an elevation of 1446m MSL on a 18.5\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 54% (0.54) and a Mohr-Coulomb Factor of Safety of 2.34 (geotechnically stable). Monitored population at risk: 530 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 5 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 18.46,
+      "elevation_m": 1446.0,
+      "factor_of_safety": 2.337,
+      "hazard_probability": 0.543,
+      "population": 530,
+      "safe_site_destination": "Safe Haven Zone 5 (Dense Forest)",
+      "tehsil": "Purola",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-42",
+    "category": "habitation_risk",
+    "title": "Rajgarhi Micro-Catchment & Geotechnical Profile",
+    "location": "Rajgarhi",
+    "lat": 30.65,
+    "lng": 78.55,
+    "zone": "yellow",
+    "text": "Rajgarhi is located in Rajgarhi Tehsil at coordinates [30.650\u00b0N, 78.550\u00b0E] at an elevation of 2127m MSL on a 26.1\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 32% (0.32) and a Mohr-Coulomb Factor of Safety of 1.64 (geotechnically stable). Monitored population at risk: 1,220 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 17 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 26.15,
+      "elevation_m": 2127.0,
+      "factor_of_safety": 1.643,
+      "hazard_probability": 0.3238,
+      "population": 1220,
+      "safe_site_destination": "Safe Haven Zone 17 (Dense Forest)",
+      "tehsil": "Rajgarhi",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-43",
+    "category": "habitation_risk",
+    "title": "Kharadi Micro-Catchment & Geotechnical Profile",
+    "location": "Kharadi",
+    "lat": 30.67,
+    "lng": 78.52,
+    "zone": "yellow",
+    "text": "Kharadi is located in Rajgarhi Tehsil at coordinates [30.670\u00b0N, 78.520\u00b0E] at an elevation of 2343m MSL on a 41.0\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 39% (0.40) and a Mohr-Coulomb Factor of Safety of 1.10 (marginally stable buffer). Monitored population at risk: 800 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 17 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 41.0,
+      "elevation_m": 2343.0,
+      "factor_of_safety": 1.099,
+      "hazard_probability": 0.399,
+      "population": 800,
+      "safe_site_destination": "Safe Haven Zone 17 (Dense Forest)",
+      "tehsil": "Rajgarhi",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-44",
+    "category": "habitation_risk",
+    "title": "Naugaon Micro-Catchment & Geotechnical Profile",
+    "location": "Naugaon",
+    "lat": 30.7,
+    "lng": 78.5,
+    "zone": "yellow",
+    "text": "Naugaon is located in Naugaon Tehsil at coordinates [30.700\u00b0N, 78.500\u00b0E] at an elevation of 2024m MSL on a 34.8\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 42% (0.42) and a Mohr-Coulomb Factor of Safety of 1.26 (marginally stable buffer). Monitored population at risk: 3,450 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 34.82,
+      "elevation_m": 2024.0,
+      "factor_of_safety": 1.258,
+      "hazard_probability": 0.4233,
+      "population": 3450,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Naugaon",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-45",
+    "category": "habitation_risk",
+    "title": "Siror Micro-Catchment & Geotechnical Profile",
+    "location": "Siror",
+    "lat": 30.68,
+    "lng": 78.46,
+    "zone": "orange",
+    "text": "Siror is located in Naugaon Tehsil at coordinates [30.680\u00b0N, 78.460\u00b0E] at an elevation of 2007m MSL on a 32.2\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 63% (0.64) and a Mohr-Coulomb Factor of Safety of 1.35 (marginally stable buffer). Monitored population at risk: 1,820 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 32.17,
+      "elevation_m": 2007.0,
+      "factor_of_safety": 1.35,
+      "hazard_probability": 0.6367,
+      "population": 1820,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Naugaon",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-46",
+    "category": "habitation_risk",
+    "title": "Nirakot Micro-Catchment & Geotechnical Profile",
+    "location": "Nirakot",
+    "lat": 30.71,
+    "lng": 78.48,
+    "zone": "red",
+    "text": "Nirakot is located in Naugaon Tehsil at coordinates [30.710\u00b0N, 78.480\u00b0E] at an elevation of 1742m MSL on a 23.2\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 68% (0.68) and a Mohr-Coulomb Factor of Safety of 1.84 (geotechnically stable). Monitored population at risk: 600 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 23.21,
+      "elevation_m": 1742.0,
+      "factor_of_safety": 1.843,
+      "hazard_probability": 0.6826,
+      "population": 600,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Naugaon",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-47",
+    "category": "habitation_risk",
+    "title": "Mando Micro-Catchment & Geotechnical Profile",
+    "location": "Mando",
+    "lat": 30.69,
+    "lng": 78.47,
+    "zone": "red",
+    "text": "Mando is located in Naugaon Tehsil at coordinates [30.690\u00b0N, 78.470\u00b0E] at an elevation of 2106m MSL on a 22.7\u00b0 slope. It is classified in the RED Hazard Zone with a multi-hazard probability score of 66% (0.67) and a Mohr-Coulomb Factor of Safety of 1.88 (geotechnically stable). Monitored population at risk: 400 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 22.66,
+      "elevation_m": 2106.0,
+      "factor_of_safety": 1.877,
+      "hazard_probability": 0.6698,
+      "population": 400,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Naugaon",
+      "zone": "red"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-48",
+    "category": "habitation_risk",
+    "title": "Kankrari Micro-Catchment & Geotechnical Profile",
+    "location": "Kankrari",
+    "lat": 30.7,
+    "lng": 78.49,
+    "zone": "orange",
+    "text": "Kankrari is located in Naugaon Tehsil at coordinates [30.700\u00b0N, 78.490\u00b0E] at an elevation of 1844m MSL on a 28.4\u00b0 slope. It is classified in the ORANGE Hazard Zone with a multi-hazard probability score of 63% (0.63) and a Mohr-Coulomb Factor of Safety of 1.52 (geotechnically stable). Monitored population at risk: 350 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 14 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 28.36,
+      "elevation_m": 1844.0,
+      "factor_of_safety": 1.518,
+      "hazard_probability": 0.6311,
+      "population": 350,
+      "safe_site_destination": "Safe Haven Zone 14 (Dense Forest)",
+      "tehsil": "Naugaon",
+      "zone": "orange"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-49",
+    "category": "habitation_risk",
+    "title": "Janki Chatti Micro-Catchment & Geotechnical Profile",
+    "location": "Janki Chatti",
+    "lat": 30.985,
+    "lng": 78.442,
+    "zone": "yellow",
+    "text": "Janki Chatti is located in Rajgarhi Tehsil at coordinates [30.985\u00b0N, 78.442\u00b0E] at an elevation of 3111m MSL on a 35.3\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 42% (0.43) and a Mohr-Coulomb Factor of Safety of 1.24 (marginally stable buffer). Monitored population at risk: 920 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 13 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 35.28,
+      "elevation_m": 3111.0,
+      "factor_of_safety": 1.244,
+      "hazard_probability": 0.4283,
+      "population": 920,
+      "safe_site_destination": "Safe Haven Zone 13 (Dense Forest)",
+      "tehsil": "Rajgarhi",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-50",
+    "category": "habitation_risk",
+    "title": "Kharsali Micro-Catchment & Geotechnical Profile",
+    "location": "Kharsali",
+    "lat": 30.99,
+    "lng": 78.45,
+    "zone": "yellow",
+    "text": "Kharsali is located in Rajgarhi Tehsil at coordinates [30.990\u00b0N, 78.450\u00b0E] at an elevation of 3017m MSL on a 37.6\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 42% (0.42) and a Mohr-Coulomb Factor of Safety of 1.18 (marginally stable buffer). Monitored population at risk: 760 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 13 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 37.6,
+      "elevation_m": 3017.0,
+      "factor_of_safety": 1.178,
+      "hazard_probability": 0.4204,
+      "population": 760,
+      "safe_site_destination": "Safe Haven Zone 13 (Dense Forest)",
+      "tehsil": "Rajgarhi",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-HAB-51",
+    "category": "habitation_risk",
+    "title": "Barnigad Micro-Catchment & Geotechnical Profile",
+    "location": "Barnigad",
+    "lat": 30.64,
+    "lng": 78.49,
+    "zone": "yellow",
+    "text": "Barnigad is located in Rajgarhi Tehsil at coordinates [30.640\u00b0N, 78.490\u00b0E] at an elevation of 2186m MSL on a 22.2\u00b0 slope. It is classified in the YELLOW Hazard Zone with a multi-hazard probability score of 29% (0.30) and a Mohr-Coulomb Factor of Safety of 1.91 (geotechnically stable). Monitored population at risk: 850 residents. Designated statutory safe evacuation reception destination: Safe Haven Zone 17 (Dense Forest).",
+    "metrics": {
+      "slope_deg": 22.23,
+      "elevation_m": 2186.0,
+      "factor_of_safety": 1.912,
+      "hazard_probability": 0.2997,
+      "population": 850,
+      "safe_site_destination": "Safe Haven Zone 17 (Dense Forest)",
+      "tehsil": "Rajgarhi",
+      "zone": "yellow"
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2012-3102",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Dharali Flash Flood & Debris Flow (2012)",
+    "location": "Dharali Flash Flood & Debris Flow",
+    "lat": 31.023,
+    "lng": 78.784,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Dharali Flash Flood & Debris Flow (2012). Disaster Type: cloudburst. Coordinates: [31.0230\u00b0N, 78.7840\u00b0E]. Recorded casualties: 4. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Dharali Flash Flood & Debris Flow",
+      "year": "2012",
+      "event_type": "cloudburst",
+      "casualties": 4,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2021-3071",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Nirakot Cloudburst (2021)",
+    "location": "Nirakot Cloudburst",
+    "lat": 30.71,
+    "lng": 78.48,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Nirakot Cloudburst (2021). Disaster Type: cloudburst. Coordinates: [30.7100\u00b0N, 78.4800\u00b0E]. Recorded casualties: 1. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Nirakot Cloudburst",
+      "year": "2021",
+      "event_type": "cloudburst",
+      "casualties": 1,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2021-3069",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Mando Debris Flow (2021)",
+    "location": "Mando Debris Flow",
+    "lat": 30.69,
+    "lng": 78.47,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Mando Debris Flow (2021). Disaster Type: cloudburst. Coordinates: [30.6900\u00b0N, 78.4700\u00b0E]. Recorded casualties: 3. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Mando Debris Flow",
+      "year": "2021",
+      "event_type": "cloudburst",
+      "casualties": 3,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2021-3068",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Siror Flash Flood (2021)",
+    "location": "Siror Flash Flood",
+    "lat": 30.68,
+    "lng": 78.46,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Siror Flash Flood (2021). Disaster Type: flood. Coordinates: [30.6800\u00b0N, 78.4600\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Siror Flash Flood",
+      "year": "2021",
+      "event_type": "flood",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2013-3099",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Gangotri Deluge & Highway Breach (2013)",
+    "location": "Gangotri Deluge & Highway Breach",
+    "lat": 30.995,
+    "lng": 78.94,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Gangotri Deluge & Highway Breach (2013). Disaster Type: flood. Coordinates: [30.9950\u00b0N, 78.9400\u00b0E]. Recorded casualties: 28. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Gangotri Deluge & Highway Breach",
+      "year": "2013",
+      "event_type": "flood",
+      "casualties": 28,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2013-3077",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Maneri Landslide Damming Risk (2013)",
+    "location": "Maneri Landslide Damming Risk",
+    "lat": 30.777,
+    "lng": 78.543,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Maneri Landslide Damming Risk (2013). Disaster Type: landslide. Coordinates: [30.7770\u00b0N, 78.5430\u00b0E]. Recorded casualties: 14. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Maneri Landslide Damming Risk",
+      "year": "2013",
+      "event_type": "landslide",
+      "casualties": 14,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2013-3072",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Uttarkashi Town Bhagirathi Inundation (2013)",
+    "location": "Uttarkashi Town Bhagirathi Inundation",
+    "lat": 30.727,
+    "lng": 78.445,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Uttarkashi Town Bhagirathi Inundation (2013). Disaster Type: flood. Coordinates: [30.7270\u00b0N, 78.4450\u00b0E]. Recorded casualties: 72. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Uttarkashi Town Bhagirathi Inundation",
+      "year": "2013",
+      "event_type": "flood",
+      "casualties": 72,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2022-3103",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Harsil Slope Failure (2022)",
+    "location": "Harsil Slope Failure",
+    "lat": 31.036,
+    "lng": 78.738,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Harsil Slope Failure (2022). Disaster Type: landslide. Coordinates: [31.0360\u00b0N, 78.7380\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Harsil Slope Failure",
+      "year": "2022",
+      "event_type": "landslide",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2022-3080",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Bhatwari Landslide & Sinking Zone (2022)",
+    "location": "Bhatwari Landslide & Sinking Zone",
+    "lat": 30.8,
+    "lng": 78.585,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Bhatwari Landslide & Sinking Zone (2022). Disaster Type: landslide. Coordinates: [30.8000\u00b0N, 78.5850\u00b0E]. Recorded casualties: 2. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Bhatwari Landslide & Sinking Zone",
+      "year": "2022",
+      "event_type": "landslide",
+      "casualties": 2,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2023-3108",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Sankri Cloudburst (2023)",
+    "location": "Sankri Cloudburst",
+    "lat": 31.082,
+    "lng": 78.185,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Sankri Cloudburst (2023). Disaster Type: cloudburst. Coordinates: [31.0820\u00b0N, 78.1850\u00b0E]. Recorded casualties: 1. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Sankri Cloudburst",
+      "year": "2023",
+      "event_type": "cloudburst",
+      "casualties": 1,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2023-3085",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Purola Flash Flood (2023)",
+    "location": "Purola Flash Flood",
+    "lat": 30.85,
+    "lng": 78.1,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Purola Flash Flood (2023). Disaster Type: flood. Coordinates: [30.8500\u00b0N, 78.1000\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Purola Flash Flood",
+      "year": "2023",
+      "event_type": "flood",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2024-3085",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Barsu Slope Collapse (2024)",
+    "location": "Barsu Slope Collapse",
+    "lat": 30.853,
+    "lng": 78.686,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Barsu Slope Collapse (2024). Disaster Type: landslide. Coordinates: [30.8530\u00b0N, 78.6860\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Barsu Slope Collapse",
+      "year": "2024",
+      "event_type": "landslide",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2012-3073",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Asi Ganga Flash Flood (2012)",
+    "location": "Asi Ganga Flash Flood",
+    "lat": 30.73,
+    "lng": 78.44,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Asi Ganga Flash Flood (2012). Disaster Type: flood. Coordinates: [30.7300\u00b0N, 78.4400\u00b0E]. Recorded casualties: 32. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Asi Ganga Flash Flood",
+      "year": "2012",
+      "event_type": "flood",
+      "casualties": 32,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2013-3100",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Kedarnath-Garhwal Mass Movement (2013)",
+    "location": "Kedarnath-Garhwal Mass Movement",
+    "lat": 31.0,
+    "lng": 78.92,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Kedarnath-Garhwal Mass Movement (2013). Disaster Type: landslide. Coordinates: [31.0000\u00b0N, 78.9200\u00b0E]. Recorded casualties: 169. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Kedarnath-Garhwal Mass Movement",
+      "year": "2013",
+      "event_type": "landslide",
+      "casualties": 169,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2017-3080",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Bhatwari-Maneri Road Collapse (2017)",
+    "location": "Bhatwari-Maneri Road Collapse",
+    "lat": 30.8,
+    "lng": 78.58,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Bhatwari-Maneri Road Collapse (2017). Disaster Type: landslide. Coordinates: [30.8000\u00b0N, 78.5800\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Bhatwari-Maneri Road Collapse",
+      "year": "2017",
+      "event_type": "landslide",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2019-3061",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Dunda Nala Surge (2019)",
+    "location": "Dunda Nala Surge",
+    "lat": 30.61,
+    "lng": 78.37,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Dunda Nala Surge (2019). Disaster Type: flood. Coordinates: [30.6100\u00b0N, 78.3700\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Dunda Nala Surge",
+      "year": "2019",
+      "event_type": "flood",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2020-3108",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Sankri Valley Cloudburst (2020)",
+    "location": "Sankri Valley Cloudburst",
+    "lat": 31.08,
+    "lng": 78.19,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Sankri Valley Cloudburst (2020). Disaster Type: cloudburst. Coordinates: [31.0800\u00b0N, 78.1900\u00b0E]. Recorded casualties: 2. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Sankri Valley Cloudburst",
+      "year": "2020",
+      "event_type": "cloudburst",
+      "casualties": 2,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-DIS-2024-3072",
+    "category": "disaster_history",
+    "title": "Disaster Benchmark: Uttarkashi NH-34 Slope Failure (2024)",
+    "location": "Uttarkashi NH-34 Slope Failure",
+    "lat": 30.72,
+    "lng": 78.48,
+    "zone": "red",
+    "text": "Historical Disaster Benchmark: Uttarkashi NH-34 Slope Failure (2024). Disaster Type: landslide. Coordinates: [30.7200\u00b0N, 78.4800\u00b0E]. Recorded casualties: 0. Peak triggering rainfall: 120 mm/hr. Geomorphic impact: . This benchmark establishes empirical ground-truth thresholds for the AI model.",
+    "metrics": {
+      "event_name": "Uttarkashi NH-34 Slope Failure",
+      "year": "2024",
+      "event_type": "landslide",
+      "casualties": 0,
+      "trigger_rainfall_mm": 120
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3089",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 1 (Dense Forest)",
+    "location": "Safe Haven Zone 1 (Dense Forest)",
+    "lat": 30.892000000000003,
+    "lng": 78.172,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 1 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (8.1\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 3.19 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 1 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 8.14,
+      "water_lpcd": 420,
+      "suitability_score": 3.194
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3089",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 2 (Dense Forest)",
+    "location": "Safe Haven Zone 2 (Dense Forest)",
+    "lat": 30.892000000000003,
+    "lng": 78.07199999999999,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 2 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (9.6\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 3.09 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 2 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 9.64,
+      "water_lpcd": 420,
+      "suitability_score": 3.093
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3057",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 3 (Dense Forest)",
+    "location": "Safe Haven Zone 3 (Dense Forest)",
+    "lat": 30.572000000000003,
+    "lng": 78.332,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 3 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (7.1\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 3.01 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 3 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 7.14,
+      "water_lpcd": 420,
+      "suitability_score": 3.008
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3079",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 4 (Dense Forest)",
+    "location": "Safe Haven Zone 4 (Dense Forest)",
+    "lat": 30.792,
+    "lng": 78.612,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 4 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (19.5\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.95 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 4 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 19.5,
+      "water_lpcd": 420,
+      "suitability_score": 2.948
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3083",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 5 (Dense Forest)",
+    "location": "Safe Haven Zone 5 (Dense Forest)",
+    "lat": 30.832,
+    "lng": 78.112,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 5 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (14.9\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.93 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 5 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 14.92,
+      "water_lpcd": 420,
+      "suitability_score": 2.93
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3115",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 6 (Dense Forest)",
+    "location": "Safe Haven Zone 6 (Dense Forest)",
+    "lat": 31.151999999999997,
+    "lng": 78.09200000000001,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 6 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (6.3\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.87 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 6 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 6.35,
+      "water_lpcd": 420,
+      "suitability_score": 2.874
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3105",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 7 (Dense Forest)",
+    "location": "Safe Haven Zone 7 (Dense Forest)",
+    "lat": 31.052,
+    "lng": 78.09200000000001,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 7 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (15.2\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.84 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 7 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 15.21,
+      "water_lpcd": 420,
+      "suitability_score": 2.837
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3087",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 8 (Dense Forest)",
+    "location": "Safe Haven Zone 8 (Dense Forest)",
+    "lat": 30.871999999999996,
+    "lng": 78.252,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 8 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (17.1\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.79 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 8 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 17.07,
+      "water_lpcd": 420,
+      "suitability_score": 2.786
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3049",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 9 (Dense Forest)",
+    "location": "Safe Haven Zone 9 (Dense Forest)",
+    "lat": 30.491999999999997,
+    "lng": 78.192,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 9 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (16.5\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.75 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 9 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 16.51,
+      "water_lpcd": 420,
+      "suitability_score": 2.751
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3097",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 10 (Dense Forest)",
+    "location": "Safe Haven Zone 10 (Dense Forest)",
+    "lat": 30.971999999999998,
+    "lng": 78.09200000000001,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 10 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (11.5\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.75 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 10 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 11.51,
+      "water_lpcd": 420,
+      "suitability_score": 2.747
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3047",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 11 (Dense Forest)",
+    "location": "Safe Haven Zone 11 (Dense Forest)",
+    "lat": 30.471999999999998,
+    "lng": 78.272,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 11 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (7.7\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.74 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 11 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 7.69,
+      "water_lpcd": 420,
+      "suitability_score": 2.742
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3081",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 12 (Dense Forest)",
+    "location": "Safe Haven Zone 12 (Dense Forest)",
+    "lat": 30.811999999999994,
+    "lng": 78.192,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 12 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (16.3\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.74 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 12 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 16.33,
+      "water_lpcd": 420,
+      "suitability_score": 2.739
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3083",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 13 (Dense Forest)",
+    "location": "Safe Haven Zone 13 (Dense Forest)",
+    "lat": 30.832,
+    "lng": 78.312,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 13 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (7.3\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.69 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 13 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 7.28,
+      "water_lpcd": 420,
+      "suitability_score": 2.688
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3077",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 14 (Dense Forest)",
+    "location": "Safe Haven Zone 14 (Dense Forest)",
+    "lat": 30.772000000000002,
+    "lng": 78.47200000000001,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 14 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (13.0\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.68 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 14 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 12.99,
+      "water_lpcd": 420,
+      "suitability_score": 2.679
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3067",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 15 (Dense Forest)",
+    "location": "Safe Haven Zone 15 (Dense Forest)",
+    "lat": 30.672000000000004,
+    "lng": 78.21199999999999,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 15 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (12.6\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.67 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 15 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 12.59,
+      "water_lpcd": 420,
+      "suitability_score": 2.675
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3065",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 16 (Dense Forest)",
+    "location": "Safe Haven Zone 16 (Dense Forest)",
+    "lat": 30.651999999999997,
+    "lng": 78.05199999999999,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 16 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (19.4\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.67 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 16 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 19.37,
+      "water_lpcd": 420,
+      "suitability_score": 2.671
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3065",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 17 (Dense Forest)",
+    "location": "Safe Haven Zone 17 (Dense Forest)",
+    "lat": 30.651999999999997,
+    "lng": 78.57199999999999,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 17 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (7.8\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.67 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 17 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 7.84,
+      "water_lpcd": 420,
+      "suitability_score": 2.665
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3073",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 18 (Dense Forest)",
+    "location": "Safe Haven Zone 18 (Dense Forest)",
+    "lat": 30.732000000000006,
+    "lng": 78.192,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 18 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (10.9\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.66 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 18 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 10.95,
+      "water_lpcd": 420,
+      "suitability_score": 2.66
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3069",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 19 (Dense Forest)",
+    "location": "Safe Haven Zone 19 (Dense Forest)",
+    "lat": 30.692,
+    "lng": 78.332,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 19 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (12.8\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.65 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 19 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 12.8,
+      "water_lpcd": 420,
+      "suitability_score": 2.653
+    }
+  },
+  {
+    "chunk_id": "CHK-SAFE-3073",
+    "category": "safe_resettlement",
+    "title": "Relocation Receiving Site: Safe Haven Zone 20 (Dense Forest)",
+    "location": "Safe Haven Zone 20 (Dense Forest)",
+    "lat": 30.732000000000006,
+    "lng": 78.272,
+    "zone": "green",
+    "text": "Verified Safe Green Zone: Safe Haven Zone 20 (Dense Forest) is a designated resettlement receiving area. Gentle terrain slope (7.0\u00b0), eliminating mass movement and runout risks. Carrying capacity: 85 families. Water supply sufficiency: 420 LPCD. AHP Multi-Criteria Suitability Score: 2.65 with statutory clearance under Section 34 of the Disaster Management Act, 2005.",
+    "metrics": {
+      "safe_site_name": "Safe Haven Zone 20 (Dense Forest)",
+      "carrying_capacity_families": 85,
+      "slope_deg": 7.04,
+      "water_lpcd": 420,
+      "suitability_score": 2.653
+    }
+  },
+  {
+    "chunk_id": "CHK-CORR-NH108-01",
+    "category": "corridor_lifeline",
+    "title": "NH-108 Lifeline Corridor: Dharali - Harsil Sector",
+    "location": "Dharali - Harsil Sector",
+    "lat": 31.03,
+    "lng": 78.75,
+    "zone": "orange",
+    "text": "Lifeline Transport Route Segment: Dharali - Harsil Sector. Coordinates: [31.030\u00b0N, 78.750\u00b0E]. High rockfall vulnerability km 72-78. Prone to debris torrent cutoffs. Alternate foot tracks mapped along south terrace.",
+    "metrics": {
+      "corridor": "NH-108",
+      "sector": "Dharali - Harsil Sector"
+    }
+  },
+  {
+    "chunk_id": "CHK-CORR-NH108-02",
+    "category": "corridor_lifeline",
+    "title": "NH-108 Lifeline Corridor: Bhatwari - Gangnani Sector",
+    "location": "Bhatwari - Gangnani Sector",
+    "lat": 30.82,
+    "lng": 78.6,
+    "zone": "orange",
+    "text": "Lifeline Transport Route Segment: Bhatwari - Gangnani Sector. Coordinates: [30.820\u00b0N, 78.600\u00b0E]. Active shear zone on Main Central Thrust (MCT). Heavy rainfall (>65mm/hr) triggers recurring road subsidence.",
+    "metrics": {
+      "corridor": "NH-108",
+      "sector": "Bhatwari - Gangnani Sector"
+    }
+  },
+  {
+    "chunk_id": "CHK-CORR-NH108-03",
+    "category": "corridor_lifeline",
+    "title": "NH-108 Lifeline Corridor: Uttarkashi - Maneri Dam Sector",
+    "location": "Uttarkashi - Maneri Dam Sector",
+    "lat": 30.75,
+    "lng": 78.5,
+    "zone": "orange",
+    "text": "Lifeline Transport Route Segment: Uttarkashi - Maneri Dam Sector. Coordinates: [30.750\u00b0N, 78.500\u00b0E]. Riverine toe-erosion along Bhagirathi corridor. Evacuation convoys require 15-minute staggered dispatch.",
+    "metrics": {
+      "corridor": "NH-108",
+      "sector": "Uttarkashi - Maneri Dam Sector"
+    }
+  },
+  {
+    "chunk_id": "CHK-CORR-NH108-04",
+    "category": "corridor_lifeline",
+    "title": "NH-108 Lifeline Corridor: Silkyara - Yamunotri Tunnel Spur",
+    "location": "Silkyara - Yamunotri Tunnel Spur",
+    "lat": 30.74,
+    "lng": 78.68,
+    "zone": "orange",
+    "text": "Lifeline Transport Route Segment: Silkyara - Yamunotri Tunnel Spur. Coordinates: [30.740\u00b0N, 78.680\u00b0E]. Structural shear and portal stability under geotechnical monitoring. Slope angles exceed 34\u00b0.",
+    "metrics": {
+      "corridor": "NH-108",
+      "sector": "Silkyara - Yamunotri Tunnel Spur"
+    }
+  }
+]

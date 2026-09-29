@@ -30,6 +30,24 @@ DATA_DIR = Path(__file__).parent
 OUTPUT_DIR = DATA_DIR.parent / "output"
 CACHE_FILE = DATA_DIR / "srtm30m_uttarkashi_cache.json"
 
+def _load_env():
+    env_file = DATA_DIR.parent.parent / ".env"
+    if env_file.exists():
+        try:
+            with open(env_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip('"').strip("'")
+                        if k:
+                            os.environ[k] = v
+        except Exception:
+            pass
+
+_load_env()
+
 # Uttarkashi District bounding box
 UTTARKASHI_BBOX = {
     "min_lat": 30.40, "max_lat": 31.25,
@@ -53,8 +71,15 @@ def init_gee(project_id: Optional[str] = None) -> bool:
     
     try:
         import ee
-        pid = project_id or os.environ.get("GEE_PROJECT_ID", "bhu-rakshak-509111")
-        if pid:
+        pid = project_id or os.environ.get("GEE_PROJECT_ID", "gmp-demo-project-504127132")
+        sa_json = os.environ.get("GEE_SERVICE_ACCOUNT_JSON")
+        if sa_json and os.path.exists(sa_json):
+            with open(sa_json, "r") as f:
+                sa_data = json.load(f)
+            sa_email = sa_data.get("client_email")
+            credentials = ee.ServiceAccountCredentials(sa_email, sa_json)
+            ee.Initialize(credentials, project=pid)
+        elif pid:
             ee.Initialize(project=pid)
         else:
             ee.Initialize()
